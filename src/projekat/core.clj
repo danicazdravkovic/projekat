@@ -84,7 +84,7 @@
       ))
 
 
-;***********requests, responses, handlers
+;***********request  s, responses, handlers
 
 ;https://www.baeldung.com/clojure-ring
 
