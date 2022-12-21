@@ -11,7 +11,7 @@
                  [ring/ring-devel "1.8.0"]
                  ]
   :plugins [[lein-ring "0.12.6"]]
-  
+  :main projekat.server-config
   :ring {:handler projekat.core/app-handler};konfigurisem server a pozivam ga naredbom lein ring server
   :profiles {:dev {:dependencies [[javax.servlet/servlet-api "2.5"]
                    [ring/ring-mock "0.3.2"]]}}

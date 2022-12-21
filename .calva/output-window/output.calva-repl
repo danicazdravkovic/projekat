@@ -5,6 +5,8 @@
 ; Happy coding! ♥️
 
 ; Jacking in...
+; Starting Jack-in Terminal: bb --nrepl-server 50004
+; Jacking in...
 ; Starting Jack-in Terminal: cmd.exe /d /c lein update-in :dependencies conj [nrepl,"1.0.0"] -- update-in :plugins conj [cider/cider-nrepl,"0.28.5"] -- update-in [:repl-options,:nrepl-middleware] conj '["cider.nrepl/cider-middleware"]' -- with-profile +dev repl :headless
 ; Hooking up nREPL sessions...
 ; Connected session: clj
@@ -18,729 +20,485 @@
 clj꞉user꞉>  ; Use `alt+enter` to evaluate
 ; Jack-in done.
 clj꞉user꞉> 
+; Syntax error compiling at (c:\Users\nodas\Desktop\alati2022\projekat\src\projekat\core.clj:97:3).
+; No such namespace: ring
+clj꞉projekat.core꞉> 
+; Jacking in...
+; nREPL Connection was closed
+; Starting Jack-in Terminal: cmd.exe /d /c lein update-in :dependencies conj [nrepl,"1.0.0"] -- update-in :plugins conj [cider/cider-nrepl,"0.28.5"] -- update-in [:repl-options,:nrepl-middleware] conj '["cider.nrepl/cider-middleware"]' -- with-profile +dev repl :headless
+; Hooking up nREPL sessions...
+; Connected session: clj
+; TIPS:
+;   - You can edit the contents here. Use it as a REPL if you like.
+;   - `alt+enter` evaluates the current top level form.
+;   - `ctrl+enter` evaluates the current form.
+;   - `alt+up` and `alt+down` traverse up and down the REPL command history
+;      when the cursor is after the last contents at the prompt
+;   - Clojure lines in stack traces are peekable and clickable.
+clj꞉user꞉> 
+; Jack-in done.
+clj꞉user꞉> 
+; Syntax error compiling at (c:\Users\nodas\Desktop\alati2022\projekat\src\projekat\core.clj:102:3).
+; No such namespace: session
+clj꞉projekat.core꞉> 
+; Syntax error compiling at (c:\Users\nodas\Desktop\alati2022\projekat\src\projekat\core.clj:102:3).
+; No such namespace: session
+clj꞉projekat.core꞉> 
 nil
 clj꞉projekat.core꞉> 
 #'projekat.core/name-surname
 clj꞉projekat.core꞉> 
 #'projekat.core/name-phone-id
 clj꞉projekat.core꞉> 
-#'projekat.core/app-routes
-clj꞉projekat.core꞉> 
-#'projekat.core/app-routes1
-clj꞉projekat.core꞉> 
-#'projekat.core/dogs-handler-method
-clj꞉projekat.core꞉> 
-#'projekat.core/dogs-handler-method
-clj꞉projekat.core꞉> 
-#'projekat.core/dogs-route
-clj꞉projekat.core꞉> 
-#function[compojure.core/wrap-route-matches/fn--8559]
-clj꞉projekat.core꞉> 
-({:uri "/dogs",
-  :request-method :get,
-  :route-params {},
-  :params {},
-  :compojure/route [:get "/dogs"]})
-{:status 200,
- :headers {"Content-Type" "text/html; charset=utf-8"},
- :body "<p>A Good Boi</p>"}
-nil
-clj꞉projekat.core꞉> 
-{:status 200,
- :headers {"Content-Type" "text/html; charset=utf-8"},
- :body
- "<!DOCTYPE html>\n<html><head><title>SPA Center</title></head><body><h1>Spa center</h1><a href=\"/clients/new\">New client</a><hr></body></html>"}
-nil
-clj꞉projekat.core꞉> 
-({:uri "/dogs",
-  :request-method :get,
-  :route-params {},
-  :params {},
-  :compojure/route [:get "/dogs"]})
-{:status 200,
- :headers {"Content-Type" "text/html; charset=utf-8"},
- :body "<p>A Good Boi</p>"}
-nil
-clj꞉projekat.core꞉> 
-{:status 200,
- :headers {"Content-Type" "text/html; charset=utf-8"},
- :body
- "<!DOCTYPE html>\n<html><head><title>SPA Center</title></head><body><h1>Spa center</h1><a href=\"/clients/new\">New client</a><hr></body></html>"}
-nil
-clj꞉projekat.core꞉> 
-({:uri "/dogs",
-  :request-method :get,
-  :route-params {},
-  :params {},
-  :compojure/route [:get "/dogs"]})
-{:status 200,
- :headers {"Content-Type" "text/html; charset=utf-8"},
- :body "<p>A Good Boi</p>"}
-nil
-clj꞉projekat.core꞉> 
-#'projekat.core/dogs-handler-method
-clj꞉projekat.core꞉> 
-#'projekat.core/dogs-route
-clj꞉projekat.core꞉> 
-({:uri "/dogs",
-  :request-method :get,
-  :route-params {},
-  :params {},
-  :compojure/route [:get "/dogs"]})
-nil
-{:status 200,
- :headers {"Content-Type" "text/html; charset=utf-8"},
- :body "<p>A Good Boi</p>"}
-nil
-clj꞉projekat.core꞉> 
-#'projekat.core/dogs-handler-method
-clj꞉projekat.core꞉> 
-#function[compojure.core/wrap-route-matches/fn--8559]
-clj꞉projekat.core꞉> 
-#'projekat.core/dogs-route
-clj꞉projekat.core꞉> 
-nil
-{:status 200,
- :headers {"Content-Type" "text/html; charset=utf-8"},
- :body "<p>A Good Boi</p>"}
-nil
-clj꞉projekat.core꞉> 
-; Syntax error compiling at (c:\Users\nodas\Desktop\alati2022\projekat\src\projekat\core.clj:140:4).
-; Unable to resolve symbol: args in this context
-clj꞉projekat.core꞉> 
-#'projekat.core/dogs-handler-method
-clj꞉projekat.core꞉> 
-#'projekat.core/dogs-route
-clj꞉projekat.core꞉> 
-nil
-{:status 200,
- :headers {"Content-Type" "text/html; charset=utf-8"},
- :body "<p>A Good Boi</p>"}
-nil
-clj꞉projekat.core꞉> 
-nil
-{:status 200,
- :headers {"Content-Type" "text/html; charset=utf-8"},
- :body "<p>A Good Boi</p>"}
-nil
-clj꞉projekat.core꞉> 
-{:status 200,
- :headers {"Content-Type" "text/html; charset=utf-8"},
- :body
- "<!DOCTYPE html>\n<html><head><title>SPA Center</title></head><body><h1>Spa center</h1><a href=\"/clients/new\">New client</a><hr></body></html>"}
-nil
-clj꞉projekat.core꞉> 
-#'projekat.core/dogs-route
-clj꞉projekat.core꞉> 
-nil
-{:status 200,
- :headers {"Content-Type" "text/html; charset=utf-8"},
- :body "<p>A Good Boi</p>"}
-nil
-clj꞉projekat.core꞉> 
-nil
-{:status 200,
- :headers {"Content-Type" "text/html; charset=utf-8"},
- :body "<p>A Good Boi</p>"}
-nil
-clj꞉projekat.core꞉> 
-nil
-{:status 200,
- :headers {"Content-Type" "text/html; charset=utf-8"},
- :body "<p>A Good Boi</p>"}
-nil
-clj꞉projekat.core꞉> 
-#'projekat.core/dogs-handler-method
-clj꞉projekat.core꞉> 
-#'projekat.core/dogs-route
-clj꞉projekat.core꞉> 
-({:uri "/dogs",
-  :query-string "type=spanial&size=small",
-  :request-method :get,
-  :route-params {},
-  :params {},
-  :compojure/route [:get "/dogs"]})
-{:status 200,
- :headers {"Content-Type" "text/html; charset=utf-8"},
- :body "<p>A Good Boi</p>"}
-nil
-clj꞉projekat.core꞉> 
-({:uri "/dogs",
-  :query-string "type=spanial&size=small",
-  :request-method :get,
-  :route-params {},
-  :params {},
-  :compojure/route [:get "/dogs"]})
-{:status 200, :headers {Content-Type text/html; charset=utf-8}, :body <p>A Good Boi</p>}nil
-clj꞉projekat.core꞉> 
-({:uri "/dogs",
-  :query-string "type=spanial&size=small",
-  :request-method :get,
-  :route-params {},
-  :params {},
-  :compojure/route [:get "/dogs"]})
-{:status 200, :headers {Content-Type text/html; charset=utf-8}, :body <p>A Good Boi</p>} :urinil
-clj꞉projekat.core꞉> 
-; Syntax error reading source at (REPL:152:20).
-; Map literal must contain an even number of forms
-clj꞉projekat.core꞉> 
-({:uri "/dogs",
-  :query-string "type=spanial&size=small",
-  :request-method :get,
-  :route-params {},
-  :params {},
-  :compojure/route [:get "/dogs"]})
-{:status 200,
- :headers {"Content-Type" "text/html; charset=utf-8"},
- :body "<p>A Good Boi</p>"}
-nil
-clj꞉projekat.core꞉> 
-#'projekat.core/dogs-app
-clj꞉projekat.core꞉> 
-({:uri "/dogs",
-  :query-string "type=spanial&size=small",
-  :request-method :get,
-  :form-params {},
-  :params {"type" "spanial", "size" "small"},
-  :query-params {"type" "spanial", "size" "small"},
-  :route-params {},
-  :compojure/route [:get "/dogs"]})
-{:status 200,
- :headers {"Content-Type" "text/html; charset=utf-8"},
- :body "<p>A Good Boi</p>"}
-nil
-clj꞉projekat.core꞉> 
-#'projekat.core/dogs-handler-method
-clj꞉projekat.core꞉> 
-#'projekat.core/dogs-handler-method
-clj꞉projekat.core꞉> 
-#'projekat.core/dogs-route11
-clj꞉projekat.core꞉> 
-#'projekat.core/dogs-app11
-clj꞉projekat.core꞉> 
-{:status 200, :headers {"Content-Type" "text/html; charset=utf-8"}, :body "<p>Snoopy is a Good Boi</p>"}
-clj꞉projekat.core꞉> 
-{:status 200, :headers {"Content-Type" "text/html; charset=utf-8"}, :body "<p>Snoopy is a Good Boi</p>"}
-clj꞉projekat.core꞉> 
-{:status 200, :headers {"Content-Type" "text/html; charset=utf-8"}, :body "<p>Snoopy is a Good Boi</p>"}
-clj꞉projekat.core꞉> 
-#'projekat.core/pom
-clj꞉projekat.core꞉> 
-nil
-clj꞉projekat.core꞉> 
-#'projekat.core/handler1
-clj꞉projekat.core꞉> 
-; Execution error (IllegalAccessError) at projekat.core/eval13490$loading (form-init12924236456342717222.clj:3).
-; keyword-params does not exist
-clj꞉projekat.core꞉> 
-nil
-clj꞉projekat.core꞉> 
-nil
-clj꞉projekat.core꞉> 
-#'projekat.core/handler1
-clj꞉projekat.core꞉> 
-#'projekat.core/app-routes1
-clj꞉projekat.core꞉> 
-; Execution error (ClassCastException) at ring.middleware.keyword-params/keyword-params-request (keyword_params.clj:35).
-; class compojure.core$routes$fn__8578 cannot be cast to class clojure.lang.Associative (compojure.core$routes$fn__8578 is in unnamed module of loader clojure.lang.DynamicClassLoader @6e29cb93; clojure.lang.Associative is in unnamed module of loader 'app')
-clj꞉projekat.core꞉> 
-; Execution error (ClassCastException) at ring.middleware.keyword-params/keyword-params-request (keyword_params.clj:35).
-; class compojure.core$routes$fn__8578 cannot be cast to class clojure.lang.Associative (compojure.core$routes$fn__8578 is in unnamed module of loader clojure.lang.DynamicClassLoader @6e29cb93; clojure.lang.Associative is in unnamed module of loader 'app')
-clj꞉projekat.core꞉> 
-#'projekat.core/my-app1
-clj꞉projekat.core꞉> 
-nil
-clj꞉projekat.core꞉> 
-#'projekat.core/my-app1
-clj꞉projekat.core꞉> 
-{:status 200,
- :headers {"Content-Type" "text/html; charset=utf-8"},
- :body
- "<!DOCTYPE html>\n<html><head><title>SPA Center</title></head><body><h1>Spa center</h1><a href=\"/clients/new\">New client</a><hr></body></html>"}
-clj꞉projekat.core꞉> 
-; Syntax error compiling at (c:\Users\nodas\Desktop\alati2022\projekat\src\projekat\core.clj:90:15).
-; Unable to resolve symbol: handler in this context
-clj꞉projekat.core꞉> 
-#'projekat.core/app-routes1
-clj꞉projekat.core꞉> 
-#'projekat.core/my-app1
-clj꞉projekat.core꞉> 
-{:status 200, :headers {"Content-Type" "text/html; charset=utf-8"}, :body "<p> is a Good Boi</p>"}
-clj꞉projekat.core꞉> 
-#'projekat.core/server
-clj꞉projekat.core꞉> 
-#'projekat.core/app-routes1
-clj꞉projekat.core꞉> 
-#'projekat.core/my-app1
-clj꞉projekat.core꞉> 
-nil
-clj꞉projekat.core꞉> 
-nil
-clj꞉projekat.core꞉> 
-#'projekat.core/app-routes1
-clj꞉projekat.core꞉> 
-#'projekat.core/my-app1
-clj꞉projekat.core꞉> 
-nil
-clj꞉projekat.core꞉> 
-{:status 200,
- :headers {"Content-Type" "text/html; charset=utf-8"},
- :body
- "<!DOCTYPE html>\n<html><ul><!DOCTYPE html>\n<html><li>Name: Ana nikolic          Phone: 090</li></html><!DOCTYPE html>\n<html><li>Name: Sofija Ristic          Phone: 060306050</li></html><!DOCTYPE html>\n<html><li>Name: Sofija Ristic          Phone: 060306050</li></html><!DOCTYPE html>\n<html><li>Name: ime          Phone: telefon</li></html><!DOCTYPE html>\n<html><li>Name: ime          Phone: telefon</li></html></ul></html>"}
-clj꞉projekat.core꞉> 
-#'projekat.core/handler1
-clj꞉projekat.core꞉> 
-#'projekat.core/app-routes1
-clj꞉projekat.core꞉> 
-#'projekat.core/my-app1
-clj꞉projekat.core꞉> 
-{:status 200, :headers {"Content-Type" "text/html; charset=utf-8"}, :body "<p>2 is a Good Boi</p>"}
-clj꞉projekat.core꞉> 
-#'projekat.core/app-routes1
-clj꞉projekat.core꞉> 
-#'projekat.core/my-app1
-clj꞉projekat.core꞉> 
-{:status 200,
- :headers {"Content-Type" "text/html; charset=utf-8"},
- :body
- "{:uri \"/client/2\", :request-method :get, :form-params {}, :params {:id \"2\"}, :query-params {}, :route-params {:id \"2\"}, :compojure/route [:get \"/client/:id\"]}"}
-clj꞉projekat.core꞉> 
-#'projekat.core/app-routes1
-clj꞉projekat.core꞉> 
-#'projekat.core/my-app1
-clj꞉projekat.core꞉> 
-{:status 200, :headers {"Content-Type" "text/html; charset=utf-8"}, :body "{:id \"2\"}"}
-clj꞉projekat.core꞉> 
-; Syntax error (IllegalStateException) compiling def at (c:\Users\nodas\Desktop\alati2022\projekat\src\projekat\core.clj:95:1).
-; wrap-routes already refers to: #'compojure.core/wrap-routes in namespace: projekat.core
-clj꞉projekat.core꞉> 
-#'projekat.core/wrapping-routes
-clj꞉projekat.core꞉> 
-#'projekat.core/app-routes
-clj꞉projekat.core꞉> 
-#'projekat.core/app-routes
-clj꞉projekat.core꞉> 
-#'projekat.core/app-routes
-clj꞉projekat.core꞉> 
-#'projekat.core/wrapping-routes
-clj꞉projekat.core꞉> 
-; Execution error (ArityException) at projekat.core/fn (form-init12924236456342717222.clj:52).
-; Wrong number of args (0) passed to: clojure.lang.PersistentArrayMap
-clj꞉projekat.core꞉> 
-#'projekat.core/wrapping-routes
-clj꞉projekat.core꞉> 
-; Execution error (ArityException) at projekat.core/fn (form-init12924236456342717222.clj:52).
-; Wrong number of args (0) passed to: clojure.lang.PersistentArrayMap
-clj꞉projekat.core꞉> 
-#'projekat.core/server
-clj꞉projekat.core꞉> 
-#'projekat.core/app-routes
-clj꞉projekat.core꞉> 
-#'projekat.core/wrapping-routes
-clj꞉projekat.core꞉> 
-#'projekat.core/server
-clj꞉projekat.core꞉> 
-#'projekat.core/handler
-clj꞉projekat.core꞉> 
-#'projekat.core/app-routes
-clj꞉projekat.core꞉> 
-#'projekat.core/wrapping-routes
-clj꞉projekat.core꞉> 
-#'projekat.core/server
-clj꞉projekat.core꞉> 
-; Execution error (IllegalArgumentException) at projekat.core/eval13669 (form-init12924236456342717222.clj:97).
-; No matching field found: stop for class clojure.lang.Var
-clj꞉projekat.core꞉> 
-#'projekat.core/app-routes
-clj꞉projekat.core꞉> 
-#'projekat.core/app-routes
-clj꞉projekat.core꞉> 
-#'projekat.core/wrapping-routes
-clj꞉projekat.core꞉> 
-; Execution error (BindException) at sun.nio.ch.Net/bind0 (Net.java:-2).
-; Address already in use: bind
-clj꞉projekat.core꞉> 
-#'projekat.core/server
-clj꞉projekat.core꞉> 
-#'projekat.core/app-routes
-clj꞉projekat.core꞉> 
-#'projekat.core/wrapping-routes
-clj꞉projekat.core꞉> 
-#'projekat.core/server
-clj꞉projekat.core꞉> 
-#'projekat.core/app-routes
-clj꞉projekat.core꞉> 
-#'projekat.core/wrapping-routes
-clj꞉projekat.core꞉> 
-#'projekat.core/server
-clj꞉projekat.core꞉> 
-; Execution error (IllegalArgumentException) at projekat.core/eval13755 (form-init12924236456342717222.clj:97).
-; No matching field found: stop for class clojure.lang.Var
-clj꞉projekat.core꞉> 
-#'projekat.core/app-routes
-clj꞉projekat.core꞉> 
-#'projekat.core/wrapping-routes
-clj꞉projekat.core꞉> 
-#'projekat.core/server
-clj꞉projekat.core꞉> 
-#'projekat.core/app-routes
-clj꞉projekat.core꞉> 
-#'projekat.core/wrapping-routes
-clj꞉projekat.core꞉> 
-; Execution error (BindException) at sun.nio.ch.Net/bind0 (Net.java:-2).
-; Address already in use: bind
-clj꞉projekat.core꞉> 
-#'projekat.core/server
-clj꞉projekat.core꞉> 
-nil
-clj꞉projekat.core꞉> 
-#'projekat.core/wrapping-routes
-clj꞉projekat.core꞉> 
-#'projekat.core/app-routes
-clj꞉projekat.core꞉> 
-#'projekat.core/wrapping-routes
-clj꞉projekat.core꞉> 
-#'projekat.core/server
-clj꞉projekat.core꞉> 
-; Syntax error compiling at (c:\Users\nodas\Desktop\alati2022\projekat\src\projekat\core.clj:92:1).
-; Unable to resolve symbol: app-routes-posts in this context
-clj꞉projekat.core꞉> 
-#'projekat.core/app-routes-posts
-clj꞉projekat.core꞉> 
-#'projekat.core/handler
-clj꞉projekat.core꞉> 
-#'projekat.core/app-routes
-clj꞉projekat.core꞉> 
-#'projekat.core/handler
-clj꞉projekat.core꞉> 
-#'projekat.core/wrapping-routes
-clj꞉projekat.core꞉> 
-{:status 200,
- :headers {"content-type" "text/clojure"},
- :body
- "{:uri \"/client-edit/:id\",\r\n :request-method :post,\r\n :form-params {},\r\n :params {:id \":id\"},\r\n :query-params {},\r\n :route-params {:id \":id\"},\r\n :compojure/route [:post \"/client-edit/:id\"]}\r\n"}
-clj꞉projekat.core꞉> 
-#'projekat.core/server
-clj꞉projekat.core꞉> 
-#'projekat.core/wrapping-handler
-clj꞉projekat.core꞉> 
-#'projekat.core/app-routes
-clj꞉projekat.core꞉> 
-#'projekat.core/handler
-clj꞉projekat.core꞉> 
-#'projekat.core/handler
-clj꞉projekat.core꞉> 
-#'projekat.core/wrapping-handler
-clj꞉projekat.core꞉> 
-#'projekat.core/app-routes
-clj꞉projekat.core꞉> 
-; Execution error (BindException) at sun.nio.ch.Net/bind0 (Net.java:-2).
-; Address already in use: bind
-clj꞉projekat.core꞉> 
-#'projekat.core/server
-clj꞉projekat.core꞉> 
-#'projekat.core/handler
-clj꞉projekat.core꞉> 
-#'projekat.core/app-routes
-clj꞉projekat.core꞉> 
-#'projekat.core/wrapping-routes
-clj꞉projekat.core꞉> 
-; Execution error (BindException) at sun.nio.ch.Net/bind0 (Net.java:-2).
-; Address already in use: bind
-clj꞉projekat.core꞉> 
-#'projekat.core/server
-clj꞉projekat.core꞉> 
-#'projekat.core/wrapping
-clj꞉projekat.core꞉> 
-{:status 403,
- :headers
- {"Content-Type" "text/html; charset=utf-8", "X-Frame-Options" "SAMEORIGIN", "X-Content-Type-Options" "nosniff"},
- :body "<h1>Invalid anti-forgery token</h1>"}
-clj꞉projekat.core꞉> 
-{:status 403,
- :headers
- {"Content-Type" "text/html; charset=utf-8", "X-Frame-Options" "SAMEORIGIN", "X-Content-Type-Options" "nosniff"},
- :body "<h1>Invalid anti-forgery token</h1>"}
-clj꞉projekat.core꞉> 
-{:status 200,
- :headers
- {"Content-Type" "text/html; charset=utf-8",
-  "Set-Cookie" ("ring-session=c0f69c49-02bf-4812-afb0-7f5773fccecf;Path=/;HttpOnly;SameSite=Strict"),
-  "X-Frame-Options" "SAMEORIGIN",
-  "X-Content-Type-Options" "nosniff"},
- :body
- "<!DOCTYPE html>\n<html><head><title>SPA Center</title></head><body><h1>Spa center</h1><a href=\"/clients/new\">New client</a><hr></body></html>"}
-clj꞉projekat.core꞉> 
-#'projekat.core/wrapping
-clj꞉projekat.core꞉> 
-#'projekat.core/app-routes
-clj꞉projekat.core꞉> 
-#'projekat.core/wrapping
-clj꞉projekat.core꞉> 
-#'projekat.core/server
-clj꞉projekat.core꞉> 
-; Execution error (IllegalArgumentException) at projekat.core/eval14015 (form-init12924236456342717222.clj:96).
-; No matching field found: stop for class clojure.lang.Var
-clj꞉projekat.core꞉> 
-#'projekat.core/app-routes
-clj꞉projekat.core꞉> 
-#'projekat.core/wrapping
-clj꞉projekat.core꞉> 
-#'projekat.core/server
-clj꞉projekat.core꞉> 
-#'projekat.admin/admin-login
-clj꞉projekat.admin꞉> 
-#'projekat.admin/check-login
-clj꞉projekat.admin꞉> 
-; Syntax error compiling at (c:\Users\nodas\Desktop\alati2022\projekat\src\projekat\core.clj:64:45).
-; Unable to resolve symbol: req in this context
-clj꞉projekat.core꞉> 
-#'projekat.core/app-routes
-clj꞉projekat.core꞉> 
-#'projekat.core/wrapping
-clj꞉projekat.core꞉> 
-; Execution error (BindException) at sun.nio.ch.Net/bind0 (Net.java:-2).
-; Address already in use: bind
-clj꞉projekat.core꞉> 
-#'projekat.core/server
-clj꞉projekat.core꞉> 
-; Execution error (BindException) at sun.nio.ch.Net/bind0 (Net.java:-2).
-; Address already in use: bind
-clj꞉projekat.core꞉> 
-#'projekat.core/server
-clj꞉projekat.core꞉> 
-#'projekat.core/app-routes
-clj꞉projekat.core꞉> 
-#'projekat.core/wrapping
-clj꞉projekat.core꞉> 
-#'projekat.core/server
-clj꞉projekat.core꞉> 
-#'projekat.core/app-routes
-clj꞉projekat.core꞉> 
-#'projekat.core/wrapping
-clj꞉projekat.core꞉> 
-; Execution error (BindException) at sun.nio.ch.Net/bind0 (Net.java:-2).
-; Address already in use: bind
-clj꞉projekat.core꞉> 
-#'projekat.core/server
-clj꞉projekat.core꞉> 
-; Execution error (IllegalArgumentException) at projekat.core/eval14128 (form-init12924236456342717222.clj:94).
-; No matching field found: stop for class clojure.lang.Var
-clj꞉projekat.core꞉> 
-#'projekat.core/app-routes
-clj꞉projekat.core꞉> 
-#'projekat.core/wrapping
-clj꞉projekat.core꞉> 
-; Execution error (BindException) at sun.nio.ch.Net/bind0 (Net.java:-2).
-; Address already in use: bind
-clj꞉projekat.core꞉> 
-#'projekat.core/server
-clj꞉projekat.core꞉> 
-#'projekat.core/app-routes
-clj꞉projekat.core꞉> 
-#'projekat.core/server
-clj꞉projekat.core꞉> 
-#'projekat.core/app-routes
-clj꞉projekat.core꞉> 
-#'projekat.core/wrapping
-clj꞉projekat.core꞉> 
-#'projekat.core/server
-clj꞉projekat.core꞉> 
-#'projekat.core/app-routes
-clj꞉projekat.core꞉> 
-#'projekat.core/wrapping
-clj꞉projekat.core꞉> 
-#'projekat.core/server
-clj꞉projekat.core꞉> 
-; Execution error (IllegalArgumentException) at projekat.core/eval14214 (form-init12924236456342717222.clj:98).
-; No matching field found: stop for class clojure.lang.Var
-clj꞉projekat.core꞉> 
-; Syntax error compiling at (c:\Users\nodas\Desktop\alati2022\projekat\src\projekat\core.clj:65:5).
-; Unable to resolve symbol: req in this context
-clj꞉projekat.core꞉> 
-#'projekat.core/app-routes
-clj꞉projekat.core꞉> 
-#'projekat.core/wrapping
-clj꞉projekat.core꞉> 
-; Execution error (BindException) at sun.nio.ch.Net/bind0 (Net.java:-2).
-; Address already in use: bind
-clj꞉projekat.core꞉> 
-#'projekat.core/server
-clj꞉projekat.core꞉> 
-#'projekat.core/app-routes
-clj꞉projekat.core꞉> 
-#'projekat.core/wrapping
-clj꞉projekat.core꞉> 
-; Execution error (BindException) at sun.nio.ch.Net/bind0 (Net.java:-2).
-; Address already in use: bind
-clj꞉projekat.core꞉> 
-#'projekat.core/server
-clj꞉projekat.core꞉> 
-#'projekat.core/app-routes
-clj꞉projekat.core꞉> 
-#'projekat.core/wrapping
-clj꞉projekat.core꞉> 
-#'projekat.core/server
-clj꞉projekat.core꞉> 
-#'projekat.core/string
-clj꞉projekat.core꞉> 
-#'projekat.core/pom
-clj꞉projekat.core꞉> 
-"[\"logintf=a\" \"passwordtf=a\" \"__anti-forgery-token=Unbound%3A %23%27ring.middleware.anti-forgery%2F*anti-forgery-token*\"]"
-clj꞉projekat.core꞉> 
-"[\"logintf=a\" \"passwordtf=a\" \"__anti-forgery-token=Unbound%3A %23%27ring.middleware.anti-forgery%2F*anti-forgery-token*\"]"
-clj꞉projekat.core꞉> 
-"[\"logintf=a\" \"passwordtf=a\" \"__anti-forgery-token=Unbound%3A %23%27ring.middleware.anti-forgery%2F*anti-forgery-token*\"]"
-clj꞉projekat.core꞉> 
-"[\"logintf=a\" \"passwordtf=a\" \"__anti-forgery-token=Unbound%3A %23%27ring.middleware.anti-forgery%2F*anti-forgery-token*\"]"
-clj꞉projekat.core꞉> 
-; Syntax error macroexpanding clojure.core/let at (c:\Users\nodas\Desktop\alati2022\projekat\src\projekat\core.clj:40:7).
-; (clojure.string/replace (clojure.string/replace (clojure.string/replace #"logintf=" "") #"passwordtf=" "") #"\+" " ") - failed: vector? at: [:bindings] spec: :clojure.core.specs.alpha/bindings
-clj꞉projekat.core꞉> 
-#'projekat.core/prepare-admin
-clj꞉projekat.core꞉> 
-#'projekat.core/prepare-admin
-clj꞉projekat.core꞉> 
-#'projekat.core/string
-clj꞉projekat.core꞉> 
-; Execution error (ArityException) at projekat.core/prepare-admin (form-init12924236456342717222.clj:35).
-; Wrong number of args (0) passed to: clojure.lang.PersistentArrayMap
-clj꞉projekat.core꞉> 
-#'projekat.core/prepare-admin
-clj꞉projekat.core꞉> 
-#'projekat.core/string
-clj꞉projekat.core꞉> 
-{:login "=a", :pass "=a"}
-clj꞉projekat.core꞉> 
-#'projekat.core/prepare-admin
-clj꞉projekat.core꞉> 
-#'projekat.core/string
-clj꞉projekat.core꞉> 
-{:login "a", :pass "a"}
-clj꞉projekat.core꞉> 
-#'projekat.core/app-routes
-clj꞉projekat.core꞉> 
-#'projekat.core/app-routes
-clj꞉projekat.core꞉> 
-#'projekat.core/wrapping
-clj꞉projekat.core꞉> 
-#'projekat.core/server
-clj꞉projekat.core꞉> 
-#'projekat.admin/check-login
-clj꞉projekat.admin꞉> 
 #'projekat.core/prepare-admin
 clj꞉projekat.core꞉> 
 #'projekat.core/app-routes
 clj꞉projekat.core꞉> 
+#'projekat.core/admin-routes
+clj꞉projekat.core꞉> 
+#function[compojure.core/wrap-route-matches/fn--10307]
+clj꞉projekat.core꞉> 
+#function[compojure.core/wrap-route-matches/fn--10307]
+clj꞉projekat.core꞉> 
+#function[compojure.core/wrap-route-matches/fn--10307]
+clj꞉projekat.core꞉> 
+#'projekat.core/admin-routes
+clj꞉projekat.core꞉> 
+#'projekat.core/wrap-admin-only
+clj꞉projekat.core꞉> 
+#'projekat.core/wrap-admin-only
+clj꞉projekat.core꞉> 
+#'projekat.core/wrapping
+clj꞉projekat.core꞉> 
+#'projekat.core/server
+clj꞉projekat.core꞉> 
+; Execution error (IllegalArgumentException) at projekat.core/eval12933 (form-init11023118574808551836.clj:119).
+; No matching field found: stop for class clojure.lang.Var
+clj꞉projekat.core꞉> 
+; Execution error (BindException) at sun.nio.ch.Net/bind0 (Net.java:-2).
+; Address already in use: bind
+clj꞉projekat.core꞉> 
+#function[compojure.core/wrap-route-matches/fn--10307]
+clj꞉projekat.core꞉> 
+#'projekat.core/wrap-admin-only
+clj꞉projekat.core꞉> 
+#'projekat.core/admin-routes
+clj꞉projekat.core꞉> 
+#'projekat.core/wrap-admin-only
+clj꞉projekat.core꞉> 
+#'projekat.core/wrapping
+clj꞉projekat.core꞉> 
+#'projekat.core/server
+clj꞉projekat.core꞉> 
+#'projekat.pages/base-page
+clj꞉projekat.pages꞉> 
+#'projekat.core/app-routes
+clj꞉projekat.core꞉> 
+#'projekat.core/admin-routes
+clj꞉projekat.core꞉> 
+#'projekat.core/wrap-admin-only
+clj꞉projekat.core꞉> 
+#'projekat.core/wrapping
+clj꞉projekat.core꞉> 
+#'projekat.core/server
+clj꞉projekat.core꞉> 
+#'projekat.pages/base-page
+clj꞉projekat.pages꞉> 
+#'projekat.core/admin-routes
+clj꞉projekat.core꞉> 
+#'projekat.core/app-routes
+clj꞉projekat.core꞉> 
+#'projekat.core/wrap-admin-only
+clj꞉projekat.core꞉> 
+#'projekat.core/wrapping
+clj꞉projekat.core꞉> 
+#'projekat.core/server
+clj꞉projekat.core꞉> 
+#'projekat.pages/admin-login
+clj꞉projekat.pages꞉> 
+#'projekat.core/admin-routes
+clj꞉projekat.core꞉> 
+#'projekat.core/app-routes
+clj꞉projekat.core꞉> 
+#'projekat.core/wrap-admin-only
+clj꞉projekat.core꞉> 
+#'projekat.core/wrapping
+clj꞉projekat.core꞉> 
+#'projekat.core/server
+clj꞉projekat.core꞉> 
+#'projekat.pages/admin-login
+clj꞉projekat.pages꞉> 
+#'projekat.core/app-routes
+clj꞉projekat.core꞉> 
+#'projekat.pages/admin-login
+clj꞉projekat.pages꞉> 
+#'projekat.core/admin-routes
+clj꞉projekat.core꞉> 
+#'projekat.core/wrap-admin-only
+clj꞉projekat.core꞉> 
+#'projekat.core/wrapping
+clj꞉projekat.core꞉> 
+#'projekat.core/server
+clj꞉projekat.core꞉> 
+#'projekat.pages/edit-client
+clj꞉projekat.pages꞉> 
+#'projekat.core/app-routes
+clj꞉projekat.core꞉> 
+#'projekat.core/admin-routes
+clj꞉projekat.core꞉> 
+#'projekat.core/wrap-admin-only
+clj꞉projekat.core꞉> 
+#'projekat.core/wrapping
+clj꞉projekat.core꞉> 
+#'projekat.core/server
+clj꞉projekat.core꞉> 
+#'projekat.database/delete-client
+clj꞉projekat.database꞉> 
+; Execution error (SQLException) at com.mysql.jdbc.SQLError/createSQLException (SQLError.java:1073).
+; Can not issue data manipulation statements with executeQuery().
+clj꞉projekat.database꞉> 
+nil
+clj꞉projekat.database꞉> 
+#'projekat.database/sql-db
+clj꞉projekat.database꞉> 
+; Execution error (SQLException) at com.mysql.jdbc.SQLError/createSQLException (SQLError.java:1073).
+; Can not issue data manipulation statements with executeQuery().
+clj꞉projekat.database꞉> 
+#'projekat.database/delete-client
+clj꞉projekat.database꞉> 
+; Execution error (SQLException) at com.mysql.jdbc.SQLError/createSQLException (SQLError.java:1073).
+; Can not issue data manipulation statements with executeQuery().
+clj꞉projekat.database꞉> 
+com.mysql.jdbc.SQLError/createSQLException (SQLError.java:1073)
+com.mysql.jdbc.StatementImpl/checkForDml (StatementImpl.java:490)
+com.mysql.jdbc.PreparedStatement/executeQuery (PreparedStatement.java:2194)
+clojure.java.jdbc/execute-query-with-params (jdbc.clj:1090)
+clojure.java.jdbc/execute-query-with-params (jdbc.clj:1084)
+clojure.java.jdbc/db-query-with-resultset* (jdbc.clj:1113)
+clojure.java.jdbc/db-query-with-resultset* (jdbc.clj:1093)
+clojure.java.jdbc/query (jdbc.clj:1182)
+clojure.java.jdbc/query (jdbc.clj:1144)
+clojure.java.jdbc/query (jdbc.clj:1160)
+clojure.java.jdbc/query (jdbc.clj:1144)
+projekat.database/delete-client (form-init11023118574808551836.clj:34)
+projekat.database/delete-client (form-init11023118574808551836.clj:33)
+projekat.database/eval13197 (form-init11023118574808551836.clj:36)
+clojure.lang.Compiler/eval (Compiler.java:7194)
+clojure.core/eval (core.clj:3215)
+clojure.core/eval (core.clj:3211)
+nrepl.middleware.interruptible-eval/evaluate (interruptible_eval.clj:87)
+clojure.core/apply (core.clj:667)
+clojure.core/with-bindings* (core.clj:1990)
+nrepl.middleware.interruptible-eval/evaluate (interruptible_eval.clj:87)
+clojure.main/repl (main.clj:437)
+clojure.main/repl (main.clj:458)
+clojure.main/repl (main.clj:368)
+nrepl.middleware.interruptible-eval/evaluate (interruptible_eval.clj:84)
+nrepl.middleware.interruptible-eval/evaluate (interruptible_eval.clj:56)
+nrepl.middleware.interruptible-eval/interruptible-eval (interruptible_eval.clj:152)
+nrepl.middleware.session/session-exec (session.clj:218)
+nrepl.middleware.session/session-exec (session.clj:217)
+java.lang.Thread/run (Thread.java:829)
+clj꞉projekat.database꞉> 
+#'projekat.database/delete-client
+clj꞉projekat.database꞉> 
+(1)
+clj꞉projekat.database꞉> 
+(0)
+clj꞉projekat.database꞉> 
+#'projekat.core/admin-routes
+clj꞉projekat.core꞉> 
+#'projekat.core/admin-routes
+clj꞉projekat.core꞉> 
+#'projekat.pages/client-view
+clj꞉projekat.pages꞉> 
+#'projekat.core/admin-routes
+clj꞉projekat.core꞉> 
+#'projekat.core/wrap-admin-only
+clj꞉projekat.core꞉> 
+#'projekat.core/wrapping
+clj꞉projekat.core꞉> 
+#'projekat.core/server
+clj꞉projekat.core꞉> 
+#'projekat.pages/client-view
+clj꞉projekat.pages꞉> 
+#'projekat.core/app-routes
+clj꞉projekat.core꞉> 
+#'projekat.core/wrap-admin-only
+clj꞉projekat.core꞉> 
+#'projekat.core/wrapping
+clj꞉projekat.core꞉> 
+#'projekat.core/server
+clj꞉projekat.core꞉> 
+#'projekat.core/admin-routes
+clj꞉projekat.core꞉> 
+#'projekat.pages/client-view
+clj꞉projekat.pages꞉> 
+#'projekat.pages/clients-view
+clj꞉projekat.pages꞉> 
+#'projekat.core/admin-routes
+clj꞉projekat.core꞉> 
+#'projekat.core/wrap-admin-only
+clj꞉projekat.core꞉> 
+#'projekat.core/wrapping
+clj꞉projekat.core꞉> 
+#'projekat.core/server
+clj꞉projekat.core꞉> 
+#'projekat.pages/client-view
+clj꞉projekat.pages꞉> 
+#'projekat.pages/client-view
+clj꞉projekat.pages꞉> 
+#'projekat.core/admin-routes
+clj꞉projekat.core꞉> 
+#'projekat.core/app-routes
+clj꞉projekat.core꞉> 
+#'projekat.core/wrap-admin-only
+clj꞉projekat.core꞉> 
+#'projekat.core/wrapping
+clj꞉projekat.core꞉> 
+#'projekat.core/server
+clj꞉projekat.core꞉> 
+#'projekat.pages/client-view
+clj꞉projekat.pages꞉> 
+#'projekat.core/app-routes
+clj꞉projekat.core꞉> 
+#'projekat.core/wrap-admin-only
+clj꞉projekat.core꞉> 
+#'projekat.core/wrapping
+clj꞉projekat.core꞉> 
+#'projekat.core/server
+clj꞉projekat.core꞉> 
+#'projekat.pages/client-view
+clj꞉projekat.pages꞉> 
+#'projekat.core/app-routes
+clj꞉projekat.core꞉> 
+#'projekat.core/admin-routes
+clj꞉projekat.core꞉> 
+#'projekat.core/wrap-admin-only
+clj꞉projekat.core꞉> 
+#'projekat.core/wrapping
+clj꞉projekat.core꞉> 
+; Execution error (BindException) at sun.nio.ch.Net/bind0 (Net.java:-2).
+; Address already in use: bind
+clj꞉projekat.core꞉> 
+#'projekat.core/server
+clj꞉projekat.core꞉> 
+#'projekat.pages/client-view
+clj꞉projekat.pages꞉> 
+#'projekat.core/app-routes
+clj꞉projekat.core꞉> 
+#'projekat.core/admin-routes
+clj꞉projekat.core꞉> 
+#'projekat.core/wrap-admin-only
+clj꞉projekat.core꞉> 
+#'projekat.core/wrapping
+clj꞉projekat.core꞉> 
+#'projekat.core/server
+clj꞉projekat.core꞉> 
+#'projekat.pages/client-view
+clj꞉projekat.pages꞉> 
+#'projekat.core/admin-routes
+clj꞉projekat.core꞉> 
+#'projekat.core/app-routes
+clj꞉projekat.core꞉> 
+#'projekat.core/wrap-admin-only
+clj꞉projekat.core꞉> 
+#'projekat.core/wrapping
+clj꞉projekat.core꞉> 
+#'projekat.core/server
+clj꞉projekat.core꞉> 
+#'projekat.pages/client-view
+clj꞉projekat.pages꞉> 
+#'projekat.core/admin-routes
+clj꞉projekat.core꞉> 
+#'projekat.core/wrap-admin-only
+clj꞉projekat.core꞉> 
+#'projekat.core/wrapping
+clj꞉projekat.core꞉> 
+#'projekat.core/server
+clj꞉projekat.core꞉> 
+#'projekat.core/admin-routes
+clj꞉projekat.core꞉> 
+#'projekat.core/wrap-admin-only
+clj꞉projekat.core꞉> 
 #'projekat.core/wrapping
 clj꞉projekat.core꞉> 
 #'projekat.core/server
 clj꞉projekat.core꞉> 
 #'projekat.core/app-routes
 clj꞉projekat.core꞉> 
+#'projekat.core/admin-routes
+clj꞉projekat.core꞉> 
+#'projekat.core/wrap-admin-only
+clj꞉projekat.core꞉> 
 #'projekat.core/wrapping
 clj꞉projekat.core꞉> 
 #'projekat.core/server
 clj꞉projekat.core꞉> 
 #'projekat.core/app-routes
 clj꞉projekat.core꞉> 
+#'projekat.core/wrap-admin-only
+clj꞉projekat.core꞉> 
+#'projekat.core/wrapping
+clj꞉projekat.core꞉> 
+#'projekat.core/server
+clj꞉projekat.core꞉> 
+#'projekat.pages/client-view
+clj꞉projekat.pages꞉> 
 #'projekat.core/app-routes
 clj꞉projekat.core꞉> 
+#'projekat.core/wrap-admin-only
+clj꞉projekat.core꞉> 
+#'projekat.core/wrapping
+clj꞉projekat.core꞉> 
+#'projekat.core/server
+clj꞉projekat.core꞉> 
 #'projekat.core/app-routes
+clj꞉projekat.core꞉> 
+#'projekat.core/wrap-admin-only
+clj꞉projekat.core꞉> 
+#'projekat.core/wrapping
+clj꞉projekat.core꞉> 
+#'projekat.core/server
+clj꞉projekat.core꞉> 
+#'projekat.core/app-routes
+clj꞉projekat.core꞉> 
+#'projekat.core/admin-routes
+clj꞉projekat.core꞉> 
+#'projekat.core/wrap-admin-only
+clj꞉projekat.core꞉> 
+#'projekat.core/wrapping
+clj꞉projekat.core꞉> 
+; Execution error (BindException) at sun.nio.ch.Net/bind0 (Net.java:-2).
+; Address already in use: bind
+clj꞉projekat.core꞉> 
+; Execution error (BindException) at sun.nio.ch.Net/bind0 (Net.java:-2).
+; Address already in use: bind
+clj꞉projekat.core꞉> 
+#'projekat.core/server
+clj꞉projekat.core꞉> 
+#'projekat.pages/client-view
+clj꞉projekat.pages꞉> 
+#'projekat.core/app-routes
+clj꞉projekat.core꞉> 
+#'projekat.pages/client-view
+clj꞉projekat.pages꞉> 
+#'projekat.core/app-routes
+clj꞉projekat.core꞉> 
+#'projekat.core/wrap-admin-only
+clj꞉projekat.core꞉> 
+#'projekat.core/wrapping
+clj꞉projekat.core꞉> 
+#'projekat.core/server
+clj꞉projekat.core꞉> 
+#'projekat.core/app-routes
+clj꞉projekat.core꞉> 
+#'projekat.core/admin-routes
+clj꞉projekat.core꞉> 
+#'projekat.core/wrap-admin-only
+clj꞉projekat.core꞉> 
+#'projekat.core/wrapping
+clj꞉projekat.core꞉> 
+#'projekat.core/server
+clj꞉projekat.core꞉> 
+#'projekat.pages/client-view
+clj꞉projekat.pages꞉> 
+#'projekat.core/admin-routes
+clj꞉projekat.core꞉> 
+#'projekat.core/wrap-admin-only
+clj꞉projekat.core꞉> 
+#'projekat.core/wrapping
+clj꞉projekat.core꞉> 
+#'projekat.core/server
+clj꞉projekat.core꞉> 
+#'projekat.core/admin-routes
+clj꞉projekat.core꞉> 
+#'projekat.core/wrap-admin-only
+clj꞉projekat.core꞉> 
+#'projekat.core/wrapping
+clj꞉projekat.core꞉> 
+#'projekat.core/server
+clj꞉projekat.core꞉> 
+#'projekat.core/admin-routes
+clj꞉projekat.core꞉> 
+#'projekat.core/wrap-admin-only
+clj꞉projekat.core꞉> 
+#'projekat.core/wrapping
+clj꞉projekat.core꞉> 
+; Execution error (BindException) at sun.nio.ch.Net/bind0 (Net.java:-2).
+; Address already in use: bind
+clj꞉projekat.core꞉> 
+#'projekat.core/server
+clj꞉projekat.core꞉> 
+#'projekat.core/admin-routes
+clj꞉projekat.core꞉> 
+#'projekat.pages/client-view
+clj꞉projekat.pages꞉> 
+#'projekat.pages/clients-view
+clj꞉projekat.pages꞉> 
+#'projekat.pages/edit-client
+clj꞉projekat.pages꞉> 
+#'projekat.core/app-routes
+clj꞉projekat.core꞉> 
+#'projekat.core/admin-routes
+clj꞉projekat.core꞉> 
+#'projekat.core/wrap-admin-only
+clj꞉projekat.core꞉> 
+#'projekat.core/wrapping
+clj꞉projekat.core꞉> 
+#'projekat.core/server
+clj꞉projekat.core꞉> 
+#'projekat.core/admin-routes
+clj꞉projekat.core꞉> 
+#'projekat.core/wrap-admin-only
 clj꞉projekat.core꞉> 
 #'projekat.core/wrapping
 clj꞉projekat.core꞉> 
 #'projekat.core/server
 clj꞉projekat.core꞉> 
 nil
-clj꞉projekat.admin꞉> 
-#'projekat.admin/admin-login
-clj꞉projekat.admin꞉> 
-"admin"
-clj꞉projekat.admin꞉> 
-#'projekat.core/app-routes
-clj꞉projekat.core꞉> 
-#'projekat.core/wrapping
-clj꞉projekat.core꞉> 
-#'projekat.core/server
-clj꞉projekat.core꞉> 
-#'projekat.core/app-routes
-clj꞉projekat.core꞉> 
-#'projekat.core/wrapping
-clj꞉projekat.core꞉> 
-#'projekat.core/server
-clj꞉projekat.core꞉> 
-#'projekat.core/app-routes
-clj꞉projekat.core꞉> 
-#'projekat.core/wrapping
-clj꞉projekat.core꞉> 
-#'projekat.core/server
-clj꞉projekat.core꞉> 
-#'projekat.core/app-routes
-clj꞉projekat.core꞉> 
-#'projekat.core/app-routes
-clj꞉projekat.core꞉> 
-#'projekat.core/wrapping
-clj꞉projekat.core꞉> 
-#'projekat.core/server
-clj꞉projekat.core꞉> 
-#'projekat.core/app-routes
-clj꞉projekat.core꞉> 
-#'projekat.core/wrapping
-clj꞉projekat.core꞉> 
-#'projekat.core/server
-clj꞉projekat.core꞉> 
-#'projekat.core/app-routes
-clj꞉projekat.core꞉> 
-#'projekat.core/wrapping
-clj꞉projekat.core꞉> 
-#'projekat.core/server
-clj꞉projekat.core꞉> 
-#'projekat.core/app-routes
-clj꞉projekat.core꞉> 
-#'projekat.core/wrapping
-clj꞉projekat.core꞉> 
-#'projekat.core/server
-clj꞉projekat.core꞉> 
-#'projekat.core/app-routes
-clj꞉projekat.core꞉> 
-#'projekat.core/wrapping
-clj꞉projekat.core꞉> 
-#'projekat.core/server
-clj꞉projekat.core꞉> 
-{:status 302, :headers {"Location" "/"}, :body ""}
-clj꞉projekat.core꞉> 
-{:status 302, :headers {"Location" "/"}, :body "", :session {:admin true}}
-clj꞉projekat.core꞉> 
-; Syntax error compiling at (c:\Users\nodas\Desktop\alati2022\projekat\src\projekat\core.clj:77:39).
-; Unable to resolve symbol: req in this context
-clj꞉projekat.core꞉> 
-; Syntax error compiling at (c:\Users\nodas\Desktop\alati2022\projekat\src\projekat\core.clj:86:39).
-; Unable to resolve symbol: req in this context
-clj꞉projekat.core꞉> 
-; Syntax error compiling at (c:\Users\nodas\Desktop\alati2022\projekat\src\projekat\core.clj:86:39).
-; Unable to resolve symbol: req in this context
-clj꞉projekat.core꞉> 
-; Syntax error compiling at (c:\Users\nodas\Desktop\alati2022\projekat\src\projekat\core.clj:77:39).
-; Unable to resolve symbol: req in this context
-clj꞉projekat.core꞉> 
-; Syntax error compiling at (c:\Users\nodas\Desktop\alati2022\projekat\src\projekat\core.clj:76:39).
-; Unable to resolve symbol: req in this context
-clj꞉projekat.core꞉> 
-; Syntax error compiling at (c:\Users\nodas\Desktop\alati2022\projekat\src\projekat\core.clj:77:39).
-; Unable to resolve symbol: req in this context
-clj꞉projekat.core꞉> 
-#'projekat.core/app-routes
-clj꞉projekat.core꞉> 
-#'projekat.core/app-routes
-clj꞉projekat.core꞉> 
-#'projekat.core/wrapping
-clj꞉projekat.core꞉> 
-; Execution error (BindException) at sun.nio.ch.Net/bind0 (Net.java:-2).
-; Address already in use: bind
-clj꞉projekat.core꞉> 
-; Execution error (BindException) at sun.nio.ch.Net/bind0 (Net.java:-2).
-; Address already in use: bind
-clj꞉projekat.core꞉> 
-#'projekat.core/server
-clj꞉projekat.core꞉> 
+clj꞉projekat.server-config꞉> 
+#'projekat.server-config/-main
+clj꞉projekat.server-config꞉> 
+; nREPL Connection was closed
+; Jacking in...
+; Starting Jack-in Terminal: cmd.exe /d /c lein update-in :dependencies conj [nrepl,"1.0.0"] -- update-in :plugins conj [cider/cider-nrepl,"0.28.5"] -- update-in [:repl-options,:nrepl-middleware] conj '["cider.nrepl/cider-middleware"]' -- with-profile +dev repl :headless
+; Hooking up nREPL sessions...
+; Connected session: clj
+; TIPS:
+;   - You can edit the contents here. Use it as a REPL if you like.
+;   - `alt+enter` evaluates the current top level form.
+;   - `ctrl+enter` evaluates the current form.
+;   - `alt+up` and `alt+down` traverse up and down the REPL command history
+;      when the cursor is after the last contents at the prompt
+;   - Clojure lines in stack traces are peekable and clickable.
+clj꞉projekat.server-config꞉> 
+; Jack-in done.
+clj꞉projekat.server-config꞉> 
+; Syntax error (IllegalArgumentException) compiling new at (c:\Users\nodas\Desktop\alati2022\projekat\src\projekat\server_config.clj:10:14).
+; No matching ctor found for class java.lang.Integer
+clj꞉projekat.server-config꞉> 
+nil
+clj꞉projekat.server-config꞉> 
+; Syntax error (IllegalArgumentException) compiling new at (c:\Users\nodas\Desktop\alati2022\projekat\src\projekat\server_config.clj:10:14).
+; No matching ctor found for class java.lang.Integer
+clj꞉projekat.server-config꞉> 
+nil
+clj꞉projekat.server-config꞉> 
+nil
+clj꞉projekat.server-config꞉> 
+; Syntax error (IllegalArgumentException) compiling new at (c:\Users\nodas\Desktop\alati2022\projekat\src\projekat\server_config.clj:10:14).
+; No matching ctor found for class java.lang.Integer
+clj꞉projekat.server-config꞉> 
+; Syntax error compiling at (c:\Users\nodas\Desktop\alati2022\projekat\src\projekat\server_config.clj:11:5).
+; Unable to resolve symbol: port in this context
+clj꞉projekat.server-config꞉> 
+#'projekat.server-config/-main
+clj꞉projekat.server-config꞉> 
+#'projekat.server-config/-main
+clj꞉projekat.server-config꞉> SERVER_PORT=3035 lein run
+; Syntax error compiling at (c:\Users\nodas\Desktop\alati2022\projekat\.calva\output-window\output.calva-repl:1:7990).
+; Unable to resolve symbol: run in this context
+clj꞉projekat.server-config꞉> 
+#'projekat.server-config/-main
+clj꞉projekat.server-config꞉> 

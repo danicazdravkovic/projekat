@@ -45,59 +45,85 @@
   (GET "/clients" [] (p/clients-view db/clients))
   (GET "/client/:id" [id] (p/client-view  (db/get-client-by-id (read-string id))))
 
-  (GET "/client-edit/edit/:id" [id]
-    (str (let [client (db/get-client-by-id (read-string id))] (p/edit-client client))))
 
-  (POST "/client-edit/:id" req (do (let [client (name-phone-id (slurp (:body req)))]
-                                     (db/update-client client))
-                                   (resp/redirect "/")))
-
-  ;slurp cita slovo po slovo i vrac string 
-
-  (GET "/clients/new" [] (p/new-client-form))
-  (POST "/clients/new/:id" req (do (let [client (name-phone-id (slurp (:body req)))]
-                                     (db/add-client client))
-                                   (resp/redirect "/")))
+  ;ako je admin ulogovan odmah vraca na pocetnu stranu
+  ;ako admin nije ulogovan, prikazuje se forma za logovanje
+  ;kada se admin izloguje menja se sesija
   (GET "/admin/login" [:as {session :session}]
     ; if admin is already logged in then go to index page
     (if (:admin session)
       (resp/redirect "/")
       (p/admin-login)))
 
-  (POST "/admin/login" req 
+  (POST "/admin/login" req
     (let [admin (prepare-admin (slurp (:body req)))]
-          (if (a/check-login admin)
-            (-> (resp/redirect "/")
-                (assoc-in [:session :admin] true));u http zahtev dodaje se polje :session{:admin true} 
-            (p/admin-login))) 
-    )
-  
-  
+      (if (a/check-login admin)
+        (-> (resp/redirect "/")
+            (assoc-in [:session :admin] true));u http zahtev dodaje se polje :session{:admin true} 
+        (p/admin-login "Invalid username or password"))))
+
+
   (GET "/admin/logout" []
     (-> (resp/redirect "/")
         (assoc-in [:session :admin] false)))
   ;(route/not-found "Not found")
   )
 
+;routes accessable only for admin
+(defroutes admin-routes
+
+  (GET "/clients/new" [] (p/new-client-form))
+  (POST "/clients/new/:id" req (do (let [client (name-phone-id (slurp (:body req)))]
+                                     (db/add-client client))
+                                   (resp/redirect "/")))
+  ;kad se pozove samo kao ruta
+  (GET "/client-edit/edit/:id" [id]
+    (str (let [client (db/get-client-by-id (read-string id))] (p/edit-client client))))
+
+  ;za edit polje kod clienta, fja p/client-view poziva post metodu
+  (POST "/client-edit/edit/:id" [id]
+    (str (let [client (db/get-client-by-id (read-string id))] (p/edit-client client))))
+  
+  (POST "/client-edit/:id" req
+    (do (let [client (name-phone-id (slurp (:body req)))]
+          (db/update-client client))
+        (resp/redirect "/")))
+  ;https://github.com/weavejester/hiccup/blob/1.0.5/src/hiccup/form.clj#L123
+  ;NE POSTOJI DELETE RUTA ZA form/form-to hiccup, samo get i post
+  (POST "/client-delete/delete/:id" [id]
+    (do (db/delete-client (read-string id))
+        (resp/redirect "/"))))
+
+
+
 ; ****************************************
 
-;umotovamao rute da bismo mogli da pristupimo pojedinacnim poljima
+
+;HANDLERS: app-routes, admin-routes
+;MIDDLEWARE: wrap-admin-only
+;ROUTES function combines more handlers into 1
+
+(defn wrap-admin-only [handler]
+  (fn [req]
+    (if (-> req :session :admin)
+      (handler req)
+      (resp/redirect "/admin/login"))))
 (def wrapping
-  (-> app-routes
+  (-> (routes (wrap-routes admin-routes wrap-admin-only)
+              app-routes)
       wrap-multipart-params
       session/wrap-session))
 
 
 ;prikaz pojedinacnih ruta
-(wrapping
- {:uri            "/"
-  :request-method :get})
+; (wrapping
+;  {:uri            "/"
+;   :request-method :get})
 
-(def server
-  (ring/run-jetty wrapping {:port 3041 :join? false}))
+; (def server
+;   (ring/run-jetty wrapping {:port 3030 :join? false}))
 
 
-(.stop *1)
 
 
 
@@ -153,8 +179,6 @@
 
 
 
-(clojure.pprint/pprint
- (app-routes {:uri "/" :request-method :get}))
 
 
 

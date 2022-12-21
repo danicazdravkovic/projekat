@@ -29,3 +29,8 @@ clients
   )
 (defn get-next-id []
  (+ 1 (:m (nth (j/query sql-db ["SELECT MAX(id) as m FROM client"]) 0))))
+
+(defn delete-client [id]
+  (j/execute! sql-db ["DELETE FROM client WHERE id = ?" id])
+  )
+(delete-client 5)
