@@ -30,8 +30,7 @@
     [:p (:id client)]
     (form/form-to [:post (if client
                            (str "/client-edit/" (:id client))
-                           "/clients")]
-
+                           "/clients")] 
                   (form/label "name" "Name: ")
                   (form/text-field "name" (:name client))
                   (form/label "phone" "Phone: ")
