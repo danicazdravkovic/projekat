@@ -19,7 +19,8 @@
    [projekat.admin :as a]
    [ring.middleware.keyword-params :refer [wrap-keyword-params]]
    [ring.middleware.multipart-params :refer [wrap-multipart-params]]
-   [projekat.massage_data_base :as massage_db]))
+   [projekat.massage_data_base :as massage_db]
+   [projekat.reservation_database :as reservations_db]))
 
 ;***********************************
 ;RAD SA PUTANJAMA
@@ -37,15 +38,21 @@
   (let [map {:login  (clojure.string/replace (get (clojure.string/split string #"&") 0) "logintf=" "")
              :pass (clojure.string/replace (get (clojure.string/split string #"&") 1) "passwordtf=" "")}] map))
 (defn prepare-massage [string]
-  (let [map {:name  (clojure.string/replace (get (clojure.string/split string #"&") 0) "nametf=" "")
-             :description (clojure.string/replace (clojure.string/replace (get (clojure.string/split string #"&") 1) "descriptiontf=" "") #"\+" " ") }] map))
+  (let [map {:name  (clojure.string/replace(clojure.string/replace (get (clojure.string/split string #"&") 0) "nametf=" "")#"\+" " ")
+             :description (clojure.string/replace (clojure.string/replace (get (clojure.string/split string #"&") 1) "descriptiontf=" "") #"\+" " ")
+             :price (parse-double (clojure.string/replace (get (clojure.string/split string #"&") 2) "pricetf=" "") )
+             }] map))
+(defn prepare-reservation[string]
+  (let [map {:phone   (clojure.string/replace(clojure.string/replace (get (clojure.string/split string #"&") 0) "phonetf=" "") #"\+" " ")
+             :massage (clojure.string/replace (clojure.string/replace (get (clojure.string/split string #"&") 1) "massagetf=" "") #"\+" " ")
+        }] map)
+  )
 ;*****************ROUTES**************
-
 (defroutes app-routes
 
   (GET "/" [] (p/index (p/massage-index-page)))
 
-  (GET "/clients" [] (p/clients-view db/clients))
+  (GET "/clients" [] (p/clients-view (db/clients)))
   (GET "/client/:id" [id] (p/client-view  (db/get-client-by-id (read-string id))))
 
 
@@ -65,13 +72,28 @@
             (assoc-in [:session :admin] true));u http zahtev dodaje se polje :session{:admin true} 
         (p/admin-login "Invalid username or password")))
     
+    
     )
 
 
   (GET "/admin/logout" []
     (-> (resp/redirect "/")
         (assoc-in [:session :admin] false)))
+  (GET "/massages/new" [] (p/new-massage-form))
+(POST "/massages/new/:id" req
+  (do (let [massage (prepare-massage (slurp (:body req)))]
+        (massage_db/add-massage massage))
+      (resp/redirect "/")))
   
+  (GET "/reservations/new" [] (p/new-reservation-form))
+  
+  
+  (POST "/reservations/new/:id" req 
+    (do (let [reservation (prepare-reservation (slurp (:body req)))]
+          (reservations_db/add-reservation reservation))
+        (resp/redirect "/"))
+    
+    )
 
   
   (route/not-found "Not found")
@@ -105,12 +127,7 @@
   (POST "/client-delete/delete/:id" [id]
     (do (db/delete-client (read-string id))
         (resp/redirect "/")))
-(GET "/massages/new" [] (p/new-massage-form))
 
-(POST "/massages/new/:id" req
-  (do (let [massage (prepare-massage (slurp (:body req)))]
-        (massage_db/add-massage massage))
-      (resp/redirect "/")))
 
 )
 ; ****************************************
@@ -138,7 +155,7 @@
 ;   :request-method :get})
 
 (def server
-  (ring/run-jetty wrapping {:port 3028 :join? false}))
+  (ring/run-jetty wrapping {:port 3023 :join? false}))
 
 
 
