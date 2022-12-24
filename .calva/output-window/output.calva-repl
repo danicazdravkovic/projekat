@@ -18,22 +18,12 @@
 clj꞉projekat.server-config꞉>  ; Use `alt+enter` to evaluate
 ; Jack-in done.
 clj꞉projekat.server-config꞉> 
-; Evaluating file: admin.clj
-#'projekat.admin/check-login
-clj꞉projekat.admin꞉> 
 ; Evaluating file: server_config.clj
 nil
 clj꞉projekat.server-config꞉> 
-; Evaluating file: database.clj
-
-| :id |             :name |      :phone |
-|-----+-------------------+-------------|
-|   1 | Danica Zdravkovic |  0652010058 |
-|   2 |          Ana Anic |   060654332 |
-|   6 |       Ana nikolic | 090 9089009 |
-|   8 |         Ana Savic |   098765678 |
-nil
-clj꞉projekat.database꞉> 
+; Evaluating file: pages.clj
+"<!DOCTYPE html>\n<html><table><tr><th>Massages</th></tr><tr><th>Id</th><th>Name</th><th>Description</th></tr><tr><td>1</td><td>Swedish</td><td>Gentle touch</td></tr><tr><td>2</td><td>Thai</td><td>Flexibility</td></tr><tr><td>3</td><td>Shiatsu</td><td>Relieve pain</td></tr><tr><td>4</td><td>Sport</td><td>Release muscle tension</td></tr><tr><td>5</td><td>Chair</td><td>Relaxed neck, shoulders and back.</td></tr><tr><td>6</td><td>Relax</td><td>Relaxing massage</td></tr></table></html>"
+clj꞉projekat.pages꞉> 
 ; Evaluating file: massage_data_base.clj
 
 | :id |   :name |                      :description |
@@ -46,398 +36,1153 @@ clj꞉projekat.database꞉> 
 |   6 |   Relax |                  Relaxing massage |
 nil
 clj꞉projekat.massage_data_base꞉> 
-; Evaluating file: pages.clj
-#'projekat.pages/massage-index-page
-clj꞉projekat.pages꞉> 
-; Evaluating file: pages.clj
-#'projekat.pages/massage-index-page
-clj꞉projekat.pages꞉> 
+; Evaluating file: database.clj
+
+| :id |             :name |      :phone |
+|-----+-------------------+-------------|
+|   1 | Danica Zdravkovic |  0652010058 |
+|   2 |          Ana Anic |   060654332 |
+|   6 |       Ana nikolic | 090 9089009 |
+|   8 |         Ana Savic |   098765678 |
+nil
+clj꞉projekat.database꞉> 
+; Evaluating file: admin.clj
+#'projekat.admin/check-login
+clj꞉projekat.admin꞉> 
 ; Evaluating file: core.clj
 ; Execution error (BindException) at sun.nio.ch.Net/bind0 (Net.java:-2).
 ; Address already in use: bind
 ; Evaluation of file core.clj failed: class clojure.lang.Compiler$CompilerException
 clj꞉projekat.core꞉> 
-#'projekat.core/server
-clj꞉projekat.core꞉> 
-; Evaluating file: core.clj
-#'projekat.core/server
-clj꞉projekat.core꞉> 
-
-| :id |             :name |      :phone |
-|-----+-------------------+-------------|
-|   1 | Danica Zdravkovic |  0652010058 |
-|   2 |          Ana Anic |   060654332 |
-|   6 |       Ana nikolic | 090 9089009 |
-|   8 |         Ana Savic |   098765678 |
+; Execution error (BatchUpdateException) at org.sqlite.Stmt/executeBatch (Stmt.java:226).
+; batch entry 0: [SQLITE_ERROR] SQL error or missing database (table massage already exists)
+clj꞉projekat.massage_data_base꞉> 
 nil
-clj꞉projekat.database꞉> 
-
-| :id |             :name |      :phone |
-|-----+-------------------+-------------|
-|   1 | Danica Zdravkovic |  0652010058 |
-|   2 |          Ana Anic |   060654332 |
-|   6 |       Ana nikolic | 090 9089009 |
-|   8 |         Ana Savic |   098765678 |
-nil
-clj꞉projekat.database꞉> 
-#'projekat.database/table-view-client
-clj꞉projekat.database꞉> 
-#'projekat.massage_data_base/massages-vector
+clj꞉projekat.massage_data_base꞉> 
+#'projekat.massage_data_base/db
+clj꞉projekat.massage_data_base꞉> 
+(0)
+clj꞉projekat.massage_data_base꞉> 
+#'projekat.massage_data_base/massages
 clj꞉projekat.massage_data_base꞉> 
 ()
 clj꞉projekat.massage_data_base꞉> 
-#'projekat.massage_data_base/massages-list
+#'projekat.massage_data_base/add-massage
+clj꞉projekat.massage_data_base꞉> 
+; Execution error (SQLException) at org.sqlite.DB/newSQLException (DB.java:383).
+; [SQLITE_ERROR] SQL error or missing database (3 values for 2 columns)
+clj꞉projekat.massage_data_base꞉> 
+#'projekat.massage_data_base/add-massage
+clj꞉projekat.massage_data_base꞉> 
+(1)
+clj꞉projekat.massage_data_base꞉> 
+(1)
+clj꞉projekat.massage_data_base꞉> 
+(1)
+clj꞉projekat.massage_data_base꞉> 
+(1)
+clj꞉projekat.massage_data_base꞉> 
+(1)
 clj꞉projekat.massage_data_base꞉> 
 ()
 clj꞉projekat.massage_data_base꞉> 
-; Error printing return value (ClassCastException) at clojure.core/map$fn (core.clj:2772).
-; class clojure.lang.PersistentList$EmptyList cannot be cast to class clojure.lang.IFn (clojure.lang.PersistentList$EmptyList and clojure.lang.IFn are in unnamed module of loader 'app')
+#'projekat.massage_data_base/massages
 clj꞉projekat.massage_data_base꞉> 
-(({:id 1, :name "Swedish", :description "Gentle touch"})
- ({:id 2, :name "Thai", :description "Flexibility"})
- ({:id 3, :name "Shiatsu", :description "Relieve pain"})
- ({:id 4, :name "Sport", :description "Release muscle tension"})
- ({:id 5, :name "Chair", :description "Relaxed neck, shoulders and back."})
- ({:id 6, :name "Relax", :description "Relaxing massage"}))
+({:id 1, :name "Swedish", :description "Gentle touch", :price 40.0}
+ {:id 2, :name "Thai", :description "Flexibility", :price 35.0}
+ {:id 3, :name "Shiatsu", :description "Relaxation and relieve pain", :price 37.0}
+ {:id 4, :name "Sport", :description "Release muscle tension", :price 45.0}
+ {:id 5, :name "Chair", :description "Relaxed neck, shoulders and back.", :price 60.0})
 clj꞉projekat.massage_data_base꞉> 
-(({:id 1, :name "Swedish", :description "Gentle touch"})
- ({:id 2, :name "Thai", :description "Flexibility"})
- ({:id 3, :name "Shiatsu", :description "Relieve pain"})
- ({:id 4, :name "Sport", :description "Release muscle tension"})
- ({:id 5, :name "Chair", :description "Relaxed neck, shoulders and back."})
- ({:id 6, :name "Relax", :description "Relaxing massage"}))
+#'projekat.massage_data_base/update-massage
 clj꞉projekat.massage_data_base꞉> 
-(({:id 1, :name "Swedish", :description "Gentle touch"})
- ({:id 2, :name "Thai", :description "Flexibility"})
- ({:id 3, :name "Shiatsu", :description "Relieve pain"})
- ({:id 4, :name "Sport", :description "Release muscle tension"})
- ({:id 5, :name "Chair", :description "Relaxed neck, shoulders and back."})
- ({:id 6, :name "Relax", :description "Relaxing massage"}))
+; Syntax error reading source at (REPL:39:82).
+; Map literal must contain an even number of forms
 clj꞉projekat.massage_data_base꞉> 
-(({:id 1, :name "Swedish", :description "Gentle touch"})
- ({:id 2, :name "Thai", :description "Flexibility"})
- ({:id 3, :name "Shiatsu", :description "Relieve pain"})
- ({:id 4, :name "Sport", :description "Release muscle tension"})
- ({:id 5, :name "Chair", :description "Relaxed neck, shoulders and back."})
- ({:id 6, :name "Relax", :description "Relaxing massage"}))
+(1)
 clj꞉projekat.massage_data_base꞉> 
-(({:id 1, :name "Swedish", :description "Gentle touch"})
- ({:id 2, :name "Thai", :description "Flexibility"})
- ({:id 3, :name "Shiatsu", :description "Relieve pain"})
- ({:id 4, :name "Sport", :description "Release muscle tension"})
- ({:id 5, :name "Chair", :description "Relaxed neck, shoulders and back."})
- ({:id 6, :name "Relax", :description "Relaxing massage"}))
+({:id 1, :name "Swedish", :description "Gentle touch", :price 40.0}
+ {:id 2, :name "Thai", :description "Flexibility", :price 35.0}
+ {:id 3, :name "Shiatsu", :description "Relaxation and relieve pain", :price 37.0}
+ {:id 4, :name "Sport", :description "Release muscle tension", :price 45.0}
+ {:id 5, :name "Chair", :description "Relaxed neck, shoulders and back.", :price 60.0})
 clj꞉projekat.massage_data_base꞉> 
-#'projekat.massage_data_base/massage-list
+#'projekat.massage_data_base/massages
 clj꞉projekat.massage_data_base꞉> 
-(({:id 1, :name "Swedish", :description "Gentle touch"})
- ({:id 2, :name "Thai", :description "Flexibility"})
- ({:id 3, :name "Shiatsu", :description "Relieve pain"})
- ({:id 4, :name "Sport", :description "Release muscle tension"})
- ({:id 5, :name "Chair", :description "Relaxed neck, shoulders and back."})
- ({:id 6, :name "Relax", :description "Relaxing massage"}))
+({:id 1, :name "Swedish", :description "Gentle touch", :price 40.0}
+ {:id 2, :name "Thai", :description "Flexibility", :price 35.0}
+ {:id 3, :name "Shiatsu", :description "Relaxation and relieve pain", :price 37.0}
+ {:id 4, :name "Sport", :description "Release muscle tension", :price 45.0}
+ {:id 5, :name "Relax", :description "Relaxing massage", :price 44.0})
 clj꞉projekat.massage_data_base꞉> 
-clojure.lang.LazySeq
+#'projekat.massage_data_base/get-massage-by-id
+clj꞉projekat.massage_data_base꞉> 
+{:id 1, :name "Swedish", :description "Gentle touch", :price 40.0}
+clj꞉projekat.massage_data_base꞉> 
+#'projekat.massage_data_base/get-next-id
 clj꞉projekat.massage_data_base꞉> 
 6
 clj꞉projekat.massage_data_base꞉> 
-caocaocaocaocaocao(nil nil nil nil nil nil)
+#'projekat.massage_data_base/delete-massage
 clj꞉projekat.massage_data_base꞉> 
-; Syntax error macroexpanding clojure.core/defn at (c:\Users\nodas\Desktop\alati2022\projekat\src\projekat\massage_data_base.clj:55:1).
-; quote - failed: vector? at: [:fn-tail :arity-n :bodies :params] spec: :clojure.core.specs.alpha/param-list
-; (quote ()) - failed: vector? at: [:fn-tail :arity-1 :params] spec: :clojure.core.specs.alpha/param-list
+#'projekat.massage_data_base/table-view-massage
 clj꞉projekat.massage_data_base꞉> 
-#'projekat.massage_data_base/empty-list
+
+| :id |   :name |                :description | :price |
+|-----+---------+-----------------------------+--------|
+|   1 | Swedish |                Gentle touch |   40.0 |
+|   2 |    Thai |                 Flexibility |   35.0 |
+|   3 | Shiatsu | Relaxation and relieve pain |   37.0 |
+|   4 |   Sport |      Release muscle tension |   45.0 |
+|   5 |   Relax |            Relaxing massage |   44.0 |
+nil
 clj꞉projekat.massage_data_base꞉> 
-#'projekat.massage_data_base/massage-list
+44.6
+clj꞉projekat.core꞉> 
+java.lang.Double
+clj꞉projekat.core꞉> 
+; Evaluating file: massage_data_base.clj
+
+| :id |   :name |                :description | :price |
+|-----+---------+-----------------------------+--------|
+|   1 | Swedish |                Gentle touch |   40.0 |
+|   2 |    Thai |                 Flexibility |   35.0 |
+|   3 | Shiatsu | Relaxation and relieve pain |   37.0 |
+|   4 |   Sport |      Release muscle tension |   45.0 |
+|   5 |   Relax |            Relaxing massage |   44.0 |
+nil
 clj꞉projekat.massage_data_base꞉> 
-; Execution error (ClassCastException) at projekat.massage-data-base/eval13443 (form-init8108535469970867471.clj:61).
-; class clojure.lang.LazySeq cannot be cast to class clojure.lang.IFn (clojure.lang.LazySeq and clojure.lang.IFn are in unnamed module of loader 'app')
-clj꞉projekat.massage_data_base꞉> 
-; Error printing return value (ClassCastException) at clojure.lang.Numbers/isPos (Numbers.java:123).
-; class clojure.lang.LazySeq cannot be cast to class java.lang.Number (clojure.lang.LazySeq is in unnamed module of loader 'app'; java.lang.Number is in module java.base of loader 'bootstrap')
-clj꞉projekat.massage_data_base꞉> 
-{:id 2, :name "Thai", :description "Flexibility"}
-clj꞉projekat.massage_data_base꞉> 
-#'projekat.massage_data_base/massage-list
-clj꞉projekat.massage_data_base꞉> 
-; Execution error (ClassCastException) at projekat.massage-data-base/eval13465 (form-init8108535469970867471.clj:61).
-; class clojure.lang.LazySeq cannot be cast to class clojure.lang.IFn (clojure.lang.LazySeq and clojure.lang.IFn are in unnamed module of loader 'app')
-clj꞉projekat.massage_data_base꞉> 
-; Syntax error compiling at (c:\Users\nodas\Desktop\alati2022\projekat\src\projekat\massage_data_base.clj:62:1).
-; Unable to resolve symbol: i in this context
-clj꞉projekat.massage_data_base꞉> 
-{:id 2, :name "Thai", :description "Flexibility"}
-clj꞉projekat.massage_data_base꞉> 
-{:id 2, :name "Thai", :description "Flexibility"}
-clj꞉projekat.massage_data_base꞉> 
-clojure.lang.PersistentArrayMap
-clj꞉projekat.massage_data_base꞉> 
-#'projekat.massage_data_base/massage-list
-clj꞉projekat.massage_data_base꞉> 
-; Execution error (ClassCastException) at projekat.massage-data-base/eval13490 (form-init8108535469970867471.clj:61).
-; class clojure.lang.LazySeq cannot be cast to class clojure.lang.IFn (clojure.lang.LazySeq and clojure.lang.IFn are in unnamed module of loader 'app')
-clj꞉projekat.massage_data_base꞉> 
-({:id 6, :name "Relax", :description "Relaxing massage"}
- {:id 5, :name "Chair", :description "Relaxed neck, shoulders and back."}
- {:id 4, :name "Sport", :description "Release muscle tension"}
- {:id 3, :name "Shiatsu", :description "Relieve pain"}
- {:id 2, :name "Thai", :description "Flexibility"}
- {:id 1, :name "Swedish", :description "Gentle touch"})
-clj꞉projekat.massage_data_base꞉> 
-clojure.lang.PersistentList
-clj꞉projekat.massage_data_base꞉> 
-#'projekat.pages/massage-index-page
-clj꞉projekat.pages꞉> 
-; Execution error (ArityException) at projekat.pages/massage-index-page (form-init8108535469970867471.clj:133).
-; Wrong number of args (1) passed to: hiccup.table/to-table1d
-clj꞉projekat.pages꞉> 
-({:id 6, :name "Relax", :description "Relaxing massage"}
- {:id 5, :name "Chair", :description "Relaxed neck, shoulders and back."}
- {:id 4, :name "Sport", :description "Release muscle tension"}
- {:id 3, :name "Shiatsu", :description "Relieve pain"}
- {:id 2, :name "Thai", :description "Flexibility"}
- {:id 1, :name "Swedish", :description "Gentle touch"})
-clj꞉projekat.pages꞉> 
-({:id 6, :name "Relax", :description "Relaxing massage"}
- {:id 5, :name "Chair", :description "Relaxed neck, shoulders and back."}
- {:id 4, :name "Sport", :description "Release muscle tension"}
- {:id 3, :name "Shiatsu", :description "Relieve pain"}
- {:id 2, :name "Thai", :description "Flexibility"}
- {:id 1, :name "Swedish", :description "Gentle touch"})
-clj꞉projekat.pages꞉> 
-; Syntax error reading source at (REPL:133:64).
-; Unsupported character: \"Id
+#'projekat.pages/new-massage-form
 clj꞉projekat.pages꞉> 
 #'projekat.pages/massage-index-page
 clj꞉projekat.pages꞉> 
+; Evaluating file: core.clj
+#'projekat.core/server
+clj꞉projekat.core꞉> 
+
+| :id |      :name |                  :description | :price |
+|-----+------------+-------------------------------+--------|
+|   1 |    Swedish |                  Gentle touch |   40.0 |
+|   2 |       Thai |                   Flexibility |   35.0 |
+|   3 |    Shiatsu |   Relaxation and relieve pain |   37.0 |
+|   4 |      Sport |        Release muscle tension |   45.0 |
+|   5 |      Relax |              Relaxing massage |   44.0 |
+|   6 | Whole+body | Preparing body for next week. |   70.0 |
+nil
+clj꞉projekat.massage_data_base꞉> 
+#'projekat.core/prepare-massage
+clj꞉projekat.core꞉> 
+; Syntax error macroexpanding clojure.core/defn at (c:\Users\nodas\Desktop\alati2022\projekat\src\projekat\massage_data_base.clj:20:1).
+; [] - failed: simple-symbol? at: [:fn-name] spec: :clojure.core.specs.alpha/defn-args
+clj꞉projekat.massage_data_base꞉> 
+#'projekat.massage_data_base/massages
+clj꞉projekat.massage_data_base꞉> 
+({:id 1, :name "Swedish", :description "Gentle touch", :price 40.0}
+ {:id 2, :name "Thai", :description "Flexibility", :price 35.0}
+ {:id 3, :name "Shiatsu", :description "Relaxation and relieve pain", :price 37.0}
+ {:id 4, :name "Sport", :description "Release muscle tension", :price 45.0}
+ {:id 5, :name "Relax", :description "Relaxing massage", :price 44.0}
+ {:id 6, :name "Whole+body", :description "Preparing body for next week.", :price 70.0})
+clj꞉projekat.massage_data_base꞉> 
+#'projekat.massage_data_base/get-massage-by-id
+clj꞉projekat.massage_data_base꞉> 
+{:id 1, :name "Swedish", :description "Gentle touch", :price 40.0}
+clj꞉projekat.massage_data_base꞉> 
+
+| :id |      :name |                  :description | :price |
+|-----+------------+-------------------------------+--------|
+|   1 |    Swedish |                  Gentle touch |   40.0 |
+|   2 |       Thai |                   Flexibility |   35.0 |
+|   3 |    Shiatsu |   Relaxation and relieve pain |   37.0 |
+|   4 |      Sport |        Release muscle tension |   45.0 |
+|   5 |      Relax |              Relaxing massage |   44.0 |
+|   6 | Whole+body | Preparing body for next week. |   70.0 |
+nil
+clj꞉projekat.massage_data_base꞉> 
+; Evaluating file: massage_data_base.clj
+
+| :id |      :name |                  :description | :price |
+|-----+------------+-------------------------------+--------|
+|   1 |    Swedish |                  Gentle touch |   40.0 |
+|   2 |       Thai |                   Flexibility |   35.0 |
+|   3 |    Shiatsu |   Relaxation and relieve pain |   37.0 |
+|   4 |      Sport |        Release muscle tension |   45.0 |
+|   5 |      Relax |              Relaxing massage |   44.0 |
+|   6 | Whole+body | Preparing body for next week. |   70.0 |
+nil
+clj꞉projekat.massage_data_base꞉> 
+; Evaluating file: pages.clj
 #'projekat.pages/massage-index-page
 clj꞉projekat.pages꞉> 
-"<!DOCTYPE html>\n<html><body><table><thead><tr><th>Id</th><th>Name</th><th>Description</th></tr></thead><tbody><tr><td></td><td></td><td></td></tr><tr><td></td><td></td><td></td></tr><tr><td></td><td></td><td></td></tr><tr><td></td><td></td><td></td></tr><tr><td></td><td></td><td></td></tr><tr><td></td><td></td><td></td></tr></tbody></table></body></html>"
+(1)
+clj꞉projekat.massage_data_base꞉> 
+
+| :id |   :name |                :description | :price |
+|-----+---------+-----------------------------+--------|
+|   1 | Swedish |                Gentle touch |   40.0 |
+|   2 |    Thai |                 Flexibility |   35.0 |
+|   3 | Shiatsu | Relaxation and relieve pain |   37.0 |
+|   4 |   Sport |      Release muscle tension |   45.0 |
+|   5 |   Relax |            Relaxing massage |   44.0 |
+nil
+clj꞉projekat.massage_data_base꞉> 
+; Evaluating file: core.clj
+#'projekat.core/server
+clj꞉projekat.core꞉> 
+#'projekat.pages/massage-index-page
+clj꞉projekat.pages꞉> 
+; Evaluating file: core.clj
+#'projekat.core/server
+clj꞉projekat.core꞉> 
+; Evaluating file: pages.clj
+#'projekat.pages/massage-index-page
+clj꞉projekat.pages꞉> 
+#'projekat.pages/client-view
+clj꞉projekat.pages꞉> 
+"Amount: 0.700000"
+clj꞉projekat.pages꞉> 
+"Amount: 0.70"
+clj꞉projekat.pages꞉> 
+#'projekat.pages/client-view
+clj꞉projekat.pages꞉> 
+; Evaluating file: pages.clj
+#'projekat.pages/massage-index-page
+clj꞉projekat.pages꞉> 
+#'projekat.database/add-client
+clj꞉projekat.database꞉> 
+#'projekat.database/db
+clj꞉projekat.database꞉> 
+(0)
+clj꞉projekat.database꞉> 
+#function[clojure.java.jdbc/query]
+clj꞉projekat.database꞉> 
+({:id 1, :name "Danica Zdravkovic", :phone "0652010058"}
+ {:id 2, :name "Ana Anic", :phone "060654332"}
+ {:id 6, :name "Ana nikolic", :phone "090 9089009"}
+ {:id 8, :name "Ana Savic", :phone "098765678"})
+clj꞉projekat.database꞉> 
+#'projekat.database/clients
+clj꞉projekat.database꞉> 
+()
+clj꞉projekat.database꞉> 
+#'projekat.database/add-client
+clj꞉projekat.database꞉> 
+#'projekat.database/add-client
+clj꞉projekat.database꞉> 
+(1)
+clj꞉projekat.database꞉> 
+#'projekat.database/add-client
+clj꞉projekat.database꞉> 
+({:id 1, :name "Ana Nikolic", :phone "0679089700", :amount 0.0})
+clj꞉projekat.database꞉> 
+(0)
+clj꞉projekat.database꞉> 
+(1)
+clj꞉projekat.database꞉> 
+#'projekat.database/get-client-by-id
+clj꞉projekat.database꞉> 
+{:id 1, :name "Ana nikolic", :phone "090 9089009", :amount 0.0}
+clj꞉projekat.database꞉> 
+#'projekat.database/get-next-id
+clj꞉projekat.database꞉> 
+2
+clj꞉projekat.database꞉> 
+#'projekat.database/table-view-client
+clj꞉projekat.database꞉> 
+
+| :id |       :name |      :phone | :amount |
+|-----+-------------+-------------+---------|
+|   1 | Ana nikolic | 090 9089009 |     0.0 |
+nil
+clj꞉projekat.database꞉> 
+; Evaluating file: core.clj
+; Execution error (BindException) at sun.nio.ch.Net/bind0 (Net.java:-2).
+; Address already in use: bind
+; Evaluation of file core.clj failed: class clojure.lang.Compiler$CompilerException
+clj꞉projekat.core꞉> 
+; Evaluating file: core.clj
+#'projekat.core/server
+clj꞉projekat.core꞉> 
+
+| :id |       :name |      :phone | :amount |
+|-----+-------------+-------------+---------|
+|   1 | Ana nikolic | 090 9089009 |     0.0 |
+|   2 |      Danica |  Zdravkovic |     0.0 |
+nil
+clj꞉projekat.database꞉> 
+(1)
+clj꞉projekat.database꞉> 
+; Evaluating file: core.clj
+#'projekat.core/server
+clj꞉projekat.core꞉> 
+; Evaluating file: pages.clj
+#'projekat.pages/massage-index-page
+clj꞉projekat.pages꞉> 
+; Evaluating file: core.clj
+#'projekat.core/server
+clj꞉projekat.core꞉> 
+nil
+clj꞉projekat.free-appointments-data-base꞉> 
+#'projekat.free-appointments-data-base/db
+clj꞉projekat.free-appointments-data-base꞉> 
+; Syntax error macroexpanding clojure.core/ns at (c:\Users\nodas\Desktop\alati2022\projekat\src\projekat\reservations_database.clj:1:1).
+; def - failed: #{:refer-clojure} at: [:ns-clauses :refer-clojure :clause] spec: :clojure.core.specs.alpha/ns-refer-clojure
+; def - failed: #{:require} at: [:ns-clauses :require :clause] spec: :clojure.core.specs.alpha/ns-require
+; def - failed: #{:import} at: [:ns-clauses :import :clause] spec: :clojure.core.specs.alpha/ns-import
+; def - failed: #{:use} at: [:ns-clauses :use :clause] spec: :clojure.core.specs.alpha/ns-use
+; def - failed: #{:refer} at: [:ns-clauses :refer :clause] spec: :clojure.core.specs.alpha/ns-refer
+; def - failed: #{:load} at: [:ns-clauses :load :clause] spec: :clojure.core.specs.alpha/ns-load
+; def - failed: #{:gen-class} at: [:ns-clauses :gen-class :clause] spec: :clojure.core.specs.alpha/ns-gen-class
+clj꞉projekat.reservations-database꞉> 
+nil
+clj꞉projekat.reservations-database꞉> 
+#'projekat.reservations-database/db
+clj꞉projekat.reservations-database꞉> 
+nil
+clj꞉projekat.reservations-database꞉> 
+#'projekat.reservations-database/db
+clj꞉projekat.reservations-database꞉> 
+nil
+clj꞉projekat.reservations-database꞉> 
+#'projekat.reservations-database/db
+clj꞉projekat.reservations-database꞉> 
+(0)
+clj꞉projekat.reservations-database꞉> 
+#'projekat.reservations-database/reservations
+clj꞉projekat.reservations-database꞉> 
+#'projekat.reservations-database/add-reservation
+clj꞉projekat.reservations-database꞉> 
+#'projekat.reservations-database/add-reservation
+clj꞉projekat.reservations-database꞉> 
+; Jacking in...
+; nREPL Connection was closed
+; Starting Jack-in Terminal: cmd.exe /d /c lein update-in :dependencies conj [nrepl,"1.0.0"] -- update-in :plugins conj [cider/cider-nrepl,"0.28.5"] -- update-in [:repl-options,:nrepl-middleware] conj '["cider.nrepl/cider-middleware"]' -- with-profile +dev repl :headless
+; Hooking up nREPL sessions...
+; Connected session: clj
+; TIPS:
+;   - You can edit the contents here. Use it as a REPL if you like.
+;   - `alt+enter` evaluates the current top level form.
+;   - `ctrl+enter` evaluates the current form.
+;   - `alt+up` and `alt+down` traverse up and down the REPL command history
+;      when the cursor is after the last contents at the prompt
+;   - Clojure lines in stack traces are peekable and clickable.
+clj꞉projekat.server-config꞉> 
+; Jack-in done.
+clj꞉projekat.server-config꞉> 
+nil
+; WARNING: second already refers to: #'clojure.core/second in namespace: projekat.reservations-database, being replaced by: #'clj-time.core/second
+; 
+; WARNING: extend already refers to: #'clojure.core/extend in namespace: projekat.reservations-database, being replaced by: #'clj-time.core/extend
+clj꞉projekat.reservations-database꞉> 
+#object[org.joda.time.DateTime 0x1c9627c6 "2022-12-24T00:00:00.000Z"]
+clj꞉projekat.reservations-database꞉> 
+#'projekat.reservations-database/datunm
+clj꞉projekat.reservations-database꞉> 
+#object[org.joda.time.DateTime 0x1b66ea98 "2022-12-24T00:00:00.000Z"]
+clj꞉projekat.reservations-database꞉> 
+; Syntax error compiling at (c:\Users\nodas\Desktop\alati2022\projekat\src\projekat\reservations_database.clj:19:23).
+; Unable to resolve symbol: db in this context
+clj꞉projekat.reservations-database꞉> 
+#'projekat.reservations-database/db
+clj꞉projekat.reservations-database꞉> 
+; Execution error (BatchUpdateException) at org.sqlite.Stmt/executeBatch (Stmt.java:226).
+; batch entry 0: [SQLITE_ERROR] SQL error or missing database (table reservation already exists)
+clj꞉projekat.reservations-database꞉> 
+#'projekat.reservations-database/reservations
+clj꞉projekat.reservations-database꞉> 
+#'projekat.reservations-database/delete-reservation
+clj꞉projekat.reservations-database꞉> 
+#'projekat.reservations-database/table-view-reservation
+clj꞉projekat.reservations-database꞉> 
+nil
+clj꞉projekat.reservations-database꞉> 
+#object[org.joda.time.DateTime 0x4e06634 "2022-12-25T14:15:00.000Z"]
+clj꞉projekat.reservations-database꞉> 
+; Syntax error compiling def at (c:\Users\nodas\Desktop\alati2022\projekat\src\projekat\reservations_database.clj:23:1).
+; Too many arguments to def
+clj꞉projekat.reservations-database꞉> 
+#'projekat.reservations-database/pr
+; WARNING: pr already refers to: #'clojure.core/pr in namespace: projekat.reservations-database, being replaced by: #'projekat.reservations-database/pr
+clj꞉projekat.reservations-database꞉> 
+#object[org.joda.time.DateTime 0x28f78af3 "2022-12-25T14:15:00.000Z"]
+clj꞉projekat.reservations-database꞉> 
+; Execution error (ClassCastException) at clj-time.core/date-time (core.clj:314).
+; class org.joda.time.DateTime cannot be cast to class java.lang.Number (org.joda.time.DateTime is in unnamed module of loader 'app'; java.lang.Number is in module java.base of loader 'bootstrap')
+clj꞉projekat.reservations-database꞉> 
+#object[org.joda.time.DateTime 0x7ad8e13 "2022-12-24T21:12:46.713Z"]
+clj꞉projekat.reservations-database꞉> 
+"2022-12-24T21:13:06.937Z"
+clj꞉projekat.reservations-database꞉> 
+; Execution error (ClassCastException) at clj-time.core/date-time (core.clj:314).
+; class java.lang.String cannot be cast to class java.lang.Number (java.lang.String and java.lang.Number are in module java.base of loader 'bootstrap')
+clj꞉projekat.reservations-database꞉> 
+; Execution error (ClassCastException) at clj-time.core/date-time (core.clj:314).
+; class java.lang.String cannot be cast to class java.lang.Number (java.lang.String and java.lang.Number are in module java.base of loader 'bootstrap')
+clj꞉projekat.reservations-database꞉> 
+"2022-12-24T21:14:06.039Z"
+clj꞉projekat.reservations-database꞉> 
+nil
+; WARNING: second already refers to: #'clojure.core/second in namespace: projekat.reservations-database, being replaced by: #'clj-time.core/second
+; 
+; WARNING: extend already refers to: #'clojure.core/extend in namespace: projekat.reservations-database, being replaced by: #'clj-time.core/extend
+clj꞉projekat.reservations-database꞉> 
+nil
+; WARNING: second already refers to: #'clojure.core/second in namespace: projekat.reservations-database, being replaced by: #'clj-time.core/second
+; 
+; WARNING: extend already refers to: #'clojure.core/extend in namespace: projekat.reservations-database, being replaced by: #'clj-time.core/extend
+clj꞉projekat.reservations-database꞉> 
+#'projekat.reservations-database/formatting
+clj꞉projekat.reservations-database꞉> 
+nil
+; WARNING: second already refers to: #'clojure.core/second in namespace: projekat.reservations-database, being replaced by: #'clj-time.core/second
+; 
+; WARNING: extend already refers to: #'clojure.core/extend in namespace: projekat.reservations-database, being replaced by: #'clj-time.core/extend
+clj꞉projekat.reservations-database꞉> 
+; Syntax error reading source at (REPL:28:44).
+; Unsupported character: \"yyyyMMdd
+clj꞉projekat.reservations-database꞉> 
+#'projekat.reservations-database/custom-formatter
+clj꞉projekat.reservations-database꞉> 
+#object[org.joda.time.DateTime 0x10a765b5 "2010-03-11T00:00:00.000Z"]
+clj꞉projekat.reservations-database꞉> 
+#'projekat.reservations-database/custom-formatter
+clj꞉projekat.reservations-database꞉> 
+; Execution error (IllegalArgumentException) at org.joda.time.format.DateTimeFormatter/parseDateTime (DateTimeFormatter.java:945).
+; Invalid format: "20100311" is too short
+clj꞉projekat.reservations-database꞉> 
+"2010-10-03"
+clj꞉projekat.reservations-database꞉> 
+#object[org.joda.time.DateTime 0x4c212ee1 "2022-12-24T21:34:53.347Z"]
+clj꞉projekat.reservations-database꞉> 
+"2022-12-24T21:35:11.676Z"
+clj꞉projekat.reservations-database꞉> 
+; Execution error (IllegalArgumentException) at org.joda.time.format.DateTimeFormat/parsePatternTo (DateTimeFormat.java:566).
+; Illegal pattern component: T
+clj꞉projekat.reservations-database꞉> 
+#'projekat.reservations-database/custom-formatter
+clj꞉projekat.reservations-database꞉> 
+"2022-12-24T21:35:51.073Z"
+clj꞉projekat.reservations-database꞉> 
+#'projekat.reservations-database/custom-formatter
+clj꞉projekat.reservations-database꞉> 
+; Execution error (ClassCastException) at projekat.reservations-database/eval13963 (form-init5611988240743897118.clj:33).
+; class org.joda.time.format.DateTimeFormatter cannot be cast to class clojure.lang.IFn (org.joda.time.format.DateTimeFormatter and clojure.lang.IFn are in unnamed module of loader 'app')
+clj꞉projekat.reservations-database꞉> 
+"2022-12-24 21:36:44.044"
+clj꞉projekat.reservations-database꞉> 
+#'projekat.reservations-database/custom-formatter
+clj꞉projekat.reservations-database꞉> 
+"2022-12-24 21:37"
+clj꞉projekat.reservations-database꞉> 
+#'projekat.reservations-database/custom-formatter
+clj꞉projekat.reservations-database꞉> 
+"24-12-2022 21:37"
+clj꞉projekat.reservations-database꞉> 
+#'projekat.reservations-database/custom-formatter
+clj꞉projekat.reservations-database꞉> 
+"24.12.2022 21:37"
+clj꞉projekat.reservations-database꞉> 
+#'projekat.reservations-database/custom-formatter
+clj꞉projekat.reservations-database꞉> 
+"24.12.2022/21:37"
+clj꞉projekat.reservations-database꞉> 
+#'projekat.reservations-database/custom-formatter
+clj꞉projekat.reservations-database꞉> 
+#object[org.joda.time.DateTime 0x225fa05f "2022-12-12T19:55:00.000Z"]
+clj꞉projekat.reservations-database꞉> 
+#object[org.joda.time.DateTime 0x25641d8e "2022-12-12T19:55:00.000Z"]
+clj꞉projekat.reservations-database꞉> 
+"24.12.2022/21:39"
+clj꞉projekat.reservations-database꞉> 
+#'projekat.reservations-database/free-appointments
+clj꞉projekat.reservations-database꞉> 
+; Execution error (ClassCastException) at clj-time.core/date-time (core.clj:314).
+; class org.joda.time.DateTime cannot be cast to class java.lang.Number (org.joda.time.DateTime is in unnamed module of loader 'app'; java.lang.Number is in module java.base of loader 'bootstrap')
+clj꞉projekat.reservations-database꞉> 
+#object[org.joda.time.DateTime 0x6d0f5c76 "2022-12-12T19:55:00.000Z"]
+clj꞉projekat.reservations-database꞉> 
+"24.12.2022/21:40"
+clj꞉projekat.reservations-database꞉> 
+; Execution error (ClassCastException) at clj-time.core/date-time (core.clj:314).
+; class org.joda.time.DateTime cannot be cast to class java.lang.Number (org.joda.time.DateTime is in unnamed module of loader 'app'; java.lang.Number is in module java.base of loader 'bootstrap')
+clj꞉projekat.reservations-database꞉> 
+#object[org.joda.time.LocalDate 0x3d253f8f "2022-12-24"]
+clj꞉projekat.reservations-database꞉> 
+"2022-12-24T21:45:18.102Z"
+clj꞉projekat.reservations-database꞉> 
+#'projekat.reservations-database/custom-formatter
+clj꞉projekat.reservations-database꞉> 
+#object[org.joda.time.DateTime 0x7de8ad9 "2022-12-12T19:55:00.000Z"]
+clj꞉projekat.reservations-database꞉> 
+"24.12.2022/21:45"
+clj꞉projekat.reservations-database꞉> 
+"24.12.2022/21:45"
+clj꞉projekat.reservations-database꞉> 
+#object[org.joda.time.DateTime 0x2fc10ca1 "2022-12-12T19:55:00.000Z"]
+clj꞉projekat.reservations-database꞉> 
+#object[org.joda.time.DateTime 0x39dad616 "2022-12-19T19:55:00.000Z"]
+clj꞉projekat.reservations-database꞉> 
+#'projekat.reservations-database/pr
+; WARNING: pr already refers to: #'clojure.core/pr in namespace: projekat.reservations-database, being replaced by: #'projekat.reservations-database/pr
+clj꞉projekat.reservations-database꞉> 
+"19.12.2022/19:55"
+clj꞉projekat.reservations-database꞉> 
+#'projekat.reservations-database/free-appointments
+clj꞉projekat.reservations-database꞉> 
+1234567(nil nil nil nil nil nil nil)
+clj꞉projekat.reservations-database꞉> 
+#'projekat.reservations-database/free-appointments
+clj꞉projekat.reservations-database꞉> 
+(1 2 3 4 5 6 7)
+clj꞉projekat.reservations-database꞉> 
+#'projekat.reservations-database/custom-formatter
+clj꞉projekat.reservations-database꞉> 
+; Syntax error (IllegalStateException) compiling def at (c:\Users\nodas\Desktop\alati2022\projekat\src\projekat\reservations_database.clj:29:1).
+; now already refers to: #'clj-time.core/now in namespace: projekat.reservations-database
+clj꞉projekat.reservations-database꞉> 
+#'projekat.reservations-database/this-moment
+clj꞉projekat.reservations-database꞉> 
+#'projekat.reservations-database/custom-formatter
+clj꞉projekat.reservations-database꞉> 
+#'projekat.reservations-database/custom-formatter
+clj꞉projekat.reservations-database꞉> 
+#'projekat.reservations-database/this-moment
+clj꞉projekat.reservations-database꞉> 
+; Execution error (ClassCastException) at clj-time.format/unparse (format.clj:200).
+; class org.joda.time.DateTime cannot be cast to class org.joda.time.format.DateTimeFormatter (org.joda.time.DateTime and org.joda.time.format.DateTimeFormatter are in unnamed module of loader 'app')
+clj꞉projekat.reservations-database꞉> 
+"24.12.2022/21:50"
+clj꞉projekat.reservations-database꞉> 
+; Execution error (ClassCastException) at clj-time.format/parse (format.clj:156).
+; class org.joda.time.DateTime cannot be cast to class java.lang.String (org.joda.time.DateTime is in unnamed module of loader 'app'; java.lang.String is in module java.base of loader 'bootstrap')
+clj꞉projekat.reservations-database꞉> 
+#object[org.joda.time.DateTime 0x811808c "2022-12-24T21:50:00.000Z"]
+clj꞉projekat.reservations-database꞉> 
+#'projekat.reservations-database/this-moment
+clj꞉projekat.reservations-database꞉> 
+#object[org.joda.time.DateTime 0x2202273d "2022-12-24T21:51:43.296Z"]
+clj꞉projekat.reservations-database꞉> 
+#'projekat.reservations-database/this-moment-object
+clj꞉projekat.reservations-database꞉> 
+#'projekat.reservations-database/this-moment-string
+clj꞉projekat.reservations-database꞉> 
+; Execution error (ClassCastException) at projekat.reservations-database/eval14048 (form-init5611988240743897118.clj:32).
+; class java.lang.String cannot be cast to class clojure.lang.IFn (java.lang.String is in module java.base of loader 'bootstrap'; clojure.lang.IFn is in unnamed module of loader 'app')
+clj꞉projekat.reservations-database꞉> 
+#'projekat.reservations-database/this-moment-string
+clj꞉projekat.reservations-database꞉> 
+; Execution error (ClassCastException) at projekat.reservations-database/eval14050 (form-init5611988240743897118.clj:32).
+; class java.lang.String cannot be cast to class clojure.lang.IFn (java.lang.String is in module java.base of loader 'bootstrap'; clojure.lang.IFn is in unnamed module of loader 'app')
+clj꞉projekat.reservations-database꞉> 
+#'projekat.reservations-database/this-moment-object
+clj꞉projekat.reservations-database꞉> 
+#'projekat.reservations-database/this-moment-string
+clj꞉projekat.reservations-database꞉> 
+; Execution error (ClassCastException) at projekat.reservations-database/eval14052 (form-init5611988240743897118.clj:32).
+; class java.lang.String cannot be cast to class clojure.lang.IFn (java.lang.String is in module java.base of loader 'bootstrap'; clojure.lang.IFn is in unnamed module of loader 'app')
+clj꞉projekat.reservations-database꞉> 
+#'projekat.reservations-database/this-moment
+clj꞉projekat.reservations-database꞉> 
+#'projekat.reservations-database/custom-formatter
+clj꞉projekat.reservations-database꞉> 
+"24.12.2022/21:56"
+clj꞉projekat.reservations-database꞉> 
+#object[org.joda.time.DateTime 0x15d58e2b "2022-12-24T21:56:39.457Z"]
+clj꞉projekat.reservations-database꞉> 
+#'projekat.reservations-database/this-moment
+clj꞉projekat.reservations-database꞉> 
+#'projekat.reservations-database/this-moment-object
+clj꞉projekat.reservations-database꞉> 
+"24.12.2022/21:57"
+clj꞉projekat.reservations-database꞉> 
+#'projekat.reservations-database/this-moment-string
+clj꞉projekat.reservations-database꞉> 
+"24.12.2022/21:57"
+clj꞉projekat.reservations-database꞉> 
+#'projekat.reservations-database/this-moment-object-frm-string
+clj꞉projekat.reservations-database꞉> 
+; Execution error (ClassCastException) at projekat.reservations-database/eval14058 (form-init5611988240743897118.clj:32).
+; class java.lang.String cannot be cast to class clojure.lang.IFn (java.lang.String is in module java.base of loader 'bootstrap'; clojure.lang.IFn is in unnamed module of loader 'app')
+clj꞉projekat.reservations-database꞉> 
+#'projekat.reservations-database/this-moment-object-frm-string
+clj꞉projekat.reservations-database꞉> 
+; Execution error (ClassCastException) at projekat.reservations-database/eval14060 (form-init5611988240743897118.clj:32).
+; class java.lang.String cannot be cast to class clojure.lang.IFn (java.lang.String is in module java.base of loader 'bootstrap'; clojure.lang.IFn is in unnamed module of loader 'app')
+clj꞉projekat.reservations-database꞉> 
+#object[org.joda.time.DateTime 0x5b7b1b6c "2022-12-24T21:50:00.000Z"]
+clj꞉projekat.reservations-database꞉> 
+#'projekat.reservations-database/this-moment-string
+clj꞉projekat.reservations-database꞉> 
+#object[org.joda.time.DateTime 0x4c48aaaa "2022-12-24T21:50:00.000Z"]
+clj꞉projekat.reservations-database꞉> 
+"24.12.2022/21:57"
+clj꞉projekat.reservations-database꞉> 
+#'projekat.reservations-database/this-moment-object-frm-string
+clj꞉projekat.reservations-database꞉> 
+; Execution error (ClassCastException) at projekat.reservations-database/eval14066 (form-init5611988240743897118.clj:34).
+; class org.joda.time.DateTime cannot be cast to class clojure.lang.IFn (org.joda.time.DateTime and clojure.lang.IFn are in unnamed module of loader 'app')
+clj꞉projekat.reservations-database꞉> 
+#'projekat.reservations-database/this-moment-object-frm-string
+clj꞉projekat.reservations-database꞉> 
+; Execution error (ClassCastException) at projekat.reservations-database/eval14068 (form-init5611988240743897118.clj:34).
+; class org.joda.time.DateTime cannot be cast to class clojure.lang.IFn (org.joda.time.DateTime and clojure.lang.IFn are in unnamed module of loader 'app')
+clj꞉projekat.reservations-database꞉> 
+#'projekat.reservations-database/this-moment-object-frm-string
+clj꞉projekat.reservations-database꞉> 
+; Execution error (ClassCastException) at projekat.reservations-database/eval14070 (form-init5611988240743897118.clj:34).
+; class org.joda.time.DateTime cannot be cast to class clojure.lang.IFn (org.joda.time.DateTime and clojure.lang.IFn are in unnamed module of loader 'app')
+clj꞉projekat.reservations-database꞉> 
+#'projekat.reservations-database/free-appointments
+clj꞉projekat.reservations-database꞉> 
+#object[org.joda.time.DateTime 0x730e834a "2022-12-31T21:57:00.000Z"]
+clj꞉projekat.reservations-database꞉> 
+#'projekat.reservations-database/free-appointments
+clj꞉projekat.reservations-database꞉> 
+#object[org.joda.time.DateTime 0x760cca4b "2022-12-24T22:57:00.000Z"]
+clj꞉projekat.reservations-database꞉> 
+#object[org.joda.time.DateTime 0x31ed6ebe "2022-12-31T21:57:00.000Z"]
+clj꞉projekat.reservations-database꞉> 
+#'projekat.reservations-database/custom-formatter
+clj꞉projekat.reservations-database꞉> 
+#'projekat.reservations-database/this-moment-object
+clj꞉projekat.reservations-database꞉> 
+#'projekat.reservations-database/this-moment-string
+clj꞉projekat.reservations-database꞉> 
+#'projekat.reservations-database/this-moment-object-frm-string
+clj꞉projekat.reservations-database꞉> 
+; Execution error (ClassCastException) at projekat.reservations-database/eval14164 (form-init5611988240743897118.clj:34).
+; class org.joda.time.DateTime cannot be cast to class clojure.lang.IFn (org.joda.time.DateTime and clojure.lang.IFn are in unnamed module of loader 'app')
+clj꞉projekat.reservations-database꞉> 
+#object[org.joda.time.DateTime 0x6bd610db "2022-12-24T22:00:00.000Z"]
+clj꞉projekat.reservations-database꞉> 
+#object[org.joda.time.DateTime 0x16b0ae52 "2022-12-31T22:00:00.000Z"]
+clj꞉projekat.reservations-database꞉> 
+#object[org.joda.time.DateTime 0x5b110746 "2022-12-24T23:00:00.000Z"]
+clj꞉projekat.reservations-database꞉> 
+; Syntax error (ArityException) compiling at (c:\Users\nodas\Desktop\alati2022\projekat\src\projekat\reservations_database.clj:39:3).
+; Wrong number of args (3) passed to: clojure.core/for
+clj꞉projekat.reservations-database꞉> 
+#'projekat.reservations-database/delete-reservation
+clj꞉projekat.reservations-database꞉> 
+#'projekat.reservations-database/free-appointments
+clj꞉projekat.reservations-database꞉> 
+(#object[org.joda.time.DateTime 0x28d9ff0c "2022-12-25T22:00:00.000Z"]
+ #object[org.joda.time.DateTime 0x4a8adff8 "2022-12-25T22:00:00.000Z"]
+ #object[org.joda.time.DateTime 0xfb9cc38 "2022-12-25T22:00:00.000Z"]
+ #object[org.joda.time.DateTime 0x16f7a073 "2022-12-25T22:00:00.000Z"]
+ #object[org.joda.time.DateTime 0x49f9d45 "2022-12-25T22:00:00.000Z"]
+ #object[org.joda.time.DateTime 0x51f16841 "2022-12-25T22:00:00.000Z"])
+clj꞉projekat.reservations-database꞉> 
+#'projekat.reservations-database/dayss
+clj꞉projekat.reservations-database꞉> 
+()
+clj꞉projekat.reservations-database꞉> 
+()
+clj꞉projekat.reservations-database꞉> 
+; Execution error (ArityException) at nrepl.middleware.interruptible-eval/evaluate$fn$fn (interruptible_eval.clj:87).
+; Wrong number of args (1) passed to: clojure.core/for
+clj꞉projekat.reservations-database꞉> 
+; Error printing return value (ClassCastException) at clj-time.format/unparse (format.clj:200).
+; class org.joda.time.DateTime cannot be cast to class org.joda.time.format.DateTimeFormatter (org.joda.time.DateTime and org.joda.time.format.DateTimeFormatter are in unnamed module of loader 'app')
+clj꞉projekat.reservations-database꞉> 
+(#object[org.joda.time.DateTime 0x688669d4 "2022-12-24T23:00:00.000Z"]
+ #object[org.joda.time.DateTime 0x50afb1bd "2022-12-24T23:00:00.000Z"]
+ #object[org.joda.time.DateTime 0x6b442241 "2022-12-24T23:00:00.000Z"]
+ #object[org.joda.time.DateTime 0x4acfa14b "2022-12-24T23:00:00.000Z"]
+ #object[org.joda.time.DateTime 0x28d911a5 "2022-12-24T23:00:00.000Z"]
+ #object[org.joda.time.DateTime 0x1cd7337e "2022-12-24T23:00:00.000Z"]
+ #object[org.joda.time.DateTime 0x56cb4c8f "2022-12-24T23:00:00.000Z"]
+ #object[org.joda.time.DateTime 0x61b97ae4 "2022-12-24T23:00:00.000Z"])
+clj꞉projekat.reservations-database꞉> 
+2022
+clj꞉projekat.reservations-database꞉> 
+; Execution error (IllegalArgumentException) at clj-time.core/eval11108$fn$G (core.clj:102).
+; No implementation of method: :day of protocol: #'clj-time.core/DateTimeProtocol found for class: java.lang.Long
+clj꞉projekat.reservations-database꞉> 
+; Syntax error compiling at (c:\Users\nodas\Desktop\alati2022\projekat\src\projekat\reservations_database.clj:34:51).
+; Unable to resolve symbol: daya in this context
+clj꞉projekat.reservations-database꞉> 
+#object[org.joda.time.DateTime 0x5067a67c "2022-12-25T22:00:00.000Z"]
+clj꞉projekat.reservations-database꞉> 
+; Execution error (ClassCastException) at projekat.reservations-database/eval14233 (form-init5611988240743897118.clj:34).
+; class org.joda.time.DateTime cannot be cast to class clojure.lang.IFn (org.joda.time.DateTime and clojure.lang.IFn are in unnamed module of loader 'app')
+clj꞉projekat.reservations-database꞉> 
+#object[org.joda.time.DateTime 0x5ae8044 "2022-12-25T22:00:00.000Z"]
+clj꞉projekat.reservations-database꞉> 
+#object[org.joda.time.DateTime 0x3b237ba9 "2022-12-24T22:00:00.000Z"]
+clj꞉projekat.reservations-database꞉> 
+#object[org.joda.time.DateTime 0x1bb1fea7 "2022-12-25T22:02:33.033Z"]
+clj꞉projekat.reservations-database꞉> 
+#object[org.joda.time.DateTime 0x40359914 "2022-12-31T22:02:33.033Z"]
+clj꞉projekat.reservations-database꞉> 
+#object[org.joda.time.DateTime 0x5a29858f "2023-01-01T22:02:33.033Z"]
+clj꞉projekat.reservations-database꞉> 
+#'projekat.reservations-database/next-day
+clj꞉projekat.reservations-database꞉> 
+; Execution error (ClassCastException) at projekat.reservations-database/eval14245 (form-init5611988240743897118.clj:36).
+; class org.joda.time.DateTime cannot be cast to class clojure.lang.IFn (org.joda.time.DateTime and clojure.lang.IFn are in unnamed module of loader 'app')
+clj꞉projekat.reservations-database꞉> 
+#object[org.joda.time.DateTime 0x77fb0f25 "2022-12-25T22:02:33.033Z"]
+clj꞉projekat.reservations-database꞉> 
+#'projekat.reservations-database/next-week
+clj꞉projekat.reservations-database꞉> 
+(#object[org.joda.time.DateTime 0x703f7ca5 "2022-12-25T09:00:00.000Z"]
+ #object[org.joda.time.DateTime 0x5f8fdae0 "2022-12-25T10:00:00.000Z"]
+ #object[org.joda.time.DateTime 0x110abc6 "2022-12-25T11:00:00.000Z"]
+ #object[org.joda.time.DateTime 0x3fb3f461 "2022-12-25T12:00:00.000Z"]
+ #object[org.joda.time.DateTime 0x6d0a998 "2022-12-25T13:00:00.000Z"]
+ #object[org.joda.time.DateTime 0x52dca6f3 "2022-12-25T14:00:00.000Z"]
+ #object[org.joda.time.DateTime 0x569669f5 "2022-12-25T15:00:00.000Z"]
+ #object[org.joda.time.DateTime 0x76269fba "2022-12-25T16:00:00.000Z"]
+ #object[org.joda.time.DateTime 0x7539648f "2022-12-25T17:00:00.000Z"]
+ #object[org.joda.time.DateTime 0x42e5afe5 "2022-12-25T18:00:00.000Z"])
+clj꞉projekat.reservations-database꞉> 
+clojure.lang.LazySeq
+clj꞉projekat.reservations-database꞉> 
+#'projekat.reservations-database/next-week
+clj꞉projekat.reservations-database꞉> 
+(#object[org.joda.time.DateTime 0x1a1dd60f "2022-12-25T22:02:33.033Z"]
+ #object[org.joda.time.DateTime 0x3a3ff65f "2022-12-25T22:02:33.033Z"]
+ #object[org.joda.time.DateTime 0x2b8f2274 "2022-12-25T22:02:33.033Z"]
+ #object[org.joda.time.DateTime 0x50fbb8d1 "2022-12-25T22:02:33.033Z"]
+ #object[org.joda.time.DateTime 0x17455eef "2022-12-25T22:02:33.033Z"]
+ #object[org.joda.time.DateTime 0x51ee676e "2022-12-25T22:02:33.033Z"]
+ #object[org.joda.time.DateTime 0x32063a5 "2022-12-25T22:02:33.033Z"]
+ #object[org.joda.time.DateTime 0xe107e20 "2022-12-25T22:02:33.033Z"])
+clj꞉projekat.reservations-database꞉> 
+(#object[org.joda.time.DateTime 0x6519dcf4 "2022-12-24T22:02:33.033Z"]
+ #object[org.joda.time.DateTime 0xed49005 "2022-12-25T22:02:33.033Z"]
+ #object[org.joda.time.DateTime 0x7bd4fe22 "2022-12-26T22:02:33.033Z"]
+ #object[org.joda.time.DateTime 0x25dbe130 "2022-12-27T22:02:33.033Z"]
+ #object[org.joda.time.DateTime 0x7c086771 "2022-12-28T22:02:33.033Z"]
+ #object[org.joda.time.DateTime 0x782c8a44 "2022-12-29T22:02:33.033Z"]
+ #object[org.joda.time.DateTime 0x24555e8d "2022-12-30T22:02:33.033Z"]
+ #object[org.joda.time.DateTime 0x5efdf956 "2022-12-31T22:02:33.033Z"])
+clj꞉projekat.reservations-database꞉> 
+(#object[org.joda.time.DateTime 0x45985407 "2022-12-25T22:02:33.033Z"]
+ #object[org.joda.time.DateTime 0x5a9a2edb "2022-12-26T22:02:33.033Z"]
+ #object[org.joda.time.DateTime 0x5c9e2109 "2022-12-27T22:02:33.033Z"]
+ #object[org.joda.time.DateTime 0x4e9d6060 "2022-12-28T22:02:33.033Z"]
+ #object[org.joda.time.DateTime 0x212be5bd "2022-12-29T22:02:33.033Z"]
+ #object[org.joda.time.DateTime 0x7dcb5005 "2022-12-30T22:02:33.033Z"]
+ #object[org.joda.time.DateTime 0x50f0a0dc "2022-12-31T22:02:33.033Z"])
+clj꞉projekat.reservations-database꞉> 
+(#object[org.joda.time.DateTime 0x257942cf "2022-12-25T22:02:33.033Z"]
+ #object[org.joda.time.DateTime 0x56d44fa4 "2022-12-26T22:02:33.033Z"]
+ #object[org.joda.time.DateTime 0x3c5ed34 "2022-12-27T22:02:33.033Z"]
+ #object[org.joda.time.DateTime 0x4cdabef8 "2022-12-28T22:02:33.033Z"]
+ #object[org.joda.time.DateTime 0x6e813806 "2022-12-29T22:02:33.033Z"]
+ #object[org.joda.time.DateTime 0x564223d2 "2022-12-30T22:02:33.033Z"]
+ #object[org.joda.time.DateTime 0x7ac2c863 "2022-12-31T22:02:33.033Z"]
+ #object[org.joda.time.DateTime 0x63f694bd "2023-01-01T22:02:33.033Z"])
+clj꞉projekat.reservations-database꞉> 
+(#object[org.joda.time.DateTime 0x48353b38 "2022-12-25T22:02:33.033Z"]
+ #object[org.joda.time.DateTime 0x200d280 "2022-12-26T22:02:33.033Z"]
+ #object[org.joda.time.DateTime 0x1ead67f4 "2022-12-27T22:02:33.033Z"]
+ #object[org.joda.time.DateTime 0x637c9612 "2022-12-28T22:02:33.033Z"]
+ #object[org.joda.time.DateTime 0x17b7780d "2022-12-29T22:02:33.033Z"]
+ #object[org.joda.time.DateTime 0x659925b5 "2022-12-30T22:02:33.033Z"]
+ #object[org.joda.time.DateTime 0x107e6c35 "2022-12-31T22:02:33.033Z"])
+clj꞉projekat.reservations-database꞉> 
+#'projekat.reservations-database/shift
+clj꞉projekat.reservations-database꞉> 
+; Syntax error compiling at (c:\Users\nodas\Desktop\alati2022\projekat\src\projekat\reservations_database.clj:52:23).
+; Unable to resolve symbol: next-7-days in this context
+clj꞉projekat.reservations-database꞉> 
+#'projekat.reservations-database/next-7-days
+clj꞉projekat.reservations-database꞉> 
+; Error printing return value (ClassCastException) at clojure.core/map$fn (core.clj:2770).
+; class clojure.lang.LazySeq cannot be cast to class clojure.lang.IFn (clojure.lang.LazySeq and clojure.lang.IFn are in unnamed module of loader 'app')
+clj꞉projekat.reservations-database꞉> 
+; Execution error (ArityException) at projekat.reservations-database/eval14394 (form-init5611988240743897118.clj:47).
+; Wrong number of args (0) passed to: projekat.reservations-database/shift
+clj꞉projekat.reservations-database꞉> 
+(#object[org.joda.time.DateTime 0x2353006 "2022-12-25T09:00:00.000Z"]
+ #object[org.joda.time.DateTime 0x66b87b71 "2022-12-25T10:00:00.000Z"]
+ #object[org.joda.time.DateTime 0x5f0c326c "2022-12-25T11:00:00.000Z"]
+ #object[org.joda.time.DateTime 0x6d1d958e "2022-12-25T12:00:00.000Z"]
+ #object[org.joda.time.DateTime 0x12d0f57 "2022-12-25T13:00:00.000Z"]
+ #object[org.joda.time.DateTime 0x7cacf49e "2022-12-25T14:00:00.000Z"]
+ #object[org.joda.time.DateTime 0x428d3635 "2022-12-25T15:00:00.000Z"]
+ #object[org.joda.time.DateTime 0x433d7a0f "2022-12-25T16:00:00.000Z"]
+ #object[org.joda.time.DateTime 0x2a838288 "2022-12-25T17:00:00.000Z"]
+ #object[org.joda.time.DateTime 0x31908b42 "2022-12-25T18:00:00.000Z"])
+clj꞉projekat.reservations-database꞉> 
+#'projekat.reservations-database/next-7-days
+clj꞉projekat.reservations-database꞉> 
+#'projekat.reservations-database/next-7-days
+clj꞉projekat.reservations-database꞉> 
+(#object[org.joda.time.DateTime 0x78c9f5d "2022-12-25T22:02:33.033Z"]
+ #object[org.joda.time.DateTime 0x828d724 "2022-12-26T22:02:33.033Z"]
+ #object[org.joda.time.DateTime 0x7887a8b9 "2022-12-27T22:02:33.033Z"]
+ #object[org.joda.time.DateTime 0x77c2ab06 "2022-12-28T22:02:33.033Z"]
+ #object[org.joda.time.DateTime 0x33b7a7e9 "2022-12-29T22:02:33.033Z"]
+ #object[org.joda.time.DateTime 0x429a9898 "2022-12-30T22:02:33.033Z"]
+ #object[org.joda.time.DateTime 0x71d3212 "2022-12-31T22:02:33.033Z"])
+clj꞉projekat.reservations-database꞉> 
+#'projekat.reservations-database/shift
+clj꞉projekat.reservations-database꞉> 
+#'projekat.reservations-database/next-7-days
+clj꞉projekat.reservations-database꞉> 
+#'projekat.reservations-database/shift
+clj꞉projekat.reservations-database꞉> 
+; Syntax error compiling at (c:\Users\nodas\Desktop\alati2022\projekat\src\projekat\reservations_database.clj:46:6).
+; Unable to resolve symbol: % in this context
+clj꞉projekat.reservations-database꞉> 
+; Error printing return value (ClassCastException) at projekat.reservations-database/shift$iter$fn$fn (form-init5611988240743897118.clj:40).
+; class org.joda.time.DateTime cannot be cast to class clojure.lang.IFn (org.joda.time.DateTime and clojure.lang.IFn are in unnamed module of loader 'app')
+clj꞉projekat.reservations-database꞉> 
+#'projekat.reservations-database/next-7-days
+clj꞉projekat.reservations-database꞉> 
+#object[org.joda.time.DateTime 0x53200386 "2022-12-26T22:02:33.033Z"]
+clj꞉projekat.reservations-database꞉> 
+; Error printing return value (ClassCastException) at projekat.reservations-database/shift$iter$fn$fn (form-init5611988240743897118.clj:40).
+; class org.joda.time.DateTime cannot be cast to class clojure.lang.IFn (org.joda.time.DateTime and clojure.lang.IFn are in unnamed module of loader 'app')
+clj꞉projekat.reservations-database꞉> 
+#'projekat.reservations-database/next-7-days
+clj꞉projekat.reservations-database꞉> 
+; Execution error (ClassCastException) at projekat.reservations-database/eval14555 (form-init5611988240743897118.clj:56).
+; class clojure.lang.LazySeq cannot be cast to class clojure.lang.IFn (clojure.lang.LazySeq and clojure.lang.IFn are in unnamed module of loader 'app')
+clj꞉projekat.reservations-database꞉> 
+#'projekat.reservations-database/next-7-days
+clj꞉projekat.reservations-database꞉> 
+(#object[org.joda.time.DateTime 0x1887c29b "2022-12-25T22:02:33.033Z"]
+ #object[org.joda.time.DateTime 0x5ba04a12 "2022-12-26T22:02:33.033Z"]
+ #object[org.joda.time.DateTime 0x2831d8fa "2022-12-27T22:02:33.033Z"]
+ #object[org.joda.time.DateTime 0x45830d23 "2022-12-28T22:02:33.033Z"]
+ #object[org.joda.time.DateTime 0x2227e4c4 "2022-12-29T22:02:33.033Z"]
+ #object[org.joda.time.DateTime 0x552f5f9f "2022-12-30T22:02:33.033Z"]
+ #object[org.joda.time.DateTime 0x73ffbbc8 "2022-12-31T22:02:33.033Z"])
+clj꞉projekat.reservations-database꞉> 
+#'projekat.reservations-database/shift
+clj꞉projekat.reservations-database꞉> 
+; Error printing return value (ClassCastException) at projekat.reservations-database/shift$iter$fn$fn (form-init5611988240743897118.clj:40).
+; class org.joda.time.DateTime cannot be cast to class clojure.lang.IFn (org.joda.time.DateTime and clojure.lang.IFn are in unnamed module of loader 'app')
+clj꞉projekat.reservations-database꞉> 
+#'projekat.reservations-database/shift
+clj꞉projekat.reservations-database꞉> 
+; Error printing return value (ClassCastException) at projekat.reservations-database/shift$iter$fn$fn (form-init5611988240743897118.clj:40).
+; class org.joda.time.DateTime cannot be cast to class clojure.lang.IFn (org.joda.time.DateTime and clojure.lang.IFn are in unnamed module of loader 'app')
+clj꞉projekat.reservations-database꞉> 
+#'projekat.reservations-database/shift
+clj꞉projekat.reservations-database꞉> 
+; Error printing return value (ClassCastException) at projekat.reservations-database/shift$iter$fn$fn (form-init5611988240743897118.clj:40).
+; class org.joda.time.DateTime cannot be cast to class clojure.lang.IFn (org.joda.time.DateTime and clojure.lang.IFn are in unnamed module of loader 'app')
+clj꞉projekat.reservations-database꞉> 
+#'projekat.reservations-database/shift
+clj꞉projekat.reservations-database꞉> 
+#'projekat.reservations-database/next-day
+clj꞉projekat.reservations-database꞉> 
+#'projekat.reservations-database/shift
+clj꞉projekat.reservations-database꞉> 
+; Error printing return value (ClassCastException) at projekat.reservations-database/shift$iter$fn$fn (form-init5611988240743897118.clj:40).
+; class org.joda.time.DateTime cannot be cast to class clojure.lang.IFn (org.joda.time.DateTime and clojure.lang.IFn are in unnamed module of loader 'app')
+clj꞉projekat.reservations-database꞉> 
+#'projekat.reservations-database/next-7-days
+clj꞉projekat.reservations-database꞉> 
+(#object[org.joda.time.DateTime 0xed2177c "2022-12-25T22:02:33.033Z"]
+ #object[org.joda.time.DateTime 0x4abbc6f6 "2022-12-26T22:02:33.033Z"]
+ #object[org.joda.time.DateTime 0x1ce21766 "2022-12-27T22:02:33.033Z"]
+ #object[org.joda.time.DateTime 0x334f1f89 "2022-12-28T22:02:33.033Z"]
+ #object[org.joda.time.DateTime 0x3e82d627 "2022-12-29T22:02:33.033Z"]
+ #object[org.joda.time.DateTime 0x608f540e "2022-12-30T22:02:33.033Z"]
+ #object[org.joda.time.DateTime 0x6c5a265e "2022-12-31T22:02:33.033Z"])
+clj꞉projekat.reservations-database꞉> 
+nil
+clj꞉projekat.reservations-database꞉> 
+nil
+clj꞉projekat.reservations-database꞉> 
+#'projekat.reservations-database/db
+clj꞉projekat.reservations-database꞉> 
+(0)
+clj꞉projekat.reservations-database꞉> 
+#'projekat.reservations-database/reservations
+clj꞉projekat.reservations-database꞉> 
+#'projekat.reservations-database/add-reservation
+clj꞉projekat.reservations-database꞉> 
+#'projekat.reservations-database/delete-reservation
+clj꞉projekat.reservations-database꞉> 
+#'projekat.reservations-database/table-view-reservation
+clj꞉projekat.reservations-database꞉> 
+nil
+clj꞉projekat.reservations-database꞉> 
+#'projekat.database/update-client-amount
+clj꞉projekat.database꞉> 
+; Syntax error compiling at (c:\Users\nodas\Desktop\alati2022\projekat\src\projekat\core.clj:83:5).
+; No such var: p/new-reservation-form
+clj꞉projekat.core꞉> 
+nil
+clj꞉projekat.pages꞉> 
+#'projekat.reservations-database/get-next-id
+clj꞉projekat.reservations-database꞉> 
+#'projekat.pages/new-reservation-form
 clj꞉projekat.pages꞉> 
 #'projekat.core/app-routes
 clj꞉projekat.core꞉> 
-#'projekat.core/admin-routes
-clj꞉projekat.core꞉> 
-#'projekat.core/wrap-admin-only
-clj꞉projekat.core꞉> 
-#'projekat.core/wrapping
-clj꞉projekat.core꞉> 
+#'projekat.database/get-next-id
+clj꞉projekat.database꞉> 
+; Evaluating file: database.clj
+
+| :id |       :name |      :phone | :amount |
+|-----+-------------+-------------+---------|
+|   1 | Ana nikolic | 090 9089009 |     0.0 |
+nil
+clj꞉projekat.database꞉> 
+; Evaluating file: reservations_database.clj
+; Execution error (BatchUpdateException) at org.sqlite.Stmt/executeBatch (Stmt.java:226).
+; batch entry 0: [SQLITE_ERROR] SQL error or missing database (table reservation already exists)
+; Evaluation of file reservations_database.clj failed: class clojure.lang.Compiler$CompilerException
+clj꞉projekat.reservations-database꞉> 
+; Evaluating file: reservations_database.clj
+nil
+clj꞉projekat.reservations-database꞉> 
+; Evaluating file: core.clj
 #'projekat.core/server
 clj꞉projekat.core꞉> 
-"<!DOCTYPE html>\n<html><body><table><thead><tr><th>Id</th><th>Name</th><th>Description</th></tr></thead><tbody><tr><td></td><td></td><td></td></tr><tr><td></td><td></td><td></td></tr><tr><td></td><td></td><td></td></tr><tr><td></td><td></td><td></td></tr><tr><td></td><td></td><td></td></tr><tr><td></td><td></td><td></td></tr></tbody></table></body></html>"
-clj꞉projekat.pages꞉> 
 #'projekat.pages/massage-index-page
 clj꞉projekat.pages꞉> 
-; Execution error (ClassCastException) at hiccup.table/render-row$fn (table.clj:21).
-; class clojure.lang.PersistentList cannot be cast to class clojure.lang.IFn (clojure.lang.PersistentList and clojure.lang.IFn are in unnamed module of loader 'app')
+#'projekat.pages/base-page
 clj꞉projekat.pages꞉> 
-(({:id 6, :name "Relax", :description "Relaxing massage"}
-  {:id 5, :name "Chair", :description "Relaxed neck, shoulders and back."}
-  {:id 4, :name "Sport", :description "Release muscle tension"}
-  {:id 3, :name "Shiatsu", :description "Relieve pain"}
-  {:id 2, :name "Thai", :description "Flexibility"}
-  {:id 1, :name "Swedish", :description "Gentle touch"}))
+; Evaluating file: pages.clj
+#'projekat.pages/new-reservation-form
 clj꞉projekat.pages꞉> 
-(({:id 1, :name "Swedish", :description "Gentle touch"}
-  {:id 2, :name "Thai", :description "Flexibility"}
-  {:id 3, :name "Shiatsu", :description "Relieve pain"}
-  {:id 4, :name "Sport", :description "Release muscle tension"}
-  {:id 5, :name "Chair", :description "Relaxed neck, shoulders and back."}
-  {:id 6, :name "Relax", :description "Relaxing massage"}))
-clj꞉projekat.pages꞉> 
+; Evaluating file: core.clj
+#'projekat.core/server
+clj꞉projekat.core꞉> 
 #'projekat.pages/massage-index-page
 clj꞉projekat.pages꞉> 
-; Execution error (ClassCastException) at projekat.pages/massage-index-page (form-init8108535469970867471.clj:133).
-; class clojure.lang.LazySeq cannot be cast to class clojure.lang.IFn (clojure.lang.LazySeq and clojure.lang.IFn are in unnamed module of loader 'app')
+#'projekat.pages/base-page
 clj꞉projekat.pages꞉> 
-#'projekat.pages/massage-index-page
+#'projekat.core/app-routes
+clj꞉projekat.core꞉> 
+#'projekat.pages/new-reservation-form
 clj꞉projekat.pages꞉> 
-; Syntax error reading source at (REPL:142:42).
-; Unsupported character: \"John
+; Evaluating file: core.clj
+#'projekat.core/server
+clj꞉projekat.core꞉> 
+; Evaluating file: pages.clj
+#'projekat.pages/new-reservation-form
 clj꞉projekat.pages꞉> 
-[:table
- nil
- [:thead nil [:tr nil ([:th nil "Name "] [:th nil "Age "] [:th nil "Height "])]]
- [:tbody
-  nil
-  ([:tr nil ([:td nil "John "] [:td nil 21] [:td nil 180])]
-   [:tr nil ([:td nil "Wilfred "] [:td nil 22] [:td nil 182])]
-   [:tr nil ([:td nil "Jack "] [:td nil 23] [:td nil 179])]
-   [:tr nil ([:td nil "Daniel "] [:td nil 24] [:td nil 165])])]]
+; Evaluating file: core.clj
+#'projekat.core/server
+clj꞉projekat.core꞉> 
+#'projekat.pages/new-reservation-form
 clj꞉projekat.pages꞉> 
-; Error printing return value (ClassCastException) at hiccup.table/render-row$fn (table.clj:21).
-; class clojure.lang.LazySeq cannot be cast to class clojure.lang.IFn (clojure.lang.LazySeq and clojure.lang.IFn are in unnamed module of loader 'app')
+; Evaluating file: core.clj
+#'projekat.core/server
+clj꞉projekat.core꞉> 
+; Evaluating file: pages.clj
+#'projekat.pages/new-reservation-form
 clj꞉projekat.pages꞉> 
-[:table
- nil
- [:thead nil [:tr nil ([:th nil "Name "] [:th nil "Age "] [:th nil "Height "])]]
- [:tbody
-  nil
-  ([:tr nil ([:td nil nil] [:td nil nil] [:td nil nil])]
-   [:tr nil ([:td nil nil] [:td nil nil] [:td nil nil])]
-   [:tr nil ([:td nil nil] [:td nil nil] [:td nil nil])]
-   [:tr nil ([:td nil nil] [:td nil nil] [:td nil nil])]
-   [:tr nil ([:td nil nil] [:td nil nil] [:td nil nil])]
-   [:tr nil ([:td nil nil] [:td nil nil] [:td nil nil])])]]
+; Evaluating file: core.clj
+#'projekat.core/server
+clj꞉projekat.core꞉> 
+#'projekat.core/app-routes
+clj꞉projekat.core꞉> 
+#'projekat.pages/new-reservation-form
 clj꞉projekat.pages꞉> 
-({:id 6, :name "Relax", :description "Relaxing massage"}
- {:id 5, :name "Chair", :description "Relaxed neck, shoulders and back."}
- {:id 4, :name "Sport", :description "Release muscle tension"}
- {:id 3, :name "Shiatsu", :description "Relieve pain"}
- {:id 2, :name "Thai", :description "Flexibility"}
- {:id 1, :name "Swedish", :description "Gentle touch"})
+#'projekat.core/app-routes
+clj꞉projekat.core꞉> 
+; Evaluating file: core.clj
+#'projekat.core/server
+clj꞉projekat.core꞉> 
+; Syntax error compiling at (c:\Users\nodas\Desktop\alati2022\projekat\src\projekat\pages.clj:1:1).
+; namespace 'projekat.reservations_database' not found after loading '/projekat/reservations_database'
 clj꞉projekat.pages꞉> 
-#'projekat.pages/<tr>
+nil
+clj꞉projekat.reservations_database꞉> 
+; Evaluating file: reservations_database.clj
+nil
+clj꞉projekat.reservations_database꞉> 
+#'projekat.pages/new-reservation-form
 clj꞉projekat.pages꞉> 
-#'projekat.pages/<tr>
+; Evaluating file: pages.clj
+; Execution error (IllegalStateException) at projekat.pages/eval16036$loading (pages.clj:1).
+; Alias reservation_db already exists in namespace projekat.pages, aliasing projekat.reservations-database
+; Evaluation of file pages.clj failed: class clojure.lang.Compiler$CompilerException
 clj꞉projekat.pages꞉> 
-"<!DOCTYPE html>\n<html><table><tr><th></th><th>X</th><th>Y</th><th>Z</th></tr><tr><td>1</td><td>8677</td><td>8402</td><td>6113</td></tr><tr><td>2</td><td>7956</td><td>3123</td><td>8804</td></tr><tr><td>3</td><td>5844</td><td>5897</td><td>7416</td></tr></table></html>"
+; Evaluating file: core.clj
+#'projekat.core/server
+clj꞉projekat.core꞉> 
+#'projekat.pages/new-reservation-form
 clj꞉projekat.pages꞉> 
-"<!DOCTYPE html>\n<html><table><tr><th description=\"Relaxing massage\" id=\"6\" name=\"Relax\"></th><th description=\"Relaxed neck, shoulders and back.\" id=\"5\" name=\"Chair\"></th><th description=\"Release muscle tension\" id=\"4\" name=\"Sport\"></th><th description=\"Relieve pain\" id=\"3\" name=\"Shiatsu\"></th><th description=\"Flexibility\" id=\"2\" name=\"Thai\"></th><th description=\"Gentle touch\" id=\"1\" name=\"Swedish\"></th></tr><tr><td>1</td><td>4375</td><td>7957</td><td>326</td></tr><tr><td>2</td><td>4254</td><td>5895</td><td>9665</td></tr><tr><td>3</td><td>6682</td><td>5433</td><td>4329</td></tr></table></html>"
+; Execution error (NullPointerException) at projekat.reservations-database/get-next-id (reservations_database.clj:27).
+; null
 clj꞉projekat.pages꞉> 
-"<!DOCTYPE html>\n<html><table><tr><th description=\"Relaxing massage\" id=\"6\" name=\"Relax\"></th><th description=\"Relaxed neck, shoulders and back.\" id=\"5\" name=\"Chair\"></th><th description=\"Release muscle tension\" id=\"4\" name=\"Sport\"></th><th description=\"Relieve pain\" id=\"3\" name=\"Shiatsu\"></th><th description=\"Flexibility\" id=\"2\" name=\"Thai\"></th><th description=\"Gentle touch\" id=\"1\" name=\"Swedish\"></th></tr><tr><td>0</td><td>9338</td><td>6230</td><td>7269</td></tr><tr><td>1</td><td>1664</td><td>1412</td><td>2868</td></tr><tr><td>2</td><td>4246</td><td>5311</td><td>6659</td></tr><tr><td>3</td><td>2461</td><td>7919</td><td>1682</td></tr><tr><td>4</td><td>4184</td><td>3564</td><td>5004</td></tr><tr><td>5</td><td>2439</td><td>6068</td><td>242</td></tr></table></html>"
+#'projekat.reservations_database/get-next-id
+clj꞉projekat.reservations_database꞉> 
+; Syntax error reading source at (REPL:23:46).
+; Duplicate key: 1
+clj꞉projekat.reservations_database꞉> 
+(1)
+clj꞉projekat.reservations_database꞉> 
+#'projekat.reservations_database/reservations
+clj꞉projekat.reservations_database꞉> 
+({:id 1, :client_id nil, :massage_id 1})
+clj꞉projekat.reservations_database꞉> 
+(1)
+clj꞉projekat.reservations_database꞉> 
+({:id 1, :client_id nil, :massage_id 1} {:id 2, :client_id 1, :massage_id 1})
+clj꞉projekat.reservations_database꞉> 
+(1)
+clj꞉projekat.reservations_database꞉> 
+({:id 2, :client_id 1, :massage_id 1})
+clj꞉projekat.reservations_database꞉> 
+"<!DOCTYPE html>\n<html><body><form action=\"/reservations/new/3\" method=\"POST\"><label for=\"phone\">Phone: </label><input id=\"phonetf\" name=\"phonetf\" type=\"text\" value=\"\"><label for=\"massage\">Massage: </label><input id=\"massagetf\" name=\"massagetf\" type=\"text\" value=\"\"><input id=\"id\" name=\"id\" type=\"hidden\" value=\"3\"><input id=\"__anti-forgery-token\" name=\"__anti-forgery-token\" type=\"hidden\" value=\"Unbound: #&apos;ring.middleware.anti-forgery/*anti-forgery-token*\"><input type=\"submit\" value=\"Save changes\"></form></body></html>"
 clj꞉projekat.pages꞉> 
-"<!DOCTYPE html>\n<html><table><tr><th></th><th>Id</th><th>Name</th><th>Description</th></tr><tr><td>0</td><td>3255</td><td>5129</td><td>2931</td></tr><tr><td>1</td><td>4796</td><td>6270</td><td>8448</td></tr><tr><td>2</td><td>8836</td><td>640</td><td>8663</td></tr><tr><td>3</td><td>1202</td><td>6971</td><td>3309</td></tr><tr><td>4</td><td>1183</td><td>3210</td><td>3287</td></tr><tr><td>5</td><td>668</td><td>1323</td><td>5819</td></tr></table></html>"
+; Evaluating file: core.clj
+#'projekat.core/server
+clj꞉projekat.core꞉> 
+nil
+clj꞉projekat.core꞉> 
+; Evaluating file: reservation_database.clj
+
+| :id | :client_id | :massage_id |
+|-----+------------+-------------|
+|   2 |          1 |           1 |
+nil
+clj꞉projekat.reservation_database꞉> 
+; Execution error (IllegalStateException) at projekat.pages/eval16213$loading (form-init5611988240743897118.clj:1).
+; Alias reservation_db already exists in namespace projekat.pages, aliasing projekat.reservations-database
 clj꞉projekat.pages꞉> 
-"<!DOCTYPE html>\n<html><table><tr><th>Id</th><th>Name</th><th>Description</th></tr><tr><td>0</td><td>3927</td><td>1698</td><td>8699</td></tr><tr><td>1</td><td>9518</td><td>3647</td><td>6993</td></tr><tr><td>2</td><td>6056</td><td>6182</td><td>6701</td></tr><tr><td>3</td><td>3038</td><td>6164</td><td>3928</td></tr><tr><td>4</td><td>8665</td><td>6658</td><td>2037</td></tr><tr><td>5</td><td>3219</td><td>7571</td><td>5682</td></tr></table></html>"
+; Execution error (IllegalStateException) at projekat.pages/eval16219$loading (form-init5611988240743897118.clj:1).
+; Alias reservation_db already exists in namespace projekat.pages, aliasing projekat.reservations-database
 clj꞉projekat.pages꞉> 
-#function[projekat.pages/eval13982/fn--13983]
+; Evaluating file: pages.clj
+"<!DOCTYPE html>\n<html><body><form action=\"/reservations/new/3\" method=\"POST\"><label for=\"phone\">Phone: </label><input id=\"phonetf\" name=\"phonetf\" type=\"text\" value=\"\"><label for=\"massage\">Massage: </label><input id=\"massagetf\" name=\"massagetf\" type=\"text\" value=\"\"><input id=\"id\" name=\"id\" type=\"hidden\" value=\"3\"><input id=\"__anti-forgery-token\" name=\"__anti-forgery-token\" type=\"hidden\" value=\"Unbound: #&apos;ring.middleware.anti-forgery/*anti-forgery-token*\"><input type=\"submit\" value=\"Save changes\"></form></body></html>"
 clj꞉projekat.pages꞉> 
-2924
+; Execution error (IllegalStateException) at projekat.pages/eval16376$loading (form-init5611988240743897118.clj:1).
+; Alias reservation_db already exists in namespace projekat.pages, aliasing projekat.reservations-database
 clj꞉projekat.pages꞉> 
-; Error printing return value (ClassCastException) at clojure.core/repeatedly$fn (core.clj:5174).
-; class java.lang.Long cannot be cast to class clojure.lang.IFn (java.lang.Long is in module java.base of loader 'bootstrap'; clojure.lang.IFn is in unnamed module of loader 'app')
+nil
 clj꞉projekat.pages꞉> 
-; Syntax error compiling at (c:\Users\nodas\Desktop\alati2022\projekat\src\projekat\pages.clj:158:39).
-; Unable to resolve symbol: n in this context
+; Evaluating file: pages.clj
+"<!DOCTYPE html>\n<html><body><form action=\"/reservations/new/3\" method=\"POST\"><label for=\"phone\">Phone: </label><input id=\"phonetf\" name=\"phonetf\" type=\"text\" value=\"\"><label for=\"massage\">Massage: </label><input id=\"massagetf\" name=\"massagetf\" type=\"text\" value=\"\"><input id=\"id\" name=\"id\" type=\"hidden\" value=\"3\"><input id=\"__anti-forgery-token\" name=\"__anti-forgery-token\" type=\"hidden\" value=\"Unbound: #&apos;ring.middleware.anti-forgery/*anti-forgery-token*\"><input type=\"submit\" value=\"Save changes\"></form></body></html>"
 clj꞉projekat.pages꞉> 
-[:tr ([:td 1] [:td 3940] [:td 5340] [:td 6734])]
-clj꞉projekat.pages꞉> 
-{:id 2, :name "Thai", :description "Flexibility"}
-clj꞉projekat.pages꞉> 
-{:id 1, :name "Swedish", :description "Gentle touch"}
-clj꞉projekat.pages꞉> 
-[:tr ([:td 1] [:td [:id 1]] [:td [:name "Swedish"]] [:td [:description "Gentle touch"]])]
-clj꞉projekat.pages꞉> 
-[:tr ([:td [:id 1]] [:td [:name "Swedish"]] [:td [:description "Gentle touch"]])]
-clj꞉projekat.pages꞉> 
+; Execution error (IllegalStateException) at projekat.core/eval16545$loading (form-init5611988240743897118.clj:3).
+; Alias reservation_db already exists in namespace projekat.core, aliasing projekat.reservations_database
+clj꞉projekat.core꞉> 
+nil
+clj꞉projekat.core꞉> 
+; Evaluating file: core.clj
+; Syntax error compiling at (c:\Users\nodas\Desktop\alati2022\projekat\src\projekat\core.clj:89:11).
+; No such var: reservations_db/add-massage
+; Evaluation of file core.clj failed: class clojure.lang.Compiler$CompilerException
+clj꞉projekat.core꞉> 
+; Evaluating file: core.clj
+; Syntax error compiling at (c:\Users\nodas\Desktop\alati2022\projekat\src\projekat\core.clj:89:11).
+; No such var: reservations_db/add-massage
+; Evaluation of file core.clj failed: class clojure.lang.Compiler$CompilerException
+clj꞉projekat.core꞉> 
+; Evaluating file: core.clj
+#'projekat.core/server
+clj꞉projekat.core꞉> 
+#'projekat.core/prepare-reservation
+clj꞉projekat.core꞉> 
+#'projekat.database/get-id-by-phone
+clj꞉projekat.database꞉> 
+#'projekat.database/get-id-by-phone
+clj꞉projekat.database꞉> 
+({:id 1})
+clj꞉projekat.database꞉> 
+#'projekat.database/get-id-by-phone
+clj꞉projekat.database꞉> 
+nil
+clj꞉projekat.database꞉> 
+#'projekat.database/get-id-by-phone
+clj꞉projekat.database꞉> 
+({:id 1})
+clj꞉projekat.database꞉> 
+#'projekat.database/get-id-by-phone
+clj꞉projekat.database꞉> 
 1
-clj꞉projekat.pages꞉> 
-; Error printing return value (IllegalArgumentException) at clojure.lang.RT/seqFrom (RT.java:557).
-; Don't know how to create ISeq from: java.lang.Integer
-clj꞉projekat.pages꞉> 
-"<!DOCTYPE html>\n<html><tr><td>1</td></tr></html>"
-clj꞉projekat.pages꞉> 
-"<!DOCTYPE html>\n<html><tr><td>1</td><td>Swedish</td><td>Gentle touch</td></tr></html>"
-clj꞉projekat.pages꞉> 
-"<!DOCTYPE html>\n<html><table><tr><td>1</td><td>Swedish</td><td>Gentle touch</td></tr><tr><td>2</td><td>Thai</td><td>Flexibility</td></tr><tr><td>3</td><td>Shiatsu</td><td>Relieve pain</td></tr><tr><td>4</td><td>Sport</td><td>Release muscle tension</td></tr><tr><td>5</td><td>Chair</td><td>Relaxed neck, shoulders and back.</td></tr><tr><td>6</td><td>Relax</td><td>Relaxing massage</td></tr></table></html>"
-clj꞉projekat.pages꞉> 
-"<!DOCTYPE html>\n<html><table><tr><th><Id>NameDescription</Id></th></tr><tr><td>1</td><td>Swedish</td><td>Gentle touch</td></tr><tr><td>2</td><td>Thai</td><td>Flexibility</td></tr><tr><td>3</td><td>Shiatsu</td><td>Relieve pain</td></tr><tr><td>4</td><td>Sport</td><td>Release muscle tension</td></tr><tr><td>5</td><td>Chair</td><td>Relaxed neck, shoulders and back.</td></tr><tr><td>6</td><td>Relax</td><td>Relaxing massage</td></tr></table></html>"
-clj꞉projekat.pages꞉> 
- clj꞉projekat.pages꞉> 
-"<!DOCTYPE html>\n<html><table><tr><th>Id</th><th>Name</th><th>Description</th></tr><tr><td>1</td><td>Swedish</td><td>Gentle touch</td></tr><tr><td>2</td><td>Thai</td><td>Flexibility</td></tr><tr><td>3</td><td>Shiatsu</td><td>Relieve pain</td></tr><tr><td>4</td><td>Sport</td><td>Release muscle tension</td></tr><tr><td>5</td><td>Chair</td><td>Relaxed neck, shoulders and back.</td></tr><tr><td>6</td><td>Relax</td><td>Relaxing massage</td></tr></table></html>"
-clj꞉projekat.pages꞉> 
-#'projekat.pages/massage-index-page
-clj꞉projekat.pages꞉> 
-"<!DOCTYPE html>\n<html><table><tr><th>Id</th><th>Name</th><th>Description</th></tr><tr><td>1</td><td>Swedish</td><td>Gentle touch</td></tr><tr><td>2</td><td>Thai</td><td>Flexibility</td></tr><tr><td>3</td><td>Shiatsu</td><td>Relieve pain</td></tr><tr><td>4</td><td>Sport</td><td>Release muscle tension</td></tr><tr><td>5</td><td>Chair</td><td>Relaxed neck, shoulders and back.</td></tr><tr><td>6</td><td>Relax</td><td>Relaxing massage</td></tr></table></html>"
-clj꞉projekat.pages꞉> 
-#'projekat.core/name-surname
+clj꞉projekat.database꞉> 
+#'projekat.massage_data_base/get-massage-id-by-name
+clj꞉projekat.massage_data_base꞉> 
+nil
+clj꞉projekat.massage_data_base꞉> 
+#'projekat.massage_data_base/get-massage-id-by-name
+clj꞉projekat.massage_data_base꞉> 
+4
+clj꞉projekat.massage_data_base꞉> 
+; Evaluating file: massage_data_base.clj
+
+| :id |      :name |                  :description | :price |
+|-----+------------+-------------------------------+--------|
+|   1 |    Swedish |                  Gentle touch |   40.0 |
+|   2 |       Thai |                   Flexibility |   35.0 |
+|   3 |    Shiatsu |   Relaxation and relieve pain |   37.0 |
+|   4 |      Sport |        Release muscle tension |   45.0 |
+|   5 |      Relax |              Relaxing massage |   44.0 |
+|   7 | Whole body | Preparing body for next week. |   70.0 |
+nil
+clj꞉projekat.massage_data_base꞉> 
+; Evaluating file: database.clj
+
+| :id |       :name |      :phone | :amount |
+|-----+-------------+-------------+---------|
+|   1 | Ana nikolic | 090 9089009 |     0.0 |
+#'projekat.database/get-id-by-phone
+clj꞉projekat.database꞉> 
+nil
+clj꞉projekat.reservation_database꞉> 
+nil
+clj꞉projekat.reservation_database꞉> 
+nil
+clj꞉projekat.reservation_database꞉> 
+#'projekat.reservation_database/add-reservation
+clj꞉projekat.reservation_database꞉> 
+#'projekat.reservation_database/add-reservation
+clj꞉projekat.reservation_database꞉> 
+; Evaluating file: reservation_database.clj
+
+| :id | :client_id | :massage_id |
+|-----+------------+-------------|
+|   2 |          1 |           1 |
+nil
+clj꞉projekat.reservation_database꞉> 
+; Evaluating file: core.clj
+#'projekat.core/server
+clj꞉projekat.core꞉> 
+1
+clj꞉projekat.database꞉> 
+#'projekat.core/prepare-reservation
+clj꞉projekat.core꞉> 
+; Evaluating file: core.clj
+#'projekat.core/server
 clj꞉projekat.core꞉> 
 #'projekat.core/app-routes
 clj꞉projekat.core꞉> 
-#'projekat.core/admin-routes
-clj꞉projekat.core꞉> 
-#'projekat.core/wrap-admin-only
-clj꞉projekat.core꞉> 
-#'projekat.core/wrapping
-clj꞉projekat.core꞉> 
-#'projekat.core/server
-clj꞉projekat.core꞉> 
-#'projekat.pages/base-page
-clj꞉projekat.pages꞉> 
 ; Evaluating file: core.clj
 #'projekat.core/server
 clj꞉projekat.core꞉> 
-#'projekat.pages/base-page
-clj꞉projekat.pages꞉> 
-; Evaluating file: core.clj
-#'projekat.core/server
-clj꞉projekat.core꞉> 
-#'projekat.pages/base-page
-clj꞉projekat.pages꞉> 
-; Evaluating file: core.clj
-#'projekat.core/server
-clj꞉projekat.core꞉> 
-#'projekat.core/app-routes
-clj꞉projekat.core꞉> 
-#'projekat.core/admin-routes
-clj꞉projekat.core꞉> 
-#'projekat.core/wrap-admin-only
-clj꞉projekat.core꞉> 
-#'projekat.core/wrapping
-clj꞉projekat.core꞉> 
-#'projekat.core/server
-clj꞉projekat.core꞉> 
-#'projekat.pages/base-page
-clj꞉projekat.pages꞉> 
-#'projekat.pages/base-page
-clj꞉projekat.pages꞉> 
-; Evaluating file: core.clj
-#'projekat.core/server
-clj꞉projekat.core꞉> 
-#'projekat.pages/massage-index-page
-clj꞉projekat.pages꞉> 
-#'projekat.pages/base-page
-clj꞉projekat.pages꞉> 
-#'projekat.pages/base-page
-clj꞉projekat.pages꞉> 
-; Evaluating file: core.clj
-#'projekat.core/server
+#'projekat.core/prepare-reservation
 clj꞉projekat.core꞉> 
 ; Evaluating file: core.clj
 #'projekat.core/server
 clj꞉projekat.core꞉> 
-#'projekat.core/server
-clj꞉projekat.core꞉> 
-#'projekat.pages/base-page
-clj꞉projekat.pages꞉> 
+
+| :id | :client_id | :massage_id |
+|-----+------------+-------------|
+|   2 |          1 |           1 |
+|   3 |          1 |           1 |
+nil
+clj꞉projekat.reservation_database꞉> 
 ; Evaluating file: core.clj
 #'projekat.core/server
 clj꞉projekat.core꞉> 
-#'projekat.pages/base-page
-clj꞉projekat.pages꞉> 
+"ss"
+clj꞉projekat.core꞉> 
 ; Evaluating file: core.clj
 #'projekat.core/server
 clj꞉projekat.core꞉> 
-#'projekat.pages/base-page
-clj꞉projekat.pages꞉> 
-; Evaluating file: core.clj
-#'projekat.core/server
-clj꞉projekat.core꞉> 
-#'projekat.pages/base-page
-clj꞉projekat.pages꞉> 
-#'projekat.pages/base-page
-clj꞉projekat.pages꞉> 
-; Evaluating file: core.clj
-#'projekat.core/server
-clj꞉projekat.core꞉> 
-#'projekat.pages/massage-index-page
-clj꞉projekat.pages꞉> 
-; Evaluating file: core.clj
-#'projekat.core/server
-clj꞉projekat.core꞉> 
-#'projekat.pages/base-page
-clj꞉projekat.pages꞉> 
-#'projekat.pages/massage-index-page
-clj꞉projekat.pages꞉> 
-; Evaluating file: core.clj
-#'projekat.core/server
-clj꞉projekat.core꞉> 
-#'projekat.pages/massage-index-page
-clj꞉projekat.pages꞉> 
-; Evaluating file: core.clj
-#'projekat.core/server
-clj꞉projekat.core꞉> 
-#'projekat.pages/massage-index-page
-clj꞉projekat.pages꞉> 
+
+| :id | :client_id | :massage_id |
+|-----+------------+-------------|
+|   2 |          1 |           1 |
+|   3 |          1 |           1 |
+|   4 |          1 |           4 |
+nil
+clj꞉projekat.reservation_database꞉> 
+({:id 2, :client_id 1, :massage_id 1} {:id 3, :client_id 1, :massage_id 1} {:id 4, :client_id 1, :massage_id 4})
+clj꞉projekat.reservation_database꞉> 

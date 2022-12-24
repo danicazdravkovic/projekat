@@ -11,7 +11,7 @@
                  [ring/ring-devel "1.8.0"]
                  [org.xerial/sqlite-jdbc "3.7.2"]
                  [hiccup-table "0.2.0"]
-
+                 [clj-time/clj-time "0.15.2"]
                  ]
   :plugins [[lein-ring "0.12.6"]]
   :main projekat.server-config

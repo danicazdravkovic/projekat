@@ -43,45 +43,49 @@
 ;MORALI SMO DA DODAMO SQLITE DRIVER U DEPENDECY U PROJECT FILE [org.xerial/sqlite-jdbc "3.7.2"]
 (def db {:classname   "org.sqlite.JDBC"
          :subprotocol "sqlite"
-         :subname     "resources/test.db"})
+         :subname     "resources/client.db"})
 ;CREATE TABLE
 ; (jdbc/db-do-commands db
 ;                      "create table client (
 ;                        id integer primary key autoincrement,
 ;                        name varchar(255),
-;                        phone varchar(255)
+;                        phone varchar(255),
+;                       amount double
 ;                        );"
 ;                      )
 
 
-(def clients (jdbc/query db ["SELECT * FROM client"]))
-clients
+(defn clients [] (jdbc/query db ["SELECT * FROM client"]))
+(clients)
 (defn add-client [client]
-  (jdbc/execute! db ["insert into client (name, phone) values (?, ?) "  (:name client) (:phone client)]))
+  (jdbc/execute! db ["insert into client (name, phone, amount) values (?, ?, ?) "  (:name client) (:phone client) 0]))
 ;(add-client { :name "Ana Nikolic" :phone "0679089700" }) 
 
 (defn update-client [client]
   (jdbc/execute! db ["UPDATE client  SET phone = ? WHERE id = ?"  (:phone client) (:id client)])
   (jdbc/execute! db ["UPDATE client  SET name = ? WHERE id = ?"  (:name client) (:id client)]))
 
-   ;(update-client { :id 6 :name "Ana nikolic" :phone "090 9089009"})
+   ;(update-client { :id 1 :name "Ana nikolic" :phone "090 9089009"})
 
 
 (defn get-client-by-id [id]
-  (nth (filter #(= (:id %) id) clients) 0) ;vraca 1. element koji zadovoljava uslov
+  (nth (filter #(= (:id %) id) (clients)) 0) ;vraca 1. element koji zadovoljava uslov
   )
-;(get-client-by-id 1)
+; (get-client-by-id 1)
 (defn get-next-id []
   (+ 1 (:m (nth (jdbc/query db ["SELECT MAX(id) as m FROM client"]) 0))))
 
-;(get-next-id)
+; (get-next-id)
 (defn delete-client [id]
   (jdbc/execute! db ["DELETE FROM client WHERE id = ?" id]))
-;(delete-client 7)
+; (delete-client 2)
 
 (defn table-view-client []
   (p/print-table (jdbc/query db (str "select * from client  ;"))))
 (table-view-client)
+(defn get-id-by-phone [phoneString]
+  (:id (nth (jdbc/query db ["SELECT id FROM client where phone=?" phoneString]) 0)))
+; (get-id-by-phone "090 9089009")
 
 ; ; INSERT
 ;   (jdbc/db-do-commands db
