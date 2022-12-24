@@ -5,8 +5,6 @@
 ; Happy coding! ♥️
 
 ; Jacking in...
-; Starting Jack-in Terminal: bb --nrepl-server 50004
-; Jacking in...
 ; Starting Jack-in Terminal: cmd.exe /d /c lein update-in :dependencies conj [nrepl,"1.0.0"] -- update-in :plugins conj [cider/cider-nrepl,"0.28.5"] -- update-in [:repl-options,:nrepl-middleware] conj '["cider.nrepl/cider-middleware"]' -- with-profile +dev repl :headless
 ; Hooking up nREPL sessions...
 ; Connected session: clj
@@ -17,81 +15,335 @@
 ;   - `alt+up` and `alt+down` traverse up and down the REPL command history
 ;      when the cursor is after the last contents at the prompt
 ;   - Clojure lines in stack traces are peekable and clickable.
-clj꞉user꞉>  ; Use `alt+enter` to evaluate
+clj꞉projekat.server-config꞉>  ; Use `alt+enter` to evaluate
 ; Jack-in done.
-clj꞉user꞉> 
-; Syntax error compiling at (c:\Users\nodas\Desktop\alati2022\projekat\src\projekat\core.clj:97:3).
-; No such namespace: ring
-clj꞉projekat.core꞉> 
-; Jacking in...
-; nREPL Connection was closed
-; Starting Jack-in Terminal: cmd.exe /d /c lein update-in :dependencies conj [nrepl,"1.0.0"] -- update-in :plugins conj [cider/cider-nrepl,"0.28.5"] -- update-in [:repl-options,:nrepl-middleware] conj '["cider.nrepl/cider-middleware"]' -- with-profile +dev repl :headless
-; Hooking up nREPL sessions...
-; Connected session: clj
-; TIPS:
-;   - You can edit the contents here. Use it as a REPL if you like.
-;   - `alt+enter` evaluates the current top level form.
-;   - `ctrl+enter` evaluates the current form.
-;   - `alt+up` and `alt+down` traverse up and down the REPL command history
-;      when the cursor is after the last contents at the prompt
-;   - Clojure lines in stack traces are peekable and clickable.
-clj꞉user꞉> 
-; Jack-in done.
-clj꞉user꞉> 
-; Syntax error compiling at (c:\Users\nodas\Desktop\alati2022\projekat\src\projekat\core.clj:102:3).
-; No such namespace: session
-clj꞉projekat.core꞉> 
-; Syntax error compiling at (c:\Users\nodas\Desktop\alati2022\projekat\src\projekat\core.clj:102:3).
-; No such namespace: session
-clj꞉projekat.core꞉> 
+clj꞉projekat.server-config꞉> 
+; Evaluating file: admin.clj
+#'projekat.admin/check-login
+clj꞉projekat.admin꞉> 
+; Evaluating file: server_config.clj
 nil
+clj꞉projekat.server-config꞉> 
+; Evaluating file: database.clj
+
+| :id |             :name |      :phone |
+|-----+-------------------+-------------|
+|   1 | Danica Zdravkovic |  0652010058 |
+|   2 |          Ana Anic |   060654332 |
+|   6 |       Ana nikolic | 090 9089009 |
+|   8 |         Ana Savic |   098765678 |
+nil
+clj꞉projekat.database꞉> 
+; Evaluating file: massage_data_base.clj
+
+| :id |   :name |                      :description |
+|-----+---------+-----------------------------------|
+|   1 | Swedish |                      Gentle touch |
+|   2 |    Thai |                       Flexibility |
+|   3 | Shiatsu |                      Relieve pain |
+|   4 |   Sport |            Release muscle tension |
+|   5 |   Chair | Relaxed neck, shoulders and back. |
+|   6 |   Relax |                  Relaxing massage |
+nil
+clj꞉projekat.massage_data_base꞉> 
+; Evaluating file: pages.clj
+#'projekat.pages/massage-index-page
+clj꞉projekat.pages꞉> 
+; Evaluating file: pages.clj
+#'projekat.pages/massage-index-page
+clj꞉projekat.pages꞉> 
+; Evaluating file: core.clj
+; Execution error (BindException) at sun.nio.ch.Net/bind0 (Net.java:-2).
+; Address already in use: bind
+; Evaluation of file core.clj failed: class clojure.lang.Compiler$CompilerException
 clj꞉projekat.core꞉> 
+#'projekat.core/server
+clj꞉projekat.core꞉> 
+; Evaluating file: core.clj
+#'projekat.core/server
+clj꞉projekat.core꞉> 
+
+| :id |             :name |      :phone |
+|-----+-------------------+-------------|
+|   1 | Danica Zdravkovic |  0652010058 |
+|   2 |          Ana Anic |   060654332 |
+|   6 |       Ana nikolic | 090 9089009 |
+|   8 |         Ana Savic |   098765678 |
+nil
+clj꞉projekat.database꞉> 
+
+| :id |             :name |      :phone |
+|-----+-------------------+-------------|
+|   1 | Danica Zdravkovic |  0652010058 |
+|   2 |          Ana Anic |   060654332 |
+|   6 |       Ana nikolic | 090 9089009 |
+|   8 |         Ana Savic |   098765678 |
+nil
+clj꞉projekat.database꞉> 
+#'projekat.database/table-view-client
+clj꞉projekat.database꞉> 
+#'projekat.massage_data_base/massages-vector
+clj꞉projekat.massage_data_base꞉> 
+()
+clj꞉projekat.massage_data_base꞉> 
+#'projekat.massage_data_base/massages-list
+clj꞉projekat.massage_data_base꞉> 
+()
+clj꞉projekat.massage_data_base꞉> 
+; Error printing return value (ClassCastException) at clojure.core/map$fn (core.clj:2772).
+; class clojure.lang.PersistentList$EmptyList cannot be cast to class clojure.lang.IFn (clojure.lang.PersistentList$EmptyList and clojure.lang.IFn are in unnamed module of loader 'app')
+clj꞉projekat.massage_data_base꞉> 
+(({:id 1, :name "Swedish", :description "Gentle touch"})
+ ({:id 2, :name "Thai", :description "Flexibility"})
+ ({:id 3, :name "Shiatsu", :description "Relieve pain"})
+ ({:id 4, :name "Sport", :description "Release muscle tension"})
+ ({:id 5, :name "Chair", :description "Relaxed neck, shoulders and back."})
+ ({:id 6, :name "Relax", :description "Relaxing massage"}))
+clj꞉projekat.massage_data_base꞉> 
+(({:id 1, :name "Swedish", :description "Gentle touch"})
+ ({:id 2, :name "Thai", :description "Flexibility"})
+ ({:id 3, :name "Shiatsu", :description "Relieve pain"})
+ ({:id 4, :name "Sport", :description "Release muscle tension"})
+ ({:id 5, :name "Chair", :description "Relaxed neck, shoulders and back."})
+ ({:id 6, :name "Relax", :description "Relaxing massage"}))
+clj꞉projekat.massage_data_base꞉> 
+(({:id 1, :name "Swedish", :description "Gentle touch"})
+ ({:id 2, :name "Thai", :description "Flexibility"})
+ ({:id 3, :name "Shiatsu", :description "Relieve pain"})
+ ({:id 4, :name "Sport", :description "Release muscle tension"})
+ ({:id 5, :name "Chair", :description "Relaxed neck, shoulders and back."})
+ ({:id 6, :name "Relax", :description "Relaxing massage"}))
+clj꞉projekat.massage_data_base꞉> 
+(({:id 1, :name "Swedish", :description "Gentle touch"})
+ ({:id 2, :name "Thai", :description "Flexibility"})
+ ({:id 3, :name "Shiatsu", :description "Relieve pain"})
+ ({:id 4, :name "Sport", :description "Release muscle tension"})
+ ({:id 5, :name "Chair", :description "Relaxed neck, shoulders and back."})
+ ({:id 6, :name "Relax", :description "Relaxing massage"}))
+clj꞉projekat.massage_data_base꞉> 
+(({:id 1, :name "Swedish", :description "Gentle touch"})
+ ({:id 2, :name "Thai", :description "Flexibility"})
+ ({:id 3, :name "Shiatsu", :description "Relieve pain"})
+ ({:id 4, :name "Sport", :description "Release muscle tension"})
+ ({:id 5, :name "Chair", :description "Relaxed neck, shoulders and back."})
+ ({:id 6, :name "Relax", :description "Relaxing massage"}))
+clj꞉projekat.massage_data_base꞉> 
+#'projekat.massage_data_base/massage-list
+clj꞉projekat.massage_data_base꞉> 
+(({:id 1, :name "Swedish", :description "Gentle touch"})
+ ({:id 2, :name "Thai", :description "Flexibility"})
+ ({:id 3, :name "Shiatsu", :description "Relieve pain"})
+ ({:id 4, :name "Sport", :description "Release muscle tension"})
+ ({:id 5, :name "Chair", :description "Relaxed neck, shoulders and back."})
+ ({:id 6, :name "Relax", :description "Relaxing massage"}))
+clj꞉projekat.massage_data_base꞉> 
+clojure.lang.LazySeq
+clj꞉projekat.massage_data_base꞉> 
+6
+clj꞉projekat.massage_data_base꞉> 
+caocaocaocaocaocao(nil nil nil nil nil nil)
+clj꞉projekat.massage_data_base꞉> 
+; Syntax error macroexpanding clojure.core/defn at (c:\Users\nodas\Desktop\alati2022\projekat\src\projekat\massage_data_base.clj:55:1).
+; quote - failed: vector? at: [:fn-tail :arity-n :bodies :params] spec: :clojure.core.specs.alpha/param-list
+; (quote ()) - failed: vector? at: [:fn-tail :arity-1 :params] spec: :clojure.core.specs.alpha/param-list
+clj꞉projekat.massage_data_base꞉> 
+#'projekat.massage_data_base/empty-list
+clj꞉projekat.massage_data_base꞉> 
+#'projekat.massage_data_base/massage-list
+clj꞉projekat.massage_data_base꞉> 
+; Execution error (ClassCastException) at projekat.massage-data-base/eval13443 (form-init8108535469970867471.clj:61).
+; class clojure.lang.LazySeq cannot be cast to class clojure.lang.IFn (clojure.lang.LazySeq and clojure.lang.IFn are in unnamed module of loader 'app')
+clj꞉projekat.massage_data_base꞉> 
+; Error printing return value (ClassCastException) at clojure.lang.Numbers/isPos (Numbers.java:123).
+; class clojure.lang.LazySeq cannot be cast to class java.lang.Number (clojure.lang.LazySeq is in unnamed module of loader 'app'; java.lang.Number is in module java.base of loader 'bootstrap')
+clj꞉projekat.massage_data_base꞉> 
+{:id 2, :name "Thai", :description "Flexibility"}
+clj꞉projekat.massage_data_base꞉> 
+#'projekat.massage_data_base/massage-list
+clj꞉projekat.massage_data_base꞉> 
+; Execution error (ClassCastException) at projekat.massage-data-base/eval13465 (form-init8108535469970867471.clj:61).
+; class clojure.lang.LazySeq cannot be cast to class clojure.lang.IFn (clojure.lang.LazySeq and clojure.lang.IFn are in unnamed module of loader 'app')
+clj꞉projekat.massage_data_base꞉> 
+; Syntax error compiling at (c:\Users\nodas\Desktop\alati2022\projekat\src\projekat\massage_data_base.clj:62:1).
+; Unable to resolve symbol: i in this context
+clj꞉projekat.massage_data_base꞉> 
+{:id 2, :name "Thai", :description "Flexibility"}
+clj꞉projekat.massage_data_base꞉> 
+{:id 2, :name "Thai", :description "Flexibility"}
+clj꞉projekat.massage_data_base꞉> 
+clojure.lang.PersistentArrayMap
+clj꞉projekat.massage_data_base꞉> 
+#'projekat.massage_data_base/massage-list
+clj꞉projekat.massage_data_base꞉> 
+; Execution error (ClassCastException) at projekat.massage-data-base/eval13490 (form-init8108535469970867471.clj:61).
+; class clojure.lang.LazySeq cannot be cast to class clojure.lang.IFn (clojure.lang.LazySeq and clojure.lang.IFn are in unnamed module of loader 'app')
+clj꞉projekat.massage_data_base꞉> 
+({:id 6, :name "Relax", :description "Relaxing massage"}
+ {:id 5, :name "Chair", :description "Relaxed neck, shoulders and back."}
+ {:id 4, :name "Sport", :description "Release muscle tension"}
+ {:id 3, :name "Shiatsu", :description "Relieve pain"}
+ {:id 2, :name "Thai", :description "Flexibility"}
+ {:id 1, :name "Swedish", :description "Gentle touch"})
+clj꞉projekat.massage_data_base꞉> 
+clojure.lang.PersistentList
+clj꞉projekat.massage_data_base꞉> 
+#'projekat.pages/massage-index-page
+clj꞉projekat.pages꞉> 
+; Execution error (ArityException) at projekat.pages/massage-index-page (form-init8108535469970867471.clj:133).
+; Wrong number of args (1) passed to: hiccup.table/to-table1d
+clj꞉projekat.pages꞉> 
+({:id 6, :name "Relax", :description "Relaxing massage"}
+ {:id 5, :name "Chair", :description "Relaxed neck, shoulders and back."}
+ {:id 4, :name "Sport", :description "Release muscle tension"}
+ {:id 3, :name "Shiatsu", :description "Relieve pain"}
+ {:id 2, :name "Thai", :description "Flexibility"}
+ {:id 1, :name "Swedish", :description "Gentle touch"})
+clj꞉projekat.pages꞉> 
+({:id 6, :name "Relax", :description "Relaxing massage"}
+ {:id 5, :name "Chair", :description "Relaxed neck, shoulders and back."}
+ {:id 4, :name "Sport", :description "Release muscle tension"}
+ {:id 3, :name "Shiatsu", :description "Relieve pain"}
+ {:id 2, :name "Thai", :description "Flexibility"}
+ {:id 1, :name "Swedish", :description "Gentle touch"})
+clj꞉projekat.pages꞉> 
+; Syntax error reading source at (REPL:133:64).
+; Unsupported character: \"Id
+clj꞉projekat.pages꞉> 
+#'projekat.pages/massage-index-page
+clj꞉projekat.pages꞉> 
+#'projekat.pages/massage-index-page
+clj꞉projekat.pages꞉> 
+"<!DOCTYPE html>\n<html><body><table><thead><tr><th>Id</th><th>Name</th><th>Description</th></tr></thead><tbody><tr><td></td><td></td><td></td></tr><tr><td></td><td></td><td></td></tr><tr><td></td><td></td><td></td></tr><tr><td></td><td></td><td></td></tr><tr><td></td><td></td><td></td></tr><tr><td></td><td></td><td></td></tr></tbody></table></body></html>"
+clj꞉projekat.pages꞉> 
+#'projekat.core/app-routes
+clj꞉projekat.core꞉> 
+#'projekat.core/admin-routes
+clj꞉projekat.core꞉> 
+#'projekat.core/wrap-admin-only
+clj꞉projekat.core꞉> 
+#'projekat.core/wrapping
+clj꞉projekat.core꞉> 
+#'projekat.core/server
+clj꞉projekat.core꞉> 
+"<!DOCTYPE html>\n<html><body><table><thead><tr><th>Id</th><th>Name</th><th>Description</th></tr></thead><tbody><tr><td></td><td></td><td></td></tr><tr><td></td><td></td><td></td></tr><tr><td></td><td></td><td></td></tr><tr><td></td><td></td><td></td></tr><tr><td></td><td></td><td></td></tr><tr><td></td><td></td><td></td></tr></tbody></table></body></html>"
+clj꞉projekat.pages꞉> 
+#'projekat.pages/massage-index-page
+clj꞉projekat.pages꞉> 
+; Execution error (ClassCastException) at hiccup.table/render-row$fn (table.clj:21).
+; class clojure.lang.PersistentList cannot be cast to class clojure.lang.IFn (clojure.lang.PersistentList and clojure.lang.IFn are in unnamed module of loader 'app')
+clj꞉projekat.pages꞉> 
+(({:id 6, :name "Relax", :description "Relaxing massage"}
+  {:id 5, :name "Chair", :description "Relaxed neck, shoulders and back."}
+  {:id 4, :name "Sport", :description "Release muscle tension"}
+  {:id 3, :name "Shiatsu", :description "Relieve pain"}
+  {:id 2, :name "Thai", :description "Flexibility"}
+  {:id 1, :name "Swedish", :description "Gentle touch"}))
+clj꞉projekat.pages꞉> 
+(({:id 1, :name "Swedish", :description "Gentle touch"}
+  {:id 2, :name "Thai", :description "Flexibility"}
+  {:id 3, :name "Shiatsu", :description "Relieve pain"}
+  {:id 4, :name "Sport", :description "Release muscle tension"}
+  {:id 5, :name "Chair", :description "Relaxed neck, shoulders and back."}
+  {:id 6, :name "Relax", :description "Relaxing massage"}))
+clj꞉projekat.pages꞉> 
+#'projekat.pages/massage-index-page
+clj꞉projekat.pages꞉> 
+; Execution error (ClassCastException) at projekat.pages/massage-index-page (form-init8108535469970867471.clj:133).
+; class clojure.lang.LazySeq cannot be cast to class clojure.lang.IFn (clojure.lang.LazySeq and clojure.lang.IFn are in unnamed module of loader 'app')
+clj꞉projekat.pages꞉> 
+#'projekat.pages/massage-index-page
+clj꞉projekat.pages꞉> 
+; Syntax error reading source at (REPL:142:42).
+; Unsupported character: \"John
+clj꞉projekat.pages꞉> 
+[:table
+ nil
+ [:thead nil [:tr nil ([:th nil "Name "] [:th nil "Age "] [:th nil "Height "])]]
+ [:tbody
+  nil
+  ([:tr nil ([:td nil "John "] [:td nil 21] [:td nil 180])]
+   [:tr nil ([:td nil "Wilfred "] [:td nil 22] [:td nil 182])]
+   [:tr nil ([:td nil "Jack "] [:td nil 23] [:td nil 179])]
+   [:tr nil ([:td nil "Daniel "] [:td nil 24] [:td nil 165])])]]
+clj꞉projekat.pages꞉> 
+; Error printing return value (ClassCastException) at hiccup.table/render-row$fn (table.clj:21).
+; class clojure.lang.LazySeq cannot be cast to class clojure.lang.IFn (clojure.lang.LazySeq and clojure.lang.IFn are in unnamed module of loader 'app')
+clj꞉projekat.pages꞉> 
+[:table
+ nil
+ [:thead nil [:tr nil ([:th nil "Name "] [:th nil "Age "] [:th nil "Height "])]]
+ [:tbody
+  nil
+  ([:tr nil ([:td nil nil] [:td nil nil] [:td nil nil])]
+   [:tr nil ([:td nil nil] [:td nil nil] [:td nil nil])]
+   [:tr nil ([:td nil nil] [:td nil nil] [:td nil nil])]
+   [:tr nil ([:td nil nil] [:td nil nil] [:td nil nil])]
+   [:tr nil ([:td nil nil] [:td nil nil] [:td nil nil])]
+   [:tr nil ([:td nil nil] [:td nil nil] [:td nil nil])])]]
+clj꞉projekat.pages꞉> 
+({:id 6, :name "Relax", :description "Relaxing massage"}
+ {:id 5, :name "Chair", :description "Relaxed neck, shoulders and back."}
+ {:id 4, :name "Sport", :description "Release muscle tension"}
+ {:id 3, :name "Shiatsu", :description "Relieve pain"}
+ {:id 2, :name "Thai", :description "Flexibility"}
+ {:id 1, :name "Swedish", :description "Gentle touch"})
+clj꞉projekat.pages꞉> 
+#'projekat.pages/<tr>
+clj꞉projekat.pages꞉> 
+#'projekat.pages/<tr>
+clj꞉projekat.pages꞉> 
+"<!DOCTYPE html>\n<html><table><tr><th></th><th>X</th><th>Y</th><th>Z</th></tr><tr><td>1</td><td>8677</td><td>8402</td><td>6113</td></tr><tr><td>2</td><td>7956</td><td>3123</td><td>8804</td></tr><tr><td>3</td><td>5844</td><td>5897</td><td>7416</td></tr></table></html>"
+clj꞉projekat.pages꞉> 
+"<!DOCTYPE html>\n<html><table><tr><th description=\"Relaxing massage\" id=\"6\" name=\"Relax\"></th><th description=\"Relaxed neck, shoulders and back.\" id=\"5\" name=\"Chair\"></th><th description=\"Release muscle tension\" id=\"4\" name=\"Sport\"></th><th description=\"Relieve pain\" id=\"3\" name=\"Shiatsu\"></th><th description=\"Flexibility\" id=\"2\" name=\"Thai\"></th><th description=\"Gentle touch\" id=\"1\" name=\"Swedish\"></th></tr><tr><td>1</td><td>4375</td><td>7957</td><td>326</td></tr><tr><td>2</td><td>4254</td><td>5895</td><td>9665</td></tr><tr><td>3</td><td>6682</td><td>5433</td><td>4329</td></tr></table></html>"
+clj꞉projekat.pages꞉> 
+"<!DOCTYPE html>\n<html><table><tr><th description=\"Relaxing massage\" id=\"6\" name=\"Relax\"></th><th description=\"Relaxed neck, shoulders and back.\" id=\"5\" name=\"Chair\"></th><th description=\"Release muscle tension\" id=\"4\" name=\"Sport\"></th><th description=\"Relieve pain\" id=\"3\" name=\"Shiatsu\"></th><th description=\"Flexibility\" id=\"2\" name=\"Thai\"></th><th description=\"Gentle touch\" id=\"1\" name=\"Swedish\"></th></tr><tr><td>0</td><td>9338</td><td>6230</td><td>7269</td></tr><tr><td>1</td><td>1664</td><td>1412</td><td>2868</td></tr><tr><td>2</td><td>4246</td><td>5311</td><td>6659</td></tr><tr><td>3</td><td>2461</td><td>7919</td><td>1682</td></tr><tr><td>4</td><td>4184</td><td>3564</td><td>5004</td></tr><tr><td>5</td><td>2439</td><td>6068</td><td>242</td></tr></table></html>"
+clj꞉projekat.pages꞉> 
+"<!DOCTYPE html>\n<html><table><tr><th></th><th>Id</th><th>Name</th><th>Description</th></tr><tr><td>0</td><td>3255</td><td>5129</td><td>2931</td></tr><tr><td>1</td><td>4796</td><td>6270</td><td>8448</td></tr><tr><td>2</td><td>8836</td><td>640</td><td>8663</td></tr><tr><td>3</td><td>1202</td><td>6971</td><td>3309</td></tr><tr><td>4</td><td>1183</td><td>3210</td><td>3287</td></tr><tr><td>5</td><td>668</td><td>1323</td><td>5819</td></tr></table></html>"
+clj꞉projekat.pages꞉> 
+"<!DOCTYPE html>\n<html><table><tr><th>Id</th><th>Name</th><th>Description</th></tr><tr><td>0</td><td>3927</td><td>1698</td><td>8699</td></tr><tr><td>1</td><td>9518</td><td>3647</td><td>6993</td></tr><tr><td>2</td><td>6056</td><td>6182</td><td>6701</td></tr><tr><td>3</td><td>3038</td><td>6164</td><td>3928</td></tr><tr><td>4</td><td>8665</td><td>6658</td><td>2037</td></tr><tr><td>5</td><td>3219</td><td>7571</td><td>5682</td></tr></table></html>"
+clj꞉projekat.pages꞉> 
+#function[projekat.pages/eval13982/fn--13983]
+clj꞉projekat.pages꞉> 
+2924
+clj꞉projekat.pages꞉> 
+; Error printing return value (ClassCastException) at clojure.core/repeatedly$fn (core.clj:5174).
+; class java.lang.Long cannot be cast to class clojure.lang.IFn (java.lang.Long is in module java.base of loader 'bootstrap'; clojure.lang.IFn is in unnamed module of loader 'app')
+clj꞉projekat.pages꞉> 
+; Syntax error compiling at (c:\Users\nodas\Desktop\alati2022\projekat\src\projekat\pages.clj:158:39).
+; Unable to resolve symbol: n in this context
+clj꞉projekat.pages꞉> 
+[:tr ([:td 1] [:td 3940] [:td 5340] [:td 6734])]
+clj꞉projekat.pages꞉> 
+{:id 2, :name "Thai", :description "Flexibility"}
+clj꞉projekat.pages꞉> 
+{:id 1, :name "Swedish", :description "Gentle touch"}
+clj꞉projekat.pages꞉> 
+[:tr ([:td 1] [:td [:id 1]] [:td [:name "Swedish"]] [:td [:description "Gentle touch"]])]
+clj꞉projekat.pages꞉> 
+[:tr ([:td [:id 1]] [:td [:name "Swedish"]] [:td [:description "Gentle touch"]])]
+clj꞉projekat.pages꞉> 
+1
+clj꞉projekat.pages꞉> 
+; Error printing return value (IllegalArgumentException) at clojure.lang.RT/seqFrom (RT.java:557).
+; Don't know how to create ISeq from: java.lang.Integer
+clj꞉projekat.pages꞉> 
+"<!DOCTYPE html>\n<html><tr><td>1</td></tr></html>"
+clj꞉projekat.pages꞉> 
+"<!DOCTYPE html>\n<html><tr><td>1</td><td>Swedish</td><td>Gentle touch</td></tr></html>"
+clj꞉projekat.pages꞉> 
+"<!DOCTYPE html>\n<html><table><tr><td>1</td><td>Swedish</td><td>Gentle touch</td></tr><tr><td>2</td><td>Thai</td><td>Flexibility</td></tr><tr><td>3</td><td>Shiatsu</td><td>Relieve pain</td></tr><tr><td>4</td><td>Sport</td><td>Release muscle tension</td></tr><tr><td>5</td><td>Chair</td><td>Relaxed neck, shoulders and back.</td></tr><tr><td>6</td><td>Relax</td><td>Relaxing massage</td></tr></table></html>"
+clj꞉projekat.pages꞉> 
+"<!DOCTYPE html>\n<html><table><tr><th><Id>NameDescription</Id></th></tr><tr><td>1</td><td>Swedish</td><td>Gentle touch</td></tr><tr><td>2</td><td>Thai</td><td>Flexibility</td></tr><tr><td>3</td><td>Shiatsu</td><td>Relieve pain</td></tr><tr><td>4</td><td>Sport</td><td>Release muscle tension</td></tr><tr><td>5</td><td>Chair</td><td>Relaxed neck, shoulders and back.</td></tr><tr><td>6</td><td>Relax</td><td>Relaxing massage</td></tr></table></html>"
+clj꞉projekat.pages꞉> 
+ clj꞉projekat.pages꞉> 
+"<!DOCTYPE html>\n<html><table><tr><th>Id</th><th>Name</th><th>Description</th></tr><tr><td>1</td><td>Swedish</td><td>Gentle touch</td></tr><tr><td>2</td><td>Thai</td><td>Flexibility</td></tr><tr><td>3</td><td>Shiatsu</td><td>Relieve pain</td></tr><tr><td>4</td><td>Sport</td><td>Release muscle tension</td></tr><tr><td>5</td><td>Chair</td><td>Relaxed neck, shoulders and back.</td></tr><tr><td>6</td><td>Relax</td><td>Relaxing massage</td></tr></table></html>"
+clj꞉projekat.pages꞉> 
+#'projekat.pages/massage-index-page
+clj꞉projekat.pages꞉> 
+"<!DOCTYPE html>\n<html><table><tr><th>Id</th><th>Name</th><th>Description</th></tr><tr><td>1</td><td>Swedish</td><td>Gentle touch</td></tr><tr><td>2</td><td>Thai</td><td>Flexibility</td></tr><tr><td>3</td><td>Shiatsu</td><td>Relieve pain</td></tr><tr><td>4</td><td>Sport</td><td>Release muscle tension</td></tr><tr><td>5</td><td>Chair</td><td>Relaxed neck, shoulders and back.</td></tr><tr><td>6</td><td>Relax</td><td>Relaxing massage</td></tr></table></html>"
+clj꞉projekat.pages꞉> 
 #'projekat.core/name-surname
 clj꞉projekat.core꞉> 
-#'projekat.core/name-phone-id
-clj꞉projekat.core꞉> 
-#'projekat.core/prepare-admin
-clj꞉projekat.core꞉> 
-#'projekat.core/app-routes
-clj꞉projekat.core꞉> 
-#'projekat.core/admin-routes
-clj꞉projekat.core꞉> 
-#function[compojure.core/wrap-route-matches/fn--10307]
-clj꞉projekat.core꞉> 
-#function[compojure.core/wrap-route-matches/fn--10307]
-clj꞉projekat.core꞉> 
-#function[compojure.core/wrap-route-matches/fn--10307]
-clj꞉projekat.core꞉> 
-#'projekat.core/admin-routes
-clj꞉projekat.core꞉> 
-#'projekat.core/wrap-admin-only
-clj꞉projekat.core꞉> 
-#'projekat.core/wrap-admin-only
-clj꞉projekat.core꞉> 
-#'projekat.core/wrapping
-clj꞉projekat.core꞉> 
-#'projekat.core/server
-clj꞉projekat.core꞉> 
-; Execution error (IllegalArgumentException) at projekat.core/eval12933 (form-init11023118574808551836.clj:119).
-; No matching field found: stop for class clojure.lang.Var
-clj꞉projekat.core꞉> 
-; Execution error (BindException) at sun.nio.ch.Net/bind0 (Net.java:-2).
-; Address already in use: bind
-clj꞉projekat.core꞉> 
-#function[compojure.core/wrap-route-matches/fn--10307]
-clj꞉projekat.core꞉> 
-#'projekat.core/wrap-admin-only
-clj꞉projekat.core꞉> 
-#'projekat.core/admin-routes
-clj꞉projekat.core꞉> 
-#'projekat.core/wrap-admin-only
-clj꞉projekat.core꞉> 
-#'projekat.core/wrapping
-clj꞉projekat.core꞉> 
-#'projekat.core/server
-clj꞉projekat.core꞉> 
-#'projekat.pages/base-page
-clj꞉projekat.pages꞉> 
 #'projekat.core/app-routes
 clj꞉projekat.core꞉> 
 #'projekat.core/admin-routes
@@ -104,225 +356,17 @@ clj꞉projekat.core꞉> 
 clj꞉projekat.core꞉> 
 #'projekat.pages/base-page
 clj꞉projekat.pages꞉> 
-#'projekat.core/admin-routes
-clj꞉projekat.core꞉> 
-#'projekat.core/app-routes
-clj꞉projekat.core꞉> 
-#'projekat.core/wrap-admin-only
-clj꞉projekat.core꞉> 
-#'projekat.core/wrapping
-clj꞉projekat.core꞉> 
+; Evaluating file: core.clj
 #'projekat.core/server
 clj꞉projekat.core꞉> 
-#'projekat.pages/admin-login
+#'projekat.pages/base-page
 clj꞉projekat.pages꞉> 
-#'projekat.core/admin-routes
-clj꞉projekat.core꞉> 
-#'projekat.core/app-routes
-clj꞉projekat.core꞉> 
-#'projekat.core/wrap-admin-only
-clj꞉projekat.core꞉> 
-#'projekat.core/wrapping
-clj꞉projekat.core꞉> 
+; Evaluating file: core.clj
 #'projekat.core/server
 clj꞉projekat.core꞉> 
-#'projekat.pages/admin-login
+#'projekat.pages/base-page
 clj꞉projekat.pages꞉> 
-#'projekat.core/app-routes
-clj꞉projekat.core꞉> 
-#'projekat.pages/admin-login
-clj꞉projekat.pages꞉> 
-#'projekat.core/admin-routes
-clj꞉projekat.core꞉> 
-#'projekat.core/wrap-admin-only
-clj꞉projekat.core꞉> 
-#'projekat.core/wrapping
-clj꞉projekat.core꞉> 
-#'projekat.core/server
-clj꞉projekat.core꞉> 
-#'projekat.pages/edit-client
-clj꞉projekat.pages꞉> 
-#'projekat.core/app-routes
-clj꞉projekat.core꞉> 
-#'projekat.core/admin-routes
-clj꞉projekat.core꞉> 
-#'projekat.core/wrap-admin-only
-clj꞉projekat.core꞉> 
-#'projekat.core/wrapping
-clj꞉projekat.core꞉> 
-#'projekat.core/server
-clj꞉projekat.core꞉> 
-#'projekat.database/delete-client
-clj꞉projekat.database꞉> 
-; Execution error (SQLException) at com.mysql.jdbc.SQLError/createSQLException (SQLError.java:1073).
-; Can not issue data manipulation statements with executeQuery().
-clj꞉projekat.database꞉> 
-nil
-clj꞉projekat.database꞉> 
-#'projekat.database/sql-db
-clj꞉projekat.database꞉> 
-; Execution error (SQLException) at com.mysql.jdbc.SQLError/createSQLException (SQLError.java:1073).
-; Can not issue data manipulation statements with executeQuery().
-clj꞉projekat.database꞉> 
-#'projekat.database/delete-client
-clj꞉projekat.database꞉> 
-; Execution error (SQLException) at com.mysql.jdbc.SQLError/createSQLException (SQLError.java:1073).
-; Can not issue data manipulation statements with executeQuery().
-clj꞉projekat.database꞉> 
-com.mysql.jdbc.SQLError/createSQLException (SQLError.java:1073)
-com.mysql.jdbc.StatementImpl/checkForDml (StatementImpl.java:490)
-com.mysql.jdbc.PreparedStatement/executeQuery (PreparedStatement.java:2194)
-clojure.java.jdbc/execute-query-with-params (jdbc.clj:1090)
-clojure.java.jdbc/execute-query-with-params (jdbc.clj:1084)
-clojure.java.jdbc/db-query-with-resultset* (jdbc.clj:1113)
-clojure.java.jdbc/db-query-with-resultset* (jdbc.clj:1093)
-clojure.java.jdbc/query (jdbc.clj:1182)
-clojure.java.jdbc/query (jdbc.clj:1144)
-clojure.java.jdbc/query (jdbc.clj:1160)
-clojure.java.jdbc/query (jdbc.clj:1144)
-projekat.database/delete-client (form-init11023118574808551836.clj:34)
-projekat.database/delete-client (form-init11023118574808551836.clj:33)
-projekat.database/eval13197 (form-init11023118574808551836.clj:36)
-clojure.lang.Compiler/eval (Compiler.java:7194)
-clojure.core/eval (core.clj:3215)
-clojure.core/eval (core.clj:3211)
-nrepl.middleware.interruptible-eval/evaluate (interruptible_eval.clj:87)
-clojure.core/apply (core.clj:667)
-clojure.core/with-bindings* (core.clj:1990)
-nrepl.middleware.interruptible-eval/evaluate (interruptible_eval.clj:87)
-clojure.main/repl (main.clj:437)
-clojure.main/repl (main.clj:458)
-clojure.main/repl (main.clj:368)
-nrepl.middleware.interruptible-eval/evaluate (interruptible_eval.clj:84)
-nrepl.middleware.interruptible-eval/evaluate (interruptible_eval.clj:56)
-nrepl.middleware.interruptible-eval/interruptible-eval (interruptible_eval.clj:152)
-nrepl.middleware.session/session-exec (session.clj:218)
-nrepl.middleware.session/session-exec (session.clj:217)
-java.lang.Thread/run (Thread.java:829)
-clj꞉projekat.database꞉> 
-#'projekat.database/delete-client
-clj꞉projekat.database꞉> 
-(1)
-clj꞉projekat.database꞉> 
-(0)
-clj꞉projekat.database꞉> 
-#'projekat.core/admin-routes
-clj꞉projekat.core꞉> 
-#'projekat.core/admin-routes
-clj꞉projekat.core꞉> 
-#'projekat.pages/client-view
-clj꞉projekat.pages꞉> 
-#'projekat.core/admin-routes
-clj꞉projekat.core꞉> 
-#'projekat.core/wrap-admin-only
-clj꞉projekat.core꞉> 
-#'projekat.core/wrapping
-clj꞉projekat.core꞉> 
-#'projekat.core/server
-clj꞉projekat.core꞉> 
-#'projekat.pages/client-view
-clj꞉projekat.pages꞉> 
-#'projekat.core/app-routes
-clj꞉projekat.core꞉> 
-#'projekat.core/wrap-admin-only
-clj꞉projekat.core꞉> 
-#'projekat.core/wrapping
-clj꞉projekat.core꞉> 
-#'projekat.core/server
-clj꞉projekat.core꞉> 
-#'projekat.core/admin-routes
-clj꞉projekat.core꞉> 
-#'projekat.pages/client-view
-clj꞉projekat.pages꞉> 
-#'projekat.pages/clients-view
-clj꞉projekat.pages꞉> 
-#'projekat.core/admin-routes
-clj꞉projekat.core꞉> 
-#'projekat.core/wrap-admin-only
-clj꞉projekat.core꞉> 
-#'projekat.core/wrapping
-clj꞉projekat.core꞉> 
-#'projekat.core/server
-clj꞉projekat.core꞉> 
-#'projekat.pages/client-view
-clj꞉projekat.pages꞉> 
-#'projekat.pages/client-view
-clj꞉projekat.pages꞉> 
-#'projekat.core/admin-routes
-clj꞉projekat.core꞉> 
-#'projekat.core/app-routes
-clj꞉projekat.core꞉> 
-#'projekat.core/wrap-admin-only
-clj꞉projekat.core꞉> 
-#'projekat.core/wrapping
-clj꞉projekat.core꞉> 
-#'projekat.core/server
-clj꞉projekat.core꞉> 
-#'projekat.pages/client-view
-clj꞉projekat.pages꞉> 
-#'projekat.core/app-routes
-clj꞉projekat.core꞉> 
-#'projekat.core/wrap-admin-only
-clj꞉projekat.core꞉> 
-#'projekat.core/wrapping
-clj꞉projekat.core꞉> 
-#'projekat.core/server
-clj꞉projekat.core꞉> 
-#'projekat.pages/client-view
-clj꞉projekat.pages꞉> 
-#'projekat.core/app-routes
-clj꞉projekat.core꞉> 
-#'projekat.core/admin-routes
-clj꞉projekat.core꞉> 
-#'projekat.core/wrap-admin-only
-clj꞉projekat.core꞉> 
-#'projekat.core/wrapping
-clj꞉projekat.core꞉> 
-; Execution error (BindException) at sun.nio.ch.Net/bind0 (Net.java:-2).
-; Address already in use: bind
-clj꞉projekat.core꞉> 
-#'projekat.core/server
-clj꞉projekat.core꞉> 
-#'projekat.pages/client-view
-clj꞉projekat.pages꞉> 
-#'projekat.core/app-routes
-clj꞉projekat.core꞉> 
-#'projekat.core/admin-routes
-clj꞉projekat.core꞉> 
-#'projekat.core/wrap-admin-only
-clj꞉projekat.core꞉> 
-#'projekat.core/wrapping
-clj꞉projekat.core꞉> 
-#'projekat.core/server
-clj꞉projekat.core꞉> 
-#'projekat.pages/client-view
-clj꞉projekat.pages꞉> 
-#'projekat.core/admin-routes
-clj꞉projekat.core꞉> 
-#'projekat.core/app-routes
-clj꞉projekat.core꞉> 
-#'projekat.core/wrap-admin-only
-clj꞉projekat.core꞉> 
-#'projekat.core/wrapping
-clj꞉projekat.core꞉> 
-#'projekat.core/server
-clj꞉projekat.core꞉> 
-#'projekat.pages/client-view
-clj꞉projekat.pages꞉> 
-#'projekat.core/admin-routes
-clj꞉projekat.core꞉> 
-#'projekat.core/wrap-admin-only
-clj꞉projekat.core꞉> 
-#'projekat.core/wrapping
-clj꞉projekat.core꞉> 
-#'projekat.core/server
-clj꞉projekat.core꞉> 
-#'projekat.core/admin-routes
-clj꞉projekat.core꞉> 
-#'projekat.core/wrap-admin-only
-clj꞉projekat.core꞉> 
-#'projekat.core/wrapping
-clj꞉projekat.core꞉> 
+; Evaluating file: core.clj
 #'projekat.core/server
 clj꞉projekat.core꞉> 
 #'projekat.core/app-routes
@@ -335,170 +379,65 @@ clj꞉projekat.core꞉> 
 clj꞉projekat.core꞉> 
 #'projekat.core/server
 clj꞉projekat.core꞉> 
-#'projekat.core/app-routes
-clj꞉projekat.core꞉> 
-#'projekat.core/wrap-admin-only
-clj꞉projekat.core꞉> 
-#'projekat.core/wrapping
-clj꞉projekat.core꞉> 
-#'projekat.core/server
-clj꞉projekat.core꞉> 
-#'projekat.pages/client-view
+#'projekat.pages/base-page
 clj꞉projekat.pages꞉> 
-#'projekat.core/app-routes
-clj꞉projekat.core꞉> 
-#'projekat.core/wrap-admin-only
-clj꞉projekat.core꞉> 
-#'projekat.core/wrapping
-clj꞉projekat.core꞉> 
-#'projekat.core/server
-clj꞉projekat.core꞉> 
-#'projekat.core/app-routes
-clj꞉projekat.core꞉> 
-#'projekat.core/wrap-admin-only
-clj꞉projekat.core꞉> 
-#'projekat.core/wrapping
-clj꞉projekat.core꞉> 
-#'projekat.core/server
-clj꞉projekat.core꞉> 
-#'projekat.core/app-routes
-clj꞉projekat.core꞉> 
-#'projekat.core/admin-routes
-clj꞉projekat.core꞉> 
-#'projekat.core/wrap-admin-only
-clj꞉projekat.core꞉> 
-#'projekat.core/wrapping
-clj꞉projekat.core꞉> 
-; Execution error (BindException) at sun.nio.ch.Net/bind0 (Net.java:-2).
-; Address already in use: bind
-clj꞉projekat.core꞉> 
-; Execution error (BindException) at sun.nio.ch.Net/bind0 (Net.java:-2).
-; Address already in use: bind
-clj꞉projekat.core꞉> 
-#'projekat.core/server
-clj꞉projekat.core꞉> 
-#'projekat.pages/client-view
+#'projekat.pages/base-page
 clj꞉projekat.pages꞉> 
-#'projekat.core/app-routes
+; Evaluating file: core.clj
+#'projekat.core/server
 clj꞉projekat.core꞉> 
-#'projekat.pages/client-view
+#'projekat.pages/massage-index-page
 clj꞉projekat.pages꞉> 
-#'projekat.core/app-routes
-clj꞉projekat.core꞉> 
-#'projekat.core/wrap-admin-only
-clj꞉projekat.core꞉> 
-#'projekat.core/wrapping
-clj꞉projekat.core꞉> 
-#'projekat.core/server
-clj꞉projekat.core꞉> 
-#'projekat.core/app-routes
-clj꞉projekat.core꞉> 
-#'projekat.core/admin-routes
-clj꞉projekat.core꞉> 
-#'projekat.core/wrap-admin-only
-clj꞉projekat.core꞉> 
-#'projekat.core/wrapping
-clj꞉projekat.core꞉> 
-#'projekat.core/server
-clj꞉projekat.core꞉> 
-#'projekat.pages/client-view
+#'projekat.pages/base-page
 clj꞉projekat.pages꞉> 
-#'projekat.core/admin-routes
-clj꞉projekat.core꞉> 
-#'projekat.core/wrap-admin-only
-clj꞉projekat.core꞉> 
-#'projekat.core/wrapping
-clj꞉projekat.core꞉> 
-#'projekat.core/server
-clj꞉projekat.core꞉> 
-#'projekat.core/admin-routes
-clj꞉projekat.core꞉> 
-#'projekat.core/wrap-admin-only
-clj꞉projekat.core꞉> 
-#'projekat.core/wrapping
-clj꞉projekat.core꞉> 
-#'projekat.core/server
-clj꞉projekat.core꞉> 
-#'projekat.core/admin-routes
-clj꞉projekat.core꞉> 
-#'projekat.core/wrap-admin-only
-clj꞉projekat.core꞉> 
-#'projekat.core/wrapping
-clj꞉projekat.core꞉> 
-; Execution error (BindException) at sun.nio.ch.Net/bind0 (Net.java:-2).
-; Address already in use: bind
-clj꞉projekat.core꞉> 
-#'projekat.core/server
-clj꞉projekat.core꞉> 
-#'projekat.core/admin-routes
-clj꞉projekat.core꞉> 
-#'projekat.pages/client-view
+#'projekat.pages/base-page
 clj꞉projekat.pages꞉> 
-#'projekat.pages/clients-view
-clj꞉projekat.pages꞉> 
-#'projekat.pages/edit-client
-clj꞉projekat.pages꞉> 
-#'projekat.core/app-routes
+; Evaluating file: core.clj
+#'projekat.core/server
 clj꞉projekat.core꞉> 
-#'projekat.core/admin-routes
-clj꞉projekat.core꞉> 
-#'projekat.core/wrap-admin-only
-clj꞉projekat.core꞉> 
-#'projekat.core/wrapping
+; Evaluating file: core.clj
+#'projekat.core/server
 clj꞉projekat.core꞉> 
 #'projekat.core/server
 clj꞉projekat.core꞉> 
-#'projekat.core/admin-routes
-clj꞉projekat.core꞉> 
-#'projekat.core/wrap-admin-only
-clj꞉projekat.core꞉> 
-#'projekat.core/wrapping
-clj꞉projekat.core꞉> 
+#'projekat.pages/base-page
+clj꞉projekat.pages꞉> 
+; Evaluating file: core.clj
 #'projekat.core/server
 clj꞉projekat.core꞉> 
-nil
-clj꞉projekat.server-config꞉> 
-#'projekat.server-config/-main
-clj꞉projekat.server-config꞉> 
-; nREPL Connection was closed
-; Jacking in...
-; Starting Jack-in Terminal: cmd.exe /d /c lein update-in :dependencies conj [nrepl,"1.0.0"] -- update-in :plugins conj [cider/cider-nrepl,"0.28.5"] -- update-in [:repl-options,:nrepl-middleware] conj '["cider.nrepl/cider-middleware"]' -- with-profile +dev repl :headless
-; Hooking up nREPL sessions...
-; Connected session: clj
-; TIPS:
-;   - You can edit the contents here. Use it as a REPL if you like.
-;   - `alt+enter` evaluates the current top level form.
-;   - `ctrl+enter` evaluates the current form.
-;   - `alt+up` and `alt+down` traverse up and down the REPL command history
-;      when the cursor is after the last contents at the prompt
-;   - Clojure lines in stack traces are peekable and clickable.
-clj꞉projekat.server-config꞉> 
-; Jack-in done.
-clj꞉projekat.server-config꞉> 
-; Syntax error (IllegalArgumentException) compiling new at (c:\Users\nodas\Desktop\alati2022\projekat\src\projekat\server_config.clj:10:14).
-; No matching ctor found for class java.lang.Integer
-clj꞉projekat.server-config꞉> 
-nil
-clj꞉projekat.server-config꞉> 
-; Syntax error (IllegalArgumentException) compiling new at (c:\Users\nodas\Desktop\alati2022\projekat\src\projekat\server_config.clj:10:14).
-; No matching ctor found for class java.lang.Integer
-clj꞉projekat.server-config꞉> 
-nil
-clj꞉projekat.server-config꞉> 
-nil
-clj꞉projekat.server-config꞉> 
-; Syntax error (IllegalArgumentException) compiling new at (c:\Users\nodas\Desktop\alati2022\projekat\src\projekat\server_config.clj:10:14).
-; No matching ctor found for class java.lang.Integer
-clj꞉projekat.server-config꞉> 
-; Syntax error compiling at (c:\Users\nodas\Desktop\alati2022\projekat\src\projekat\server_config.clj:11:5).
-; Unable to resolve symbol: port in this context
-clj꞉projekat.server-config꞉> 
-#'projekat.server-config/-main
-clj꞉projekat.server-config꞉> 
-#'projekat.server-config/-main
-clj꞉projekat.server-config꞉> SERVER_PORT=3035 lein run
-; Syntax error compiling at (c:\Users\nodas\Desktop\alati2022\projekat\.calva\output-window\output.calva-repl:1:7990).
-; Unable to resolve symbol: run in this context
-clj꞉projekat.server-config꞉> 
-#'projekat.server-config/-main
-clj꞉projekat.server-config꞉> 
+#'projekat.pages/base-page
+clj꞉projekat.pages꞉> 
+; Evaluating file: core.clj
+#'projekat.core/server
+clj꞉projekat.core꞉> 
+#'projekat.pages/base-page
+clj꞉projekat.pages꞉> 
+; Evaluating file: core.clj
+#'projekat.core/server
+clj꞉projekat.core꞉> 
+#'projekat.pages/base-page
+clj꞉projekat.pages꞉> 
+#'projekat.pages/base-page
+clj꞉projekat.pages꞉> 
+; Evaluating file: core.clj
+#'projekat.core/server
+clj꞉projekat.core꞉> 
+#'projekat.pages/massage-index-page
+clj꞉projekat.pages꞉> 
+; Evaluating file: core.clj
+#'projekat.core/server
+clj꞉projekat.core꞉> 
+#'projekat.pages/base-page
+clj꞉projekat.pages꞉> 
+#'projekat.pages/massage-index-page
+clj꞉projekat.pages꞉> 
+; Evaluating file: core.clj
+#'projekat.core/server
+clj꞉projekat.core꞉> 
+#'projekat.pages/massage-index-page
+clj꞉projekat.pages꞉> 
+; Evaluating file: core.clj
+#'projekat.core/server
+clj꞉projekat.core꞉> 
+#'projekat.pages/massage-index-page
+clj꞉projekat.pages꞉> 

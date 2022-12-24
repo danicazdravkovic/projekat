@@ -1,3 +1,5 @@
+;netstat -ano
+; taskkill -pid 10400 /f ;KILLING THE PROCESS WITH PID AND PORT 3000
 (ns projekat.server-config
   (:require 
    [ring.adapter.jetty :as jetty]
@@ -8,11 +10,13 @@
 ;MORAMO MAIN DA DODAMO U PROJECT FAJLU
 ;APLIKACIJA SE POKRECE KOMANDOM lein run
 ;u terimnalu kucamo SERVER_PORT=3035 lein run AKO NECEMO DA BUDE NA 3000
-(defn -main [& args]
+
+
+; (defn -main [& args]
   
    
-    (jetty/run-jetty (handler/site #'core/wrapping)
-                     {:port 3000
-                      :join? false})
+;     (jetty/run-jetty (handler/site #'core/wrapping)
+;                      {:port 3000
+;                       :join? false})
     
-  )
+;   )

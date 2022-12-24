@@ -18,7 +18,8 @@
    [ring.middleware.params :refer [wrap-params]]
    [projekat.admin :as a]
    [ring.middleware.keyword-params :refer [wrap-keyword-params]]
-   [ring.middleware.multipart-params :refer [wrap-multipart-params]]))
+   [ring.middleware.multipart-params :refer [wrap-multipart-params]]
+   [projekat.massage_data_base :as massage_db]))
 
 ;***********************************
 ;RAD SA PUTANJAMA
@@ -35,12 +36,14 @@
 (defn prepare-admin [string]
   (let [map {:login  (clojure.string/replace (get (clojure.string/split string #"&") 0) "logintf=" "")
              :pass (clojure.string/replace (get (clojure.string/split string #"&") 1) "passwordtf=" "")}] map))
-
+(defn prepare-massage [string]
+  (let [map {:name  (clojure.string/replace (get (clojure.string/split string #"&") 0) "nametf=" "")
+             :description (clojure.string/replace (clojure.string/replace (get (clojure.string/split string #"&") 1) "descriptiontf=" "") #"\+" " ") }] map))
 ;*****************ROUTES**************
 
 (defroutes app-routes
 
-  (GET "/" [] (p/index ""))
+  (GET "/" [] (p/index (p/massage-index-page)))
 
   (GET "/clients" [] (p/clients-view db/clients))
   (GET "/client/:id" [id] (p/client-view  (db/get-client-by-id (read-string id))))
@@ -60,22 +63,31 @@
       (if (a/check-login admin)
         (-> (resp/redirect "/")
             (assoc-in [:session :admin] true));u http zahtev dodaje se polje :session{:admin true} 
-        (p/admin-login "Invalid username or password"))))
+        (p/admin-login "Invalid username or password")))
+    
+    )
 
 
   (GET "/admin/logout" []
     (-> (resp/redirect "/")
         (assoc-in [:session :admin] false)))
-  ;(route/not-found "Not found")
+  
+
+  
+  (route/not-found "Not found")
+  
   )
 
 ;routes accessable only for admin
 (defroutes admin-routes
 
   (GET "/clients/new" [] (p/new-client-form))
+  
+  
   (POST "/clients/new/:id" req (do (let [client (name-phone-id (slurp (:body req)))]
                                      (db/add-client client))
                                    (resp/redirect "/")))
+  
   ;kad se pozove samo kao ruta
   (GET "/client-edit/edit/:id" [id]
     (str (let [client (db/get-client-by-id (read-string id))] (p/edit-client client))))
@@ -92,10 +104,15 @@
   ;NE POSTOJI DELETE RUTA ZA form/form-to hiccup, samo get i post
   (POST "/client-delete/delete/:id" [id]
     (do (db/delete-client (read-string id))
-        (resp/redirect "/"))))
+        (resp/redirect "/")))
+(GET "/massages/new" [] (p/new-massage-form))
 
+(POST "/massages/new/:id" req
+  (do (let [massage (prepare-massage (slurp (:body req)))]
+        (massage_db/add-massage massage))
+      (resp/redirect "/")))
 
-
+)
 ; ****************************************
 
 
@@ -111,7 +128,7 @@
 (def wrapping
   (-> (routes (wrap-routes admin-routes wrap-admin-only)
               app-routes)
-      wrap-multipart-params
+      (wrap-multipart-params)
       session/wrap-session))
 
 
@@ -120,8 +137,8 @@
 ;  {:uri            "/"
 ;   :request-method :get})
 
-; (def server
-;   (ring/run-jetty wrapping {:port 3030 :join? false}))
+(def server
+  (ring/run-jetty wrapping {:port 3028 :join? false}))
 
 
 

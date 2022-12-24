@@ -3,28 +3,30 @@
    [hiccup.page :refer [html5]]
    [hiccup.form :as form]
    [ring.util.anti-forgery :refer (anti-forgery-field)]
-   [projekat.database :as db]))
+   [projekat.database :as db]
+   [projekat.massage_data_base :as massage_db]
+   [hiccup.table :as table]))
+
 
 (defn base-page [& body]
   (html5
-   [:head [:title "SPA Center"]
+   [:head [:title "SPA Center"] 
     [:link
      {:rel "stylesheet"
       :href "https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
       :integrity "sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65"
-      :crossorigin "anonymous"}]]
+      :crossorigin "anonymous"}]
+    
+    ]
    [:body
     [:div.container
      [:nav.navbar.navbar-expand-lg.navbar-light.bd-light
       [:a.navbar-brand {:href "/"} "Spa center"]
       [:div.navbar-nav.ml-auto
-        [:a.nav-item.nav-link {:href "/clients/new"} "New client"]
-        [:a.nav-item.nav-link {:href "/admin/login"} "Log in"]
-        [:a.nav-item.nav-link {:href "/admin/logout"} "Log out"]
-
-       ]
-      
-      ]
+       [:a.nav-item.nav-link {:href "/clients/new"} "New client"]
+       [:a.nav-item.nav-link {:href "/massages/new"} "New massage"]
+       [:a.nav-item.nav-link {:href "/admin/login"} "Log in"]
+       [:a.nav-item.nav-link {:href "/admin/logout"} "Log out"]]]
 
 
      body]]))
@@ -34,22 +36,20 @@
   (base-page body))
 
 (defn client-view [{id :id name :name phone :phone}]
-  (html5 
-   
-    [:li (format "Name: %s          Phone: %s" name phone)] 
-    (form/form-to
-   [:post (str "/client-delete/delete/" id )]
-   (anti-forgery-field)
-   (form/submit-button  {:class "btn btn-danger"} "Delete"))
-   
-    (form/form-to
-     [:post (str "/client-edit/edit/" id)]
-     (anti-forgery-field)
-     (form/submit-button  {:class "btn btn-primary"} "Edit"))
-    
-   ))
+  (html5
+
+   [:li (format "Name: %s          Phone: %s" name phone)]
+   (form/form-to
+    [:post (str "/client-delete/delete/" id)]
+    (anti-forgery-field)
+    (form/submit-button  {:class "btn btn-danger"} "Delete"))
+
+   (form/form-to
+    [:post (str "/client-edit/edit/" id)]
+    (anti-forgery-field)
+    (form/submit-button  {:class "btn btn-primary"} "Edit"))))
 (defn clients-view [clients]
-  (html5 [:ul 
+  (html5 [:ul
           (map  client-view clients)]))
 (defn edit-client [client]
   (html5
@@ -59,27 +59,17 @@
                            (str "/client-edit/" (:id client))
                            "/clients")]
                   [:div.form-group
-                  (form/label "name" "Name: ")
-                  (form/text-field {:class "form-control"} "name" (:name client))]
-                  
-                 [ :div.form-group
-                  (form/label "phone" "Phone: ")
-                  (form/text-field {:class "form-control"} "phone" (:phone client))
-                  (form/hidden-field "id" (:id client))]
+                   (form/label "name" "Name: ")
+                   (form/text-field {:class "form-control"} "name" (:name client))]
+
+                  [:div.form-group
+                   (form/label "phone" "Phone: ")
+                   (form/text-field {:class "form-control"} "phone" (:phone client))
+                   (form/hidden-field "id" (:id client))]
                   (anti-forgery-field)
 
                   (form/submit-button {:class "btn btn-primary"} "Save changes"))]))
-; (edit-client (db/get-client-by-id 2))
-; (defn edit-client [{id :id name :name phone :phone}]
-;   (html5
-;    (form/form-to [:post (str "/client-edit/" id)]
-;                  (form/label "namel" "Name: ")
-;                  (form/text-field "nametf" name)
 
-;                  (form/label "phonel" "Phone: ")
-;                  (form/text-field "phonetf" phone)
-;                  (anti-forgery-field)
-;                  (form/submit-button "Save changes"))))
 
 (defn admin-login [& [message]]
   (html5
@@ -88,15 +78,14 @@
      [:div.alert.alert-danger message])
    [:body [:h1 "Admin login"]
     (form/form-to [:post (str "/admin/login")]
-                  
-                 [:div.form-group 
-                  (form/label "usernamel" "Username: ")
-                  (form/text-field {:class "form-control"} "logintf")
-                  ]
-                  
-                  [:div.form-group 
+
+                  [:div.form-group
+                   (form/label "usernamel" "Username: ")
+                   (form/text-field {:class "form-control"} "logintf")]
+
+                  [:div.form-group
                    (form/label "passwordl" "Password: ")
-                  (form/password-field {:class "form-control"} "passwordtf")]
+                   (form/password-field {:class "form-control"} "passwordtf")]
                   (anti-forgery-field)
                   (form/submit-button {:class "btn btn-primary"} "Login"))]))
 
@@ -115,5 +104,37 @@
                   (anti-forgery-field)
 
                   (form/submit-button "Save changes"))]))
-(defn add-new-client [client]
-  (db/add-client client))
+; (defn add-new-client [client]
+;   (db/add-client client))
+
+(defn new-massage-form []
+  (html5
+   [:body
+    (form/form-to [:post (str "/massages/new/" (massage_db/get-next-id))]
+
+                  (form/label "name" "Name: ")
+                  (form/text-field "nametf" "")
+                  (form/label "desription" "Description: ")
+                  (form/text-field "descriptiontf" "")
+                  (form/hidden-field "id" (massage_db/get-next-id))
+                  (anti-forgery-field)
+
+                  (form/submit-button "Save changes"))]))
+(defn massage-index-page []
+  (html5
+   [:table
+    [:tr
+     [:th "Massages"]]
+    [:tr 
+     [:th "Id"] 
+     [:th "Name"] 
+     [:th "Description"]]
+    (for [n (range 0 (count massage_db/massages))]
+      [:tr 
+       [:td (:id (nth massage_db/massages n))]
+       [:td (:name (nth massage_db/massages n))]
+       [:td (:description (nth massage_db/massages n))]])
+    ]
+   )
+  )
+(massage-index-page)

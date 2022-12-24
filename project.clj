@@ -9,6 +9,9 @@
                  [ring/ring-anti-forgery "1.3.0"];returns the HTML for the anti-forgery field
                  [ring/ring-defaults "0.3.4"]
                  [ring/ring-devel "1.8.0"]
+                 [org.xerial/sqlite-jdbc "3.7.2"]
+                 [hiccup-table "0.2.0"]
+
                  ]
   :plugins [[lein-ring "0.12.6"]]
   :main projekat.server-config
