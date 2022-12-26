@@ -1,5 +1,5 @@
 (defproject projekat "0.1.0-SNAPSHOT"
-  
+
   :dependencies [[org.clojure/clojure "1.11.1"]
                  [compojure "1.7.0"];dep za defroutes fju za definisanje ruta
                  [ring/ring-jetty-adapter "1.9.6"];dep za pokretanje servera u sopstvenom browseru i podrzava http req
@@ -11,11 +11,17 @@
                  [ring/ring-devel "1.8.0"]
                  [org.xerial/sqlite-jdbc "3.7.2"]
                  [hiccup-table "0.2.0"]
-                 [clj-time/clj-time "0.15.2"]
-                 ]
+                 [clj-time/clj-time "0.15.2"]]
   :plugins [[lein-ring "0.12.6"]]
   :main projekat.server-config
   :ring {:handler projekat.core/app-handler};konfigurisem server a pozivam ga naredbom lein ring server
   :profiles {:dev {:dependencies [[javax.servlet/servlet-api "2.5"]
-                   [ring/ring-mock "0.3.2"]]}}
+                                  [ring/ring-mock "0.3.2"]
+                                  [midje "1.10.9"]]
+                   :plugins [[lein-midje "3.2.1"]
+                             [criterium "0.4.6"];ukljucujemo u dev profile jer ne saljemo to klijentu
+                             ]
+                   }}
+
   )
+

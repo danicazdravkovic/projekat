@@ -54,6 +54,10 @@
 (defn get-massage-id-by-name [name]
   (:id (nth (jdbc/query db ["SELECT id FROM massage where name=?" name]) 0)))
 ; (get-massage-id-by-name "Sport")
+(defn get-massage-price-by-id [id]
+   (:price (nth (jdbc/query db ["SELECT price FROM massage where id=?" id]) 0)))
+
+; (get-massage-price-by-id 1)
 (defn table-view-massage []
   (p/print-table (jdbc/query db (str "select * from massage  ;"))))
 (table-view-massage)

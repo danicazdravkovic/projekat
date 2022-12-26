@@ -25,6 +25,10 @@
        [:a.nav-item.nav-link {:href "/reservations/new"} "Make a reservation"]
        [:a.nav-item.nav-link {:href "/clients/new"} "New client"]
        [:a.nav-item.nav-link {:href "/massages/new"} "New massage"]
+
+       [:a.nav-item.nav-link {:href "/clients"} "Clients"]
+       [:a.nav-item.nav-link {:href "/reservations"} "Reservations table"]
+
        [:a.nav-item.nav-link {:href "/admin/login"} "Log in"]
        [:a.nav-item.nav-link {:href "/admin/logout"} "Log out"]]]
 
@@ -143,6 +147,21 @@
        [:td (:name (nth (massage_db/massages) n))]
        [:td (:description (nth (massage_db/massages) n))]
        [:td (:price (nth (massage_db/massages) n))]])]))
+(defn reservation-index-page []
+  (html5
+   [:table
+    [:tr
+     [:th "Massages"]]
+    [:tr
+     [:th "Id"]
+     [:th "Client_id"]
+     [:th "Massage_id"]]
+    (for [n (range 0 (count (reservations_db/reservations)))]
+      [:tr
+       [:td (:id (nth (reservations_db/reservations) n))]
+       [:td (:client_id (nth (reservations_db/reservations) n))]
+       [:td (:massage_id (nth (reservations_db/reservations) n))]
+       ])]))
 
 
 (defn new-reservation-form []

@@ -1,7 +1,9 @@
 (ns projekat.core-test
   (:require [clojure.test :refer :all]
-            [projekat.core :refer :all]))
+            [projekat.core :refer :all]
+            [midje.sweet :refer [facts =>]]))
 
-(deftest a-test
-  (testing "FIXME, I fail."
-    (is (= 0 1))))
+(facts "name-surname"
+       (name-surname 2) => "2"
+       
+       )

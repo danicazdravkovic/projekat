@@ -24,15 +24,20 @@
 
 ;***********************************
 ;RAD SA PUTANJAMA
+; (defn only-digits[string] (every? #(Character/isDigit %) string))
+; (defn only-string [string] (every? #(or (Character/isLetter %) (Character/isSpace %)) string))
+
 (defn name-surname [name]
-  ;name in format Nevena+Arsic
+  ;name in format Nevena+Arsic 
   (clojure.string/replace name #"\+" " "))
 (defn name-phone-id [string]
   ;string contains name and phone in this format
-  ;name=Nevena+Arsic&phone=0000&__anti-forgery-token=Unbound%3A+%23%27ring.middleware.anti-forgery%2F*anti-forgery-token*
+  ;name=Nevena+Arsic&phone=0000&__anti-forgery-token=Unbound%3A+%23%27ring.middleware.anti-forgery%2F*anti-forgery-token* 
+  
   (let [map {:name  (name-surname (clojure.string/replace (get (clojure.string/split string #"&") 0) "name=" ""))
              :phone (clojure.string/replace (get (clojure.string/split string #"&") 1) "phone=" "")
-             :id (clojure.string/replace (get (clojure.string/split string #"&") 2) "id=" "")}] map))
+             :id (clojure.string/replace (get (clojure.string/split string #"&") 2) "id=" "")}]  map 
+    ))
 
 (defn prepare-admin [string]
   (let [map {:login  (clojure.string/replace (get (clojure.string/split string #"&") 0) "logintf=" "")
@@ -70,9 +75,7 @@
       (if (a/check-login admin)
         (-> (resp/redirect "/")
             (assoc-in [:session :admin] true));u http zahtev dodaje se polje :session{:admin true} 
-        (p/admin-login "Invalid username or password")))
-    
-    
+        (p/admin-login "Invalid username or password"))) 
     )
 
 
@@ -85,6 +88,7 @@
         (massage_db/add-massage massage))
       (resp/redirect "/")))
   
+   (GET "/reservations" [] (p/reservation-index-page))
   (GET "/reservations/new" [] (p/new-reservation-form))
   
   
@@ -106,9 +110,12 @@
   (GET "/clients/new" [] (p/new-client-form))
   
   
-  (POST "/clients/new/:id" req (do (let [client (name-phone-id (slurp (:body req)))]
+  (POST "/clients/new/:id" req (do 
+                                 (let [client (name-phone-id (slurp (:body req)))]
                                      (db/add-client client))
-                                   (resp/redirect "/")))
+                                   (resp/redirect "/")
+                                 )
+    )
   
   ;kad se pozove samo kao ruta
   (GET "/client-edit/edit/:id" [id]
@@ -155,16 +162,7 @@
 ;   :request-method :get})
 
 (def server
-  (ring/run-jetty wrapping {:port 3023 :join? false}))
-
-
-
-
-
-
-
-
-
+  (ring/run-jetty wrapping {:port 3006 :join? false}))
 
 
 ;***********requests, responses, handlers

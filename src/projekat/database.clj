@@ -59,14 +59,22 @@
 (clients)
 (defn add-client [client]
   (jdbc/execute! db ["insert into client (name, phone, amount) values (?, ?, ?) "  (:name client) (:phone client) 0]))
-;(add-client { :name "Ana Nikolic" :phone "0679089700" }) 
+; (add-client { :name "Nevena Stanic" :phone "0679089700" })
+; (add-client {:name "Nikola Nikolic" :phone "065409756"})
+; (add-client {:name "Milica Milic" :phone "060342567"})
+
+
 
 (defn update-client [client]
   (jdbc/execute! db ["UPDATE client  SET phone = ? WHERE id = ?"  (:phone client) (:id client)])
   (jdbc/execute! db ["UPDATE client  SET name = ? WHERE id = ?"  (:name client) (:id client)]))
 
    ;(update-client { :id 1 :name "Ana nikolic" :phone "090 9089009"})
+(defn update-client-amount [phone amount]
+  
+    (jdbc/execute! db ["UPDATE client  SET amount = ? WHERE phone = ?"  amount phone])
 
+  )
 
 (defn get-client-by-id [id]
   (nth (filter #(= (:id %) id) (clients)) 0) ;vraca 1. element koji zadovoljava uslov
