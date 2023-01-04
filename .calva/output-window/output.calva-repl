@@ -18,40 +18,280 @@
 clj꞉projekat.server-config꞉>  ; Use `alt+enter` to evaluate
 ; Jack-in done.
 clj꞉projekat.server-config꞉> 
-; Evaluating file: server_config.clj
-nil
-clj꞉projekat.server-config꞉> 
-; Evaluating file: reservation_database.clj
-; Syntax error compiling at (c:\Users\nodas\Desktop\alati2022\projekat\src\projekat\reservation_database.clj:32:35).
-; Unable to resolve symbol: total-client-amount in this context
-; Evaluation of file reservation_database.clj failed: class clojure.lang.Compiler$CompilerException
-clj꞉projekat.reservation_database꞉> 
-; Evaluating file: database.clj
-
-| :id |          :name |      :phone | :amount |
-|-----+----------------+-------------+---------|
-|   1 |    Ana nikolic | 090 9089009 |   165.0 |
-|   3 |  Nevena Stanic |  0679089700 |     0.0 |
-|   4 | Nikola Nikolic |   065409756 |     0.0 |
-|   5 |   Milica Milic |   060342567 |     0.0 |
-#'projekat.database/get-id-by-phone
+; Evaluating file: core.clj
+#'projekat.core/server
+clj꞉projekat.core꞉> 
+#'projekat.core/client-routes
+clj꞉projekat.core꞉> 
+; Evaluating file: core.clj
+#'projekat.core/server
+clj꞉projekat.core꞉> 
+; Evaluating file: core.clj
+#'projekat.core/server
+clj꞉projekat.core꞉> 
+; Evaluating file: core.clj
+#'projekat.core/server
+clj꞉projekat.core꞉> 
+#'projekat.core/app-routes
+clj꞉projekat.core꞉> 
+; Evaluating file: core.clj
+#'projekat.core/server
+clj꞉projekat.core꞉> 
+; Evaluating file: core.clj
+; Execution error (BindException) at sun.nio.ch.Net/bind0 (Net.java:-2).
+; Address already in use: bind
+; Evaluation of file core.clj failed: class clojure.lang.Compiler$CompilerException
+clj꞉projekat.core꞉> 
+; Evaluating file: core.clj
+#'projekat.core/server
+clj꞉projekat.core꞉> 
+; Evaluating file: core.clj
+#'projekat.core/server
+clj꞉projekat.core꞉> 
+; Evaluating file: core.clj
+#'projekat.core/server
+clj꞉projekat.core꞉> 
+(0)
 clj꞉projekat.database꞉> 
-; Evaluating file: massage_data_base.clj
+#'projekat.database/add-client
+clj꞉projekat.database꞉> 
+(1)
+clj꞉projekat.database꞉> 
+(1)
+clj꞉projekat.database꞉> 
+(1)
+clj꞉projekat.database꞉> 
+#'projekat.database/table-view-client
+clj꞉projekat.database꞉> 
 
-| :id |      :name |                  :description | :price |
-|-----+------------+-------------------------------+--------|
-|   1 |    Swedish |                  Gentle touch |   40.0 |
-|   2 |       Thai |                   Flexibility |   35.0 |
-|   3 |    Shiatsu |   Relaxation and relieve pain |   37.0 |
-|   4 |      Sport |        Release muscle tension |   45.0 |
-|   5 |      Relax |              Relaxing massage |   44.0 |
-|   7 | Whole body | Preparing body for next week. |   70.0 |
+| :id |          :name |     :phone | :amount | :password |  :role |
+|-----+----------------+------------+---------+-----------+--------|
+|   1 |  Nevena Stanic | 0679089700 |     0.0 |    nevena | client |
+|   2 | Nikola Nikolic |  065409756 |     0.0 |    nikola | client |
+|   3 |   Milica Milic |  060342567 |     0.0 |    milica | client |
 nil
-clj꞉projekat.massage_data_base꞉> 
+clj꞉projekat.database꞉> 
+#'projekat.pages/client-login
+clj꞉projekat.pages꞉> 
+#'projekat.core/app-routes
+clj꞉projekat.core꞉> 
+#'projekat.core/admin-routes
+clj꞉projekat.core꞉> 
+#'projekat.core/admin-routes
+clj꞉projekat.core꞉> 
+#'projekat.core/prepare-client
+clj꞉projekat.core꞉> 
+#'projekat.pages/client-login
+clj꞉projekat.pages꞉> 
+; Evaluating file: pages.clj
+#'projekat.pages/client-login
+clj꞉projekat.pages꞉> 
+#'projekat.database/check-login
+clj꞉projekat.database꞉> 
+#'projekat.database/check-login
+clj꞉projekat.database꞉> 
+#'projekat.database/check-login
+clj꞉projekat.database꞉> 
+; Execution error (IndexOutOfBoundsException) at projekat.database/check-login (form-init1312386880905720873.clj:99).
+; null
+clj꞉projekat.database꞉> 
+
+| :id |          :name |     :phone | :amount | :password |  :role |
+|-----+----------------+------------+---------+-----------+--------|
+|   1 |  Nevena Stanic | 0679089700 |     0.0 |    nevena | client |
+|   2 | Nikola Nikolic |  065409756 |     0.0 |    nikola | client |
+|   3 |   Milica Milic |  060342567 |     0.0 |    milica | client |
+nil
+clj꞉projekat.database꞉> 
+; Execution error (IndexOutOfBoundsException) at projekat.database/check-login (form-init1312386880905720873.clj:99).
+; null
+clj꞉projekat.database꞉> 
+{:id 1, :name "Nevena Stanic", :phone "0679089700", :amount 0.0, :password "nevena", :role "client"}
+clj꞉projekat.database꞉> 
+#'projekat.core/app-routes
+clj꞉projekat.core꞉> 
+; Evaluating file: core.clj
+#'projekat.core/server
+clj꞉projekat.core꞉> 
+; Evaluating file: core.clj
+#'projekat.core/server
+clj꞉projekat.core꞉> 
+; Evaluating file: core.clj
+#'projekat.core/server
+clj꞉projekat.core꞉> 
+; Evaluating file: core.clj
+#'projekat.core/server
+clj꞉projekat.core꞉> 
+; Evaluating file: pages.clj
+#'projekat.pages/client-login
+clj꞉projekat.pages꞉> 
+; Evaluating file: core.clj
+#'projekat.core/server
+clj꞉projekat.core꞉> 
+#'projekat.core/name-phone-id
+clj꞉projekat.core꞉> 
+#'projekat.database/update-client
+clj꞉projekat.database꞉> 
+; Evaluating file: core.clj
+; Syntax error compiling at (c:\Users\nodas\Desktop\alati2022\projekat\src\projekat\core.clj:107:28).
+; No such var: p/client-sign-up
+; Evaluation of file core.clj failed: class clojure.lang.Compiler$CompilerException
+clj꞉projekat.core꞉> 
+#'projekat.pages/client-sign-up
+clj꞉projekat.pages꞉> 
+; Evaluating file: pages.clj
+#'projekat.pages/client-login
+clj꞉projekat.pages꞉> 
+; Evaluating file: core.clj
+#'projekat.core/server
+clj꞉projekat.core꞉> 
+; Evaluating file: pages.clj
+#'projekat.pages/client-login
+clj꞉projekat.pages꞉> 
+
+| :id |              :name |     :phone | :amount | :password |  :role |
+|-----+--------------------+------------+---------+-----------+--------|
+|   1 |      Nevena Stanic | 0679089700 |     0.0 |    nevena | client |
+|   2 |     Nikola Nikolic |  065409756 |     0.0 |    nikola | client |
+|   3 |       Milica Milic |  060342567 |     0.0 |    milica | client |
+|   4 | Danica Zdravkovoic | 0652010059 |     0.0 |      dana | client |
+nil
+clj꞉projekat.database꞉> 
+; Evaluating file: core.clj
+#'projekat.core/server
+clj꞉projekat.core꞉> 
+
+| :id |              :name |     :phone | :amount | :password |  :role |
+|-----+--------------------+------------+---------+-----------+--------|
+|   1 |      Nevena Stanic | 0679089700 |     0.0 |    nevena | client |
+|   2 |     Nikola Nikolic |  065409756 |     0.0 |    nikola | client |
+|   3 |       Milica Milic |  060342567 |     0.0 |    milica | client |
+|   4 | Danica Zdravkovoic | 0652010059 |     0.0 |      dana | client |
+|   5 |       Nikola Nikic | x |     0.0 |     nidza | client |
+nil
+clj꞉projekat.database꞉> 
+; Evaluating file: pages.clj
+#'projekat.pages/client-login
+clj꞉projekat.pages꞉> 
+; Evaluating file: core.clj
+#'projekat.core/server
+clj꞉projekat.core꞉> 
+; Evaluating file: pages.clj
+#'projekat.pages/client-login
+clj꞉projekat.pages꞉> 
+; Evaluating file: core.clj
+#'projekat.core/server
+clj꞉projekat.core꞉> 
+; Evaluating file: pages.clj
+#'projekat.pages/client-login
+clj꞉projekat.pages꞉> 
+; Evaluating file: core.clj
+#'projekat.core/server
+clj꞉projekat.core꞉> 
+{:id 1, :name "Nevena Stanic", :phone "0679089700", :amount 0.0, :password "nevena", :role "client"}
+clj꞉projekat.database꞉> 
+#'projekat.pages/index-client
+clj꞉projekat.pages꞉> 
+#'projekat.pages/index-admin
+clj꞉projekat.pages꞉> 
+; Evaluating file: pages.clj
+#'projekat.pages/client-login
+clj꞉projekat.pages꞉> 
+; Evaluating file: pages.clj
+#'projekat.pages/client-login
+clj꞉projekat.pages꞉> 
+; Evaluating file: pages.clj
+#'projekat.pages/client-login
+clj꞉projekat.pages꞉> 
+; Evaluating file: pages.clj
+#'projekat.pages/client-login
+clj꞉projekat.pages꞉> 
+; Evaluating file: core.clj
+; Execution error (BindException) at sun.nio.ch.Net/bind0 (Net.java:-2).
+; Address already in use: bind
+; Evaluation of file core.clj failed: class clojure.lang.Compiler$CompilerException
+clj꞉projekat.core꞉> 
+; Evaluating file: core.clj
+#'projekat.core/server
+clj꞉projekat.core꞉> 
+; Evaluating file: core.clj
+#'projekat.core/server
+clj꞉projekat.core꞉> 
+; Evaluating file: pages.clj
+#'projekat.pages/client-login
+clj꞉projekat.pages꞉> 
+; Evaluating file: core.clj
+#'projekat.core/server
+clj꞉projekat.core꞉> 
+; Evaluating file: pages.clj
+#'projekat.pages/client-login
+clj꞉projekat.pages꞉> 
+; Evaluating file: core.clj
+#'projekat.core/server
+clj꞉projekat.core꞉> 
+; Evaluating file: pages.clj
+#'projekat.pages/client-login
+clj꞉projekat.pages꞉> 
+; Evaluating file: core.clj
+#'projekat.core/server
+clj꞉projekat.core꞉> 
+; Evaluating file: pages.clj
+#'projekat.pages/client-login
+clj꞉projekat.pages꞉> 
+; Evaluating file: core.clj
+#'projekat.core/server
+clj꞉projekat.core꞉> 
+; Evaluating file: pages.clj
+#'projekat.pages/client-login
+clj꞉projekat.pages꞉> 
+; Evaluating file: core.clj
+#'projekat.core/server
+clj꞉projekat.core꞉> 
+; Evaluating file: pages.clj
+#'projekat.pages/client-login
+clj꞉projekat.pages꞉> 
+; Evaluating file: core.clj
+#'projekat.core/server
+clj꞉projekat.core꞉> 
+#'projekat.database/update-client-amount
+clj꞉projekat.database꞉> 
+; Syntax error compiling at (c:\Users\nodas\Desktop\alati2022\projekat\src\projekat\reservation_database.clj:50:59).
+; Unable to resolve symbol: phone in this context
+clj꞉projekat.reservation_database꞉> 
+#'projekat.reservation_database/add-reservation
+clj꞉projekat.reservation_database꞉> 
+; Evaluating file: core.clj
+; Execution error (BindException) at sun.nio.ch.Net/bind0 (Net.java:-2).
+; Address already in use: bind
+; Evaluation of file core.clj failed: class clojure.lang.Compiler$CompilerException
+clj꞉projekat.core꞉> 
 ; Evaluating file: reservation_database.clj
-; Syntax error compiling at (c:\Users\nodas\Desktop\alati2022\projekat\src\projekat\reservation_database.clj:32:35).
-; Unable to resolve symbol: total-client-amount in this context
-; Evaluation of file reservation_database.clj failed: class clojure.lang.Compiler$CompilerException
+
+| :id | :client_id | :massage_id |
+|-----+------------+-------------|
+|   2 |          1 |           1 |
+|   3 |          1 |           1 |
+|   4 |          1 |           4 |
+|   5 |          1 |           1 |
+|   6 |          1 |           4 |
+nil
+clj꞉projekat.reservation_database꞉> 
+; Evaluating file: pages.clj
+#'projekat.pages/client-login
+clj꞉projekat.pages꞉> 
+; Evaluating file: core.clj
+#'projekat.core/server
+clj꞉projekat.core꞉> 
+; Evaluating file: core.clj
+#'projekat.core/server
+clj꞉projekat.core꞉> 
+; Evaluating file: core.clj
+#'projekat.core/server
+clj꞉projekat.core꞉> 
+; Evaluating file: core.clj
+#'projekat.core/server
+clj꞉projekat.core꞉> 
+290.0
 clj꞉projekat.reservation_database꞉> 
 ; Evaluating file: reservation_database.clj
 
@@ -61,184 +301,792 @@ clj꞉projekat.reservation_database꞉> 
 |   3 |          1 |           1 |
 |   4 |          1 |           4 |
 |   5 |          1 |           1 |
+|   6 |          1 |           4 |
+|   7 |          1 |           1 |
+|   8 |          1 |           1 |
 nil
 clj꞉projekat.reservation_database꞉> 
-; Evaluating file: pages.clj
-#'projekat.pages/new-reservation-form
-clj꞉projekat.pages꞉> 
-; Evaluating file: admin.clj
-#'projekat.admin/check-login
-clj꞉projekat.admin꞉> 
+; Evaluating file: database.clj
+
+| :id |              :name |     :phone | :amount | :password |  :role |
+|-----+--------------------+------------+---------+-----------+--------|
+|   1 |      Nevena Stanic | 0679089700 |     0.0 |    nevena | client |
+|   2 |     Nikola Nikolic |  065409756 |     0.0 |    nikola | client |
+|   3 |       Milica Milic |  060342567 |     0.0 |    milica | client |
+|   4 | Danica Zdravkovoic | 0652010059 |     0.0 |      dana | client |
+|   5 |       Nikola Nikic | 0874569833 |     0.0 |     nidza | client |
+#'projekat.database/check-login
+clj꞉projekat.database꞉> 
 ; Evaluating file: core.clj
 #'projekat.core/server
 clj꞉projekat.core꞉> 
-#'projekat.core/server
-clj꞉projekat.core꞉> 
-Run `(doc midje)` for Midje usage.
-nil
-clj꞉projekat.core-test꞉> 
-nil
-clj꞉projekat.core-test꞉> 
-; Syntax error compiling at (c:\Users\nodas\Desktop\alati2022\projekat\test\projekat\core_test.clj:6:1).
-; Unable to resolve symbol: nill in this context
-clj꞉projekat.core-test꞉> 
 
-FAIL name-surname at (c:\Users\nodas\Desktop\alati2022\projekat\test\projekat\core_test.clj:12)
-Expected:
+| :id | :client_id | :massage_id |
+|-----+------------+-------------|
+|   2 |          1 |           1 |
+|   3 |          1 |           1 |
+|   4 |          1 |           4 |
+|   5 |          1 |           1 |
+|   6 |          1 |           4 |
+|   7 |          1 |           1 |
+|   8 |          1 |           1 |
+|   9 |          1 |           1 |
 nil
-Actual:
-java.lang.NullPointerException
-  projekat.core$name_surname.invokeStatic(core.clj:29)
-  projekat.core$name_surname.invoke(core.clj:27)
-  projekat.core_test$eval20882$fn__20883$fn__20884$fn__20885.invoke(form-init12718646884227605729.clj:12)
-  projekat.core_test$eval20882$fn__20883$fn__20884.invoke(form-init12718646884227605729.clj:6)
-  projekat.core_test$eval20882$fn__20883.invoke(form-init12718646884227605729.clj:6)
-  projekat.core_test$eval20882.invokeStatic(form-init12718646884227605729.clj:6)
-  projekat.core_test$eval20882.invoke(form-init12718646884227605729.clj:6)
-  nrepl.middleware.interruptible_eval$evaluate$fn__6255$fn__6256.invoke(interruptible_eval.clj:87)
-  nrepl.middleware.interruptible_eval$evaluate$fn__6255.invoke(interruptible_eval.clj:87)
-  nrepl.middleware.interruptible_eval$evaluate.invokeStatic(interruptible_eval.clj:84)
-  nrepl.middleware.interruptible_eval$evaluate.invoke(interruptible_eval.clj:56)
-  nrepl.middleware.interruptible_eval$interruptible_eval$fn__6288$fn__6292.invoke(interruptible_eval.clj:152)
-  nrepl.middleware.session$session_exec$main_loop__6358$fn__6362.invoke(session.clj:218)
-  nrepl.middleware.session$session_exec$main_loop__6358.invoke(session.clj:217)
-false
-clj꞉projekat.core-test꞉> 
+clj꞉projekat.reservation_database꞉> 
 
-FAIL name-surname at (c:\Users\nodas\Desktop\alati2022\projekat\test\projekat\core_test.clj:12)
-Expected:
+| :id | :client_id | :massage_id |
+|-----+------------+-------------|
+|   2 |          1 |           1 |
+|   3 |          1 |           1 |
+|   4 |          1 |           4 |
+|   5 |          1 |           1 |
+|   6 |          1 |           4 |
+|   7 |          1 |           1 |
+|   8 |          1 |           1 |
+|   9 |          1 |           1 |
+|  10 |          4 |           3 |
 nil
-Actual:
-java.lang.NullPointerException
-  projekat.core$name_surname.invokeStatic(core.clj:29)
-  projekat.core$name_surname.invoke(core.clj:27)
-  projekat.core_test$eval20890$fn__20891$fn__20892$fn__20893.invoke(form-init12718646884227605729.clj:12)
-  projekat.core_test$eval20890$fn__20891$fn__20892.invoke(form-init12718646884227605729.clj:6)
-  projekat.core_test$eval20890$fn__20891.invoke(form-init12718646884227605729.clj:6)
-  projekat.core_test$eval20890.invokeStatic(form-init12718646884227605729.clj:6)
-  projekat.core_test$eval20890.invoke(form-init12718646884227605729.clj:6)
-  nrepl.middleware.interruptible_eval$evaluate$fn__6255$fn__6256.invoke(interruptible_eval.clj:87)
-  nrepl.middleware.interruptible_eval$evaluate$fn__6255.invoke(interruptible_eval.clj:87)
-  nrepl.middleware.interruptible_eval$evaluate.invokeStatic(interruptible_eval.clj:84)
-  nrepl.middleware.interruptible_eval$evaluate.invoke(interruptible_eval.clj:56)
-  nrepl.middleware.interruptible_eval$interruptible_eval$fn__6288$fn__6292.invoke(interruptible_eval.clj:152)
-  nrepl.middleware.session$session_exec$main_loop__6358$fn__6362.invoke(session.clj:218)
-  nrepl.middleware.session$session_exec$main_loop__6358.invoke(session.clj:217)
-false
-clj꞉projekat.core-test꞉> 
-; Execution error (NullPointerException) at projekat.core/name-surname (core.clj:29).
+clj꞉projekat.reservation_database꞉> 
+; Execution error (NullPointerException) at projekat.reservation-database/total-client-amount (reservation_database.clj:31).
 ; null
+clj꞉projekat.reservation_database꞉> 
+; Execution error (NullPointerException) at projekat.reservation-database/total-client-amount (reservation_database.clj:31).
+; null
+clj꞉projekat.reservation_database꞉> 
+; Execution error (NullPointerException) at projekat.reservation-database/total-client-amount (reservation_database.clj:31).
+; null
+clj꞉projekat.reservation_database꞉> 
+(40.0 40.0 45.0 40.0 45.0 40.0 40.0 40.0 nil)
+clj꞉projekat.reservation_database꞉> 
+(40.0 40.0 45.0 40.0 45.0 40.0 40.0 40.0 nil)
+clj꞉projekat.reservation_database꞉> 
+(nil nil nil nil nil nil nil nil 37.0)
+clj꞉projekat.reservation_database꞉> 
+(40.0 40.0 45.0 40.0 45.0 40.0 40.0 40.0 nil)
+clj꞉projekat.reservation_database꞉> 
+(40.0 40.0 45.0 40.0 45.0 40.0 40.0 40.0 nil)
+clj꞉projekat.reservation_database꞉> 
+(nil nil nil nil nil nil nil nil 37.0)
+clj꞉projekat.reservation_database꞉> 
+#'projekat.reservation_database/proba
+clj꞉projekat.reservation_database꞉> 
+({:id 2, :client_id 1, :massage_id 1}
+ {:id 3, :client_id 1, :massage_id 1}
+ {:id 4, :client_id 1, :massage_id 4}
+ {:id 5, :client_id 1, :massage_id 1}
+ {:id 6, :client_id 1, :massage_id 4}
+ {:id 7, :client_id 1, :massage_id 1}
+ {:id 8, :client_id 1, :massage_id 1}
+ {:id 9, :client_id 1, :massage_id 1})
+clj꞉projekat.reservation_database꞉> 
+#'projekat.reservation_database/proba
+clj꞉projekat.reservation_database꞉> 
+(true true true true true true true true false)
+clj꞉projekat.reservation_database꞉> 
+#'projekat.reservation_database/proba
+clj꞉projekat.reservation_database꞉> 
+({:id 2, :client_id 1, :massage_id 1}
+ {:id 3, :client_id 1, :massage_id 1}
+ {:id 4, :client_id 1, :massage_id 4}
+ {:id 5, :client_id 1, :massage_id 1}
+ {:id 6, :client_id 1, :massage_id 4}
+ {:id 7, :client_id 1, :massage_id 1}
+ {:id 8, :client_id 1, :massage_id 1}
+ {:id 9, :client_id 1, :massage_id 1})
+clj꞉projekat.reservation_database꞉> 
+({:id 10, :client_id 4, :massage_id 3})
+clj꞉projekat.reservation_database꞉> 
+#'projekat.reservation_database/proba
+clj꞉projekat.reservation_database꞉> 
+({:id 10, :client_id 4, :massage_id 3})
+clj꞉projekat.reservation_database꞉> 
+({:id 2, :client_id 1, :massage_id 1}
+ {:id 3, :client_id 1, :massage_id 1}
+ {:id 4, :client_id 1, :massage_id 4}
+ {:id 5, :client_id 1, :massage_id 1}
+ {:id 6, :client_id 1, :massage_id 4}
+ {:id 7, :client_id 1, :massage_id 1}
+ {:id 8, :client_id 1, :massage_id 1}
+ {:id 9, :client_id 1, :massage_id 1})
+clj꞉projekat.reservation_database꞉> 
+#'projekat.reservation_database/client-reservations
+clj꞉projekat.reservation_database꞉> 
+#'projekat.reservation_database/client-amounts
+clj꞉projekat.reservation_database꞉> 
+; Execution error (ArityException) at projekat.reservation-database/client-amounts (form-init1312386880905720873.clj:28).
+; Wrong number of args (0) passed to: projekat.reservation-database/client-reservations
+clj꞉projekat.reservation_database꞉> 
+#'projekat.reservation_database/client-amounts
+clj꞉projekat.reservation_database꞉> 
+(40.0 40.0 45.0 40.0 45.0 40.0 40.0 40.0)
+clj꞉projekat.reservation_database꞉> 
+(nil)
+clj꞉projekat.reservation_database꞉> 
+({:id 2, :client_id 1, :massage_id 1}
+ {:id 3, :client_id 1, :massage_id 1}
+ {:id 4, :client_id 1, :massage_id 4}
+ {:id 5, :client_id 1, :massage_id 1}
+ {:id 6, :client_id 1, :massage_id 4}
+ {:id 7, :client_id 1, :massage_id 1}
+ {:id 8, :client_id 1, :massage_id 1}
+ {:id 9, :client_id 1, :massage_id 1}
+ {:id 10, :client_id 4, :massage_id 3})
+clj꞉projekat.reservation_database꞉> 
+(nil)
+clj꞉projekat.reservation_database꞉> 
+(40.0 40.0 45.0 40.0 45.0 40.0 40.0 40.0)
+clj꞉projekat.reservation_database꞉> 
+#'projekat.reservation_database/client-amounts
+clj꞉projekat.reservation_database꞉> 
+(40.0 40.0 45.0 40.0 45.0 40.0 40.0 40.0)
+clj꞉projekat.reservation_database꞉> 
+(40.0)
+clj꞉projekat.reservation_database꞉> 
+#'projekat.reservation_database/client-amounts
+clj꞉projekat.reservation_database꞉> 
+()
+clj꞉projekat.reservation_database꞉> 
+(40.0)
+clj꞉projekat.reservation_database꞉> 
+330.0
+clj꞉projekat.reservation_database꞉> 
+40.0
+clj꞉projekat.reservation_database꞉> 
+; Evaluating file: reservation_database.clj
+
+| :id | :client_id | :massage_id |
+|-----+------------+-------------|
+|   2 |          1 |           1 |
+|   3 |          1 |           1 |
+|   4 |          1 |           4 |
+|   5 |          1 |           1 |
+|   6 |          1 |           4 |
+|   7 |          1 |           1 |
+|   8 |          1 |           1 |
+|   9 |          1 |           1 |
+|  10 |          4 |           3 |
+nil
+clj꞉projekat.reservation_database꞉> 
+; Evaluating file: database.clj
+
+| :id |              :name |     :phone | :amount | :password |  :role |
+|-----+--------------------+------------+---------+-----------+--------|
+|   1 |      Nevena Stanic | 0679089700 |     0.0 |    nevena | client |
+|   2 |     Nikola Nikolic |  065409756 |     0.0 |    nikola | client |
+|   3 |       Milica Milic |  060342567 |     0.0 |    milica | client |
+|   4 | Danica Zdravkovoic | 0652010059 |     0.0 |      dana | client |
+|   5 |       Nikola Nikic | 0874569833 |     0.0 |     nidza | client |
+#'projekat.database/check-login
+clj꞉projekat.database꞉> 
+; Evaluating file: core.clj
+#'projekat.core/server
 clj꞉projekat.core꞉> 
 
-FAIL name-surname at (c:\Users\nodas\Desktop\alati2022\projekat\test\projekat\core_test.clj:12)
-Expected:
+| :id | :client_id | :massage_id |
+|-----+------------+-------------|
+|   2 |          1 |           1 |
+|   3 |          1 |           1 |
+|   4 |          1 |           4 |
+|   5 |          1 |           1 |
+|   6 |          1 |           4 |
+|   7 |          1 |           1 |
+|   8 |          1 |           1 |
+|   9 |          1 |           1 |
+|  10 |          4 |           3 |
+|  11 |          1 |           1 |
 nil
-Actual:
-"2"
-false
-clj꞉projekat.core-test꞉> 
-true
-clj꞉projekat.core-test꞉> 
-#'projekat.core/only-digits
+clj꞉projekat.reservation_database꞉> 
+
+| :id | :client_id | :massage_id |
+|-----+------------+-------------|
+|   2 |          1 |           1 |
+|   3 |          1 |           1 |
+|   4 |          1 |           4 |
+|   5 |          1 |           1 |
+|   6 |          1 |           4 |
+|   7 |          1 |           1 |
+|   8 |          1 |           1 |
+|   9 |          1 |           1 |
+|  10 |          4 |           3 |
+|  11 |          1 |           1 |
+nil
+clj꞉projekat.reservation_database꞉> 
+; Evaluating file: reservation_database.clj
+
+| :id | :client_id | :massage_id |
+|-----+------------+-------------|
+|   2 |          1 |           1 |
+|   3 |          1 |           1 |
+|   4 |          1 |           4 |
+|   5 |          1 |           1 |
+|   6 |          1 |           4 |
+|   7 |          1 |           1 |
+|   8 |          1 |           1 |
+|   9 |          1 |           1 |
+|  10 |          4 |           3 |
+|  11 |          1 |           1 |
+nil
+clj꞉projekat.reservation_database꞉> 
+; Evaluating file: core.clj
+#'projekat.core/server
 clj꞉projekat.core꞉> 
-true
+
+| :id |              :name |     :phone | :amount | :password |  :role |
+|-----+--------------------+------------+---------+-----------+--------|
+|   1 |      Nevena Stanic | 0679089700 |     0.0 |    nevena | client |
+|   2 |     Nikola Nikolic |  065409756 |     0.0 |    nikola | client |
+|   3 |       Milica Milic |  060342567 |     0.0 |    milica | client |
+|   4 | Danica Zdravkovoic | 0652010059 |     0.0 |      dana | client |
+|   5 |       Nikola Nikic | 0874569833 |     0.0 |     nidza | client |
+nil
+clj꞉projekat.database꞉> 
+(1)
+clj꞉projekat.database꞉> 
+
+| :id |              :name |     :phone | :amount | :password |  :role |
+|-----+--------------------+------------+---------+-----------+--------|
+|   1 |      Nevena Stanic | 0679089700 |   200.0 |    nevena | client |
+|   2 |     Nikola Nikolic |  065409756 |     0.0 |    nikola | client |
+|   3 |       Milica Milic |  060342567 |     0.0 |    milica | client |
+|   4 | Danica Zdravkovoic | 0652010059 |     0.0 |      dana | client |
+|   5 |       Nikola Nikic | 0874569833 |     0.0 |     nidza | client |
+nil
+clj꞉projekat.database꞉> 
+407.0
+clj꞉projekat.reservation_database꞉> 
+(1)
+clj꞉projekat.reservation_database꞉> 
+
+| :id |              :name |     :phone | :amount | :password |  :role |
+|-----+--------------------+------------+---------+-----------+--------|
+|   1 |      Nevena Stanic | 0679089700 |   407.0 |    nevena | client |
+|   2 |     Nikola Nikolic |  065409756 |     0.0 |    nikola | client |
+|   3 |       Milica Milic |  060342567 |     0.0 |    milica | client |
+|   4 | Danica Zdravkovoic | 0652010059 |     0.0 |      dana | client |
+|   5 |       Nikola Nikic | 0874569833 |     0.0 |     nidza | client |
+nil
+clj꞉projekat.database꞉> 
+; Evaluating file: reservation_database.clj
+
+| :id | :client_id | :massage_id |
+|-----+------------+-------------|
+|   2 |          1 |           1 |
+|   3 |          1 |           1 |
+|   4 |          1 |           4 |
+|   5 |          1 |           1 |
+|   6 |          1 |           4 |
+|   7 |          1 |           1 |
+|   8 |          1 |           1 |
+|   9 |          1 |           1 |
+|  10 |          4 |           3 |
+|  11 |          1 |           1 |
+|  12 |          1 |           5 |
+nil
+clj꞉projekat.reservation_database꞉> 
+; Evaluating file: reservation_database.clj
+
+| :id | :client_id | :massage_id |
+|-----+------------+-------------|
+|   2 |          1 |           1 |
+|   3 |          1 |           1 |
+|   4 |          1 |           4 |
+|   5 |          1 |           1 |
+|   6 |          1 |           4 |
+|   7 |          1 |           1 |
+|   8 |          1 |           1 |
+|   9 |          1 |           1 |
+|  10 |          4 |           3 |
+|  11 |          1 |           1 |
+|  12 |          1 |           5 |
+nil
+clj꞉projekat.reservation_database꞉> 
+; Evaluating file: database.clj
+
+| :id |              :name |     :phone | :amount | :password |  :role |
+|-----+--------------------+------------+---------+-----------+--------|
+|   1 |      Nevena Stanic | 0679089700 |   407.0 |    nevena | client |
+|   2 |     Nikola Nikolic |  065409756 |     0.0 |    nikola | client |
+|   3 |       Milica Milic |  060342567 |     0.0 |    milica | client |
+|   4 | Danica Zdravkovoic | 0652010059 |     0.0 |      dana | client |
+|   5 |       Nikola Nikic | 0874569833 |     0.0 |     nidza | client |
+nil
+clj꞉projekat.database꞉> 
+; Evaluating file: core.clj
+#'projekat.core/server
 clj꞉projekat.core꞉> 
-false
+
+| :id | :client_id | :massage_id |
+|-----+------------+-------------|
+|   2 |          1 |           1 |
+|   3 |          1 |           1 |
+|   4 |          1 |           4 |
+|   5 |          1 |           1 |
+|   6 |          1 |           4 |
+|   7 |          1 |           1 |
+|   8 |          1 |           1 |
+|   9 |          1 |           1 |
+|  10 |          4 |           3 |
+|  11 |          1 |           1 |
+|  12 |          1 |           5 |
+|  13 |          1 |           1 |
+|  14 |          1 |           3 |
+|  15 |          1 |           5 |
+|  16 |          1 |           3 |
+|  17 |          1 |           1 |
+|  18 |          1 |           2 |
+nil
+clj꞉projekat.reservation_database꞉> 
+649.0
+clj꞉projekat.reservation_database꞉> 
+(1)
+clj꞉projekat.database꞉> 
+
+| :id |              :name |     :phone | :amount | :password |  :role |
+|-----+--------------------+------------+---------+-----------+--------|
+|   1 |      Nevena Stanic | 0679089700 |   200.0 |    nevena | client |
+|   2 |     Nikola Nikolic |  065409756 |     0.0 |    nikola | client |
+|   3 |       Milica Milic |  060342567 |     0.0 |    milica | client |
+|   4 | Danica Zdravkovoic | 0652010059 |     0.0 |      dana | client |
+|   5 |       Nikola Nikic | 0874569833 |     0.0 |     nidza | client |
+nil
+clj꞉projekat.database꞉> 
+(1)
+clj꞉projekat.database꞉> 
+
+| :id |              :name |     :phone | :amount | :password |  :role |
+|-----+--------------------+------------+---------+-----------+--------|
+|   1 |      Nevena Stanic | 0679089700 |     0.0 |    nevena | client |
+|   2 |     Nikola Nikolic |  065409756 |     0.0 |    nikola | client |
+|   3 |       Milica Milic |  060342567 |     0.0 |    milica | client |
+|   4 | Danica Zdravkovoic | 0652010059 |     0.0 |      dana | client |
+|   5 |       Nikola Nikic | 0874569833 |     0.0 |     nidza | client |
+nil
+clj꞉projekat.database꞉> 
+(1)
+clj꞉projekat.reservation_database꞉> 
+
+| :id |              :name |     :phone | :amount | :password |  :role |
+|-----+--------------------+------------+---------+-----------+--------|
+|   1 |      Nevena Stanic | 0679089700 |   649.0 |    nevena | client |
+|   2 |     Nikola Nikolic |  065409756 |     0.0 |    nikola | client |
+|   3 |       Milica Milic |  060342567 |     0.0 |    milica | client |
+|   4 | Danica Zdravkovoic | 0652010059 |     0.0 |      dana | client |
+|   5 |       Nikola Nikic | 0874569833 |     0.0 |     nidza | client |
+nil
+clj꞉projekat.database꞉> 
+#'projekat.reservation_database/add-reservation
+clj꞉projekat.reservation_database꞉> 
+; Evaluating file: reservation_database.clj
+
+| :id | :client_id | :massage_id |
+|-----+------------+-------------|
+|   2 |          1 |           1 |
+|   3 |          1 |           1 |
+|   4 |          1 |           4 |
+|   5 |          1 |           1 |
+|   6 |          1 |           4 |
+|   7 |          1 |           1 |
+|   8 |          1 |           1 |
+|   9 |          1 |           1 |
+|  10 |          4 |           3 |
+|  11 |          1 |           1 |
+|  12 |          1 |           5 |
+|  13 |          1 |           1 |
+|  14 |          1 |           3 |
+|  15 |          1 |           5 |
+|  16 |          1 |           3 |
+|  17 |          1 |           1 |
+|  18 |          1 |           2 |
+nil
+clj꞉projekat.reservation_database꞉> 
+; Evaluating file: core.clj
+#'projekat.core/server
 clj꞉projekat.core꞉> 
-; Execution error (IllegalArgumentException) at projekat.core/only-digits (form-init12718646884227605729.clj:27).
-; Don't know how to create ISeq from: java.lang.Long
+
+| :id | :client_id | :massage_id |
+|-----+------------+-------------|
+|   2 |          1 |           1 |
+|   3 |          1 |           1 |
+|   4 |          1 |           4 |
+|   5 |          1 |           1 |
+|   6 |          1 |           4 |
+|   7 |          1 |           1 |
+|   8 |          1 |           1 |
+|   9 |          1 |           1 |
+|  10 |          4 |           3 |
+|  11 |          1 |           1 |
+|  12 |          1 |           5 |
+|  13 |          1 |           1 |
+|  14 |          1 |           3 |
+|  15 |          1 |           5 |
+|  16 |          1 |           3 |
+|  17 |          1 |           1 |
+|  18 |          1 |           2 |
+|  19 |          1 |           1 |
+|  20 |          1 |           1 |
+|  21 |          1 |           7 |
+nil
+clj꞉projekat.reservation_database꞉> 
+
+| :id |              :name |     :phone | :amount | :password |  :role |
+|-----+--------------------+------------+---------+-----------+--------|
+|   1 |      Nevena Stanic | 0679089700 |     0.0 |    nevena | client |
+|   2 |     Nikola Nikolic |  065409756 |     0.0 |    nikola | client |
+|   3 |       Milica Milic |  060342567 |     0.0 |    milica | client |
+|   4 | Danica Zdravkovoic | 0652010059 |     0.0 |      dana | client |
+|   5 |       Nikola Nikic | 0874569833 |     0.0 |     nidza | client |
+nil
+clj꞉projekat.database꞉> 
+java.lang.Double
+clj꞉projekat.reservation_database꞉> 
+764.0
+clj꞉projekat.reservation_database꞉> 
+(1)
+clj꞉projekat.reservation_database꞉> 
+
+| :id |              :name |     :phone | :amount | :password |  :role |
+|-----+--------------------+------------+---------+-----------+--------|
+|   1 |      Nevena Stanic | 0679089700 |   764.0 |    nevena | client |
+|   2 |     Nikola Nikolic |  065409756 |     0.0 |    nikola | client |
+|   3 |       Milica Milic |  060342567 |     0.0 |    milica | client |
+|   4 | Danica Zdravkovoic | 0652010059 |     0.0 |      dana | client |
+|   5 |       Nikola Nikic | 0874569833 |     0.0 |     nidza | client |
+nil
+clj꞉projekat.database꞉> 
+; Evaluating file: reservation_database.clj
+
+| :id | :client_id | :massage_id |
+|-----+------------+-------------|
+|   2 |          1 |           1 |
+|   3 |          1 |           1 |
+|   4 |          1 |           4 |
+|   5 |          1 |           1 |
+|   6 |          1 |           4 |
+|   7 |          1 |           1 |
+|   8 |          1 |           1 |
+|   9 |          1 |           1 |
+|  10 |          4 |           3 |
+|  11 |          1 |           1 |
+|  12 |          1 |           5 |
+|  13 |          1 |           1 |
+|  14 |          1 |           3 |
+|  15 |          1 |           5 |
+|  16 |          1 |           3 |
+|  17 |          1 |           1 |
+|  18 |          1 |           2 |
+|  19 |          1 |           1 |
+|  20 |          1 |           1 |
+|  21 |          1 |           7 |
+nil
+clj꞉projekat.reservation_database꞉> 
+(1)
+clj꞉projekat.reservation_database꞉> 
+
+| :id |              :name |     :phone | :amount | :password |  :role |
+|-----+--------------------+------------+---------+-----------+--------|
+|   1 |      Nevena Stanic | 0679089700 |     0.0 |    nevena | client |
+|   2 |     Nikola Nikolic |  065409756 |     0.0 |    nikola | client |
+|   3 |       Milica Milic |  060342567 |     0.0 |    milica | client |
+|   4 | Danica Zdravkovoic | 0652010059 |     0.0 |      dana | client |
+|   5 |       Nikola Nikic | 0874569833 |     0.0 |     nidza | client |
+nil
+clj꞉projekat.database꞉> 
+; Evaluating file: reservation_database.clj
+
+| :id | :client_id | :massage_id |
+|-----+------------+-------------|
+|   2 |          1 |           1 |
+|   3 |          1 |           1 |
+|   4 |          1 |           4 |
+|   5 |          1 |           1 |
+|   6 |          1 |           4 |
+|   7 |          1 |           1 |
+|   8 |          1 |           1 |
+|   9 |          1 |           1 |
+|  10 |          4 |           3 |
+|  11 |          1 |           1 |
+|  12 |          1 |           5 |
+|  13 |          1 |           1 |
+|  14 |          1 |           3 |
+|  15 |          1 |           5 |
+|  16 |          1 |           3 |
+|  17 |          1 |           1 |
+|  18 |          1 |           2 |
+|  19 |          1 |           1 |
+|  20 |          1 |           1 |
+|  21 |          1 |           7 |
+nil
+clj꞉projekat.reservation_database꞉> 
+; Evaluating file: core.clj
+#'projekat.core/server
 clj꞉projekat.core꞉> 
-#'projekat.core/only-string
+
+| :id |              :name |     :phone | :amount | :password |  :role |
+|-----+--------------------+------------+---------+-----------+--------|
+|   1 |      Nevena Stanic | 0679089700 |     0.0 |    nevena | client |
+|   2 |     Nikola Nikolic |  065409756 |     0.0 |    nikola | client |
+|   3 |       Milica Milic |  060342567 |     0.0 |    milica | client |
+|   4 | Danica Zdravkovoic | 0652010059 |     0.0 |      dana | client |
+|   5 |       Nikola Nikic | 0874569833 |     0.0 |     nidza | client |
+nil
+clj꞉projekat.database꞉> 
+(1)
+clj꞉projekat.database꞉> 
+#'projekat.reservation_database/add-reservation
+clj꞉projekat.reservation_database꞉> 
+; Evaluating file: reservation_database.clj
+
+| :id | :client_id | :massage_id |
+|-----+------------+-------------|
+|   2 |          1 |           1 |
+|   3 |          1 |           1 |
+|   4 |          1 |           4 |
+|   5 |          1 |           1 |
+|   6 |          1 |           4 |
+|   7 |          1 |           1 |
+|   8 |          1 |           1 |
+|   9 |          1 |           1 |
+|  10 |          4 |           3 |
+|  11 |          1 |           1 |
+|  12 |          1 |           5 |
+|  13 |          1 |           1 |
+|  14 |          1 |           3 |
+|  15 |          1 |           5 |
+|  16 |          1 |           3 |
+|  17 |          1 |           1 |
+|  18 |          1 |           2 |
+|  19 |          1 |           1 |
+|  20 |          1 |           1 |
+|  21 |          1 |           7 |
+nil
+clj꞉projekat.reservation_database꞉> 
+; Evaluating file: core.clj
+#'projekat.core/server
 clj꞉projekat.core꞉> 
-; Execution error (ClassCastException) at projekat.core/only-string$fn (form-init12718646884227605729.clj:28).
-; class java.lang.Character cannot be cast to class java.lang.Number (java.lang.Character and java.lang.Number are in module java.base of loader 'bootstrap')
+; Evaluating file: core.clj
+#'projekat.core/server
 clj꞉projekat.core꞉> 
-; Execution error (ClassCastException) at projekat.core/only-string$fn (form-init12718646884227605729.clj:28).
-; class java.lang.Character cannot be cast to class java.lang.Number (java.lang.Character and java.lang.Number are in module java.base of loader 'bootstrap')
+#'projekat.core/client-routes
 clj꞉projekat.core꞉> 
-#'projekat.core/only-string
+; Evaluating file: core.clj
+#'projekat.core/server
 clj꞉projekat.core꞉> 
-false
+1 -------- 871.0(1)
 clj꞉projekat.core꞉> 
-false
+; Evaluating file: reservation_database.clj
+
+| :id | :client_id | :massage_id |
+|-----+------------+-------------|
+|   2 |          1 |           1 |
+|   3 |          1 |           1 |
+|   4 |          1 |           4 |
+|   5 |          1 |           1 |
+|   6 |          1 |           4 |
+|   7 |          1 |           1 |
+|   8 |          1 |           1 |
+|   9 |          1 |           1 |
+|  10 |          4 |           3 |
+|  11 |          1 |           1 |
+|  12 |          1 |           5 |
+|  13 |          1 |           1 |
+|  14 |          1 |           3 |
+|  15 |          1 |           5 |
+|  16 |          1 |           3 |
+|  17 |          1 |           1 |
+|  18 |          1 |           2 |
+|  19 |          1 |           1 |
+|  20 |          1 |           1 |
+|  21 |          1 |           7 |
+|  22 |          1 |           3 |
+|  23 |          1 |           7 |
+nil
+clj꞉projekat.reservation_database꞉> 
+; Evaluating file: database.clj
+
+| :id |              :name |     :phone | :amount | :password |  :role |
+|-----+--------------------+------------+---------+-----------+--------|
+|   1 |      Nevena Stanic | 0679089700 |   871.0 |    nevena | client |
+|   2 |     Nikola Nikolic |  065409756 |     0.0 |    nikola | client |
+|   3 |       Milica Milic |  060342567 |     0.0 |    milica | client |
+|   4 | Danica Zdravkovoic | 0652010059 |     0.0 |      dana | client |
+|   5 |       Nikola Nikic | 0874569833 |     0.0 |     nidza | client |
+nil
+clj꞉projekat.database꞉> 
+(1)
 clj꞉projekat.core꞉> 
-true
+
+| :id | :client_id | :massage_id |
+|-----+------------+-------------|
+|   2 |          1 |           1 |
+|   3 |          1 |           1 |
+|   4 |          1 |           4 |
+|   5 |          1 |           1 |
+|   6 |          1 |           4 |
+|   7 |          1 |           1 |
+|   8 |          1 |           1 |
+|   9 |          1 |           1 |
+|  10 |          4 |           3 |
+|  11 |          1 |           1 |
+|  12 |          1 |           5 |
+|  13 |          1 |           1 |
+|  14 |          1 |           3 |
+|  15 |          1 |           5 |
+|  16 |          1 |           3 |
+|  17 |          1 |           1 |
+|  18 |          1 |           2 |
+|  19 |          1 |           1 |
+|  20 |          1 |           1 |
+|  21 |          1 |           7 |
+|  22 |          1 |           3 |
+|  23 |          1 |           7 |
+|  24 |          1 |           7 |
+nil
+clj꞉projekat.reservation_database꞉> 
+
+| :id |              :name |     :phone | :amount | :password |  :role |
+|-----+--------------------+------------+---------+-----------+--------|
+|   1 |      Nevena Stanic | 0679089700 |   941.0 |    nevena | client |
+|   2 |     Nikola Nikolic |  065409756 |     0.0 |    nikola | client |
+|   3 |       Milica Milic |  060342567 |     0.0 |    milica | client |
+|   4 | Danica Zdravkovoic | 0652010059 |     0.0 |      dana | client |
+|   5 |       Nikola Nikic | 0874569833 |     0.0 |     nidza | client |
+nil
+clj꞉projekat.database꞉> 
+(1)
 clj꞉projekat.core꞉> 
-false
+
+| :id | :client_id | :massage_id |
+|-----+------------+-------------|
+|   2 |          1 |           1 |
+|   3 |          1 |           1 |
+|   4 |          1 |           4 |
+|   5 |          1 |           1 |
+|   6 |          1 |           4 |
+|   7 |          1 |           1 |
+|   8 |          1 |           1 |
+|   9 |          1 |           1 |
+|  10 |          4 |           3 |
+|  11 |          1 |           1 |
+|  12 |          1 |           5 |
+|  13 |          1 |           1 |
+|  14 |          1 |           3 |
+|  15 |          1 |           5 |
+|  16 |          1 |           3 |
+|  17 |          1 |           1 |
+|  18 |          1 |           2 |
+|  19 |          1 |           1 |
+|  20 |          1 |           1 |
+|  21 |          1 |           7 |
+|  22 |          1 |           3 |
+|  23 |          1 |           7 |
+|  24 |          1 |           7 |
+|  25 |          1 |           7 |
+nil
+clj꞉projekat.reservation_database꞉> 
+
+| :id |              :name |     :phone | :amount | :password |  :role |
+|-----+--------------------+------------+---------+-----------+--------|
+|   1 |      Nevena Stanic | 0679089700 |  1011.0 |    nevena | client |
+|   2 |     Nikola Nikolic |  065409756 |     0.0 |    nikola | client |
+|   3 |       Milica Milic |  060342567 |     0.0 |    milica | client |
+|   4 | Danica Zdravkovoic | 0652010059 |     0.0 |      dana | client |
+|   5 |       Nikola Nikic | 0874569833 |     0.0 |     nidza | client |
+nil
+clj꞉projekat.database꞉> 
+; Evaluating file: core.clj
+#'projekat.core/server
 clj꞉projekat.core꞉> 
-false
+; Evaluating file: core.clj
+#'projekat.core/server
 clj꞉projekat.core꞉> 
-false
+java.lang.Long
 clj꞉projekat.core꞉> 
-#'projekat.core/only-string
+#'projekat.core/client-routes
 clj꞉projekat.core꞉> 
-false
+; Evaluating file: core.clj
+#'projekat.core/server
 clj꞉projekat.core꞉> 
-"aa"
-clj꞉projekat.core꞉> 
-""
-clj꞉projekat.core꞉> 
-#'projekat.core/only-digits
-clj꞉projekat.core꞉> 
-true
-clj꞉projekat.core꞉> 
-#'projekat.core/only-string
-clj꞉projekat.core꞉> 
-; Syntax error (IllegalArgumentException) compiling . at (c:\Users\nodas\Desktop\alati2022\projekat\src\projekat\core.clj:29:1).
-; No matching method COMBINING_SPACING_MARK found taking 1 args for class java.lang.Character
-clj꞉projekat.core꞉> 
-; Execution error (IllegalArgumentException) at projekat.core/eval21034 (form-init12718646884227605729.clj:29).
-; No matching method isSpaceChar found taking 1 args
-clj꞉projekat.core꞉> 
-" "
-clj꞉projekat.core꞉> 
-; Execution error (IllegalArgumentException) at projekat.core/eval21036 (form-init12718646884227605729.clj:29).
-; No matching method isSpaceChar found taking 1 args
-clj꞉projekat.core꞉> 
-; Execution error (ClassCastException) at projekat.core/eval21038 (form-init12718646884227605729.clj:29).
-; class java.lang.String cannot be cast to class java.lang.Character (java.lang.String and java.lang.Character are in module java.base of loader 'bootstrap')
-clj꞉projekat.core꞉> 
-false
-clj꞉projekat.core꞉> 
-true
-clj꞉projekat.core꞉> 
-true
-clj꞉projekat.core꞉> 
-true
-clj꞉projekat.core꞉> 
-#'projekat.core/only-string
-clj꞉projekat.core꞉> 
-true
-clj꞉projekat.core꞉> 
-false
-clj꞉projekat.core꞉> 
-#'projekat.core/name-phone-id
-clj꞉projekat.core꞉> 
-#'projekat.pages/new-reservation-form
+; Evaluating file: pages.clj
+#'projekat.pages/client-login
 clj꞉projekat.pages꞉> 
 ; Evaluating file: core.clj
 #'projekat.core/server
 clj꞉projekat.core꞉> 
-#'projekat.pages/new-reservation-form
-clj꞉projekat.pages꞉> 
-#'projekat.pages/new-reservation-form
-clj꞉projekat.pages꞉> 
 ; Evaluating file: pages.clj
-#'projekat.pages/new-reservation-form
+#'projekat.pages/client-login
 clj꞉projekat.pages꞉> 
 ; Evaluating file: core.clj
 #'projekat.core/server
 clj꞉projekat.core꞉> 
 ; Evaluating file: pages.clj
-#'projekat.pages/new-reservation-form
+#'projekat.pages/client-login
+clj꞉projekat.pages꞉> 
+; Evaluating file: pages.clj
+#'projekat.pages/client-login
+clj꞉projekat.pages꞉> 
+; Evaluating file: pages.clj
+#'projekat.pages/client-login
+clj꞉projekat.pages꞉> 
+; Evaluating file: pages.clj
+#'projekat.pages/client-login
+clj꞉projekat.pages꞉> 
+; Evaluating file: core.clj
+; Execution error (BindException) at sun.nio.ch.Net/bind0 (Net.java:-2).
+; Address already in use: bind
+; Evaluation of file core.clj failed: class clojure.lang.Compiler$CompilerException
+clj꞉projekat.core꞉> 
+; Evaluating file: pages.clj
+#'projekat.pages/client-login
 clj꞉projekat.pages꞉> 
 ; Evaluating file: core.clj
 #'projekat.core/server
 clj꞉projekat.core꞉> 
-#'projekat.pages/reservation-index-page
+#'projekat.core/app-routes
+clj꞉projekat.core꞉> 
+; Evaluating file: core.clj
+#'projekat.core/server
+clj꞉projekat.core꞉> 
+; Evaluating file: core.clj
+#'projekat.core/server
+clj꞉projekat.core꞉> 
+; Evaluating file: core.clj
+; Execution error (BindException) at sun.nio.ch.Net/bind0 (Net.java:-2).
+; Address already in use: bind
+; Evaluation of file core.clj failed: class clojure.lang.Compiler$CompilerException
+clj꞉projekat.core꞉> 
+; Evaluating file: core.clj
+#'projekat.core/server
+clj꞉projekat.core꞉> 
+; Evaluating file: pages.clj
+#'projekat.pages/client-login
+clj꞉projekat.pages꞉> 
+; Evaluating file: core.clj
+#'projekat.core/server
+clj꞉projekat.core꞉> 
+; Evaluating file: pages.clj
+#'projekat.pages/client-login
+clj꞉projekat.pages꞉> 
+; Evaluating file: core.clj
+#'projekat.core/server
+clj꞉projekat.core꞉> 
+; Evaluating file: core.clj
+#'projekat.core/server
+clj꞉projekat.core꞉> 
+
+| :id |              :name |     :phone | :amount | :password |  :role |
+|-----+--------------------+------------+---------+-----------+--------|
+|   1 |    Nevena Stanisic | 0679089700 |  1126.0 |    nevena | client |
+|   2 |     Nikola Nikolic |  065409756 |     0.0 |    nikola | client |
+|   3 |       Milica Milic |  060342567 |     0.0 |    milica | client |
+|   4 | Danica Zdravkovoic | 0652010059 |     0.0 |      dana | client |
+|   5 |       Nikola Nikic | 0874569833 |     0.0 |     nidza | client |
+nil
+clj꞉projekat.database꞉> 
+; Evaluating file: pages.clj
+#'projekat.pages/client-login
 clj꞉projekat.pages꞉> 
 ; Evaluating file: pages.clj
-#'projekat.pages/new-reservation-form
+#'projekat.pages/client-login
 clj꞉projekat.pages꞉> 
 ; Evaluating file: core.clj
 #'projekat.core/server

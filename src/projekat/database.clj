@@ -44,13 +44,15 @@
 (def db {:classname   "org.sqlite.JDBC"
          :subprotocol "sqlite"
          :subname     "resources/client.db"})
-;CREATE TABLE
+; ;CREATE TABLE
 ; (jdbc/db-do-commands db
 ;                      "create table client (
 ;                        id integer primary key autoincrement,
 ;                        name varchar(255),
 ;                        phone varchar(255),
-;                       amount double
+;                       amount double,
+;                       password varchar(255),
+;                       role varchar(255)
 ;                        );"
 ;                      )
 
@@ -58,23 +60,25 @@
 (defn clients [] (jdbc/query db ["SELECT * FROM client"]))
 (clients)
 (defn add-client [client]
-  (jdbc/execute! db ["insert into client (name, phone, amount) values (?, ?, ?) "  (:name client) (:phone client) 0]))
-; (add-client { :name "Nevena Stanic" :phone "0679089700" })
-; (add-client {:name "Nikola Nikolic" :phone "065409756"})
-; (add-client {:name "Milica Milic" :phone "060342567"})
+  (jdbc/execute! db ["insert into client (name, phone, amount, password, role) values (?, ?, ?, ?,?) "  (:name client) (:phone client) 0 (:password client) "client"]))
+; (add-client { :name "Nevena Stanic" :phone "0679089700" :password "nevena" })
+; (add-client {:name "Nikola Nikolic" :phone "065409756" :password "nikola"})
+; (add-client {:name "Milica Milic" :phone "060342567" :password "milica"})
 
 
 
 (defn update-client [client]
   (jdbc/execute! db ["UPDATE client  SET phone = ? WHERE id = ?"  (:phone client) (:id client)])
-  (jdbc/execute! db ["UPDATE client  SET name = ? WHERE id = ?"  (:name client) (:id client)]))
+  (jdbc/execute! db ["UPDATE client  SET name = ? WHERE id = ?"  (:name client) (:id client)])
+  (jdbc/execute! db ["UPDATE client  SET password = ? WHERE id = ?"  (:password client) (:id client)]))
 
    ;(update-client { :id 1 :name "Ana nikolic" :phone "090 9089009"})
-(defn update-client-amount [phone amount]
+(defn update-client-amount [id amount]
   
-    (jdbc/execute! db ["UPDATE client  SET amount = ? WHERE phone = ?"  amount phone])
+    (jdbc/execute! db ["UPDATE client  SET amount = ? WHERE id = ?"  amount id])
 
   )
+; (update-client-amount 1 0)
 
 (defn get-client-by-id [id]
   (nth (filter #(= (:id %) id) (clients)) 0) ;vraca 1. element koji zadovoljava uslov
@@ -90,9 +94,15 @@
 
 (defn table-view-client []
   (p/print-table (jdbc/query db (str "select * from client  ;"))))
-(table-view-client)
 (defn get-id-by-phone [phoneString]
   (:id (nth (jdbc/query db ["SELECT id FROM client where phone=?" phoneString]) 0)))
+(defn check-login[{phone :phone password :password}]
+  (nth (jdbc/query db ["SELECT * FROM client WHERE phone=? AND password=?" phone password]) 0) 
+  )
+
+(table-view-client)
+
+; (check-login {:phone "0679089700"  :password "nevena" })
 ; (get-id-by-phone "090 9089009")
 
 ; ; INSERT

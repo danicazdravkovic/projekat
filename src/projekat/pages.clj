@@ -6,10 +6,11 @@
    [projekat.database :as db]
    [projekat.massage_data_base :as massage_db]
    [hiccup.table :as table]
-   [projekat.reservation_database :as reservations_db]))
+   [projekat.reservation_database :as reservations_db]
+   [ring.middleware.session :as session]))
 
 
-(defn base-page [& body]
+(defn index-admin []
   (html5
    [:head [:title "SPA Center"]
     [:link
@@ -20,23 +21,113 @@
    [:body
     [:div.container
      [:nav.navbar.navbar-expand-lg.navbar-light.bd-light
-      [:a.navbar-brand {:href "/"} "Spa center"]
+      [:a.navbar-brand {:href "/index-admin"} "Spa center"]
       [:div.navbar-nav.ml-auto
-       [:a.nav-item.nav-link {:href "/reservations/new"} "Make a reservation"]
-       [:a.nav-item.nav-link {:href "/clients/new"} "New client"]
        [:a.nav-item.nav-link {:href "/massages/new"} "New massage"]
-
        [:a.nav-item.nav-link {:href "/clients"} "Clients"]
        [:a.nav-item.nav-link {:href "/reservations"} "Reservations table"]
+       [:a.nav-item.nav-link {:href "/admin/logout"} "Log out"]
+       ]]]
+    "Hello admin"
+    ]))
+(defn index-client [session]
+  (html5
+   [:head [:title "SPA Center"]
+    [:link
+     {:rel "stylesheet"
+      :href "https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
+      :integrity "sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65"
+      :crossorigin "anonymous"}]]
+   [:body 
+    [:div.container
+     [:nav.navbar.navbar-expand-lg.navbar-light.bd-light
+      [:a.navbar-brand {:href "/index-client"} "Spa center"]
+      [:div.navbar-nav.ml-auto
+       [:a.nav-item.nav-link {:href (format "/client-edit/edit/%d" (:id session))} "Edit client"]
+       [:a.nav-item.nav-link {:href "/client-logout"} "Log out"]
+       ]]]
+    
+    "Hello " (:name (db/get-client-by-id (:id session)))
+    [:br]
+    "Total amount: " (:amount (db/get-client-by-id (:id session)))
+    [:hr]
+     [:table {:style "border:1px solid black;margin-left:auto;margin-right:auto;"}
+      [:tr
+       [:th "Massages"]]
+      [:tr
+       [:th "Id"]
+       [:th "Name"]
+       [:th "Description"]
+       [:th "Price [EUR]"]
+       [:th "BUY"]]
+      (for [n (range 0 (count (massage_db/massages)))]
+        [:tr
+         [:td (:id (nth (massage_db/massages) n))]
+         [:td (:name (nth (massage_db/massages) n))]
+         [:td (:description (nth (massage_db/massages) n))]
+         [:td (:price (nth (massage_db/massages) n))]
+         [:td (form/form-to [:post (format "/reservations/new/%d/%d" (:id session) (:id (nth (massage_db/massages) n)))]
 
-       [:a.nav-item.nav-link {:href "/admin/login"} "Log in"]
-       [:a.nav-item.nav-link {:href "/admin/logout"} "Log out"]]]
+                            (anti-forgery-field)
+
+                            (form/submit-button "BUY"))]])]
+    ]))
+
+(defn index[]
+  (html5
+     [:head [:title "SPA Center"]
+      [:link
+       {:rel "stylesheet"
+        :href "https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
+        :integrity "sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65"
+        :crossorigin "anonymous"}]]
+  [:body
+   [:div.container
+    [:nav.navbar.navbar-expand-lg.navbar-light.bd-light
+     [:a.navbar-brand {:href "/index"} "Spa center-login"]
+     [:div.navbar-nav.ml-auto
+
+      [:a.nav-item.nav-link {:href "/admin/login"} "Log in as an admin"]
+      [:a.nav-item.nav-link {:href "/client-login"} "Log in as a client"]
+      [:a.nav-item.nav-link {:href "/client-sign-up"} "Sign up as a client"]]]]
+   [:table
+    [:tr
+     [:th "Massages"]]
+    [:tr
+     [:th "Id"]
+     [:th "Name"]
+     [:th "Description"]
+     [:th "Price [EUR]"]]
+    (for [n (range 0 (count (massage_db/massages)))]
+      [:tr
+       [:td (:id (nth (massage_db/massages) n))]
+       [:td (:name (nth (massage_db/massages) n))]
+       [:td (:description (nth (massage_db/massages) n))]
+       [:td (:price (nth (massage_db/massages) n))]])]
+   ])
+  )
+(defn login-page []
+  (html5
+   [:head [:title "SPA Center-login"]
+    [:link
+     {:rel "stylesheet"
+      :href "https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
+      :integrity "sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65"
+      :crossorigin "anonymous"}]]
+   [:body
+    [:div.container
+     [:nav.navbar.navbar-expand-lg.navbar-light.bd-light
+      [:a.navbar-brand {:href "/"} "Spa center-login"]
+      [:div.navbar-nav.ml-auto
+
+       [:a.nav-item.nav-link {:href "/admin/login"} "Log in as an admin"]
+       [:a.nav-item.nav-link {:href "/client-login"} "Log in as a client"]
+       [:a.nav-item.nav-link {:href "/client-sign-up"} "Sign up as a client"]
+       [:a.nav-item.nav-link {:href "/index"} "Continue without account"]
+       
+       ]]]]))
 
 
-     body]]))
-
-(defn index [body]
-  (base-page body))
 
 (defn client-view [{id :id name :name phone :phone amount :amount}]
   (html5
@@ -62,19 +153,24 @@
 (defn edit-client [client]
   (html5
    [:body
-    [:p (:id client)]
     (form/form-to [:post (if client
                            (str "/client-edit/" (:id client))
                            "/clients")]
                   [:div.form-group
                    (form/label "name" "Name: ")
-                   (form/text-field {:class "form-control"} "name" (:name client))]
+                   (form/text-field {:class "form-control"} "nametf" (:name client))]
 
                   [:div.form-group
                    (form/label "phone" "Phone: ")
-                   (form/text-field {:class "form-control"} "phone" (:phone client))
+                   (form/text-field {:class "form-control"} "phonetf" (:phone client))
+                  ]
+                  [:div.form-group
+                   (form/label "password" "Password: ")
+                   (form/password-field {:class "form-control"} "passwordtf" (:password client))]
 
-                   (form/hidden-field "id" (:id client))]
+                   (form/hidden-field "id" (:id client))
+                  
+                  
                   (anti-forgery-field)
 
                   (form/submit-button {:class "btn btn-primary"} "Save changes"))]))
@@ -100,21 +196,24 @@
 
 
 
-(defn new-client-form []
+(defn client-sign-up []
   (html5
    [:body
-    (form/form-to [:post (str "/clients/new/" (db/get-next-id))]
+    (form/form-to [:post (str "/client-sign-up/" (db/get-next-id))]
 
-                  (form/label "name" "Name: ")
-                  (form/text-field "name")
-                  (form/label "phone" "Phone: ")
-                  (form/text-field "phone")
+                  (form/label "namel" "Name and surname: ")
+                  (form/text-field "nametf")
+                  (form/label "phonel" "Phone: ")
+                  (form/text-field "phonetf")
+
+                  (form/label "passwordl" "Password: ")
+                  (form/text-field "passwordtf")
+
                   (form/hidden-field "id" (db/get-next-id))
                   (anti-forgery-field)
 
                   (form/submit-button "Save changes"))]))
-; (defn add-new-client [client]
-;   (db/add-client client))
+
 
 (defn new-massage-form []
   (html5
@@ -131,27 +230,12 @@
                   (anti-forgery-field)
 
                   (form/submit-button "Save changes"))]))
-(defn massage-index-page []
-  (html5
-   [:table
-    [:tr
-     [:th "Massages"]]
-    [:tr
-     [:th "Id"]
-     [:th "Name"]
-     [:th "Description"]
-     [:th "Price [EUR]"]]
-    (for [n (range 0 (count (massage_db/massages)))]
-      [:tr
-       [:td (:id (nth (massage_db/massages) n))]
-       [:td (:name (nth (massage_db/massages) n))]
-       [:td (:description (nth (massage_db/massages) n))]
-       [:td (:price (nth (massage_db/massages) n))]])]))
+
 (defn reservation-index-page []
   (html5
    [:table
     [:tr
-     [:th "Massages"]]
+     [:th "RESERVATIONS"]]
     [:tr
      [:th "Id"]
      [:th "Client_id"]
@@ -160,8 +244,7 @@
       [:tr
        [:td (:id (nth (reservations_db/reservations) n))]
        [:td (:client_id (nth (reservations_db/reservations) n))]
-       [:td (:massage_id (nth (reservations_db/reservations) n))]
-       ])]))
+       [:td (:massage_id (nth (reservations_db/reservations) n))]])]))
 
 
 (defn new-reservation-form []
@@ -177,3 +260,19 @@
                   (anti-forgery-field)
 
                   (form/submit-button "Save changes"))]))
+(defn client-login [& [message]]
+  (html5
+   (when message
+     [:div.alert.alert-danger message])
+   [:body [:h1 "Client login"]
+    (form/form-to [:post (str "/client-login")]
+
+                  [:div.form-group
+                   (form/label "phonel" "Phone: ")
+                   (form/text-field {:class "form-control"} "phonetf")]
+
+                  [:div.form-group
+                   (form/label "passwordl" "Password: ")
+                   (form/password-field {:class "form-control"} "passwordtf")]
+                  (anti-forgery-field)
+                  (form/submit-button {:class "btn btn-primary"} "Login"))]))
