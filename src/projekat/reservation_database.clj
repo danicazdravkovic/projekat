@@ -23,12 +23,13 @@
 (reservations)
 (defn client-reservations [client_id]
   (filter #(= (:client_id %) client_id) (reservations)))
+; (client-reservations 11)
 (defn client-amounts [client_id]
   ;return all amounts for a client
   (for [i (range 0 (count (client-reservations client_id)))] 
       (massage_db/get-massage-price-by-id (:massage_id (nth (reservations) i)))))
 
-; (client-amounts 4)
+
 (defn total-client-amount [client_id]
   ;sums clients amounts
   (reduce + (client-amounts client_id)))
@@ -64,7 +65,6 @@
   (p/print-table (jdbc/query db (str "select * from reservation  ;"))))
 
 (table-view-reservation)
-
 ;computing 
 (defn number-of-reservations [massage_id]
   (count (filter #(=(:massage_id %) massage_id)(reservations)));returns
@@ -72,7 +72,6 @@
 
 (defn total-number-of-reserv[]
   (map number-of-reservations (map :id (massage_db/massages))))
-
 
 
 

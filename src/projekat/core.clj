@@ -20,24 +20,31 @@
    [ring.middleware.keyword-params :refer [wrap-keyword-params]]
    [ring.middleware.multipart-params :refer [wrap-multipart-params]]
    [projekat.massage_data_base :as massage_db]
-   [projekat.reservation_database :as reservations_db]))
+   [projekat.reservation_database :as reservations_db]
+   [clojure.string :as string]))
 
 ;***********************************
-;RAD SA PUTANJAMA
-; (defn only-digits[string] (every? #(Character/isDigit %) string))
-; (defn only-string [string] (every? #(or (Character/isLetter %) (Character/isSpace %)) string))
-
+;ADDITIONAL FUNCTIONS
+(defn only-digits [string] (every? #(Character/isDigit %) string))
+(defn only-letters [string] (every? #(or (Character/isLetter %) (Character/isWhitespace %)) string))
+(defn is-blank [string] (every? #(Character/isWhitespace %)  string))
 (defn name-surname [name]
   ;name in format Nevena+Arsic 
   (clojure.string/replace name #"\+" " "))
 (defn name-phone-password-id [string]
   ;string contains name and phone in this format
-  ;name=Nevena+Arsic&phone=0000&__anti-forgery-token=Unbound%3A+%23%27ring.middleware.anti-forgery%2F*anti-forgery-token* 
-
+  ; name=Nevena+Arsic&phone=0000&__anti-forgery-token=Unbound%3A+%23%27ring.middleware.anti-forgery%2F*anti-forgery-token*  
   (let [map {:name  (name-surname (clojure.string/replace (get (clojure.string/split string #"&") 0) "nametf=" ""))
              :phone (clojure.string/replace (get (clojure.string/split string #"&") 1) "phonetf=" "")
              :password (clojure.string/replace (get (clojure.string/split string #"&") 2) "passwordtf=" "")
              :id (clojure.string/replace (get (clojure.string/split string #"&") 3) "id=" "")}]  map))
+(defn validate-name-phone-password-id [{name :name  phone :phone password :password  id :id}]
+  (str
+  ;  (when (or (nil? name) (nil? password) (nil? phone) (nil? id)) "Fill all fields. ")
+   (when (or (is-blank name) (is-blank password) (is-blank phone)) "Fill all fields. ")
+   (when-not (only-letters name) "Name must contain only letters. ")
+   (when-not (only-digits phone) "Phone must contain only digits. ")))
+
 
 (defn prepare-admin [string]
   (let [map {:login  (clojure.string/replace (get (clojure.string/split string #"&") 0) "logintf=" "")
@@ -47,9 +54,12 @@
              :description (clojure.string/replace (clojure.string/replace (get (clojure.string/split string #"&") 1) "descriptiontf=" "") #"\+" " ")
              :price (parse-double (clojure.string/replace (get (clojure.string/split string #"&") 2) "pricetf=" ""))
              :id (clojure.string/replace (get (clojure.string/split string #"&") 3) "id=" "")}] map))
-(defn prepare-reservation [string]
-  (let [map {:phone   (clojure.string/replace (clojure.string/replace (get (clojure.string/split string #"&") 0) "phonetf=" "") #"\+" " ")
-             :massage (clojure.string/replace (clojure.string/replace (get (clojure.string/split string #"&") 1) "massagetf=" "") #"\+" " ")}] map))
+(defn validate-massage [{name :name  description :description price :price  id :id}]
+  (str
+   (when (or (is-blank name) (is-blank description) (is-blank (str price))) "Fill all fields. ")
+   (when-not (only-letters name) "Name must contain only letters. ")
+   (when-not (only-digits (clojure.string/replace (str price)  #"\." "")) "Price must contain only digits. ")
+   (when (nil? price) "Price must contain only digits. ")))
 (defn prepare-client [string]
   (let [map {:phone   (clojure.string/replace (clojure.string/replace (get (clojure.string/split string #"&") 0) "phonetf=" "") #"\+" " ")
              :password (clojure.string/replace (clojure.string/replace (get (clojure.string/split string #"&") 1) "passwordtf=" "") #"\+" " ")}] map))
@@ -61,14 +71,7 @@
   (GET "/index" [] (p/index))
   (GET "/index-admin" [] (p/index-admin))
   (GET "/index-client" [:as {session :session}] (p/index-client session))
-
-
-
   (GET "/clients" [] (p/clients-view (db/clients)))
-
-  ;ako je admin ulogovan odmah vraca na pocetnu stranu
-  ;ako admin nije ulogovan, prikazuje se forma za logovanje
-  ;kada se admin izloguje menja se sesija
   (GET "/admin/login" [:as {session :session}]
     ; if admin is already logged in then go to index page
     (if (:admin session)
@@ -85,7 +88,7 @@
         (-> (resp/redirect "/index-client")
             (assoc-in [:session :role] "client")
             (assoc-in [:session :id] (db/get-id-by-phone (:phone client))));u http zahtev dodaje se polje :session{:admin true} 
-        (p/client-login "Invalid username or password"))))
+        (p/client-login "Invalid phone or password"))))
 
   (POST "/admin/login" req
     (let [admin (prepare-admin (slurp (:body req)))]
@@ -93,7 +96,6 @@
         (-> (resp/redirect "/index-admin")
             (assoc-in [:session :admin] true));u http zahtev dodaje se polje :session{:admin true} 
         (p/admin-login "Invalid username or password"))))
-
 
   (GET "/admin/logout" []
     (-> (resp/redirect "/index")
@@ -103,33 +105,35 @@
         (assoc-in [:session :role] false)))
 
   (GET "/client-sign-up" [] (p/client-sign-up))
-  (POST "/client-sign-up/:id" req (do
-                                    (let [client (name-phone-password-id (slurp (:body req)))]
-                                      (db/add-client client))
-                                    (resp/redirect "/index-client")))
 
+  (POST "/client-sign-up/:id" req
+    (do
+      (let [client (name-phone-password-id (slurp (:body req)))]
+        (if (= (validate-name-phone-password-id client) "")
+          (do
+            (db/add-client client)
+            (resp/redirect "/"))
+          (p/client-sign-up (validate-name-phone-password-id client)))))) 
   (route/not-found "Not found"))
 
-;routes accessable only for admi
+;routes accessable only for admin
 (defroutes admin-routes
 
-
   (GET "/client/:id" [id] (p/client-view  (db/get-client-by-id (read-string id))))
-
-
-
-
-  ;https://github.com/weavejester/hiccup/blob/1.0.5/src/hiccup/form.clj#L123
-  ;NE POSTOJI DELETE RUTA ZA form/form-to hiccup, samo get i post
+  
   (POST "/client-delete/delete/:id" [id]
     (do (db/delete-client (read-string id))
         (resp/redirect "/clients")))
 
-  (GET "/massages/new" [] (p/new-massage-form))
+  (GET "/massages/new" [] (p/new-massage-form ""))
   (POST "/massages/new/:id" req
-    (do (let [massage (prepare-massage (slurp (:body req)))]
-          (massage_db/add-massage massage))
-        (resp/redirect "/index-admin")))
+    (do
+      (let  [massage (prepare-massage (slurp (:body req)))]
+        (if (= (validate-massage massage) "")
+          (do
+            (massage_db/add-massage massage)
+            (resp/redirect "/index-admin"))
+          (p/new-massage-form (validate-massage massage))))))
 
   (GET "/reservations" [] (p/reservation-index-page))
   (GET "/reservations/new" [] (p/new-reservation-form))
@@ -141,25 +145,18 @@
   (POST "/admin/change-massage/:id" [id] (p/edit-massage-form id))
   (POST "/admin/change-massage/massage/:id" req
     (do (let [massage (prepare-massage (slurp (:body req)))]
-          (massage_db/update-massage massage)
-          ) 
-        (resp/redirect "/admin/massages")))
-  
-  )
-
+          (massage_db/update-massage massage))
+        (resp/redirect "/admin/massages"))))
+;routes accessable only for client
 (defroutes client-routes
   (GET "/client/client/news" [] (p/prepare-news))
 
   (POST "/reservations/new/:id_client/:id_massage" [id_client id_massage]
     (do (reservations_db/add-reservation (read-string id_client) (read-string id_massage))
         (resp/redirect "/index-client")))
-  ;kad se pozove samo kao ruta
+
   (GET "/client-edit/edit/:id" [id]
     (str (let [client (db/get-client-by-id (read-string id))] (p/edit-client client))))
-
-  ;za edit polje kod clienta, fja p/client-view poziva post metodu
-; (POST "/client-edit/edit/:id" [id]
-;   (str (let [client (db/get-client-by-id (read-string id))] (p/edit-client client))))
 
   (POST "/client-edit/:id" req
     (do (let [client (name-phone-password-id (slurp (:body req)))]
@@ -192,10 +189,15 @@
       session/wrap-session))
 
 
-(def server
-  (ring/run-jetty wrapping {:port 3000
-                            :join? false}))
+; (def server
+;   (ring/run-jetty wrapping {:port 3001
+;                             :join? false}))
 
+(defn -main [& args]
+(ring/run-jetty wrapping {:port 3003
+                            :join? false})
+  
+  )
 
 ;***********requests, responses, handlers
 

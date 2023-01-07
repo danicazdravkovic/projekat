@@ -73,33 +73,41 @@
   (jdbc/execute! db ["UPDATE client  SET password = ? WHERE id = ?"  (:password client) (:id client)]))
 
    ;(update-client { :id 1 :name "Ana nikolic" :phone "090 9089009"})
-(defn update-client-amount [id amount]
-  
+(defn update-client-amount [id amount] 
     (jdbc/execute! db ["UPDATE client  SET amount = ? WHERE id = ?"  amount id])
 
   )
-; (update-client-amount 1 0)
+; (update-client-amount 22 0)
 
 (defn get-client-by-id [id]
-  (nth (filter #(= (:id %) id) (clients)) 0) ;vraca 1. element koji zadovoljava uslov
+  (try
+    (nth (filter #(= (:id %) id) (clients)) 0)
+    (catch Exception e (str "Exception method: database/get-client-by-id"))
+    )
   )
-; (get-client-by-id 1)
+; (get-client-by-id 11)
 (defn get-next-id []
   (+ 1 (:m (nth (jdbc/query db ["SELECT MAX(id) as m FROM client"]) 0))))
 
 ; (get-next-id)
 (defn delete-client [id]
   (jdbc/execute! db ["DELETE FROM client WHERE id = ?" id]))
-; (delete-client 2)
+; (delete-client 22)
 
 (defn table-view-client []
   (p/print-table (jdbc/query db (str "select * from client  ;"))))
 (defn get-id-by-phone [phoneString]
-  (:id (nth (jdbc/query db ["SELECT id FROM client where phone=?" phoneString]) 0)))
-(defn check-login[{phone :phone password :password}]
-  (nth (jdbc/query db ["SELECT * FROM client WHERE phone=? AND password=?" phone password]) 0) 
+  (try
+  (:id (nth (jdbc/query db ["SELECT id FROM client where phone=?" phoneString]) 0))
+   (catch Exception e (str "Exception method: database/get-id-by-phone")))
   )
 
+(defn check-login[{phone :phone password :password}]
+  (try
+  (nth (jdbc/query db ["SELECT * FROM client WHERE phone=? AND password=?" phone password]) 0) 
+    (catch Exception e (str "Exception method: database/check-login")))
+
+    )
 (table-view-client)
 
 ; (check-login {:phone "0679089700"  :password "nevena" })

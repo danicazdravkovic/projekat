@@ -15,7 +15,7 @@
                  [metasoarous/oz "2.0.0-alpha5"]; za grafikone
                  ]
   :plugins [[lein-ring "0.12.6"]]
-  :main projekat.server-config
+  :main projekat.core
   :ring {:handler projekat.core/app-handler};konfigurisem server a pozivam ga naredbom lein ring server
   :profiles {:dev {:dependencies [[javax.servlet/servlet-api "2.5"]
                                   [ring/ring-mock "0.3.2"]

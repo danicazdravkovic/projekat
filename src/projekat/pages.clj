@@ -206,7 +206,6 @@
    [:a {:href "/admin/graph"} "See a massage reservations graph"] 
    ))
 
-
 (defn edit-client [client]
   (html5
    [:body
@@ -251,20 +250,19 @@
                   (anti-forgery-field)
                   (form/submit-button {:class "btn btn-primary"} "Login"))]))
 
-
-
-(defn client-sign-up []
+(defn client-sign-up [& [message]]
   (html5
    [:body
     (form/form-to [:post (str "/client-sign-up/" (db/get-next-id))]
-
+  (when message
+    [:div.alert.alert-danger message])
                   (form/label "namel" "Name and surname: ")
                   (form/text-field "nametf")
                   (form/label "phonel" "Phone: ")
                   (form/text-field "phonetf")
 
                   (form/label "passwordl" "Password: ")
-                  (form/text-field "passwordtf")
+                  (form/password-field "passwordtf")
 
                   (form/hidden-field "id" (db/get-next-id))
                   (anti-forgery-field)
@@ -272,9 +270,11 @@
                   (form/submit-button "Save changes"))]))
 
 
-(defn new-massage-form []
+(defn new-massage-form [& [message]]
   (html5
    [:body
+     (when message
+       [:div.alert.alert-danger message])
     (form/form-to [:post (str "/massages/new/" (massage_db/get-next-id))]
 
                   (form/label "name" "Name: ")

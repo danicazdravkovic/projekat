@@ -2,8 +2,7 @@
   (:require
    [clojure.java.jdbc :as jdbc];sql/sqlite database 
    [clojure.pprint :as p]
-   [clj-time.core :as t]
-   ))
+   [clj-time.core :as t]))
 
 (def db {:classname   "org.sqlite.JDBC"
          :subprotocol "sqlite"
@@ -19,7 +18,7 @@
 ;                      )
 
 
-(defn  massages [] (jdbc/query db ["SELECT * FROM massage"])) 
+(defn  massages [] (jdbc/query db ["SELECT * FROM massage"]))
 
 (massages)
 (defn add-massage [massage]
@@ -30,34 +29,33 @@
 ; (add-massage {:name "Sport" :description "Release muscle tension" :price 45})
 ; (add-massage {:name "Chair" :description "Relaxed neck, shoulders and back." :price 60})
 
-(defn get-massage-names[]
-    (map :name (jdbc/query db ["SELECT name FROM massage "]))
-  )
+(defn get-massage-names []
+  (map :name (jdbc/query db ["SELECT name FROM massage "])))
 ; (get-massage-names)
 
 (defn noticeClients [massage]
-  (spit "resources/news.txt" 
+  (spit "resources/news.txt"
         (format "[%s] Massage %s  has been changed. New description: %s. New price:%s \n "
                 (clojure.string/replace (str (t/now)) "T" "  ")
                 (:name massage)
                 (:description massage)
-                (:price massage)
-                )
-        
-        :append true)
-  )
+                (:price massage))
+
+        :append true))
 (defn update-massage [massage]
   (jdbc/execute! db ["UPDATE massage  SET name = ? WHERE id = ?"  (:name massage) (:id massage)])
   (jdbc/execute! db ["UPDATE massage  SET description = ? WHERE id = ?"  (:description massage) (:id massage)])
   (jdbc/execute! db ["UPDATE massage  SET price = ? WHERE id = ?"  (:price massage) (:id massage)])
-  (noticeClients massage)
-  )
+  (noticeClients massage))
 
     ; (update-massage { :id 5 :name "Relax" :description "Relaxing massage" :price 44})
 
 
 (defn get-massage-by-id [id]
-  (nth (filter #(= (:id %) id) (massages)) 0) ;vraca 1. element koji zadovoljava uslov
+  (try
+    (nth (filter #(= (:id %) id) (massages)) 0)
+    (catch Exception e (str "Exception method: massage_data_base/get-massage-by-id")))
+  ;vraca 1. element koji zadovoljava uslov
   )
 ; (get-massage-by-id 1)
 (defn get-next-id []
@@ -69,12 +67,18 @@
 ; (delete-massage 6)
 
 (defn get-massage-id-by-name [name]
-  (:id (nth (jdbc/query db ["SELECT id FROM massage where name=?" name]) 0)))
-; (get-massage-id-by-name "Sport")
+  (try
+
+    (:id (nth (jdbc/query db ["SELECT id FROM massage where name=?" name]) 0))
+    (catch Exception e (str "Exception method: massage_data_base/get-massage-id-by-name"))))
+
 (defn get-massage-price-by-id [id]
-   (:price (nth (jdbc/query db ["SELECT price FROM massage where id=?" id]) 0)))
+  (try
+    (:price (nth (jdbc/query db ["SELECT price FROM massage where id=?" id]) 0))
+    (catch Exception e (str "Exception method: massage_data_base/get-massage-price-by-id"))))
 
 ; (get-massage-price-by-id 1)
 (defn table-view-massage []
   (p/print-table (jdbc/query db (str "select * from massage  ;"))))
 (table-view-massage)
+
