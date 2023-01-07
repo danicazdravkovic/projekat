@@ -64,3 +64,15 @@
   (p/print-table (jdbc/query db (str "select * from reservation  ;"))))
 
 (table-view-reservation)
+
+;computing 
+(defn number-of-reservations [massage_id]
+  (count (filter #(=(:massage_id %) massage_id)(reservations)));returns
+  )
+
+(defn total-number-of-reserv[]
+  (map number-of-reservations (map :id (massage_db/massages))))
+
+
+
+

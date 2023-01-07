@@ -33,41 +33,38 @@
 (defn name-phone-password-id [string]
   ;string contains name and phone in this format
   ;name=Nevena+Arsic&phone=0000&__anti-forgery-token=Unbound%3A+%23%27ring.middleware.anti-forgery%2F*anti-forgery-token* 
-  
+
   (let [map {:name  (name-surname (clojure.string/replace (get (clojure.string/split string #"&") 0) "nametf=" ""))
              :phone (clojure.string/replace (get (clojure.string/split string #"&") 1) "phonetf=" "")
              :password (clojure.string/replace (get (clojure.string/split string #"&") 2) "passwordtf=" "")
-             :id (clojure.string/replace (get (clojure.string/split string #"&") 3) "id=" "")}]  map 
-    ))
+             :id (clojure.string/replace (get (clojure.string/split string #"&") 3) "id=" "")}]  map))
 
 (defn prepare-admin [string]
   (let [map {:login  (clojure.string/replace (get (clojure.string/split string #"&") 0) "logintf=" "")
              :pass (clojure.string/replace (get (clojure.string/split string #"&") 1) "passwordtf=" "")}] map))
 (defn prepare-massage [string]
-  (let [map {:name  (clojure.string/replace(clojure.string/replace (get (clojure.string/split string #"&") 0) "nametf=" "")#"\+" " ")
+  (let [map {:name  (clojure.string/replace (clojure.string/replace (get (clojure.string/split string #"&") 0) "nametf=" "") #"\+" " ")
              :description (clojure.string/replace (clojure.string/replace (get (clojure.string/split string #"&") 1) "descriptiontf=" "") #"\+" " ")
-             :price (parse-double (clojure.string/replace (get (clojure.string/split string #"&") 2) "pricetf=" "") )
-             }] map))
-(defn prepare-reservation[string]
-  (let [map {:phone   (clojure.string/replace(clojure.string/replace (get (clojure.string/split string #"&") 0) "phonetf=" "") #"\+" " ")
-             :massage (clojure.string/replace (clojure.string/replace (get (clojure.string/split string #"&") 1) "massagetf=" "") #"\+" " ")
-        }] map)
-  )
-(defn prepare-client[string]
-   (let [map {:phone   (clojure.string/replace (clojure.string/replace (get (clojure.string/split string #"&") 0) "phonetf=" "") #"\+" " ")
-              :password (clojure.string/replace (clojure.string/replace (get (clojure.string/split string #"&") 1) "passwordtf=" "") #"\+" " ")}] map)
-  )
+             :price (parse-double (clojure.string/replace (get (clojure.string/split string #"&") 2) "pricetf=" ""))
+             :id (clojure.string/replace (get (clojure.string/split string #"&") 3) "id=" "")}] map))
+(defn prepare-reservation [string]
+  (let [map {:phone   (clojure.string/replace (clojure.string/replace (get (clojure.string/split string #"&") 0) "phonetf=" "") #"\+" " ")
+             :massage (clojure.string/replace (clojure.string/replace (get (clojure.string/split string #"&") 1) "massagetf=" "") #"\+" " ")}] map))
+(defn prepare-client [string]
+  (let [map {:phone   (clojure.string/replace (clojure.string/replace (get (clojure.string/split string #"&") 0) "phonetf=" "") #"\+" " ")
+             :password (clojure.string/replace (clojure.string/replace (get (clojure.string/split string #"&") 1) "passwordtf=" "") #"\+" " ")}] map))
 ;*****************ROUTES**************
 (defroutes app-routes
 
-  (GET "/" [] (p/login-page ))
+  (GET "/" [] (p/login-page))
+
   (GET "/index" [] (p/index))
-  (GET "/index-admin" [](p/index-admin ))
+  (GET "/index-admin" [] (p/index-admin))
   (GET "/index-client" [:as {session :session}] (p/index-client session))
 
 
-  
-(GET "/clients" [] (p/clients-view (db/clients)))
+
+  (GET "/clients" [] (p/clients-view (db/clients)))
 
   ;ako je admin ulogovan odmah vraca na pocetnu stranu
   ;ako admin nije ulogovan, prikazuje se forma za logovanje
@@ -77,28 +74,25 @@
     (if (:admin session)
       (resp/redirect "/index-admin")
       (p/admin-login)))
-  
-   (GET "/client-login" [:as {session :session}]
-  (if (= (:role session) "client")
+
+  (GET "/client-login" [:as {session :session}]
+    (if (= (:role session) "client")
       (resp/redirect "/index-client")
-      (p/client-login))
-     ) 
+      (p/client-login)))
   (POST "/client-login" req
-        (let [client (prepare-client (slurp (:body req)))]
-          (if (db/check-login client)
-            (-> (resp/redirect "/index-client")
-                (assoc-in [:session :role] "client")
-                (assoc-in [:session :id] (db/get-id-by-phone (:phone client))));u http zahtev dodaje se polje :session{:admin true} 
-            (p/client-login "Invalid username or password")))
-    )
+    (let [client (prepare-client (slurp (:body req)))]
+      (if (db/check-login client)
+        (-> (resp/redirect "/index-client")
+            (assoc-in [:session :role] "client")
+            (assoc-in [:session :id] (db/get-id-by-phone (:phone client))));u http zahtev dodaje se polje :session{:admin true} 
+        (p/client-login "Invalid username or password"))))
 
   (POST "/admin/login" req
     (let [admin (prepare-admin (slurp (:body req)))]
       (if (a/check-login admin)
         (-> (resp/redirect "/index-admin")
             (assoc-in [:session :admin] true));u http zahtev dodaje se polje :session{:admin true} 
-        (p/admin-login "Invalid username or password"))) 
-    )
+        (p/admin-login "Invalid username or password"))))
 
 
   (GET "/admin/logout" []
@@ -106,69 +100,71 @@
         (assoc-in [:session :admin] false)))
   (GET "/client-logout" []
     (-> (resp/redirect "/index")
-        (assoc-in [:session :role] false)
-        ))
+        (assoc-in [:session :role] false)))
 
- (GET "/client-sign-up" [] (p/client-sign-up))
-(POST "/client-sign-up/:id" req (do
-                                  (let [client (name-phone-password-id (slurp (:body req)))]
-                                    (db/add-client client))
-                                  (resp/redirect "/")))
-  
-  (route/not-found "Not found")
-  
-  )
+  (GET "/client-sign-up" [] (p/client-sign-up))
+  (POST "/client-sign-up/:id" req (do
+                                    (let [client (name-phone-password-id (slurp (:body req)))]
+                                      (db/add-client client))
+                                    (resp/redirect "/index-client")))
+
+  (route/not-found "Not found"))
 
 ;routes accessable only for admi
 (defroutes admin-routes
 
 
-(GET "/client/:id" [id] (p/client-view  (db/get-client-by-id (read-string id))))
+  (GET "/client/:id" [id] (p/client-view  (db/get-client-by-id (read-string id))))
 
- 
-  
-  
+
+
+
   ;https://github.com/weavejester/hiccup/blob/1.0.5/src/hiccup/form.clj#L123
   ;NE POSTOJI DELETE RUTA ZA form/form-to hiccup, samo get i post
   (POST "/client-delete/delete/:id" [id]
     (do (db/delete-client (read-string id))
-        (resp/redirect "/")))
+        (resp/redirect "/clients")))
 
   (GET "/massages/new" [] (p/new-massage-form))
-(POST "/massages/new/:id" req
-  (do (let [massage (prepare-massage (slurp (:body req)))]
-        (massage_db/add-massage massage))
-      (resp/redirect "/index")))
+  (POST "/massages/new/:id" req
+    (do (let [massage (prepare-massage (slurp (:body req)))]
+          (massage_db/add-massage massage))
+        (resp/redirect "/index-admin")))
 
-(GET "/reservations" [] (p/reservation-index-page))
-(GET "/reservations/new" [] (p/new-reservation-form))
+  (GET "/reservations" [] (p/reservation-index-page))
+  (GET "/reservations/new" [] (p/new-reservation-form))
 
+  (GET "/admin/graph" [] (do (p/admin-massage-graph)
+                             (resp/redirect "/clients")))
+  (GET "/admin/massages" [] (p/admin-massages))
 
-
-
-
-)
-(defroutes client-routes
-  (GET "/client-routes" [:as {session :session}] (str session))
+  (POST "/admin/change-massage/:id" [id] (p/edit-massage-form id))
+  (POST "/admin/change-massage/massage/:id" req
+    (do (let [massage (prepare-massage (slurp (:body req)))]
+          (massage_db/update-massage massage)
+          ) 
+        (resp/redirect "/admin/massages")))
   
+  )
+
+(defroutes client-routes
+  (GET "/client/client/news" [] (p/prepare-news))
+
   (POST "/reservations/new/:id_client/:id_massage" [id_client id_massage]
     (do (reservations_db/add-reservation (read-string id_client) (read-string id_massage))
-     (resp/redirect "/index-client")
-        )
-    )
+        (resp/redirect "/index-client")))
   ;kad se pozove samo kao ruta
   (GET "/client-edit/edit/:id" [id]
     (str (let [client (db/get-client-by-id (read-string id))] (p/edit-client client))))
 
   ;za edit polje kod clienta, fja p/client-view poziva post metodu
-(POST "/client-edit/edit/:id" [id]
-  (str (let [client (db/get-client-by-id (read-string id))] (p/edit-client client))))
+; (POST "/client-edit/edit/:id" [id]
+;   (str (let [client (db/get-client-by-id (read-string id))] (p/edit-client client))))
 
-(POST "/client-edit/:id" req
-  (do (let [client (name-phone-password-id (slurp (:body req)))]
-        (db/update-client client))
-      (resp/redirect "/index")))
-  )
+  (POST "/client-edit/:id" req
+    (do (let [client (name-phone-password-id (slurp (:body req)))]
+          (db/update-client client))
+        (resp/redirect "/index-client"))))
 ; ****************************************
 
 ;HANDLERS: app-routes, admin-routes
@@ -183,25 +179,22 @@
 
 (defn wrap-client [handler]
   (fn [req]
-    (if (-> req :session :role )
+    (if (-> req :session :role)
       (handler req)
       (resp/redirect "/client-login"))))
+
+
 (def wrapping
   (-> (routes (wrap-routes admin-routes wrap-admin-only)
               (wrap-routes client-routes wrap-client)
               app-routes)
       (wrap-multipart-params)
-      session/wrap-session
-      ))
+      session/wrap-session))
 
-
-;prikaz pojedinacnih ruta
-; (wrapping
-;  {:uri            "/"
-;   :request-method :get})
 
 (def server
-  (ring/run-jetty wrapping {:port 3054 :join? false}))
+  (ring/run-jetty wrapping {:port 3000
+                            :join? false}))
 
 
 ;***********requests, responses, handlers

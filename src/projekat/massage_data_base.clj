@@ -1,7 +1,9 @@
 (ns projekat.massage_data_base
   (:require
    [clojure.java.jdbc :as jdbc];sql/sqlite database 
-   [clojure.pprint :as p]))
+   [clojure.pprint :as p]
+   [clj-time.core :as t]
+   ))
 
 (def db {:classname   "org.sqlite.JDBC"
          :subprotocol "sqlite"
@@ -17,7 +19,8 @@
 ;                      )
 
 
-(defn  massages [] (jdbc/query db ["SELECT * FROM massage"]))
+(defn  massages [] (jdbc/query db ["SELECT * FROM massage"])) 
+
 (massages)
 (defn add-massage [massage]
   (jdbc/execute! db ["insert into massage (name, description, price) values (?, ?, ?) "  (:name massage) (:description massage) (:price massage)]))
@@ -27,13 +30,27 @@
 ; (add-massage {:name "Sport" :description "Release muscle tension" :price 45})
 ; (add-massage {:name "Chair" :description "Relaxed neck, shoulders and back." :price 60})
 
+(defn get-massage-names[]
+    (map :name (jdbc/query db ["SELECT name FROM massage "]))
+  )
+; (get-massage-names)
 
-
-
+(defn noticeClients [massage]
+  (spit "resources/news.txt" 
+        (format "[%s] Massage %s  has been changed. New description: %s. New price:%s \n "
+                (clojure.string/replace (str (t/now)) "T" "  ")
+                (:name massage)
+                (:description massage)
+                (:price massage)
+                )
+        
+        :append true)
+  )
 (defn update-massage [massage]
   (jdbc/execute! db ["UPDATE massage  SET name = ? WHERE id = ?"  (:name massage) (:id massage)])
   (jdbc/execute! db ["UPDATE massage  SET description = ? WHERE id = ?"  (:description massage) (:id massage)])
   (jdbc/execute! db ["UPDATE massage  SET price = ? WHERE id = ?"  (:price massage) (:id massage)])
+  (noticeClients massage)
   )
 
     ; (update-massage { :id 5 :name "Relax" :description "Relaxing massage" :price 44})

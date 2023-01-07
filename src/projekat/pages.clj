@@ -7,7 +7,10 @@
    [projekat.massage_data_base :as massage_db]
    [hiccup.table :as table]
    [projekat.reservation_database :as reservations_db]
-   [ring.middleware.session :as session]))
+   [ring.middleware.session :as session]
+   [oz.core :as oz]
+   ))
+
 
 
 (defn index-admin []
@@ -25,7 +28,8 @@
       [:div.navbar-nav.ml-auto
        [:a.nav-item.nav-link {:href "/massages/new"} "New massage"]
        [:a.nav-item.nav-link {:href "/clients"} "Clients"]
-       [:a.nav-item.nav-link {:href "/reservations"} "Reservations table"]
+       [:a.nav-item.nav-link {:href "/reservations"} "Reservations table"] 
+       [:a.nav-item.nav-link {:href "/admin/massages"} "Massages"]
        [:a.nav-item.nav-link {:href "/admin/logout"} "Log out"]
        ]]]
     "Hello admin"
@@ -44,6 +48,7 @@
       [:a.navbar-brand {:href "/index-client"} "Spa center"]
       [:div.navbar-nav.ml-auto
        [:a.nav-item.nav-link {:href (format "/client-edit/edit/%d" (:id session))} "Edit client"]
+       [:a.nav-item.nav-link {:href "/client/client/news"} "News"]
        [:a.nav-item.nav-link {:href "/client-logout"} "Log out"]
        ]]]
     
@@ -127,7 +132,33 @@
        
        ]]]]))
 
+(defn admin-massages[]
+  (html5
+   [:body 
+    [:table
+     [:tr
+      [:th "Massages"]]
+     [:tr
+      [:th "Id"]
+      [:th "Name"]
+      [:th "Description"]
+      [:th "Price [EUR]"]]
+     (for [n (range 0 (count (massage_db/massages)))]
+       [:tr
+        [:td (:id (nth (massage_db/massages) n))]
+        [:td (:name (nth (massage_db/massages) n))]
+        [:td (:description (nth (massage_db/massages) n))]
+        [:td (:price (nth (massage_db/massages) n))]
+         [:td (form/form-to [:post (format "/admin/change-massage/%d"  (:id (nth (massage_db/massages) n)))]
 
+                            (anti-forgery-field)
+
+                            (form/submit-button "CHANGE MASSAGE"))]
+        ])
+     ] 
+    [:hr] 
+    ])
+  )
 
 (defn client-view [{id :id name :name phone :phone amount :amount}]
   (html5
@@ -142,14 +173,40 @@
     [:post (str "/client-delete/delete/" id)]
     (anti-forgery-field)
     (form/submit-button  {:class "btn btn-danger"} "Delete"))
-   (form/form-to
-    [:post (str "/client-edit/edit/" id)]
+  ;  (form/form-to
+    ; [:post (str "/client-edit/edit/" id)]
     (anti-forgery-field)
-    (form/submit-button  {:class "btn btn-primary"} "Edit"))
+    ; (form/submit-button  {:class "btn btn-primary"} "Edit"))
    [:hr]))
+
+;GRAPH
+(defn data []
+  ;amount of reservation for every massage
+  (for [n (range 0 (count (massage_db/get-massage-names)))]
+    {:Name (nth (massage_db/get-massage-names) n) 
+     :Amount_of_reservations (nth (reservations_db/total-number-of-reserv) n)
+     }))
+
+(def line-plot
+  {:data {:values (data)}
+   :encoding {:x {:field "Name" :type "nominal"}
+              :y {:field "Amount_of_reservations" :type "quantitative"}}
+   :mark "bar"})
+
+(defn admin-massage-graph[]
+  (oz/start-server!)
+
+  (oz/view! line-plot)
+  )
+
+
 (defn clients-view [clients]
-  (html5
-   (map  client-view clients)))
+  (html5 
+   (map  client-view clients) 
+   [:a {:href "/admin/graph"} "See a massage reservations graph"] 
+   ))
+
+
 (defn edit-client [client]
   (html5
    [:body
@@ -230,6 +287,21 @@
                   (anti-forgery-field)
 
                   (form/submit-button "Save changes"))]))
+(defn edit-massage-form [massage_id]
+  (html5
+   [:body
+    (form/form-to [:post (str "/admin/change-massage/massage/" massage_id)]
+
+                  (form/label "name" "Name: ")
+                  (form/text-field "nametf" "")
+                  (form/label "desription" "Description: ")
+                  (form/text-field "descriptiontf" "")
+                  (form/label "price" "Price: ")
+                  (form/text-field "pricetf" "")
+                  (form/hidden-field "id" massage_id)
+                  (anti-forgery-field)
+
+                  (form/submit-button "Save changes"))]))
 
 (defn reservation-index-page []
   (html5
@@ -276,3 +348,12 @@
                    (form/password-field {:class "form-control"} "passwordtf")]
                   (anti-forgery-field)
                   (form/submit-button {:class "btn btn-primary"} "Login"))]))
+(defn prepare-news[]
+  (html5
+   [:body
+    [:p
+    [:i  (clojure.string/replace  (slurp "resources/news.txt" :encoding "UTF-8") #"\n" "<br>")]
+     ]
+    ]
+   )
+  )

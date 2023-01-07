@@ -18,942 +18,10 @@
 clj꞉projekat.server-config꞉>  ; Use `alt+enter` to evaluate
 ; Jack-in done.
 clj꞉projekat.server-config꞉> 
-; Evaluating file: core.clj
-#'projekat.core/server
-clj꞉projekat.core꞉> 
-#'projekat.core/client-routes
-clj꞉projekat.core꞉> 
-; Evaluating file: core.clj
-#'projekat.core/server
-clj꞉projekat.core꞉> 
-; Evaluating file: core.clj
-#'projekat.core/server
-clj꞉projekat.core꞉> 
-; Evaluating file: core.clj
-#'projekat.core/server
-clj꞉projekat.core꞉> 
-#'projekat.core/app-routes
-clj꞉projekat.core꞉> 
-; Evaluating file: core.clj
-#'projekat.core/server
-clj꞉projekat.core꞉> 
-; Evaluating file: core.clj
-; Execution error (BindException) at sun.nio.ch.Net/bind0 (Net.java:-2).
-; Address already in use: bind
-; Evaluation of file core.clj failed: class clojure.lang.Compiler$CompilerException
-clj꞉projekat.core꞉> 
-; Evaluating file: core.clj
-#'projekat.core/server
-clj꞉projekat.core꞉> 
-; Evaluating file: core.clj
-#'projekat.core/server
-clj꞉projekat.core꞉> 
-; Evaluating file: core.clj
-#'projekat.core/server
-clj꞉projekat.core꞉> 
-(0)
-clj꞉projekat.database꞉> 
-#'projekat.database/add-client
-clj꞉projekat.database꞉> 
-(1)
-clj꞉projekat.database꞉> 
-(1)
-clj꞉projekat.database꞉> 
-(1)
-clj꞉projekat.database꞉> 
-#'projekat.database/table-view-client
-clj꞉projekat.database꞉> 
-
-| :id |          :name |     :phone | :amount | :password |  :role |
-|-----+----------------+------------+---------+-----------+--------|
-|   1 |  Nevena Stanic | 0679089700 |     0.0 |    nevena | client |
-|   2 | Nikola Nikolic |  065409756 |     0.0 |    nikola | client |
-|   3 |   Milica Milic |  060342567 |     0.0 |    milica | client |
+; Evaluating file: server_config.clj
 nil
-clj꞉projekat.database꞉> 
-#'projekat.pages/client-login
-clj꞉projekat.pages꞉> 
-#'projekat.core/app-routes
-clj꞉projekat.core꞉> 
-#'projekat.core/admin-routes
-clj꞉projekat.core꞉> 
-#'projekat.core/admin-routes
-clj꞉projekat.core꞉> 
-#'projekat.core/prepare-client
-clj꞉projekat.core꞉> 
-#'projekat.pages/client-login
-clj꞉projekat.pages꞉> 
-; Evaluating file: pages.clj
-#'projekat.pages/client-login
-clj꞉projekat.pages꞉> 
-#'projekat.database/check-login
-clj꞉projekat.database꞉> 
-#'projekat.database/check-login
-clj꞉projekat.database꞉> 
-#'projekat.database/check-login
-clj꞉projekat.database꞉> 
-; Execution error (IndexOutOfBoundsException) at projekat.database/check-login (form-init1312386880905720873.clj:99).
-; null
-clj꞉projekat.database꞉> 
-
-| :id |          :name |     :phone | :amount | :password |  :role |
-|-----+----------------+------------+---------+-----------+--------|
-|   1 |  Nevena Stanic | 0679089700 |     0.0 |    nevena | client |
-|   2 | Nikola Nikolic |  065409756 |     0.0 |    nikola | client |
-|   3 |   Milica Milic |  060342567 |     0.0 |    milica | client |
-nil
-clj꞉projekat.database꞉> 
-; Execution error (IndexOutOfBoundsException) at projekat.database/check-login (form-init1312386880905720873.clj:99).
-; null
-clj꞉projekat.database꞉> 
-{:id 1, :name "Nevena Stanic", :phone "0679089700", :amount 0.0, :password "nevena", :role "client"}
-clj꞉projekat.database꞉> 
-#'projekat.core/app-routes
-clj꞉projekat.core꞉> 
-; Evaluating file: core.clj
-#'projekat.core/server
-clj꞉projekat.core꞉> 
-; Evaluating file: core.clj
-#'projekat.core/server
-clj꞉projekat.core꞉> 
-; Evaluating file: core.clj
-#'projekat.core/server
-clj꞉projekat.core꞉> 
-; Evaluating file: core.clj
-#'projekat.core/server
-clj꞉projekat.core꞉> 
-; Evaluating file: pages.clj
-#'projekat.pages/client-login
-clj꞉projekat.pages꞉> 
-; Evaluating file: core.clj
-#'projekat.core/server
-clj꞉projekat.core꞉> 
-#'projekat.core/name-phone-id
-clj꞉projekat.core꞉> 
-#'projekat.database/update-client
-clj꞉projekat.database꞉> 
-; Evaluating file: core.clj
-; Syntax error compiling at (c:\Users\nodas\Desktop\alati2022\projekat\src\projekat\core.clj:107:28).
-; No such var: p/client-sign-up
-; Evaluation of file core.clj failed: class clojure.lang.Compiler$CompilerException
-clj꞉projekat.core꞉> 
-#'projekat.pages/client-sign-up
-clj꞉projekat.pages꞉> 
-; Evaluating file: pages.clj
-#'projekat.pages/client-login
-clj꞉projekat.pages꞉> 
-; Evaluating file: core.clj
-#'projekat.core/server
-clj꞉projekat.core꞉> 
-; Evaluating file: pages.clj
-#'projekat.pages/client-login
-clj꞉projekat.pages꞉> 
-
-| :id |              :name |     :phone | :amount | :password |  :role |
-|-----+--------------------+------------+---------+-----------+--------|
-|   1 |      Nevena Stanic | 0679089700 |     0.0 |    nevena | client |
-|   2 |     Nikola Nikolic |  065409756 |     0.0 |    nikola | client |
-|   3 |       Milica Milic |  060342567 |     0.0 |    milica | client |
-|   4 | Danica Zdravkovoic | 0652010059 |     0.0 |      dana | client |
-nil
-clj꞉projekat.database꞉> 
-; Evaluating file: core.clj
-#'projekat.core/server
-clj꞉projekat.core꞉> 
-
-| :id |              :name |     :phone | :amount | :password |  :role |
-|-----+--------------------+------------+---------+-----------+--------|
-|   1 |      Nevena Stanic | 0679089700 |     0.0 |    nevena | client |
-|   2 |     Nikola Nikolic |  065409756 |     0.0 |    nikola | client |
-|   3 |       Milica Milic |  060342567 |     0.0 |    milica | client |
-|   4 | Danica Zdravkovoic | 0652010059 |     0.0 |      dana | client |
-|   5 |       Nikola Nikic | x |     0.0 |     nidza | client |
-nil
-clj꞉projekat.database꞉> 
-; Evaluating file: pages.clj
-#'projekat.pages/client-login
-clj꞉projekat.pages꞉> 
-; Evaluating file: core.clj
-#'projekat.core/server
-clj꞉projekat.core꞉> 
-; Evaluating file: pages.clj
-#'projekat.pages/client-login
-clj꞉projekat.pages꞉> 
-; Evaluating file: core.clj
-#'projekat.core/server
-clj꞉projekat.core꞉> 
-; Evaluating file: pages.clj
-#'projekat.pages/client-login
-clj꞉projekat.pages꞉> 
-; Evaluating file: core.clj
-#'projekat.core/server
-clj꞉projekat.core꞉> 
-{:id 1, :name "Nevena Stanic", :phone "0679089700", :amount 0.0, :password "nevena", :role "client"}
-clj꞉projekat.database꞉> 
-#'projekat.pages/index-client
-clj꞉projekat.pages꞉> 
-#'projekat.pages/index-admin
-clj꞉projekat.pages꞉> 
-; Evaluating file: pages.clj
-#'projekat.pages/client-login
-clj꞉projekat.pages꞉> 
-; Evaluating file: pages.clj
-#'projekat.pages/client-login
-clj꞉projekat.pages꞉> 
-; Evaluating file: pages.clj
-#'projekat.pages/client-login
-clj꞉projekat.pages꞉> 
-; Evaluating file: pages.clj
-#'projekat.pages/client-login
-clj꞉projekat.pages꞉> 
-; Evaluating file: core.clj
-; Execution error (BindException) at sun.nio.ch.Net/bind0 (Net.java:-2).
-; Address already in use: bind
-; Evaluation of file core.clj failed: class clojure.lang.Compiler$CompilerException
-clj꞉projekat.core꞉> 
-; Evaluating file: core.clj
-#'projekat.core/server
-clj꞉projekat.core꞉> 
-; Evaluating file: core.clj
-#'projekat.core/server
-clj꞉projekat.core꞉> 
-; Evaluating file: pages.clj
-#'projekat.pages/client-login
-clj꞉projekat.pages꞉> 
-; Evaluating file: core.clj
-#'projekat.core/server
-clj꞉projekat.core꞉> 
-; Evaluating file: pages.clj
-#'projekat.pages/client-login
-clj꞉projekat.pages꞉> 
-; Evaluating file: core.clj
-#'projekat.core/server
-clj꞉projekat.core꞉> 
-; Evaluating file: pages.clj
-#'projekat.pages/client-login
-clj꞉projekat.pages꞉> 
-; Evaluating file: core.clj
-#'projekat.core/server
-clj꞉projekat.core꞉> 
-; Evaluating file: pages.clj
-#'projekat.pages/client-login
-clj꞉projekat.pages꞉> 
-; Evaluating file: core.clj
-#'projekat.core/server
-clj꞉projekat.core꞉> 
-; Evaluating file: pages.clj
-#'projekat.pages/client-login
-clj꞉projekat.pages꞉> 
-; Evaluating file: core.clj
-#'projekat.core/server
-clj꞉projekat.core꞉> 
-; Evaluating file: pages.clj
-#'projekat.pages/client-login
-clj꞉projekat.pages꞉> 
-; Evaluating file: core.clj
-#'projekat.core/server
-clj꞉projekat.core꞉> 
-#'projekat.database/update-client-amount
-clj꞉projekat.database꞉> 
-; Syntax error compiling at (c:\Users\nodas\Desktop\alati2022\projekat\src\projekat\reservation_database.clj:50:59).
-; Unable to resolve symbol: phone in this context
-clj꞉projekat.reservation_database꞉> 
-#'projekat.reservation_database/add-reservation
-clj꞉projekat.reservation_database꞉> 
-; Evaluating file: core.clj
-; Execution error (BindException) at sun.nio.ch.Net/bind0 (Net.java:-2).
-; Address already in use: bind
-; Evaluation of file core.clj failed: class clojure.lang.Compiler$CompilerException
-clj꞉projekat.core꞉> 
+clj꞉projekat.server-config꞉> 
 ; Evaluating file: reservation_database.clj
-
-| :id | :client_id | :massage_id |
-|-----+------------+-------------|
-|   2 |          1 |           1 |
-|   3 |          1 |           1 |
-|   4 |          1 |           4 |
-|   5 |          1 |           1 |
-|   6 |          1 |           4 |
-nil
-clj꞉projekat.reservation_database꞉> 
-; Evaluating file: pages.clj
-#'projekat.pages/client-login
-clj꞉projekat.pages꞉> 
-; Evaluating file: core.clj
-#'projekat.core/server
-clj꞉projekat.core꞉> 
-; Evaluating file: core.clj
-#'projekat.core/server
-clj꞉projekat.core꞉> 
-; Evaluating file: core.clj
-#'projekat.core/server
-clj꞉projekat.core꞉> 
-; Evaluating file: core.clj
-#'projekat.core/server
-clj꞉projekat.core꞉> 
-290.0
-clj꞉projekat.reservation_database꞉> 
-; Evaluating file: reservation_database.clj
-
-| :id | :client_id | :massage_id |
-|-----+------------+-------------|
-|   2 |          1 |           1 |
-|   3 |          1 |           1 |
-|   4 |          1 |           4 |
-|   5 |          1 |           1 |
-|   6 |          1 |           4 |
-|   7 |          1 |           1 |
-|   8 |          1 |           1 |
-nil
-clj꞉projekat.reservation_database꞉> 
-; Evaluating file: database.clj
-
-| :id |              :name |     :phone | :amount | :password |  :role |
-|-----+--------------------+------------+---------+-----------+--------|
-|   1 |      Nevena Stanic | 0679089700 |     0.0 |    nevena | client |
-|   2 |     Nikola Nikolic |  065409756 |     0.0 |    nikola | client |
-|   3 |       Milica Milic |  060342567 |     0.0 |    milica | client |
-|   4 | Danica Zdravkovoic | 0652010059 |     0.0 |      dana | client |
-|   5 |       Nikola Nikic | 0874569833 |     0.0 |     nidza | client |
-#'projekat.database/check-login
-clj꞉projekat.database꞉> 
-; Evaluating file: core.clj
-#'projekat.core/server
-clj꞉projekat.core꞉> 
-
-| :id | :client_id | :massage_id |
-|-----+------------+-------------|
-|   2 |          1 |           1 |
-|   3 |          1 |           1 |
-|   4 |          1 |           4 |
-|   5 |          1 |           1 |
-|   6 |          1 |           4 |
-|   7 |          1 |           1 |
-|   8 |          1 |           1 |
-|   9 |          1 |           1 |
-nil
-clj꞉projekat.reservation_database꞉> 
-
-| :id | :client_id | :massage_id |
-|-----+------------+-------------|
-|   2 |          1 |           1 |
-|   3 |          1 |           1 |
-|   4 |          1 |           4 |
-|   5 |          1 |           1 |
-|   6 |          1 |           4 |
-|   7 |          1 |           1 |
-|   8 |          1 |           1 |
-|   9 |          1 |           1 |
-|  10 |          4 |           3 |
-nil
-clj꞉projekat.reservation_database꞉> 
-; Execution error (NullPointerException) at projekat.reservation-database/total-client-amount (reservation_database.clj:31).
-; null
-clj꞉projekat.reservation_database꞉> 
-; Execution error (NullPointerException) at projekat.reservation-database/total-client-amount (reservation_database.clj:31).
-; null
-clj꞉projekat.reservation_database꞉> 
-; Execution error (NullPointerException) at projekat.reservation-database/total-client-amount (reservation_database.clj:31).
-; null
-clj꞉projekat.reservation_database꞉> 
-(40.0 40.0 45.0 40.0 45.0 40.0 40.0 40.0 nil)
-clj꞉projekat.reservation_database꞉> 
-(40.0 40.0 45.0 40.0 45.0 40.0 40.0 40.0 nil)
-clj꞉projekat.reservation_database꞉> 
-(nil nil nil nil nil nil nil nil 37.0)
-clj꞉projekat.reservation_database꞉> 
-(40.0 40.0 45.0 40.0 45.0 40.0 40.0 40.0 nil)
-clj꞉projekat.reservation_database꞉> 
-(40.0 40.0 45.0 40.0 45.0 40.0 40.0 40.0 nil)
-clj꞉projekat.reservation_database꞉> 
-(nil nil nil nil nil nil nil nil 37.0)
-clj꞉projekat.reservation_database꞉> 
-#'projekat.reservation_database/proba
-clj꞉projekat.reservation_database꞉> 
-({:id 2, :client_id 1, :massage_id 1}
- {:id 3, :client_id 1, :massage_id 1}
- {:id 4, :client_id 1, :massage_id 4}
- {:id 5, :client_id 1, :massage_id 1}
- {:id 6, :client_id 1, :massage_id 4}
- {:id 7, :client_id 1, :massage_id 1}
- {:id 8, :client_id 1, :massage_id 1}
- {:id 9, :client_id 1, :massage_id 1})
-clj꞉projekat.reservation_database꞉> 
-#'projekat.reservation_database/proba
-clj꞉projekat.reservation_database꞉> 
-(true true true true true true true true false)
-clj꞉projekat.reservation_database꞉> 
-#'projekat.reservation_database/proba
-clj꞉projekat.reservation_database꞉> 
-({:id 2, :client_id 1, :massage_id 1}
- {:id 3, :client_id 1, :massage_id 1}
- {:id 4, :client_id 1, :massage_id 4}
- {:id 5, :client_id 1, :massage_id 1}
- {:id 6, :client_id 1, :massage_id 4}
- {:id 7, :client_id 1, :massage_id 1}
- {:id 8, :client_id 1, :massage_id 1}
- {:id 9, :client_id 1, :massage_id 1})
-clj꞉projekat.reservation_database꞉> 
-({:id 10, :client_id 4, :massage_id 3})
-clj꞉projekat.reservation_database꞉> 
-#'projekat.reservation_database/proba
-clj꞉projekat.reservation_database꞉> 
-({:id 10, :client_id 4, :massage_id 3})
-clj꞉projekat.reservation_database꞉> 
-({:id 2, :client_id 1, :massage_id 1}
- {:id 3, :client_id 1, :massage_id 1}
- {:id 4, :client_id 1, :massage_id 4}
- {:id 5, :client_id 1, :massage_id 1}
- {:id 6, :client_id 1, :massage_id 4}
- {:id 7, :client_id 1, :massage_id 1}
- {:id 8, :client_id 1, :massage_id 1}
- {:id 9, :client_id 1, :massage_id 1})
-clj꞉projekat.reservation_database꞉> 
-#'projekat.reservation_database/client-reservations
-clj꞉projekat.reservation_database꞉> 
-#'projekat.reservation_database/client-amounts
-clj꞉projekat.reservation_database꞉> 
-; Execution error (ArityException) at projekat.reservation-database/client-amounts (form-init1312386880905720873.clj:28).
-; Wrong number of args (0) passed to: projekat.reservation-database/client-reservations
-clj꞉projekat.reservation_database꞉> 
-#'projekat.reservation_database/client-amounts
-clj꞉projekat.reservation_database꞉> 
-(40.0 40.0 45.0 40.0 45.0 40.0 40.0 40.0)
-clj꞉projekat.reservation_database꞉> 
-(nil)
-clj꞉projekat.reservation_database꞉> 
-({:id 2, :client_id 1, :massage_id 1}
- {:id 3, :client_id 1, :massage_id 1}
- {:id 4, :client_id 1, :massage_id 4}
- {:id 5, :client_id 1, :massage_id 1}
- {:id 6, :client_id 1, :massage_id 4}
- {:id 7, :client_id 1, :massage_id 1}
- {:id 8, :client_id 1, :massage_id 1}
- {:id 9, :client_id 1, :massage_id 1}
- {:id 10, :client_id 4, :massage_id 3})
-clj꞉projekat.reservation_database꞉> 
-(nil)
-clj꞉projekat.reservation_database꞉> 
-(40.0 40.0 45.0 40.0 45.0 40.0 40.0 40.0)
-clj꞉projekat.reservation_database꞉> 
-#'projekat.reservation_database/client-amounts
-clj꞉projekat.reservation_database꞉> 
-(40.0 40.0 45.0 40.0 45.0 40.0 40.0 40.0)
-clj꞉projekat.reservation_database꞉> 
-(40.0)
-clj꞉projekat.reservation_database꞉> 
-#'projekat.reservation_database/client-amounts
-clj꞉projekat.reservation_database꞉> 
-()
-clj꞉projekat.reservation_database꞉> 
-(40.0)
-clj꞉projekat.reservation_database꞉> 
-330.0
-clj꞉projekat.reservation_database꞉> 
-40.0
-clj꞉projekat.reservation_database꞉> 
-; Evaluating file: reservation_database.clj
-
-| :id | :client_id | :massage_id |
-|-----+------------+-------------|
-|   2 |          1 |           1 |
-|   3 |          1 |           1 |
-|   4 |          1 |           4 |
-|   5 |          1 |           1 |
-|   6 |          1 |           4 |
-|   7 |          1 |           1 |
-|   8 |          1 |           1 |
-|   9 |          1 |           1 |
-|  10 |          4 |           3 |
-nil
-clj꞉projekat.reservation_database꞉> 
-; Evaluating file: database.clj
-
-| :id |              :name |     :phone | :amount | :password |  :role |
-|-----+--------------------+------------+---------+-----------+--------|
-|   1 |      Nevena Stanic | 0679089700 |     0.0 |    nevena | client |
-|   2 |     Nikola Nikolic |  065409756 |     0.0 |    nikola | client |
-|   3 |       Milica Milic |  060342567 |     0.0 |    milica | client |
-|   4 | Danica Zdravkovoic | 0652010059 |     0.0 |      dana | client |
-|   5 |       Nikola Nikic | 0874569833 |     0.0 |     nidza | client |
-#'projekat.database/check-login
-clj꞉projekat.database꞉> 
-; Evaluating file: core.clj
-#'projekat.core/server
-clj꞉projekat.core꞉> 
-
-| :id | :client_id | :massage_id |
-|-----+------------+-------------|
-|   2 |          1 |           1 |
-|   3 |          1 |           1 |
-|   4 |          1 |           4 |
-|   5 |          1 |           1 |
-|   6 |          1 |           4 |
-|   7 |          1 |           1 |
-|   8 |          1 |           1 |
-|   9 |          1 |           1 |
-|  10 |          4 |           3 |
-|  11 |          1 |           1 |
-nil
-clj꞉projekat.reservation_database꞉> 
-
-| :id | :client_id | :massage_id |
-|-----+------------+-------------|
-|   2 |          1 |           1 |
-|   3 |          1 |           1 |
-|   4 |          1 |           4 |
-|   5 |          1 |           1 |
-|   6 |          1 |           4 |
-|   7 |          1 |           1 |
-|   8 |          1 |           1 |
-|   9 |          1 |           1 |
-|  10 |          4 |           3 |
-|  11 |          1 |           1 |
-nil
-clj꞉projekat.reservation_database꞉> 
-; Evaluating file: reservation_database.clj
-
-| :id | :client_id | :massage_id |
-|-----+------------+-------------|
-|   2 |          1 |           1 |
-|   3 |          1 |           1 |
-|   4 |          1 |           4 |
-|   5 |          1 |           1 |
-|   6 |          1 |           4 |
-|   7 |          1 |           1 |
-|   8 |          1 |           1 |
-|   9 |          1 |           1 |
-|  10 |          4 |           3 |
-|  11 |          1 |           1 |
-nil
-clj꞉projekat.reservation_database꞉> 
-; Evaluating file: core.clj
-#'projekat.core/server
-clj꞉projekat.core꞉> 
-
-| :id |              :name |     :phone | :amount | :password |  :role |
-|-----+--------------------+------------+---------+-----------+--------|
-|   1 |      Nevena Stanic | 0679089700 |     0.0 |    nevena | client |
-|   2 |     Nikola Nikolic |  065409756 |     0.0 |    nikola | client |
-|   3 |       Milica Milic |  060342567 |     0.0 |    milica | client |
-|   4 | Danica Zdravkovoic | 0652010059 |     0.0 |      dana | client |
-|   5 |       Nikola Nikic | 0874569833 |     0.0 |     nidza | client |
-nil
-clj꞉projekat.database꞉> 
-(1)
-clj꞉projekat.database꞉> 
-
-| :id |              :name |     :phone | :amount | :password |  :role |
-|-----+--------------------+------------+---------+-----------+--------|
-|   1 |      Nevena Stanic | 0679089700 |   200.0 |    nevena | client |
-|   2 |     Nikola Nikolic |  065409756 |     0.0 |    nikola | client |
-|   3 |       Milica Milic |  060342567 |     0.0 |    milica | client |
-|   4 | Danica Zdravkovoic | 0652010059 |     0.0 |      dana | client |
-|   5 |       Nikola Nikic | 0874569833 |     0.0 |     nidza | client |
-nil
-clj꞉projekat.database꞉> 
-407.0
-clj꞉projekat.reservation_database꞉> 
-(1)
-clj꞉projekat.reservation_database꞉> 
-
-| :id |              :name |     :phone | :amount | :password |  :role |
-|-----+--------------------+------------+---------+-----------+--------|
-|   1 |      Nevena Stanic | 0679089700 |   407.0 |    nevena | client |
-|   2 |     Nikola Nikolic |  065409756 |     0.0 |    nikola | client |
-|   3 |       Milica Milic |  060342567 |     0.0 |    milica | client |
-|   4 | Danica Zdravkovoic | 0652010059 |     0.0 |      dana | client |
-|   5 |       Nikola Nikic | 0874569833 |     0.0 |     nidza | client |
-nil
-clj꞉projekat.database꞉> 
-; Evaluating file: reservation_database.clj
-
-| :id | :client_id | :massage_id |
-|-----+------------+-------------|
-|   2 |          1 |           1 |
-|   3 |          1 |           1 |
-|   4 |          1 |           4 |
-|   5 |          1 |           1 |
-|   6 |          1 |           4 |
-|   7 |          1 |           1 |
-|   8 |          1 |           1 |
-|   9 |          1 |           1 |
-|  10 |          4 |           3 |
-|  11 |          1 |           1 |
-|  12 |          1 |           5 |
-nil
-clj꞉projekat.reservation_database꞉> 
-; Evaluating file: reservation_database.clj
-
-| :id | :client_id | :massage_id |
-|-----+------------+-------------|
-|   2 |          1 |           1 |
-|   3 |          1 |           1 |
-|   4 |          1 |           4 |
-|   5 |          1 |           1 |
-|   6 |          1 |           4 |
-|   7 |          1 |           1 |
-|   8 |          1 |           1 |
-|   9 |          1 |           1 |
-|  10 |          4 |           3 |
-|  11 |          1 |           1 |
-|  12 |          1 |           5 |
-nil
-clj꞉projekat.reservation_database꞉> 
-; Evaluating file: database.clj
-
-| :id |              :name |     :phone | :amount | :password |  :role |
-|-----+--------------------+------------+---------+-----------+--------|
-|   1 |      Nevena Stanic | 0679089700 |   407.0 |    nevena | client |
-|   2 |     Nikola Nikolic |  065409756 |     0.0 |    nikola | client |
-|   3 |       Milica Milic |  060342567 |     0.0 |    milica | client |
-|   4 | Danica Zdravkovoic | 0652010059 |     0.0 |      dana | client |
-|   5 |       Nikola Nikic | 0874569833 |     0.0 |     nidza | client |
-nil
-clj꞉projekat.database꞉> 
-; Evaluating file: core.clj
-#'projekat.core/server
-clj꞉projekat.core꞉> 
-
-| :id | :client_id | :massage_id |
-|-----+------------+-------------|
-|   2 |          1 |           1 |
-|   3 |          1 |           1 |
-|   4 |          1 |           4 |
-|   5 |          1 |           1 |
-|   6 |          1 |           4 |
-|   7 |          1 |           1 |
-|   8 |          1 |           1 |
-|   9 |          1 |           1 |
-|  10 |          4 |           3 |
-|  11 |          1 |           1 |
-|  12 |          1 |           5 |
-|  13 |          1 |           1 |
-|  14 |          1 |           3 |
-|  15 |          1 |           5 |
-|  16 |          1 |           3 |
-|  17 |          1 |           1 |
-|  18 |          1 |           2 |
-nil
-clj꞉projekat.reservation_database꞉> 
-649.0
-clj꞉projekat.reservation_database꞉> 
-(1)
-clj꞉projekat.database꞉> 
-
-| :id |              :name |     :phone | :amount | :password |  :role |
-|-----+--------------------+------------+---------+-----------+--------|
-|   1 |      Nevena Stanic | 0679089700 |   200.0 |    nevena | client |
-|   2 |     Nikola Nikolic |  065409756 |     0.0 |    nikola | client |
-|   3 |       Milica Milic |  060342567 |     0.0 |    milica | client |
-|   4 | Danica Zdravkovoic | 0652010059 |     0.0 |      dana | client |
-|   5 |       Nikola Nikic | 0874569833 |     0.0 |     nidza | client |
-nil
-clj꞉projekat.database꞉> 
-(1)
-clj꞉projekat.database꞉> 
-
-| :id |              :name |     :phone | :amount | :password |  :role |
-|-----+--------------------+------------+---------+-----------+--------|
-|   1 |      Nevena Stanic | 0679089700 |     0.0 |    nevena | client |
-|   2 |     Nikola Nikolic |  065409756 |     0.0 |    nikola | client |
-|   3 |       Milica Milic |  060342567 |     0.0 |    milica | client |
-|   4 | Danica Zdravkovoic | 0652010059 |     0.0 |      dana | client |
-|   5 |       Nikola Nikic | 0874569833 |     0.0 |     nidza | client |
-nil
-clj꞉projekat.database꞉> 
-(1)
-clj꞉projekat.reservation_database꞉> 
-
-| :id |              :name |     :phone | :amount | :password |  :role |
-|-----+--------------------+------------+---------+-----------+--------|
-|   1 |      Nevena Stanic | 0679089700 |   649.0 |    nevena | client |
-|   2 |     Nikola Nikolic |  065409756 |     0.0 |    nikola | client |
-|   3 |       Milica Milic |  060342567 |     0.0 |    milica | client |
-|   4 | Danica Zdravkovoic | 0652010059 |     0.0 |      dana | client |
-|   5 |       Nikola Nikic | 0874569833 |     0.0 |     nidza | client |
-nil
-clj꞉projekat.database꞉> 
-#'projekat.reservation_database/add-reservation
-clj꞉projekat.reservation_database꞉> 
-; Evaluating file: reservation_database.clj
-
-| :id | :client_id | :massage_id |
-|-----+------------+-------------|
-|   2 |          1 |           1 |
-|   3 |          1 |           1 |
-|   4 |          1 |           4 |
-|   5 |          1 |           1 |
-|   6 |          1 |           4 |
-|   7 |          1 |           1 |
-|   8 |          1 |           1 |
-|   9 |          1 |           1 |
-|  10 |          4 |           3 |
-|  11 |          1 |           1 |
-|  12 |          1 |           5 |
-|  13 |          1 |           1 |
-|  14 |          1 |           3 |
-|  15 |          1 |           5 |
-|  16 |          1 |           3 |
-|  17 |          1 |           1 |
-|  18 |          1 |           2 |
-nil
-clj꞉projekat.reservation_database꞉> 
-; Evaluating file: core.clj
-#'projekat.core/server
-clj꞉projekat.core꞉> 
-
-| :id | :client_id | :massage_id |
-|-----+------------+-------------|
-|   2 |          1 |           1 |
-|   3 |          1 |           1 |
-|   4 |          1 |           4 |
-|   5 |          1 |           1 |
-|   6 |          1 |           4 |
-|   7 |          1 |           1 |
-|   8 |          1 |           1 |
-|   9 |          1 |           1 |
-|  10 |          4 |           3 |
-|  11 |          1 |           1 |
-|  12 |          1 |           5 |
-|  13 |          1 |           1 |
-|  14 |          1 |           3 |
-|  15 |          1 |           5 |
-|  16 |          1 |           3 |
-|  17 |          1 |           1 |
-|  18 |          1 |           2 |
-|  19 |          1 |           1 |
-|  20 |          1 |           1 |
-|  21 |          1 |           7 |
-nil
-clj꞉projekat.reservation_database꞉> 
-
-| :id |              :name |     :phone | :amount | :password |  :role |
-|-----+--------------------+------------+---------+-----------+--------|
-|   1 |      Nevena Stanic | 0679089700 |     0.0 |    nevena | client |
-|   2 |     Nikola Nikolic |  065409756 |     0.0 |    nikola | client |
-|   3 |       Milica Milic |  060342567 |     0.0 |    milica | client |
-|   4 | Danica Zdravkovoic | 0652010059 |     0.0 |      dana | client |
-|   5 |       Nikola Nikic | 0874569833 |     0.0 |     nidza | client |
-nil
-clj꞉projekat.database꞉> 
-java.lang.Double
-clj꞉projekat.reservation_database꞉> 
-764.0
-clj꞉projekat.reservation_database꞉> 
-(1)
-clj꞉projekat.reservation_database꞉> 
-
-| :id |              :name |     :phone | :amount | :password |  :role |
-|-----+--------------------+------------+---------+-----------+--------|
-|   1 |      Nevena Stanic | 0679089700 |   764.0 |    nevena | client |
-|   2 |     Nikola Nikolic |  065409756 |     0.0 |    nikola | client |
-|   3 |       Milica Milic |  060342567 |     0.0 |    milica | client |
-|   4 | Danica Zdravkovoic | 0652010059 |     0.0 |      dana | client |
-|   5 |       Nikola Nikic | 0874569833 |     0.0 |     nidza | client |
-nil
-clj꞉projekat.database꞉> 
-; Evaluating file: reservation_database.clj
-
-| :id | :client_id | :massage_id |
-|-----+------------+-------------|
-|   2 |          1 |           1 |
-|   3 |          1 |           1 |
-|   4 |          1 |           4 |
-|   5 |          1 |           1 |
-|   6 |          1 |           4 |
-|   7 |          1 |           1 |
-|   8 |          1 |           1 |
-|   9 |          1 |           1 |
-|  10 |          4 |           3 |
-|  11 |          1 |           1 |
-|  12 |          1 |           5 |
-|  13 |          1 |           1 |
-|  14 |          1 |           3 |
-|  15 |          1 |           5 |
-|  16 |          1 |           3 |
-|  17 |          1 |           1 |
-|  18 |          1 |           2 |
-|  19 |          1 |           1 |
-|  20 |          1 |           1 |
-|  21 |          1 |           7 |
-nil
-clj꞉projekat.reservation_database꞉> 
-(1)
-clj꞉projekat.reservation_database꞉> 
-
-| :id |              :name |     :phone | :amount | :password |  :role |
-|-----+--------------------+------------+---------+-----------+--------|
-|   1 |      Nevena Stanic | 0679089700 |     0.0 |    nevena | client |
-|   2 |     Nikola Nikolic |  065409756 |     0.0 |    nikola | client |
-|   3 |       Milica Milic |  060342567 |     0.0 |    milica | client |
-|   4 | Danica Zdravkovoic | 0652010059 |     0.0 |      dana | client |
-|   5 |       Nikola Nikic | 0874569833 |     0.0 |     nidza | client |
-nil
-clj꞉projekat.database꞉> 
-; Evaluating file: reservation_database.clj
-
-| :id | :client_id | :massage_id |
-|-----+------------+-------------|
-|   2 |          1 |           1 |
-|   3 |          1 |           1 |
-|   4 |          1 |           4 |
-|   5 |          1 |           1 |
-|   6 |          1 |           4 |
-|   7 |          1 |           1 |
-|   8 |          1 |           1 |
-|   9 |          1 |           1 |
-|  10 |          4 |           3 |
-|  11 |          1 |           1 |
-|  12 |          1 |           5 |
-|  13 |          1 |           1 |
-|  14 |          1 |           3 |
-|  15 |          1 |           5 |
-|  16 |          1 |           3 |
-|  17 |          1 |           1 |
-|  18 |          1 |           2 |
-|  19 |          1 |           1 |
-|  20 |          1 |           1 |
-|  21 |          1 |           7 |
-nil
-clj꞉projekat.reservation_database꞉> 
-; Evaluating file: core.clj
-#'projekat.core/server
-clj꞉projekat.core꞉> 
-
-| :id |              :name |     :phone | :amount | :password |  :role |
-|-----+--------------------+------------+---------+-----------+--------|
-|   1 |      Nevena Stanic | 0679089700 |     0.0 |    nevena | client |
-|   2 |     Nikola Nikolic |  065409756 |     0.0 |    nikola | client |
-|   3 |       Milica Milic |  060342567 |     0.0 |    milica | client |
-|   4 | Danica Zdravkovoic | 0652010059 |     0.0 |      dana | client |
-|   5 |       Nikola Nikic | 0874569833 |     0.0 |     nidza | client |
-nil
-clj꞉projekat.database꞉> 
-(1)
-clj꞉projekat.database꞉> 
-#'projekat.reservation_database/add-reservation
-clj꞉projekat.reservation_database꞉> 
-; Evaluating file: reservation_database.clj
-
-| :id | :client_id | :massage_id |
-|-----+------------+-------------|
-|   2 |          1 |           1 |
-|   3 |          1 |           1 |
-|   4 |          1 |           4 |
-|   5 |          1 |           1 |
-|   6 |          1 |           4 |
-|   7 |          1 |           1 |
-|   8 |          1 |           1 |
-|   9 |          1 |           1 |
-|  10 |          4 |           3 |
-|  11 |          1 |           1 |
-|  12 |          1 |           5 |
-|  13 |          1 |           1 |
-|  14 |          1 |           3 |
-|  15 |          1 |           5 |
-|  16 |          1 |           3 |
-|  17 |          1 |           1 |
-|  18 |          1 |           2 |
-|  19 |          1 |           1 |
-|  20 |          1 |           1 |
-|  21 |          1 |           7 |
-nil
-clj꞉projekat.reservation_database꞉> 
-; Evaluating file: core.clj
-#'projekat.core/server
-clj꞉projekat.core꞉> 
-; Evaluating file: core.clj
-#'projekat.core/server
-clj꞉projekat.core꞉> 
-#'projekat.core/client-routes
-clj꞉projekat.core꞉> 
-; Evaluating file: core.clj
-#'projekat.core/server
-clj꞉projekat.core꞉> 
-1 -------- 871.0(1)
-clj꞉projekat.core꞉> 
-; Evaluating file: reservation_database.clj
-
-| :id | :client_id | :massage_id |
-|-----+------------+-------------|
-|   2 |          1 |           1 |
-|   3 |          1 |           1 |
-|   4 |          1 |           4 |
-|   5 |          1 |           1 |
-|   6 |          1 |           4 |
-|   7 |          1 |           1 |
-|   8 |          1 |           1 |
-|   9 |          1 |           1 |
-|  10 |          4 |           3 |
-|  11 |          1 |           1 |
-|  12 |          1 |           5 |
-|  13 |          1 |           1 |
-|  14 |          1 |           3 |
-|  15 |          1 |           5 |
-|  16 |          1 |           3 |
-|  17 |          1 |           1 |
-|  18 |          1 |           2 |
-|  19 |          1 |           1 |
-|  20 |          1 |           1 |
-|  21 |          1 |           7 |
-|  22 |          1 |           3 |
-|  23 |          1 |           7 |
-nil
-clj꞉projekat.reservation_database꞉> 
-; Evaluating file: database.clj
-
-| :id |              :name |     :phone | :amount | :password |  :role |
-|-----+--------------------+------------+---------+-----------+--------|
-|   1 |      Nevena Stanic | 0679089700 |   871.0 |    nevena | client |
-|   2 |     Nikola Nikolic |  065409756 |     0.0 |    nikola | client |
-|   3 |       Milica Milic |  060342567 |     0.0 |    milica | client |
-|   4 | Danica Zdravkovoic | 0652010059 |     0.0 |      dana | client |
-|   5 |       Nikola Nikic | 0874569833 |     0.0 |     nidza | client |
-nil
-clj꞉projekat.database꞉> 
-(1)
-clj꞉projekat.core꞉> 
-
-| :id | :client_id | :massage_id |
-|-----+------------+-------------|
-|   2 |          1 |           1 |
-|   3 |          1 |           1 |
-|   4 |          1 |           4 |
-|   5 |          1 |           1 |
-|   6 |          1 |           4 |
-|   7 |          1 |           1 |
-|   8 |          1 |           1 |
-|   9 |          1 |           1 |
-|  10 |          4 |           3 |
-|  11 |          1 |           1 |
-|  12 |          1 |           5 |
-|  13 |          1 |           1 |
-|  14 |          1 |           3 |
-|  15 |          1 |           5 |
-|  16 |          1 |           3 |
-|  17 |          1 |           1 |
-|  18 |          1 |           2 |
-|  19 |          1 |           1 |
-|  20 |          1 |           1 |
-|  21 |          1 |           7 |
-|  22 |          1 |           3 |
-|  23 |          1 |           7 |
-|  24 |          1 |           7 |
-nil
-clj꞉projekat.reservation_database꞉> 
-
-| :id |              :name |     :phone | :amount | :password |  :role |
-|-----+--------------------+------------+---------+-----------+--------|
-|   1 |      Nevena Stanic | 0679089700 |   941.0 |    nevena | client |
-|   2 |     Nikola Nikolic |  065409756 |     0.0 |    nikola | client |
-|   3 |       Milica Milic |  060342567 |     0.0 |    milica | client |
-|   4 | Danica Zdravkovoic | 0652010059 |     0.0 |      dana | client |
-|   5 |       Nikola Nikic | 0874569833 |     0.0 |     nidza | client |
-nil
-clj꞉projekat.database꞉> 
-(1)
-clj꞉projekat.core꞉> 
 
 | :id | :client_id | :massage_id |
 |-----+------------+-------------|
@@ -981,12 +49,146 @@ clj꞉projekat.core꞉> 
 |  23 |          1 |           7 |
 |  24 |          1 |           7 |
 |  25 |          1 |           7 |
+|  26 |          1 |           4 |
+|  27 |          1 |           1 |
+|  28 |          1 |           4 |
 nil
 clj꞉projekat.reservation_database꞉> 
+; Evaluating file: pages.clj
+#'projekat.pages/client-login
+clj꞉projekat.pages꞉> 
+; Evaluating file: massage_data_base.clj
+
+| :id |      :name |                  :description | :price |
+|-----+------------+-------------------------------+--------|
+|   1 |    Swedish |                  Gentle touch |   40.0 |
+|   2 |       Thai |                   Flexibility |   35.0 |
+|   3 |    Shiatsu |   Relaxation and relieve pain |   37.0 |
+|   4 |      Sport |        Release muscle tension |   45.0 |
+|   5 |      Relax |              Relaxing massage |   44.0 |
+|   7 | Whole body | Preparing body for next week. |   70.0 |
+nil
+clj꞉projekat.massage_data_base꞉> 
+; Evaluating file: database.clj
 
 | :id |              :name |     :phone | :amount | :password |  :role |
 |-----+--------------------+------------+---------+-----------+--------|
-|   1 |      Nevena Stanic | 0679089700 |  1011.0 |    nevena | client |
+|   1 |    Nevena Stanisic | 0679089700 |  1166.0 |    nevena | client |
+|   2 |     Nikola Nikolic |  065409756 |     0.0 |    nikola | client |
+|   3 |       Milica Milic |  060342567 |     0.0 |    milica | client |
+|   4 | Danica Zdravkovoic | 0652010059 |     0.0 |      dana | client |
+|   5 |       Nikola Nikic | 0874569833 |     0.0 |     nidza | client |
+nil
+clj꞉projekat.database꞉> 
+; Evaluating file: admin.clj
+#'projekat.admin/check-login
+clj꞉projekat.admin꞉> 
+; Evaluating file: core.clj
+#'projekat.core/server
+clj꞉projekat.core꞉> 
+; nREPL Connection was closed
+; Jacking in...
+; Starting Jack-in Terminal: cmd.exe /d /c lein update-in :dependencies conj [nrepl,"1.0.0"] -- update-in :plugins conj [cider/cider-nrepl,"0.28.5"] -- update-in [:repl-options,:nrepl-middleware] conj '["cider.nrepl/cider-middleware"]' -- with-profile +dev repl :headless
+; Hooking up nREPL sessions...
+; Connected session: clj
+; TIPS:
+;   - You can edit the contents here. Use it as a REPL if you like.
+;   - `alt+enter` evaluates the current top level form.
+;   - `ctrl+enter` evaluates the current form.
+;   - `alt+up` and `alt+down` traverse up and down the REPL command history
+;      when the cursor is after the last contents at the prompt
+;   - Clojure lines in stack traces are peekable and clickable.
+clj꞉projekat.server-config꞉> 
+; Jack-in done.
+clj꞉projekat.server-config꞉> 
+nil
+; WARNING: update-vals already refers to: #'clojure.core/update-vals in namespace: clojure.tools.analyzer.utils, being replaced by: #'clojure.tools.analyzer.utils/update-vals
+; 
+; WARNING: update-keys already refers to: #'clojure.core/update-keys in namespace: clojure.tools.analyzer.utils, being replaced by: #'clojure.tools.analyzer.utils/update-keys
+; 
+; WARNING: update-vals already refers to: #'clojure.core/update-vals in namespace: clojure.tools.analyzer, being replaced by: #'clojure.tools.analyzer.utils/update-vals
+; 
+; WARNING: update-keys already refers to: #'clojure.core/update-keys in namespace: clojure.tools.analyzer, being replaced by: #'clojure.tools.analyzer.utils/update-keys
+; 
+; WARNING: update-vals already refers to: #'clojure.core/update-vals in namespace: clojure.tools.analyzer.passes, being replaced by: #'clojure.tools.analyzer.utils/update-vals
+; 
+; WARNING: update-vals already refers to: #'clojure.core/update-vals in namespace: clojure.tools.analyzer.passes.uniquify, being replaced by: #'clojure.tools.analyzer.utils/update-vals
+; 
+; WARNING: abs already refers to: #'clojure.core/abs in namespace: taoensso.encore, being replaced by: #'taoensso.encore/abs
+clj꞉projekat.pages꞉> 
+nil
+clj꞉projekat.pages꞉> 
+23-01-06 19:26:15 DESKTOP-289S0RC INFO [oz.server:148] - Web server is running at `http://localhost:10666/`
+#function[taoensso.sente/-start-chsk-router!/stop!--24918]
+clj꞉projekat.pages꞉> 
+23-01-06 19:26:23 DESKTOP-289S0RC INFO [oz.core:1192] - new connection established:  {:?reply-fn nil, :ch-recv #object[clojure.core.async.impl.channels.ManyToManyChannel 0x7cbbb341 "clojure.core.async.impl.channels.ManyToManyChannel@7cbbb341"], :client-id "adb139a0-222d-4dcc-affc-c358f35a49e7", :connected-uids #atom[{:ws #{#uuid "1c65c6b5-f2b7-444e-bfa8-da971f70f1be"}, :ajax #{}, :any #{#uuid "1c65c6b5-f2b7-444e-bfa8-da971f70f1be"}} 0x58bedd0f], :uid #uuid "1c65c6b5-f2b7-444e-bfa8-da971f70f1be", :event [:oz.app/connection-established], :id :oz.app/connection-established, :ring-req {:aleph/request-arrived 697719587785900, :aleph/keep-alive? true, :cookies {"ring-session" {:value "13406eb3-9889-495b-b561-61ff99dd6fdc"}}, :remote-addr "0:0:0:0:0:0:0:1", :params {:client-id "adb139a0-222d-4dcc-affc-c358f35a49e7"}, :flash nil, :route-params {}, :headers {"origin" "http://localhost:10666", "host" "localhost:10666", "upgrade" "websocket", "user-agent" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/108.0.0.0 Safari/537.36", "cookie" "ring-session=13406eb3-9889-495b-b561-61ff99dd6fdc", "connection" "Upgrade", "pragma" "no-cache", "sec-websocket-key" "XZJUX+sDdD6QTYJlEX84sQ==", "accept-language" "en-RS,en;q=0.9,sr-RS;q=0.8,sr;q=0.7,en-US;q=0.6", "sec-websocket-version" "13", "accept-encoding" "gzip, deflate, br", "sec-websocket-extensions" "permessage-deflate; client_max_window_bits", "cache-control" "no-cache"}, :server-port 10666, :form-params {}, :compojure/route [:get "/chsk"], :session/key "13406eb3-9889-495b-b561-61ff99dd6fdc", :query-params {"client-id" "adb139a0-222d-4dcc-affc-c358f35a49e7"}, :uri "/chsk", :server-name "0:0:0:0:0:0:0:1", :anti-forgery-token "+RjQtmQlAqs6JJ7HzBVYWwnp+qGT68HgCKQDUhalwiQv7sSphCcGR8bq5mSCGNsKMgQ0xgXvOWYrHS8h", :query-string "client-id=adb139a0-222d-4dcc-affc-c358f35a49e7", :body nil, :multipart-params {}, :scheme :http, :request-method :get, :session {:uid "20c11717-4ec8-453d-8ee4-53173854a45a", :ring.middleware.anti-forgery/anti-forgery-token "+RjQtmQlAqs6JJ7HzBVYWwnp+qGT68HgCKQDUhalwiQv7sSphCcGR8bq5mSCGNsKMgQ0xgXvOWYrHS8h"}}, :?data nil, :send-fn #function[taoensso.sente/make-channel-socket-server!/send-fn--23105]}
+; Syntax error compiling at (c:\Users\nodas\Desktop\alati2022\projekat\src\projekat\pages.clj:17:19).
+; Unable to resolve symbol: play-data in this context
+clj꞉projekat.pages꞉> 
+#'projekat.pages/play-data
+clj꞉projekat.pages꞉> 
+#'projekat.pages/line-plot
+clj꞉projekat.pages꞉> 
+nil
+clj꞉projekat.pages꞉> 
+; Evaluating file: server_config.clj
+nil
+clj꞉projekat.server-config꞉> 
+; Evaluating file: reservation_database.clj
+
+| :id | :client_id | :massage_id |
+|-----+------------+-------------|
+|   2 |          1 |           1 |
+|   3 |          1 |           1 |
+|   4 |          1 |           4 |
+|   5 |          1 |           1 |
+|   6 |          1 |           4 |
+|   7 |          1 |           1 |
+|   8 |          1 |           1 |
+|   9 |          1 |           1 |
+|  10 |          4 |           3 |
+|  11 |          1 |           1 |
+|  12 |          1 |           5 |
+|  13 |          1 |           1 |
+|  14 |          1 |           3 |
+|  15 |          1 |           5 |
+|  16 |          1 |           3 |
+|  17 |          1 |           1 |
+|  18 |          1 |           2 |
+|  19 |          1 |           1 |
+|  20 |          1 |           1 |
+|  21 |          1 |           7 |
+|  22 |          1 |           3 |
+|  23 |          1 |           7 |
+|  24 |          1 |           7 |
+|  25 |          1 |           7 |
+|  26 |          1 |           4 |
+|  27 |          1 |           1 |
+|  28 |          1 |           4 |
+nil
+clj꞉projekat.reservation_database꞉> 
+; Evaluating file: pages.clj
+23-01-06 19:33:00 DESKTOP-289S0RC INFO [oz.server:148] - Web server is running at `http://localhost:10666/`
+23-01-06 19:33:02 DESKTOP-289S0RC INFO [oz.core:1192] - new connection established:  {:?reply-fn nil, :ch-recv #object[clojure.core.async.impl.channels.ManyToManyChannel 0x7cbbb341 "clojure.core.async.impl.channels.ManyToManyChannel@7cbbb341"], :client-id "d466af31-8eea-41ac-9d59-9ea7cc1e85d2", :connected-uids #atom[{:ws #{#uuid "dc0afda4-35a0-41c4-bf42-7bba227d5348"}, :ajax #{}, :any #{#uuid "dc0afda4-35a0-41c4-bf42-7bba227d5348"}} 0x58bedd0f], :uid #uuid "dc0afda4-35a0-41c4-bf42-7bba227d5348", :event [:oz.app/connection-established], :id :oz.app/connection-established, :ring-req {:aleph/request-arrived 698122667241400, :aleph/keep-alive? true, :cookies {"ring-session" {:value "13406eb3-9889-495b-b561-61ff99dd6fdc"}}, :remote-addr "0:0:0:0:0:0:0:1", :params {:client-id "d466af31-8eea-41ac-9d59-9ea7cc1e85d2"}, :flash nil, :route-params {}, :headers {"origin" "http://localhost:10666", "host" "localhost:10666", "upgrade" "websocket", "user-agent" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/108.0.0.0 Safari/537.36", "cookie" "ring-session=13406eb3-9889-495b-b561-61ff99dd6fdc", "connection" "Upgrade", "pragma" "no-cache", "sec-websocket-key" "aYNIqUcNMk2/C4pbJet8JQ==", "accept-language" "en-RS,en;q=0.9,sr-RS;q=0.8,sr;q=0.7,en-US;q=0.6", "sec-websocket-version" "13", "accept-encoding" "gzip, deflate, br", "sec-websocket-extensions" "permessage-deflate; client_max_window_bits", "cache-control" "no-cache"}, :server-port 10666, :form-params {}, :compojure/route [:get "/chsk"], :session/key "13406eb3-9889-495b-b561-61ff99dd6fdc", :query-params {"client-id" "d466af31-8eea-41ac-9d59-9ea7cc1e85d2"}, :uri "/chsk", :server-name "0:0:0:0:0:0:0:1", :anti-forgery-token "+RjQtmQlAqs6JJ7HzBVYWwnp+qGT68HgCKQDUhalwiQv7sSphCcGR8bq5mSCGNsKMgQ0xgXvOWYrHS8h", :query-string "client-id=d466af31-8eea-41ac-9d59-9ea7cc1e85d2", :body nil, :multipart-params {}, :scheme :http, :request-method :get, :session {:uid "20c11717-4ec8-453d-8ee4-53173854a45a", :ring.middleware.anti-forgery/anti-forgery-token "+RjQtmQlAqs6JJ7HzBVYWwnp+qGT68HgCKQDUhalwiQv7sSphCcGR8bq5mSCGNsKMgQ0xgXvOWYrHS8h"}}, :?data nil, :send-fn #function[taoensso.sente/make-channel-socket-server!/send-fn--23105]}
+; Evaluating file: massage_data_base.clj
+#'projekat.pages/client-login
+clj꞉projekat.pages꞉> 
+
+| :id |      :name |                  :description | :price |
+|-----+------------+-------------------------------+--------|
+|   1 |    Swedish |                  Gentle touch |   40.0 |
+|   2 |       Thai |                   Flexibility |   35.0 |
+|   3 |    Shiatsu |   Relaxation and relieve pain |   37.0 |
+|   4 |      Sport |        Release muscle tension |   45.0 |
+|   5 |      Relax |              Relaxing massage |   44.0 |
+|   7 | Whole body | Preparing body for next week. |   70.0 |
+nil
+clj꞉projekat.massage_data_base꞉> 
+; Evaluating file: database.clj
+
+| :id |              :name |     :phone | :amount | :password |  :role |
+|-----+--------------------+------------+---------+-----------+--------|
+|   1 |    Nevena Stanisic | 0679089700 |  1166.0 |    nevena | client |
 |   2 |     Nikola Nikolic |  065409756 |     0.0 |    nikola | client |
 |   3 |       Milica Milic |  060342567 |     0.0 |    milica | client |
 |   4 | Danica Zdravkovoic | 0652010059 |     0.0 |      dana | client |
@@ -994,14 +196,762 @@ clj꞉projekat.reservation_database꞉> 
 nil
 clj꞉projekat.database꞉> 
 ; Evaluating file: core.clj
+; Execution error (BindException) at sun.nio.ch.Net/bind0 (Net.java:-2).
+; Address already in use: bind
+; Evaluation of file core.clj failed: class clojure.lang.Compiler$CompilerException
+clj꞉projekat.core꞉> 
+; Evaluating file: admin.clj
+#'projekat.admin/check-login
+clj꞉projekat.admin꞉> 
+; Evaluating file: core.clj
+#'projekat.core/server
+clj꞉projekat.core꞉> 
+; Evaluating file: pages.clj
+23-01-06 19:37:17 DESKTOP-289S0RC INFO [oz.server:148] - Web server is running at `http://localhost:10666/`
+23-01-06 19:37:19 DESKTOP-289S0RC INFO [oz.core:1192] - new connection established:  {:?reply-fn nil, :ch-recv #object[clojure.core.async.impl.channels.ManyToManyChannel 0x7cbbb341 "clojure.core.async.impl.channels.ManyToManyChannel@7cbbb341"], :client-id "3396e3a8-bca9-43e4-b7dc-a29a8fc6e139", :connected-uids #atom[{:ws #{#uuid "dc0afda4-35a0-41c4-bf42-7bba227d5348" #uuid "30685031-3940-4b7e-a2f0-f2de6ed0f3a4"}, :ajax #{}, :any #{#uuid "dc0afda4-35a0-41c4-bf42-7bba227d5348" #uuid "30685031-3940-4b7e-a2f0-f2de6ed0f3a4"}} 0x58bedd0f], :uid #uuid "30685031-3940-4b7e-a2f0-f2de6ed0f3a4", :event [:oz.app/connection-established], :id :oz.app/connection-established, :ring-req {:aleph/request-arrived 698379740844600, :aleph/keep-alive? true, :cookies {"ring-session" {:value "13406eb3-9889-495b-b561-61ff99dd6fdc"}}, :remote-addr "0:0:0:0:0:0:0:1", :params {:client-id "3396e3a8-bca9-43e4-b7dc-a29a8fc6e139"}, :flash nil, :route-params {}, :headers {"origin" "http://localhost:10666", "host" "localhost:10666", "upgrade" "websocket", "user-agent" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/108.0.0.0 Safari/537.36", "cookie" "ring-session=13406eb3-9889-495b-b561-61ff99dd6fdc", "connection" "Upgrade", "pragma" "no-cache", "sec-websocket-key" "I4nUmof+uICkeLycnIk7JA==", "accept-language" "en-RS,en;q=0.9,sr-RS;q=0.8,sr;q=0.7,en-US;q=0.6", "sec-websocket-version" "13", "accept-encoding" "gzip, deflate, br", "sec-websocket-extensions" "permessage-deflate; client_max_window_bits", "cache-control" "no-cache"}, :server-port 10666, :form-params {}, :compojure/route [:get "/chsk"], :session/key "13406eb3-9889-495b-b561-61ff99dd6fdc", :query-params {"client-id" "3396e3a8-bca9-43e4-b7dc-a29a8fc6e139"}, :uri "/chsk", :server-name "0:0:0:0:0:0:0:1", :anti-forgery-token "+RjQtmQlAqs6JJ7HzBVYWwnp+qGT68HgCKQDUhalwiQv7sSphCcGR8bq5mSCGNsKMgQ0xgXvOWYrHS8h", :query-string "client-id=3396e3a8-bca9-43e4-b7dc-a29a8fc6e139", :body nil, :multipart-params {}, :scheme :http, :request-method :get, :session {:uid "20c11717-4ec8-453d-8ee4-53173854a45a", :ring.middleware.anti-forgery/anti-forgery-token "+RjQtmQlAqs6JJ7HzBVYWwnp+qGT68HgCKQDUhalwiQv7sSphCcGR8bq5mSCGNsKMgQ0xgXvOWYrHS8h"}}, :?data nil, :send-fn #function[taoensso.sente/make-channel-socket-server!/send-fn--23105]}
+23-01-06 19:37:21 DESKTOP-289S0RC INFO [oz.core:1192] - new connection established:  {:?reply-fn nil, :ch-recv #object[clojure.core.async.impl.channels.ManyToManyChannel 0x7cbbb341 "clojure.core.async.impl.channels.ManyToManyChannel@7cbbb341"], :client-id "d466af31-8eea-41ac-9d59-9ea7cc1e85d2", :connected-uids #atom[{:ws #{#uuid "dc0afda4-35a0-41c4-bf42-7bba227d5348" #uuid "30685031-3940-4b7e-a2f0-f2de6ed0f3a4" #uuid "931a0816-3192-427c-a637-e3489419337b"}, :ajax #{}, :any #{#uuid "dc0afda4-35a0-41c4-bf42-7bba227d5348" #uuid "30685031-3940-4b7e-a2f0-f2de6ed0f3a4" #uuid "931a0816-3192-427c-a637-e3489419337b"}} 0x58bedd0f], :uid #uuid "931a0816-3192-427c-a637-e3489419337b", :event [:oz.app/connection-established], :id :oz.app/connection-established, :ring-req {:aleph/request-arrived 698381046324500, :aleph/keep-alive? true, :cookies {"ring-session" {:value "13406eb3-9889-495b-b561-61ff99dd6fdc"}}, :remote-addr "0:0:0:0:0:0:0:1", :params {:client-id "d466af31-8eea-41ac-9d59-9ea7cc1e85d2"}, :flash nil, :route-params {}, :headers {"origin" "http://localhost:10666", "host" "localhost:10666", "upgrade" "websocket", "user-agent" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/108.0.0.0 Safari/537.36", "cookie" "ring-session=13406eb3-9889-495b-b561-61ff99dd6fdc", "connection" "Upgrade", "pragma" "no-cache", "sec-websocket-key" "XQuWGWAc9eRNcKSDHOJgGg==", "accept-language" "en-RS,en;q=0.9,sr-RS;q=0.8,sr;q=0.7,en-US;q=0.6", "sec-websocket-version" "13", "accept-encoding" "gzip, deflate, br", "sec-websocket-extensions" "permessage-deflate; client_max_window_bits", "cache-control" "no-cache"}, :server-port 10666, :form-params {}, :compojure/route [:get "/chsk"], :session/key "13406eb3-9889-495b-b561-61ff99dd6fdc", :query-params {"client-id" "d466af31-8eea-41ac-9d59-9ea7cc1e85d2"}, :uri "/chsk", :server-name "0:0:0:0:0:0:0:1", :anti-forgery-token "+RjQtmQlAqs6JJ7HzBVYWwnp+qGT68HgCKQDUhalwiQv7sSphCcGR8bq5mSCGNsKMgQ0xgXvOWYrHS8h", :query-string "client-id=d466af31-8eea-41ac-9d59-9ea7cc1e85d2", :body nil, :multipart-params {}, :scheme :http, :request-method :get, :session {:uid "20c11717-4ec8-453d-8ee4-53173854a45a", :ring.middleware.anti-forgery/anti-forgery-token "+RjQtmQlAqs6JJ7HzBVYWwnp+qGT68HgCKQDUhalwiQv7sSphCcGR8bq5mSCGNsKMgQ0xgXvOWYrHS8h"}}, :?data nil, :send-fn #function[taoensso.sente/make-channel-socket-server!/send-fn--23105]}
+#'projekat.pages/client-login
+clj꞉projekat.pages꞉> 
+; Evaluating file: pages.clj
+#'projekat.pages/client-login
+clj꞉projekat.pages꞉> 
+; Evaluating file: core.clj
+#'projekat.core/server
+clj꞉projekat.core꞉> 
+; Evaluating file: pages.clj
+#'projekat.pages/client-login
+clj꞉projekat.pages꞉> 
+; Evaluating file: core.clj
+#'projekat.core/server
+clj꞉projekat.core꞉> 
+; Evaluating file: pages.clj
+#'projekat.pages/client-login
+clj꞉projekat.pages꞉> 
+; Syntax error macroexpanding clojure.core/defn at (c:\Users\nodas\Desktop\alati2022\projekat\src\projekat\pages.clj:159:1).
+; p/admin-graph - failed: simple-symbol? at: [:fn-name] spec: :clojure.core.specs.alpha/defn-args
+clj꞉projekat.pages꞉> 
+; Syntax error macroexpanding clojure.core/defn at (c:\Users\nodas\Desktop\alati2022\projekat\src\projekat\pages.clj:159:1).
+; p/admin-graph - failed: simple-symbol? at: [:fn-name] spec: :clojure.core.specs.alpha/defn-args
+clj꞉projekat.pages꞉> 
+({:time 0, :item "monkey", :quantity 2.0}
+ {:time 1, :item "monkey", :quantity 9.192962712629477}
+ {:time 2, :item "monkey", :quantity 8.30037210271847}
+ {:time 3, :item "monkey", :quantity 11.097596309015797}
+ {:time 4, :item "monkey", :quantity 13.71068609258575}
+ {:time 5, :item "monkey", :quantity 18.194870523363548}
+ {:time 6, :item "monkey", :quantity 20.580936309501134}
+ {:time 7, :item "monkey", :quantity 20.888381054913122}
+ {:time 8, :item "monkey", :quantity 22.13058987556147}
+ {:time 9, :item "monkey", :quantity 24.317280693371046}
+ {:time 10, :item "monkey", :quantity 29.45580618665162}
+ {:time 11, :item "monkey", :quantity 33.55190884598056}
+ {:time 12, :item "monkey", :quantity 33.610188015018984}
+ {:time 13, :item "monkey", :quantity 32.63440373999379}
+ {:time 14, :item "monkey", :quantity 35.62768266080517}
+ {:time 15, :item "monkey", :quantity 39.59266228400805}
+ {:time 16, :item "monkey", :quantity 39.53159496449108}
+ {:time 17, :item "monkey", :quantity 41.44642466614132}
+ {:time 18, :item "monkey", :quantity 45.338844810888254}
+ {:time 19, :item "monkey", :quantity 48.21034266761982}
+ {:time 0, :item "slipper", :quantity 6.0}
+ {:time 1, :item "slipper", :quantity 5.743276393803367}
+ {:time 2, :item "slipper", :quantity 14.258523872989459}
+ {:time 3, :item "slipper", :quantity 17.422875300666448}
+ {:time 4, :item "slipper", :quantity 18.378925219250924}
+ {:time 5, :item "slipper", :quantity 21.189151347155786}
+ {:time 6, :item "slipper", :quantity 19.888381054913122}
+ {:time 7, :item "slipper", :quantity 22.498670948012276}
+ {:time 8, :item "slipper", :quantity 29.03516289842348}
+ {:time 9, :item "slipper", :quantity 29.508850275948053}
+ {:time 10, :item "slipper", :quantity 35.9280507756976}
+ {:time 11, :item "slipper", :quantity 35.299260572778856}
+ {:time 12, :item "slipper", :quantity 34.62768266080517}
+ {:time 13, :item "slipper", :quantity 41.9175705807045}
+ {:time 14, :item "slipper", :quantity 42.17246133441246}
+ {:time 15, :item "slipper", :quantity 44.39533859324643}
+ {:time 16, :item "slipper", :quantity 44.58875032686557}
+ {:time 17, :item "slipper", :quantity 46.75489563854074}
+ {:time 18, :item "slipper", :quantity 49.89569020671064}
+ {:time 19, :item "slipper", :quantity 55.012816499808885}
+ {:time 0, :item "broom", :quantity 2.0}
+ {:time 1, :item "broom", :quantity 7.623898318388478}
+ {:time 2, :item "broom", :quantity 7.309573444801933}
+ {:time 3, :item "broom", :quantity 8.727161387290321}
+ {:time 4, :item "broom", :quantity 14.98560543306118}
+ {:time 5, :item "broom", :quantity 15.132639022018838}
+ {:time 6, :item "broom", :quantity 15.194870523363548}
+ {:time 7, :item "broom", :quantity 17.189151347155786}
+ {:time 8, :item "broom", :quantity 21.127049995800743}
+ {:time 9, :item "broom", :quantity 22.016965485301043}
+ ...)
+clj꞉projekat.pages꞉> 
+#'projekat.massage_data_base/get-massage-names
+clj꞉projekat.massage_data_base꞉> 
+; Execution error (ArityException) at projekat.massage-data-base/eval43912 (form-init11297555367406710466.clj:33).
+; Wrong number of args (0) passed to: projekat.massage-data-base/get-massage-by-id
+clj꞉projekat.massage_data_base꞉> 
+; Execution error (SQLException) at org.sqlite.PrepStmt/executeUpdate (PrepStmt.java:82).
+; query returns results
+clj꞉projekat.massage_data_base꞉> 
+; Execution error (SQLException) at org.sqlite.PrepStmt/executeUpdate (PrepStmt.java:82).
+; query returns results
+clj꞉projekat.massage_data_base꞉> 
+; Execution error (SQLException) at org.sqlite.PrepStmt/executeUpdate (PrepStmt.java:82).
+; query returns results
+clj꞉projekat.massage_data_base꞉> 
+#'projekat.massage_data_base/massages
+clj꞉projekat.massage_data_base꞉> 
+({:id 1, :name "Swedish", :description "Gentle touch", :price 40.0}
+ {:id 2, :name "Thai", :description "Flexibility", :price 35.0}
+ {:id 3, :name "Shiatsu", :description "Relaxation and relieve pain", :price 37.0}
+ {:id 4, :name "Sport", :description "Release muscle tension", :price 45.0}
+ {:id 5, :name "Relax", :description "Relaxing massage", :price 44.0}
+ {:id 7, :name "Whole body", :description "Preparing body for next week.", :price 70.0})
+clj꞉projekat.massage_data_base꞉> 
+#'projekat.massage_data_base/get-massage-names
+clj꞉projekat.massage_data_base꞉> 
+; Execution error (SQLException) at org.sqlite.PrepStmt/executeUpdate (PrepStmt.java:82).
+; query returns results
+clj꞉projekat.massage_data_base꞉> 
+#'projekat.massage_data_base/get-massage-names
+clj꞉projekat.massage_data_base꞉> 
+; Execution error (SQLException) at org.sqlite.PrepStmt/executeUpdate (PrepStmt.java:82).
+; query returns results
+clj꞉projekat.massage_data_base꞉> 
+#'projekat.massage_data_base/get-massage-names
+clj꞉projekat.massage_data_base꞉> 
+({:name "Swedish"} {:name "Thai"} {:name "Shiatsu"} {:name "Sport"} {:name "Relax"} {:name "Whole body"})
+clj꞉projekat.massage_data_base꞉> 
+#'projekat.massage_data_base/get-massage-names
+clj꞉projekat.massage_data_base꞉> 
+nil
+clj꞉projekat.massage_data_base꞉> 
+#'projekat.massage_data_base/get-massage-names
+clj꞉projekat.massage_data_base꞉> 
+("Swedish" "Thai" "Shiatsu" "Sport" "Relax" "Whole body")
+clj꞉projekat.massage_data_base꞉> 
+#'projekat.pages/play-data
+clj꞉projekat.pages꞉> 
+#'projekat.pages/line-plot
+clj꞉projekat.pages꞉> 
+nil
+clj꞉projekat.pages꞉> 
+23-01-06 20:34:33 DESKTOP-289S0RC INFO [oz.server:148] - Web server is running at `http://localhost:10666/`
+23-01-06 20:34:35 DESKTOP-289S0RC INFO [oz.core:1192] - new connection established:  {:?reply-fn nil, :ch-recv #object[clojure.core.async.impl.channels.ManyToManyChannel 0x7cbbb341 "clojure.core.async.impl.channels.ManyToManyChannel@7cbbb341"], :client-id "59ac77a5-6ff1-409a-a787-a4dd213077fd", :connected-uids #atom[{:ws #{#uuid "549f94e1-ada3-4d79-9a02-ec9221d2c61d"}, :ajax #{}, :any #{#uuid "549f94e1-ada3-4d79-9a02-ec9221d2c61d"}} 0x58bedd0f], :uid #uuid "549f94e1-ada3-4d79-9a02-ec9221d2c61d", :event [:oz.app/connection-established], :id :oz.app/connection-established, :ring-req {:aleph/request-arrived 701816157302300, :aleph/keep-alive? true, :cookies {"ring-session" {:value "f8a4008b-9c57-4e97-8c14-3d437aac8eee"}}, :remote-addr "0:0:0:0:0:0:0:1", :params {:client-id "59ac77a5-6ff1-409a-a787-a4dd213077fd"}, :flash nil, :route-params {}, :headers {"origin" "http://localhost:10666", "host" "localhost:10666", "upgrade" "websocket", "user-agent" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/108.0.0.0 Safari/537.36", "cookie" "ring-session=f8a4008b-9c57-4e97-8c14-3d437aac8eee", "connection" "Upgrade", "pragma" "no-cache", "sec-websocket-key" "gP3pkTpzcj59liJX7rG+HA==", "accept-language" "en-RS,en;q=0.9,sr-RS;q=0.8,sr;q=0.7,en-US;q=0.6", "sec-websocket-version" "13", "accept-encoding" "gzip, deflate, br", "sec-websocket-extensions" "permessage-deflate; client_max_window_bits", "cache-control" "no-cache"}, :server-port 10666, :form-params {}, :compojure/route [:get "/chsk"], :session/key "f8a4008b-9c57-4e97-8c14-3d437aac8eee", :query-params {"client-id" "59ac77a5-6ff1-409a-a787-a4dd213077fd"}, :uri "/chsk", :server-name "0:0:0:0:0:0:0:1", :anti-forgery-token "fT+A4oKO2z8ZPmowOtAE20kHwIcl3g7Un03v04ak49y+HD74R4rrRYcFYui5nNJLXxkYyB58cLYf5uEv", :query-string "client-id=59ac77a5-6ff1-409a-a787-a4dd213077fd", :body nil, :multipart-params {}, :scheme :http, :request-method :get, :session {:uid "5990a56e-1048-4694-ac14-908a5e1503bf", :ring.middleware.anti-forgery/anti-forgery-token "fT+A4oKO2z8ZPmowOtAE20kHwIcl3g7Un03v04ak49y+HD74R4rrRYcFYui5nNJLXxkYyB58cLYf5uEv"}}, :?data nil, :send-fn #function[taoensso.sente/make-channel-socket-server!/send-fn--23105]}
+#function[taoensso.sente/-start-chsk-router!/stop!--24918]
+clj꞉projekat.pages꞉> 
+#'projekat.pages/play-data
+clj꞉projekat.pages꞉> 
+({:time 0, :item "monkey", :quantity 5.0}
+ {:time 1, :item "monkey", :quantity 9.192962712629477}
+ {:time 2, :item "monkey", :quantity 9.30037210271847}
+ {:time 3, :item "monkey", :quantity 15.097596309015797}
+ {:time 4, :item "monkey", :quantity 12.71068609258575}
+ {:time 5, :item "monkey", :quantity 17.194870523363548}
+ {:time 6, :item "monkey", :quantity 20.580936309501134}
+ {:time 7, :item "monkey", :quantity 21.888381054913122}
+ {:time 8, :item "monkey", :quantity 27.13058987556147}
+ {:time 9, :item "monkey", :quantity 27.317280693371046}
+ {:time 10, :item "monkey", :quantity 28.45580618665162}
+ {:time 11, :item "monkey", :quantity 30.55190884598056}
+ {:time 12, :item "monkey", :quantity 31.610188015018984}
+ {:time 13, :item "monkey", :quantity 33.63440373999379}
+ {:time 14, :item "monkey", :quantity 39.62768266080517}
+ {:time 15, :item "monkey", :quantity 36.59266228400805}
+ {:time 16, :item "monkey", :quantity 42.53159496449108}
+ {:time 17, :item "monkey", :quantity 44.44642466614132}
+ {:time 18, :item "monkey", :quantity 42.338844810888254}
+ {:time 19, :item "monkey", :quantity 49.21034266761982}
+ {:time 0, :item "slipper", :quantity 0.0}
+ {:time 1, :item "slipper", :quantity 8.743276393803367}
+ {:time 2, :item "slipper", :quantity 11.258523872989459}
+ {:time 3, :item "slipper", :quantity 14.42287530066645}
+ {:time 4, :item "slipper", :quantity 16.378925219250924}
+ {:time 5, :item "slipper", :quantity 19.189151347155786}
+ {:time 6, :item "slipper", :quantity 20.888381054913122}
+ {:time 7, :item "slipper", :quantity 28.498670948012276}
+ {:time 8, :item "slipper", :quantity 30.03516289842348}
+ {:time 9, :item "slipper", :quantity 29.508850275948053}
+ {:time 10, :item "slipper", :quantity 30.928050775697603}
+ {:time 11, :item "slipper", :quantity 32.299260572778856}
+ {:time 12, :item "slipper", :quantity 34.62768266080517}
+ {:time 13, :item "slipper", :quantity 40.9175705807045}
+ {:time 14, :item "slipper", :quantity 42.17246133441246}
+ {:time 15, :item "slipper", :quantity 42.39533859324643}
+ {:time 16, :item "slipper", :quantity 49.58875032686557}
+ {:time 17, :item "slipper", :quantity 45.75489563854074}
+ {:time 18, :item "slipper", :quantity 47.89569020671064}
+ {:time 19, :item "slipper", :quantity 55.012816499808885}
+ {:time 0, :item "broom", :quantity 2.0}
+ {:time 1, :item "broom", :quantity 7.623898318388478}
+ {:time 2, :item "broom", :quantity 10.309573444801934}
+ {:time 3, :item "broom", :quantity 11.727161387290321}
+ {:time 4, :item "broom", :quantity 12.98560543306118}
+ {:time 5, :item "broom", :quantity 14.132639022018838}
+ {:time 6, :item "broom", :quantity 17.194870523363548}
+ {:time 7, :item "broom", :quantity 17.189151347155786}
+ {:time 8, :item "broom", :quantity 20.127049995800743}
+ {:time 9, :item "broom", :quantity 23.016965485301043}
+ ...)
+clj꞉projekat.pages꞉> 
+#'projekat.pages/massages
+clj꞉projekat.pages꞉> 
+("Swedish" "Thai" "Shiatsu" "Sport" "Relax" "Whole body")
+clj꞉projekat.pages꞉> 
+({:id 2, :client_id 1, :massage_id 1}
+ {:id 3, :client_id 1, :massage_id 1}
+ {:id 4, :client_id 1, :massage_id 4}
+ {:id 5, :client_id 1, :massage_id 1}
+ {:id 6, :client_id 1, :massage_id 4}
+ {:id 7, :client_id 1, :massage_id 1}
+ {:id 8, :client_id 1, :massage_id 1}
+ {:id 9, :client_id 1, :massage_id 1}
+ {:id 10, :client_id 4, :massage_id 3}
+ {:id 11, :client_id 1, :massage_id 1}
+ {:id 12, :client_id 1, :massage_id 5}
+ {:id 13, :client_id 1, :massage_id 1}
+ {:id 14, :client_id 1, :massage_id 3}
+ {:id 15, :client_id 1, :massage_id 5}
+ {:id 16, :client_id 1, :massage_id 3}
+ {:id 17, :client_id 1, :massage_id 1}
+ {:id 18, :client_id 1, :massage_id 2}
+ {:id 19, :client_id 1, :massage_id 1}
+ {:id 20, :client_id 1, :massage_id 1}
+ {:id 21, :client_id 1, :massage_id 7}
+ {:id 22, :client_id 1, :massage_id 3}
+ {:id 23, :client_id 1, :massage_id 7}
+ {:id 24, :client_id 1, :massage_id 7}
+ {:id 25, :client_id 1, :massage_id 7}
+ {:id 26, :client_id 1, :massage_id 4}
+ {:id 27, :client_id 1, :massage_id 1}
+ {:id 28, :client_id 1, :massage_id 4})
+clj꞉projekat.reservation_database꞉> 
+#'projekat.reservation_database/massage-sum
+clj꞉projekat.reservation_database꞉> 
+()
+clj꞉projekat.reservation_database꞉> 
+({:id 2, :client_id 1, :massage_id 1}
+ {:id 3, :client_id 1, :massage_id 1}
+ {:id 4, :client_id 1, :massage_id 4}
+ {:id 5, :client_id 1, :massage_id 1}
+ {:id 6, :client_id 1, :massage_id 4}
+ {:id 7, :client_id 1, :massage_id 1}
+ {:id 8, :client_id 1, :massage_id 1}
+ {:id 9, :client_id 1, :massage_id 1}
+ {:id 10, :client_id 4, :massage_id 3}
+ {:id 11, :client_id 1, :massage_id 1}
+ {:id 12, :client_id 1, :massage_id 5}
+ {:id 13, :client_id 1, :massage_id 1}
+ {:id 14, :client_id 1, :massage_id 3}
+ {:id 15, :client_id 1, :massage_id 5}
+ {:id 16, :client_id 1, :massage_id 3}
+ {:id 17, :client_id 1, :massage_id 1}
+ {:id 18, :client_id 1, :massage_id 2}
+ {:id 19, :client_id 1, :massage_id 1}
+ {:id 20, :client_id 1, :massage_id 1}
+ {:id 21, :client_id 1, :massage_id 7}
+ {:id 22, :client_id 1, :massage_id 3}
+ {:id 23, :client_id 1, :massage_id 7}
+ {:id 24, :client_id 1, :massage_id 7}
+ {:id 25, :client_id 1, :massage_id 7}
+ {:id 26, :client_id 1, :massage_id 4}
+ {:id 27, :client_id 1, :massage_id 1}
+ {:id 28, :client_id 1, :massage_id 4})
+clj꞉projekat.reservation_database꞉> 
+nil
+clj꞉projekat.reservation_database꞉> 
+nil
+clj꞉projekat.reservation_database꞉> 
+nil
+clj꞉projekat.reservation_database꞉> 
+({:id 2, :client_id 1, :massage_id 1}
+ {:id 3, :client_id 1, :massage_id 1}
+ {:id 4, :client_id 1, :massage_id 4}
+ {:id 5, :client_id 1, :massage_id 1}
+ {:id 6, :client_id 1, :massage_id 4}
+ {:id 7, :client_id 1, :massage_id 1}
+ {:id 8, :client_id 1, :massage_id 1}
+ {:id 9, :client_id 1, :massage_id 1}
+ {:id 10, :client_id 4, :massage_id 3}
+ {:id 11, :client_id 1, :massage_id 1}
+ {:id 12, :client_id 1, :massage_id 5}
+ {:id 13, :client_id 1, :massage_id 1}
+ {:id 14, :client_id 1, :massage_id 3}
+ {:id 15, :client_id 1, :massage_id 5}
+ {:id 16, :client_id 1, :massage_id 3}
+ {:id 17, :client_id 1, :massage_id 1}
+ {:id 18, :client_id 1, :massage_id 2}
+ {:id 19, :client_id 1, :massage_id 1}
+ {:id 20, :client_id 1, :massage_id 1}
+ {:id 21, :client_id 1, :massage_id 7}
+ {:id 22, :client_id 1, :massage_id 3}
+ {:id 23, :client_id 1, :massage_id 7}
+ {:id 24, :client_id 1, :massage_id 7}
+ {:id 25, :client_id 1, :massage_id 7}
+ {:id 26, :client_id 1, :massage_id 4}
+ {:id 27, :client_id 1, :massage_id 1}
+ {:id 28, :client_id 1, :massage_id 4})
+clj꞉projekat.reservation_database꞉> 
+nil
+clj꞉projekat.reservation_database꞉> 
+; Error printing return value (IllegalArgumentException) at clojure.lang.RT/seqFrom (RT.java:557).
+; Don't know how to create ISeq from: projekat.reservation_database$reservations
+clj꞉projekat.reservation_database꞉> 
+(1 1 4 1 4 1 1 1 3 1 5 1 3 5 3 1 2 1 1 7 3 7 7 7 4 1 4)
+clj꞉projekat.reservation_database꞉> 
+false
+clj꞉projekat.reservation_database꞉> 
+#'projekat.reservation_database/massage-sum
+clj꞉projekat.reservation_database꞉> 
+; Execution error (ArityException) at projekat.reservation-database/eval44047 (form-init11297555367406710466.clj:70).
+; Wrong number of args (0) passed to: projekat.reservation-database/massage-sum
+clj꞉projekat.reservation_database꞉> 
+()
+clj꞉projekat.reservation_database꞉> 
+()
+clj꞉projekat.reservation_database꞉> 
+#'projekat.reservation_database/massage-sum
+clj꞉projekat.reservation_database꞉> 
+({:id 2, :client_id 1, :massage_id 1}
+ {:id 3, :client_id 1, :massage_id 1}
+ {:id 5, :client_id 1, :massage_id 1}
+ {:id 7, :client_id 1, :massage_id 1}
+ {:id 8, :client_id 1, :massage_id 1}
+ {:id 9, :client_id 1, :massage_id 1}
+ {:id 11, :client_id 1, :massage_id 1}
+ {:id 13, :client_id 1, :massage_id 1}
+ {:id 17, :client_id 1, :massage_id 1}
+ {:id 19, :client_id 1, :massage_id 1}
+ {:id 20, :client_id 1, :massage_id 1}
+ {:id 27, :client_id 1, :massage_id 1})
+clj꞉projekat.reservation_database꞉> 
+({:id 18, :client_id 1, :massage_id 2})
+clj꞉projekat.reservation_database꞉> 
+({:id 10, :client_id 4, :massage_id 3}
+ {:id 14, :client_id 1, :massage_id 3}
+ {:id 16, :client_id 1, :massage_id 3}
+ {:id 22, :client_id 1, :massage_id 3})
+clj꞉projekat.reservation_database꞉> 
+()
+clj꞉projekat.reservation_database꞉> 
+({:id 2, :client_id 1, :massage_id 1}
+ {:id 3, :client_id 1, :massage_id 1}
+ {:id 5, :client_id 1, :massage_id 1}
+ {:id 7, :client_id 1, :massage_id 1}
+ {:id 8, :client_id 1, :massage_id 1}
+ {:id 9, :client_id 1, :massage_id 1}
+ {:id 11, :client_id 1, :massage_id 1}
+ {:id 13, :client_id 1, :massage_id 1}
+ {:id 17, :client_id 1, :massage_id 1}
+ {:id 19, :client_id 1, :massage_id 1}
+ {:id 20, :client_id 1, :massage_id 1}
+ {:id 27, :client_id 1, :massage_id 1})
+clj꞉projekat.reservation_database꞉> 
+#'projekat.reservation_database/massage-with-this-id
+clj꞉projekat.reservation_database꞉> 
+#'projekat.reservation_database/number-of-reservations
+clj꞉projekat.reservation_database꞉> 
+12
+clj꞉projekat.reservation_database꞉> 
+#'projekat.reservation_database/number-of-reservation
+clj꞉projekat.reservation_database꞉> 
+12
+clj꞉projekat.reservation_database꞉> 
+#'projekat.reservation_database/number-of-reservations
+clj꞉projekat.reservation_database꞉> 
+; Evaluating file: reservation_database.clj
+
+| :id | :client_id | :massage_id |
+|-----+------------+-------------|
+|   2 |          1 |           1 |
+|   3 |          1 |           1 |
+|   4 |          1 |           4 |
+|   5 |          1 |           1 |
+|   6 |          1 |           4 |
+|   7 |          1 |           1 |
+|   8 |          1 |           1 |
+|   9 |          1 |           1 |
+|  10 |          4 |           3 |
+|  11 |          1 |           1 |
+|  12 |          1 |           5 |
+|  13 |          1 |           1 |
+|  14 |          1 |           3 |
+|  15 |          1 |           5 |
+|  16 |          1 |           3 |
+|  17 |          1 |           1 |
+|  18 |          1 |           2 |
+|  19 |          1 |           1 |
+|  20 |          1 |           1 |
+|  21 |          1 |           7 |
+|  22 |          1 |           3 |
+|  23 |          1 |           7 |
+|  24 |          1 |           7 |
+|  25 |          1 |           7 |
+|  26 |          1 |           4 |
+|  27 |          1 |           1 |
+|  28 |          1 |           4 |
+#'projekat.reservation_database/number-of-reservations
+clj꞉projekat.reservation_database꞉> 
+("Swedish" "Thai" "Shiatsu" "Sport" "Relax" "Whole body")
+clj꞉projekat.pages꞉> 
+({:id 1, :name "Swedish", :description "Gentle touch", :price 40.0}
+ {:id 2, :name "Thai", :description "Flexibility", :price 35.0}
+ {:id 3, :name "Shiatsu", :description "Relaxation and relieve pain", :price 37.0}
+ {:id 4, :name "Sport", :description "Release muscle tension", :price 45.0}
+ {:id 5, :name "Relax", :description "Relaxing massage", :price 44.0}
+ {:id 7, :name "Whole body", :description "Preparing body for next week.", :price 70.0})
+clj꞉projekat.pages꞉> 
+; Execution error (ClassCastException) at projekat.pages/eval44199 (form-init11297555367406710466.clj:156).
+; class clojure.lang.LazySeq cannot be cast to class clojure.lang.Associative (clojure.lang.LazySeq and clojure.lang.Associative are in unnamed module of loader 'app')
+clj꞉projekat.pages꞉> 
+; Error printing return value (IllegalArgumentException) at clojure.lang.RT/seqFrom (RT.java:557).
+; Don't know how to create ISeq from: java.lang.Long
+clj꞉projekat.pages꞉> 
+("Swedish" "Thai" "Shiatsu" "Sport" "Relax" "Whole body")
+clj꞉projekat.pages꞉> 
+#'projekat.reservation_database/number-of-reservations
+clj꞉projekat.reservation_database꞉> 
+; Execution error (ArityException) at projekat.reservation-database/eval44210 (form-init11297555367406710466.clj:73).
+; Wrong number of args (2) passed to: projekat.reservation-database/number-of-reservation
+clj꞉projekat.reservation_database꞉> 
+; Error printing return value (ClassCastException) at clojure.core/map$fn (core.clj:2772).
+; class java.lang.Integer cannot be cast to class clojure.lang.IFn (java.lang.Integer is in module java.base of loader 'bootstrap'; clojure.lang.IFn is in unnamed module of loader 'app')
+clj꞉projekat.reservation_database꞉> 
+#'projekat.reservation_database/number-of-reservations
+clj꞉projekat.reservation_database꞉> 
+#'projekat.reservation_database/number-of-reservations
+clj꞉projekat.reservation_database꞉> 
+#'projekat.reservation_database/total-number-of-reserv
+clj꞉projekat.reservation_database꞉> 
+; Execution error (ArityException) at projekat.reservation-database/total-number-of-reserv (form-init11297555367406710466.clj:73).
+; Wrong number of args (0) passed to: :id-massage
+clj꞉projekat.reservation_database꞉> 
+#'projekat.reservation_database/total-number-of-reserv
+clj꞉projekat.reservation_database꞉> 
+(1 2 3 4 5 7)
+clj꞉projekat.reservation_database꞉> 
+#'projekat.reservation_database/number-of-reservations
+clj꞉projekat.reservation_database꞉> 
+#'projekat.reservation_database/total-number-of-reserv
+clj꞉projekat.reservation_database꞉> 
+#function[clojure.core/comp/fn--5876]
+clj꞉projekat.reservation_database꞉> 
+#'projekat.reservation_database/total-number-of-reserv
+clj꞉projekat.reservation_database꞉> 
+#'projekat.reservation_database/total-number-of-reserv
+clj꞉projekat.reservation_database꞉> 
+#function[clojure.core/map/fn--5931]
+clj꞉projekat.reservation_database꞉> 
+(1 2 3 4 5 7)
+clj꞉projekat.reservation_database꞉> 
+(12 1 4 4 2 4)
+clj꞉projekat.reservation_database꞉> 
+(12 1 4 4 2 4)
+clj꞉projekat.reservation_database꞉> 
+4
+clj꞉projekat.reservation_database꞉> 
+(12 1 4 4 2 4)
+clj꞉projekat.reservation_database꞉> 
+4
+clj꞉projekat.reservation_database꞉> 
+
+| :id | :client_id | :massage_id |
+|-----+------------+-------------|
+|   2 |          1 |           1 |
+|   3 |          1 |           1 |
+|   4 |          1 |           4 |
+|   5 |          1 |           1 |
+|   6 |          1 |           4 |
+|   7 |          1 |           1 |
+|   8 |          1 |           1 |
+|   9 |          1 |           1 |
+|  10 |          4 |           3 |
+|  11 |          1 |           1 |
+|  12 |          1 |           5 |
+|  13 |          1 |           1 |
+|  14 |          1 |           3 |
+|  15 |          1 |           5 |
+|  16 |          1 |           3 |
+|  17 |          1 |           1 |
+|  18 |          1 |           2 |
+|  19 |          1 |           1 |
+|  20 |          1 |           1 |
+|  21 |          1 |           7 |
+|  22 |          1 |           3 |
+|  23 |          1 |           7 |
+|  24 |          1 |           7 |
+|  25 |          1 |           7 |
+|  26 |          1 |           4 |
+|  27 |          1 |           1 |
+|  28 |          1 |           4 |
+nil
+clj꞉projekat.reservation_database꞉> 
+(12 1 4 4 2 4)
+clj꞉projekat.reservation_database꞉> 
+#'projekat.reservation_database/number-of-reservations
+clj꞉projekat.reservation_database꞉> 
+(12 1 4 4 2 4)
+clj꞉projekat.reservation_database꞉> 
+; Evaluating file: reservation_database.clj
+
+| :id | :client_id | :massage_id |
+|-----+------------+-------------|
+|   2 |          1 |           1 |
+|   3 |          1 |           1 |
+|   4 |          1 |           4 |
+|   5 |          1 |           1 |
+|   6 |          1 |           4 |
+|   7 |          1 |           1 |
+|   8 |          1 |           1 |
+|   9 |          1 |           1 |
+|  10 |          4 |           3 |
+|  11 |          1 |           1 |
+|  12 |          1 |           5 |
+|  13 |          1 |           1 |
+|  14 |          1 |           3 |
+|  15 |          1 |           5 |
+|  16 |          1 |           3 |
+|  17 |          1 |           1 |
+|  18 |          1 |           2 |
+|  19 |          1 |           1 |
+|  20 |          1 |           1 |
+|  21 |          1 |           7 |
+|  22 |          1 |           3 |
+|  23 |          1 |           7 |
+|  24 |          1 |           7 |
+|  25 |          1 |           7 |
+|  26 |          1 |           4 |
+|  27 |          1 |           1 |
+|  28 |          1 |           4 |
+(12 1 4 4 2 4)
+clj꞉projekat.reservation_database꞉> 
+#'projekat.reservation_database/total-number-of-reserv
+clj꞉projekat.reservation_database꞉> 
+#'projekat.pages/play-data
+clj꞉projekat.pages꞉> 
+({:massage "Swedish", :amount 12}
+ {:massage "Swedish", :amount 1}
+ {:massage "Swedish", :amount 4}
+ {:massage "Swedish", :amount 4}
+ {:massage "Swedish", :amount 2}
+ {:massage "Swedish", :amount 4}
+ {:massage "Thai", :amount 12}
+ {:massage "Thai", :amount 1}
+ {:massage "Thai", :amount 4}
+ {:massage "Thai", :amount 4}
+ {:massage "Thai", :amount 2}
+ {:massage "Thai", :amount 4}
+ {:massage "Shiatsu", :amount 12}
+ {:massage "Shiatsu", :amount 1}
+ {:massage "Shiatsu", :amount 4}
+ {:massage "Shiatsu", :amount 4}
+ {:massage "Shiatsu", :amount 2}
+ {:massage "Shiatsu", :amount 4}
+ {:massage "Sport", :amount 12}
+ {:massage "Sport", :amount 1}
+ {:massage "Sport", :amount 4}
+ {:massage "Sport", :amount 4}
+ {:massage "Sport", :amount 2}
+ {:massage "Sport", :amount 4}
+ {:massage "Relax", :amount 12}
+ {:massage "Relax", :amount 1}
+ {:massage "Relax", :amount 4}
+ {:massage "Relax", :amount 4}
+ {:massage "Relax", :amount 2}
+ {:massage "Relax", :amount 4}
+ {:massage "Whole body", :amount 12}
+ {:massage "Whole body", :amount 1}
+ {:massage "Whole body", :amount 4}
+ {:massage "Whole body", :amount 4}
+ {:massage "Whole body", :amount 2}
+ {:massage "Whole body", :amount 4})
+clj꞉projekat.pages꞉> 
+{"Swedish" 12, "Thai" 1, "Shiatsu" 4, "Sport" 4, "Relax" 2, "Whole body" 4}
+clj꞉projekat.pages꞉> 
+#'projekat.pages/proba
+clj꞉projekat.pages꞉> 
+({:name "Swedish", :quantity 12}
+ {:name "Thai", :quantity 1}
+ {:name "Shiatsu", :quantity 4}
+ {:name "Sport", :quantity 4}
+ {:name "Relax", :quantity 2}
+ {:name "Whole body", :quantity 4})
+clj꞉projekat.pages꞉> 
+; Syntax error compiling at (c:\Users\nodas\Desktop\alati2022\projekat\src\projekat\pages.clj:177:19).
+; Unable to resolve symbol: data in this context
+clj꞉projekat.pages꞉> 
+#'projekat.pages/data
+clj꞉projekat.pages꞉> 
+#'projekat.pages/line-plot1
+clj꞉projekat.pages꞉> 
+23-01-06 21:32:23 DESKTOP-289S0RC INFO [oz.server:148] - Web server is running at `http://localhost:10666/`
+23-01-06 21:32:25 DESKTOP-289S0RC INFO [oz.core:1192] - new connection established:  {:?reply-fn nil, :ch-recv #object[clojure.core.async.impl.channels.ManyToManyChannel 0x7cbbb341 "clojure.core.async.impl.channels.ManyToManyChannel@7cbbb341"], :client-id "8ee7f5d0-9b39-4602-b0d6-259a3562a315", :connected-uids #atom[{:ws #{#uuid "74885f43-de37-45e2-b999-a355e36ae284" #uuid "549f94e1-ada3-4d79-9a02-ec9221d2c61d"}, :ajax #{}, :any #{#uuid "74885f43-de37-45e2-b999-a355e36ae284" #uuid "549f94e1-ada3-4d79-9a02-ec9221d2c61d"}} 0x58bedd0f], :uid #uuid "74885f43-de37-45e2-b999-a355e36ae284", :event [:oz.app/connection-established], :id :oz.app/connection-established, :ring-req {:aleph/request-arrived 705285665416400, :aleph/keep-alive? true, :cookies {"ring-session" {:value "f8a4008b-9c57-4e97-8c14-3d437aac8eee"}}, :remote-addr "0:0:0:0:0:0:0:1", :params {:client-id "8ee7f5d0-9b39-4602-b0d6-259a3562a315"}, :flash nil, :route-params {}, :headers {"origin" "http://localhost:10666", "host" "localhost:10666", "upgrade" "websocket", "user-agent" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/108.0.0.0 Safari/537.36", "cookie" "ring-session=f8a4008b-9c57-4e97-8c14-3d437aac8eee", "connection" "Upgrade", "pragma" "no-cache", "sec-websocket-key" "IuagWd2DNDwsK/2draer4Q==", "accept-language" "en-RS,en;q=0.9,sr-RS;q=0.8,sr;q=0.7,en-US;q=0.6", "sec-websocket-version" "13", "accept-encoding" "gzip, deflate, br", "sec-websocket-extensions" "permessage-deflate; client_max_window_bits", "cache-control" "no-cache"}, :server-port 10666, :form-params {}, :compojure/route [:get "/chsk"], :session/key "f8a4008b-9c57-4e97-8c14-3d437aac8eee", :query-params {"client-id" "8ee7f5d0-9b39-4602-b0d6-259a3562a315"}, :uri "/chsk", :server-name "0:0:0:0:0:0:0:1", :anti-forgery-token "fT+A4oKO2z8ZPmowOtAE20kHwIcl3g7Un03v04ak49y+HD74R4rrRYcFYui5nNJLXxkYyB58cLYf5uEv", :query-string "client-id=8ee7f5d0-9b39-4602-b0d6-259a3562a315", :body nil, :multipart-params {}, :scheme :http, :request-method :get, :session {:uid "5990a56e-1048-4694-ac14-908a5e1503bf", :ring.middleware.anti-forgery/anti-forgery-token "fT+A4oKO2z8ZPmowOtAE20kHwIcl3g7Un03v04ak49y+HD74R4rrRYcFYui5nNJLXxkYyB58cLYf5uEv"}}, :?data nil, :send-fn #function[taoensso.sente/make-channel-socket-server!/send-fn--23105]}
+23-01-06 21:32:27 DESKTOP-289S0RC INFO [oz.core:1192] - new connection established:  {:?reply-fn nil, :ch-recv #object[clojure.core.async.impl.channels.ManyToManyChannel 0x7cbbb341 "clojure.core.async.impl.channels.ManyToManyChannel@7cbbb341"], :client-id "59ac77a5-6ff1-409a-a787-a4dd213077fd", :connected-uids #atom[{:ws #{#uuid "e0c7879b-5239-4d24-ab66-0cae29b8851a" #uuid "74885f43-de37-45e2-b999-a355e36ae284" #uuid "549f94e1-ada3-4d79-9a02-ec9221d2c61d"}, :ajax #{}, :any #{#uuid "e0c7879b-5239-4d24-ab66-0cae29b8851a" #uuid "74885f43-de37-45e2-b999-a355e36ae284" #uuid "549f94e1-ada3-4d79-9a02-ec9221d2c61d"}} 0x58bedd0f], :uid #uuid "e0c7879b-5239-4d24-ab66-0cae29b8851a", :event [:oz.app/connection-established], :id :oz.app/connection-established, :ring-req {:aleph/request-arrived 705287019482800, :aleph/keep-alive? true, :cookies {"ring-session" {:value "f8a4008b-9c57-4e97-8c14-3d437aac8eee"}}, :remote-addr "0:0:0:0:0:0:0:1", :params {:client-id "59ac77a5-6ff1-409a-a787-a4dd213077fd"}, :flash nil, :route-params {}, :headers {"origin" "http://localhost:10666", "host" "localhost:10666", "upgrade" "websocket", "user-agent" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/108.0.0.0 Safari/537.36", "cookie" "ring-session=f8a4008b-9c57-4e97-8c14-3d437aac8eee", "connection" "Upgrade", "pragma" "no-cache", "sec-websocket-key" "lpWIYvp2+E276kTdmHdNtg==", "accept-language" "en-RS,en;q=0.9,sr-RS;q=0.8,sr;q=0.7,en-US;q=0.6", "sec-websocket-version" "13", "accept-encoding" "gzip, deflate, br", "sec-websocket-extensions" "permessage-deflate; client_max_window_bits", "cache-control" "no-cache"}, :server-port 10666, :form-params {}, :compojure/route [:get "/chsk"], :session/key "f8a4008b-9c57-4e97-8c14-3d437aac8eee", :query-params {"client-id" "59ac77a5-6ff1-409a-a787-a4dd213077fd"}, :uri "/chsk", :server-name "0:0:0:0:0:0:0:1", :anti-forgery-token "fT+A4oKO2z8ZPmowOtAE20kHwIcl3g7Un03v04ak49y+HD74R4rrRYcFYui5nNJLXxkYyB58cLYf5uEv", :query-string "client-id=59ac77a5-6ff1-409a-a787-a4dd213077fd", :body nil, :multipart-params {}, :scheme :http, :request-method :get, :session {:uid "5990a56e-1048-4694-ac14-908a5e1503bf", :ring.middleware.anti-forgery/anti-forgery-token "fT+A4oKO2z8ZPmowOtAE20kHwIcl3g7Un03v04ak49y+HD74R4rrRYcFYui5nNJLXxkYyB58cLYf5uEv"}}, :?data nil, :send-fn #function[taoensso.sente/make-channel-socket-server!/send-fn--23105]}
+#function[taoensso.sente/-start-chsk-router!/stop!--24918]
+clj꞉projekat.pages꞉> 
+nil
+clj꞉projekat.pages꞉> 
+nil
+clj꞉projekat.pages꞉> 
+nil
+clj꞉projekat.pages꞉> 
+#'projekat.pages/line-plot1
+clj꞉projekat.pages꞉> 
+nil
+clj꞉projekat.pages꞉> 
+#'projekat.pages/line-plot1
+clj꞉projekat.pages꞉> 
+nil
+clj꞉projekat.pages꞉> 
+#'projekat.pages/line-plot1
+clj꞉projekat.pages꞉> 
+nil
+clj꞉projekat.pages꞉> 
+23-01-06 21:36:34 DESKTOP-289S0RC INFO [oz.core:1192] - new connection established:  {:?reply-fn nil, :ch-recv #object[clojure.core.async.impl.channels.ManyToManyChannel 0x7cbbb341 "clojure.core.async.impl.channels.ManyToManyChannel@7cbbb341"], :client-id "fae385cc-1d60-4c8d-8695-7b449bb05185", :connected-uids #atom[{:ws #{#uuid "e0c7879b-5239-4d24-ab66-0cae29b8851a" #uuid "371246fd-6518-4adb-a072-ddde34d662d7" #uuid "74885f43-de37-45e2-b999-a355e36ae284"}, :ajax #{}, :any #{#uuid "e0c7879b-5239-4d24-ab66-0cae29b8851a" #uuid "371246fd-6518-4adb-a072-ddde34d662d7" #uuid "74885f43-de37-45e2-b999-a355e36ae284"}} 0x58bedd0f], :uid #uuid "371246fd-6518-4adb-a072-ddde34d662d7", :event [:oz.app/connection-established], :id :oz.app/connection-established, :ring-req {:aleph/request-arrived 705535373049400, :aleph/keep-alive? true, :cookies {"ring-session" {:value "f8a4008b-9c57-4e97-8c14-3d437aac8eee"}}, :remote-addr "0:0:0:0:0:0:0:1", :params {:client-id "fae385cc-1d60-4c8d-8695-7b449bb05185"}, :flash nil, :route-params {}, :headers {"origin" "http://localhost:10666", "host" "localhost:10666", "upgrade" "websocket", "user-agent" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/108.0.0.0 Safari/537.36", "cookie" "ring-session=f8a4008b-9c57-4e97-8c14-3d437aac8eee", "connection" "Upgrade", "pragma" "no-cache", "sec-websocket-key" "iRrdLnxrWmBt2SQ8Gs2G8w==", "accept-language" "en-RS,en;q=0.9,sr-RS;q=0.8,sr;q=0.7,en-US;q=0.6", "sec-websocket-version" "13", "accept-encoding" "gzip, deflate, br", "sec-websocket-extensions" "permessage-deflate; client_max_window_bits", "cache-control" "no-cache"}, :server-port 10666, :form-params {}, :compojure/route [:get "/chsk"], :session/key "f8a4008b-9c57-4e97-8c14-3d437aac8eee", :query-params {"client-id" "fae385cc-1d60-4c8d-8695-7b449bb05185"}, :uri "/chsk", :server-name "0:0:0:0:0:0:0:1", :anti-forgery-token "fT+A4oKO2z8ZPmowOtAE20kHwIcl3g7Un03v04ak49y+HD74R4rrRYcFYui5nNJLXxkYyB58cLYf5uEv", :query-string "client-id=fae385cc-1d60-4c8d-8695-7b449bb05185", :body nil, :multipart-params {}, :scheme :http, :request-method :get, :session {:uid "5990a56e-1048-4694-ac14-908a5e1503bf", :ring.middleware.anti-forgery/anti-forgery-token "fT+A4oKO2z8ZPmowOtAE20kHwIcl3g7Un03v04ak49y+HD74R4rrRYcFYui5nNJLXxkYyB58cLYf5uEv"}}, :?data nil, :send-fn #function[taoensso.sente/make-channel-socket-server!/send-fn--23105]}
+#'projekat.pages/line-plot1
+clj꞉projekat.pages꞉> 
+nil
+clj꞉projekat.pages꞉> 
+#'projekat.pages/line-plot1
+clj꞉projekat.pages꞉> 
+nil
+clj꞉projekat.pages꞉> 
+#'projekat.pages/data
+clj꞉projekat.pages꞉> 
+#'projekat.pages/line-plot1
+clj꞉projekat.pages꞉> 
+nil
+clj꞉projekat.pages꞉> 
+#'projekat.pages/line-plot1
+clj꞉projekat.pages꞉> 
+nil
+clj꞉projekat.pages꞉> 
+23-01-06 21:37:53 DESKTOP-289S0RC INFO [oz.core:1192] - new connection established:  {:?reply-fn nil, :ch-recv #object[clojure.core.async.impl.channels.ManyToManyChannel 0x7cbbb341 "clojure.core.async.impl.channels.ManyToManyChannel@7cbbb341"], :client-id "1396962a-e6eb-42b7-8a38-379cc174c14c", :connected-uids #atom[{:ws #{#uuid "371246fd-6518-4adb-a072-ddde34d662d7" #uuid "74885f43-de37-45e2-b999-a355e36ae284" #uuid "51dc0816-d7be-4ff2-84ff-b918b528212d"}, :ajax #{}, :any #{#uuid "371246fd-6518-4adb-a072-ddde34d662d7" #uuid "74885f43-de37-45e2-b999-a355e36ae284" #uuid "51dc0816-d7be-4ff2-84ff-b918b528212d"}} 0x58bedd0f], :uid #uuid "51dc0816-d7be-4ff2-84ff-b918b528212d", :event [:oz.app/connection-established], :id :oz.app/connection-established, :ring-req {:aleph/request-arrived 705613971571800, :aleph/keep-alive? true, :cookies {"ring-session" {:value "f8a4008b-9c57-4e97-8c14-3d437aac8eee"}}, :remote-addr "0:0:0:0:0:0:0:1", :params {:client-id "1396962a-e6eb-42b7-8a38-379cc174c14c"}, :flash nil, :route-params {}, :headers {"origin" "http://localhost:10666", "host" "localhost:10666", "upgrade" "websocket", "user-agent" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/108.0.0.0 Safari/537.36", "cookie" "ring-session=f8a4008b-9c57-4e97-8c14-3d437aac8eee", "connection" "Upgrade", "pragma" "no-cache", "sec-websocket-key" "P5b+v72sLouOqu3LCnxenQ==", "accept-language" "en-RS,en;q=0.9,sr-RS;q=0.8,sr;q=0.7,en-US;q=0.6", "sec-websocket-version" "13", "accept-encoding" "gzip, deflate, br", "sec-websocket-extensions" "permessage-deflate; client_max_window_bits", "cache-control" "no-cache"}, :server-port 10666, :form-params {}, :compojure/route [:get "/chsk"], :session/key "f8a4008b-9c57-4e97-8c14-3d437aac8eee", :query-params {"client-id" "1396962a-e6eb-42b7-8a38-379cc174c14c"}, :uri "/chsk", :server-name "0:0:0:0:0:0:0:1", :anti-forgery-token "fT+A4oKO2z8ZPmowOtAE20kHwIcl3g7Un03v04ak49y+HD74R4rrRYcFYui5nNJLXxkYyB58cLYf5uEv", :query-string "client-id=1396962a-e6eb-42b7-8a38-379cc174c14c", :body nil, :multipart-params {}, :scheme :http, :request-method :get, :session {:uid "5990a56e-1048-4694-ac14-908a5e1503bf", :ring.middleware.anti-forgery/anti-forgery-token "fT+A4oKO2z8ZPmowOtAE20kHwIcl3g7Un03v04ak49y+HD74R4rrRYcFYui5nNJLXxkYyB58cLYf5uEv"}}, :?data nil, :send-fn #function[taoensso.sente/make-channel-socket-server!/send-fn--23105]}
+23-01-06 21:37:57 DESKTOP-289S0RC INFO [oz.core:1192] - new connection established:  {:?reply-fn nil, :ch-recv #object[clojure.core.async.impl.channels.ManyToManyChannel 0x7cbbb341 "clojure.core.async.impl.channels.ManyToManyChannel@7cbbb341"], :client-id "1afa34cd-5f36-47aa-ae51-596d45194dd2", :connected-uids #atom[{:ws #{#uuid "d5b941df-ca60-4cfc-aecf-7a11167aeab7" #uuid "74885f43-de37-45e2-b999-a355e36ae284" #uuid "51dc0816-d7be-4ff2-84ff-b918b528212d"}, :ajax #{}, :any #{#uuid "d5b941df-ca60-4cfc-aecf-7a11167aeab7" #uuid "74885f43-de37-45e2-b999-a355e36ae284" #uuid "51dc0816-d7be-4ff2-84ff-b918b528212d"}} 0x58bedd0f], :uid #uuid "d5b941df-ca60-4cfc-aecf-7a11167aeab7", :event [:oz.app/connection-established], :id :oz.app/connection-established, :ring-req {:aleph/request-arrived 705618391963900, :aleph/keep-alive? true, :cookies {"ring-session" {:value "f8a4008b-9c57-4e97-8c14-3d437aac8eee"}}, :remote-addr "0:0:0:0:0:0:0:1", :params {:client-id "1afa34cd-5f36-47aa-ae51-596d45194dd2"}, :flash nil, :route-params {}, :headers {"origin" "http://localhost:10666", "host" "localhost:10666", "upgrade" "websocket", "user-agent" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/108.0.0.0 Safari/537.36", "cookie" "ring-session=f8a4008b-9c57-4e97-8c14-3d437aac8eee", "connection" "Upgrade", "pragma" "no-cache", "sec-websocket-key" "NW1peKm9dbzEh+nfzzmM8A==", "accept-language" "en-RS,en;q=0.9,sr-RS;q=0.8,sr;q=0.7,en-US;q=0.6", "sec-websocket-version" "13", "accept-encoding" "gzip, deflate, br", "sec-websocket-extensions" "permessage-deflate; client_max_window_bits", "cache-control" "no-cache"}, :server-port 10666, :form-params {}, :compojure/route [:get "/chsk"], :session/key "f8a4008b-9c57-4e97-8c14-3d437aac8eee", :query-params {"client-id" "1afa34cd-5f36-47aa-ae51-596d45194dd2"}, :uri "/chsk", :server-name "0:0:0:0:0:0:0:1", :anti-forgery-token "fT+A4oKO2z8ZPmowOtAE20kHwIcl3g7Un03v04ak49y+HD74R4rrRYcFYui5nNJLXxkYyB58cLYf5uEv", :query-string "client-id=1afa34cd-5f36-47aa-ae51-596d45194dd2", :body nil, :multipart-params {}, :scheme :http, :request-method :get, :session {:uid "5990a56e-1048-4694-ac14-908a5e1503bf", :ring.middleware.anti-forgery/anti-forgery-token "fT+A4oKO2z8ZPmowOtAE20kHwIcl3g7Un03v04ak49y+HD74R4rrRYcFYui5nNJLXxkYyB58cLYf5uEv"}}, :?data nil, :send-fn #function[taoensso.sente/make-channel-socket-server!/send-fn--23105]}
+nil
+clj꞉projekat.pages꞉> 
+#'projekat.pages/line-plot1
+clj꞉projekat.pages꞉> 
+nil
+clj꞉projekat.pages꞉> 
+#'projekat.pages/data
+clj꞉projekat.pages꞉> 
+#'projekat.pages/line-plot1
+clj꞉projekat.pages꞉> 
+nil
+clj꞉projekat.pages꞉> 
+; Evaluating file: pages.clj
+#'projekat.pages/client-login
+clj꞉projekat.pages꞉> 
+#'projekat.pages/clients-view
+clj꞉projekat.pages꞉> 
+; Evaluating file: pages.clj
+#'projekat.pages/client-login
+clj꞉projekat.pages꞉> 
+; Evaluating file: core.clj
+#'projekat.core/server
+clj꞉projekat.core꞉> 
+23-01-06 21:42:33 DESKTOP-289S0RC INFO [oz.core:1192] - new connection established:  {:?reply-fn nil, :ch-recv #object[clojure.core.async.impl.channels.ManyToManyChannel 0x7cbbb341 "clojure.core.async.impl.channels.ManyToManyChannel@7cbbb341"], :client-id "c268bb5c-747c-497d-b63d-10d291c566aa", :connected-uids #atom[{:ws #{#uuid "4e683d9a-7b66-4133-832f-eebdcf50b0f5" #uuid "d5b941df-ca60-4cfc-aecf-7a11167aeab7" #uuid "74885f43-de37-45e2-b999-a355e36ae284" #uuid "c42da315-366b-4f3e-b09f-99d47f1674cb"}, :ajax #{}, :any #{#uuid "4e683d9a-7b66-4133-832f-eebdcf50b0f5" #uuid "d5b941df-ca60-4cfc-aecf-7a11167aeab7" #uuid "74885f43-de37-45e2-b999-a355e36ae284" #uuid "c42da315-366b-4f3e-b09f-99d47f1674cb"}} 0x58bedd0f], :uid #uuid "4e683d9a-7b66-4133-832f-eebdcf50b0f5", :event [:oz.app/connection-established], :id :oz.app/connection-established, :ring-req {:aleph/request-arrived 705894065838000, :aleph/keep-alive? true, :cookies {"ring-session" {:value "dc459dd2-93db-434b-b483-d62dcbf7f6f0"}}, :remote-addr "0:0:0:0:0:0:0:1", :params {:client-id "c268bb5c-747c-497d-b63d-10d291c566aa"}, :flash nil, :route-params {}, :headers {"origin" "http://localhost:10666", "host" "localhost:10666", "upgrade" "websocket", "user-agent" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/108.0.0.0 Safari/537.36", "cookie" "ring-session=dc459dd2-93db-434b-b483-d62dcbf7f6f0", "connection" "Upgrade", "pragma" "no-cache", "sec-websocket-key" "x7uv95j9BItx2ry3CnaAMA==", "accept-language" "en-RS,en;q=0.9,sr-RS;q=0.8,sr;q=0.7,en-US;q=0.6", "sec-websocket-version" "13", "accept-encoding" "gzip, deflate, br", "sec-websocket-extensions" "permessage-deflate; client_max_window_bits", "cache-control" "no-cache"}, :server-port 10666, :form-params {}, :compojure/route [:get "/chsk"], :session/key "dc459dd2-93db-434b-b483-d62dcbf7f6f0", :query-params {"client-id" "c268bb5c-747c-497d-b63d-10d291c566aa"}, :uri "/chsk", :server-name "0:0:0:0:0:0:0:1", :anti-forgery-token "55D9GxrqPnPuQTX5oNkAKa0PHdYZz4HdtQZgvN17RdyjbXC6Yc14ou0bfTXMhZP3DhNkJFvCVMB5rtPL", :query-string "client-id=c268bb5c-747c-497d-b63d-10d291c566aa", :body nil, :multipart-params {}, :scheme :http, :request-method :get, :session {:uid "dac25a50-b4dc-426e-92ef-ec97a0f23038", :ring.middleware.anti-forgery/anti-forgery-token "55D9GxrqPnPuQTX5oNkAKa0PHdYZz4HdtQZgvN17RdyjbXC6Yc14ou0bfTXMhZP3DhNkJFvCVMB5rtPL"}}, :?data nil, :send-fn #function[taoensso.sente/make-channel-socket-server!/send-fn--23105]}
+23-01-06 21:42:35 DESKTOP-289S0RC INFO [oz.core:1192] - new connection established:  {:?reply-fn nil, :ch-recv #object[clojure.core.async.impl.channels.ManyToManyChannel 0x7cbbb341 "clojure.core.async.impl.channels.ManyToManyChannel@7cbbb341"], :client-id "1afa34cd-5f36-47aa-ae51-596d45194dd2", :connected-uids #atom[{:ws #{#uuid "4e683d9a-7b66-4133-832f-eebdcf50b0f5" #uuid "d5b941df-ca60-4cfc-aecf-7a11167aeab7" #uuid "74885f43-de37-45e2-b999-a355e36ae284" #uuid "c42da315-366b-4f3e-b09f-99d47f1674cb" #uuid "db530fe5-5377-4846-8ac6-22fd6eefc940"}, :ajax #{}, :any #{#uuid "4e683d9a-7b66-4133-832f-eebdcf50b0f5" #uuid "d5b941df-ca60-4cfc-aecf-7a11167aeab7" #uuid "74885f43-de37-45e2-b999-a355e36ae284" #uuid "c42da315-366b-4f3e-b09f-99d47f1674cb" #uuid "db530fe5-5377-4846-8ac6-22fd6eefc940"}} 0x58bedd0f], :uid #uuid "c42da315-366b-4f3e-b09f-99d47f1674cb", :event [:oz.app/connection-established], :id :oz.app/connection-established, :ring-req {:aleph/request-arrived 705895007874600, :aleph/keep-alive? true, :cookies {"ring-session" {:value "dc459dd2-93db-434b-b483-d62dcbf7f6f0"}}, :remote-addr "0:0:0:0:0:0:0:1", :params {:client-id "1afa34cd-5f36-47aa-ae51-596d45194dd2"}, :flash nil, :route-params {}, :headers {"origin" "http://localhost:10666", "host" "localhost:10666", "upgrade" "websocket", "user-agent" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/108.0.0.0 Safari/537.36", "cookie" "ring-session=dc459dd2-93db-434b-b483-d62dcbf7f6f0", "connection" "Upgrade", "pragma" "no-cache", "sec-websocket-key" "K2VsrCm0Zs4cHR7gkrBVXg==", "accept-language" "en-RS,en;q=0.9,sr-RS;q=0.8,sr;q=0.7,en-US;q=0.6", "sec-websocket-version" "13", "accept-encoding" "gzip, deflate, br", "sec-websocket-extensions" "permessage-deflate; client_max_window_bits", "cache-control" "no-cache"}, :server-port 10666, :form-params {}, :compojure/route [:get "/chsk"], :session/key "dc459dd2-93db-434b-b483-d62dcbf7f6f0", :query-params {"client-id" "1afa34cd-5f36-47aa-ae51-596d45194dd2"}, :uri "/chsk", :server-name "0:0:0:0:0:0:0:1", :anti-forgery-token "55D9GxrqPnPuQTX5oNkAKa0PHdYZz4HdtQZgvN17RdyjbXC6Yc14ou0bfTXMhZP3DhNkJFvCVMB5rtPL", :query-string "client-id=1afa34cd-5f36-47aa-ae51-596d45194dd2", :body nil, :multipart-params {}, :scheme :http, :request-method :get, :session {:uid "dac25a50-b4dc-426e-92ef-ec97a0f23038", :ring.middleware.anti-forgery/anti-forgery-token "55D9GxrqPnPuQTX5oNkAKa0PHdYZz4HdtQZgvN17RdyjbXC6Yc14ou0bfTXMhZP3DhNkJFvCVMB5rtPL"}}, :?data nil, :send-fn #function[taoensso.sente/make-channel-socket-server!/send-fn--23105]}
+23-01-06 21:42:36 DESKTOP-289S0RC INFO [oz.core:1192] - new connection established:  {:?reply-fn nil, :ch-recv #object[clojure.core.async.impl.channels.ManyToManyChannel 0x7cbbb341 "clojure.core.async.impl.channels.ManyToManyChannel@7cbbb341"], :client-id "8ee7f5d0-9b39-4602-b0d6-259a3562a315", :connected-uids #atom[{:ws #{#uuid "4e683d9a-7b66-4133-832f-eebdcf50b0f5" #uuid "d5b941df-ca60-4cfc-aecf-7a11167aeab7" #uuid "74885f43-de37-45e2-b999-a355e36ae284" #uuid "c42da315-366b-4f3e-b09f-99d47f1674cb" #uuid "db530fe5-5377-4846-8ac6-22fd6eefc940"}, :ajax #{}, :any #{#uuid "4e683d9a-7b66-4133-832f-eebdcf50b0f5" #uuid "d5b941df-ca60-4cfc-aecf-7a11167aeab7" #uuid "74885f43-de37-45e2-b999-a355e36ae284" #uuid "c42da315-366b-4f3e-b09f-99d47f1674cb" #uuid "db530fe5-5377-4846-8ac6-22fd6eefc940"}} 0x58bedd0f], :uid #uuid "db530fe5-5377-4846-8ac6-22fd6eefc940", :event [:oz.app/connection-established], :id :oz.app/connection-established, :ring-req {:aleph/request-arrived 705896016301500, :aleph/keep-alive? true, :cookies {"ring-session" {:value "dc459dd2-93db-434b-b483-d62dcbf7f6f0"}}, :remote-addr "0:0:0:0:0:0:0:1", :params {:client-id "8ee7f5d0-9b39-4602-b0d6-259a3562a315"}, :flash nil, :route-params {}, :headers {"origin" "http://localhost:10666", "host" "localhost:10666", "upgrade" "websocket", "user-agent" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/108.0.0.0 Safari/537.36", "cookie" "ring-session=dc459dd2-93db-434b-b483-d62dcbf7f6f0", "connection" "Upgrade", "pragma" "no-cache", "sec-websocket-key" "nmLtylULU0452BsTPLmmJQ==", "accept-language" "en-RS,en;q=0.9,sr-RS;q=0.8,sr;q=0.7,en-US;q=0.6", "sec-websocket-version" "13", "accept-encoding" "gzip, deflate, br", "sec-websocket-extensions" "permessage-deflate; client_max_window_bits", "cache-control" "no-cache"}, :server-port 10666, :form-params {}, :compojure/route [:get "/chsk"], :session/key "dc459dd2-93db-434b-b483-d62dcbf7f6f0", :query-params {"client-id" "8ee7f5d0-9b39-4602-b0d6-259a3562a315"}, :uri "/chsk", :server-name "0:0:0:0:0:0:0:1", :anti-forgery-token "55D9GxrqPnPuQTX5oNkAKa0PHdYZz4HdtQZgvN17RdyjbXC6Yc14ou0bfTXMhZP3DhNkJFvCVMB5rtPL", :query-string "client-id=8ee7f5d0-9b39-4602-b0d6-259a3562a315", :body nil, :multipart-params {}, :scheme :http, :request-method :get, :session {:uid "dac25a50-b4dc-426e-92ef-ec97a0f23038", :ring.middleware.anti-forgery/anti-forgery-token "55D9GxrqPnPuQTX5oNkAKa0PHdYZz4HdtQZgvN17RdyjbXC6Yc14ou0bfTXMhZP3DhNkJFvCVMB5rtPL"}}, :?data nil, :send-fn #function[taoensso.sente/make-channel-socket-server!/send-fn--23105]}
+; Evaluating file: core.clj
 #'projekat.core/server
 clj꞉projekat.core꞉> 
 ; Evaluating file: core.clj
 #'projekat.core/server
 clj꞉projekat.core꞉> 
-java.lang.Long
+nil
 clj꞉projekat.core꞉> 
-#'projekat.core/client-routes
+; Execution error (ArityException) at nrepl.middleware.interruptible-eval/evaluate$fn$fn (interruptible_eval.clj:87).
+; Wrong number of args (3) passed to: ring.middleware.cookies/wrap-cookies
+clj꞉projekat.core꞉> 
+; Execution error (ArityException) at nrepl.middleware.interruptible-eval/evaluate$fn$fn (interruptible_eval.clj:87).
+; Wrong number of args (3) passed to: ring.middleware.cookies/wrap-cookies
+clj꞉projekat.core꞉> 
+#'projekat.core/wrapping
+clj꞉projekat.core꞉> 
+; Evaluating file: core.clj
+#'projekat.core/server
+clj꞉projekat.core꞉> 
+#'projekat.core/wrapping
+clj꞉projekat.core꞉> 
+; Evaluating file: core.clj
+#'projekat.core/server
+clj꞉projekat.core꞉> 
+; Evaluating file: core.clj
+#'projekat.core/server
+clj꞉projekat.core꞉> 
+; Evaluating file: core.clj
+#'projekat.core/server
+clj꞉projekat.core꞉> 
+; Evaluating file: core.clj
+; Execution error (BindException) at sun.nio.ch.Net/bind0 (Net.java:-2).
+; Address already in use: bind
+; Evaluation of file core.clj failed: class clojure.lang.Compiler$CompilerException
+clj꞉projekat.core꞉> 
+; Evaluating file: core.clj
+#'projekat.core/server
+clj꞉projekat.core꞉> 
+; Evaluating file: core.clj
+#'projekat.core/server
+clj꞉projekat.core꞉> 
+; Evaluating file: core.clj
+#'projekat.core/server
+clj꞉projekat.core꞉> 
+#'projekat.core/expire-cookie
+clj꞉projekat.core꞉> 
+; Execution error (ArityException) at projekat.core/eval46010 (form-init11297555367406710466.clj:187).
+; Wrong number of args (0) passed to: projekat.core/expire-cookie
+clj꞉projekat.core꞉> 
+#'projekat.core/expire-cookie
+clj꞉projekat.core꞉> 
+; Evaluating file: core.clj
+#'projekat.core/server
+clj꞉projekat.core꞉> 
+; Evaluating file: core.clj
+#'projekat.core/server
+clj꞉projekat.core꞉> 
+#'projekat.core/expire-cookie
+clj꞉projekat.core꞉> 
+#'projekat.core/wrapping
+clj꞉projekat.core꞉> 
+; Execution error (ArityException) at projekat.core/eval46172 (form-init11297555367406710466.clj:187).
+; Wrong number of args (0) passed to: ring.middleware.session/wrap-session/fn--1232
+clj꞉projekat.core꞉> 
+#function[ring.util.response/response]
+clj꞉projekat.core꞉> 
+{:status 200, :headers {}, :body ""}
+clj꞉projekat.core꞉> 
+; Evaluating file: core.clj
+#'projekat.core/server
+clj꞉projekat.core꞉> 
+; Evaluating file: core.clj
+#'projekat.core/server
+clj꞉projekat.core꞉> 
+; Evaluating file: core.clj
+#'projekat.core/server
+clj꞉projekat.core꞉> 
+; Evaluating file: core.clj
+#'projekat.core/server
+clj꞉projekat.core꞉> 
+; Evaluating file: core.clj
+#'projekat.core/server
+clj꞉projekat.core꞉> 
+; Evaluating file: pages.clj
+#'projekat.pages/client-login
+clj꞉projekat.pages꞉> 
+#'projekat.pages/admin-massages
+clj꞉projekat.pages꞉> 
+; Evaluating file: pages.clj
+#'projekat.pages/client-login
+clj꞉projekat.pages꞉> 
+; Evaluating file: core.clj
+#'projekat.core/server
+clj꞉projekat.core꞉> 
+; Evaluating file: core.clj
+; Execution error (BindException) at sun.nio.ch.Net/bind0 (Net.java:-2).
+; Address already in use: bind
+; Evaluation of file core.clj failed: class clojure.lang.Compiler$CompilerException
 clj꞉projekat.core꞉> 
 ; Evaluating file: core.clj
 #'projekat.core/server
@@ -1012,21 +962,42 @@ clj꞉projekat.pages꞉> 
 ; Evaluating file: core.clj
 #'projekat.core/server
 clj꞉projekat.core꞉> 
+#'projekat.pages/edit-massage-form
+clj꞉projekat.pages꞉> 
 ; Evaluating file: pages.clj
 #'projekat.pages/client-login
 clj꞉projekat.pages꞉> 
 ; Evaluating file: core.clj
 #'projekat.core/server
 clj꞉projekat.core꞉> 
-; Evaluating file: pages.clj
-#'projekat.pages/client-login
-clj꞉projekat.pages꞉> 
-; Evaluating file: pages.clj
-#'projekat.pages/client-login
-clj꞉projekat.pages꞉> 
-; Evaluating file: pages.clj
-#'projekat.pages/client-login
-clj꞉projekat.pages꞉> 
+
+| :id |      :name |                  :description | :price |
+|-----+------------+-------------------------------+--------|
+|   1 |    Swedish |                  Gentle touch |   40.0 |
+|   2 |       Thai |                   Flexibility |   35.0 |
+|   3 |    Shiatsu |   Relaxation and relieve pain |   37.0 |
+|   4 |      Sport |        Release muscle tension |   45.0 |
+|   5 |      Relax |              Relaxing massage |   44.0 |
+|   7 | Whole body | Preparing body for next week. |   70.0 |
+nil
+clj꞉projekat.massage_data_base꞉> 
+
+| :id |      :name |                  :description | :price |
+|-----+------------+-------------------------------+--------|
+|   1 |    Swedish |                  Gentle touch |   40.0 |
+|   2 |       Thai |                   Flexibility |   35.0 |
+|   3 |    Shiatsu |   Relaxation and relieve pain |   37.0 |
+|   4 |      Sport |        Release muscle tension |   45.0 |
+|   5 |      Relax |              Relaxing massage |   44.0 |
+|   7 | Whole body | Preparing body for next week. |   70.0 |
+nil
+clj꞉projekat.massage_data_base꞉> 
+; Evaluating file: core.clj
+#'projekat.core/server
+clj꞉projekat.core꞉> 
+; Evaluating file: core.clj
+#'projekat.core/server
+clj꞉projekat.core꞉> 
 ; Evaluating file: pages.clj
 #'projekat.pages/client-login
 clj꞉projekat.pages꞉> 
@@ -1035,19 +1006,146 @@ clj꞉projekat.pages꞉> 
 ; Address already in use: bind
 ; Evaluation of file core.clj failed: class clojure.lang.Compiler$CompilerException
 clj꞉projekat.core꞉> 
+; Evaluating file: core.clj
+#'projekat.core/server
+clj꞉projekat.core꞉> 
+#function[compojure.core/wrap-route-matches/fn--3235]
+clj꞉projekat.core꞉> 
+; Evaluating file: core.clj
+#'projekat.core/server
+clj꞉projekat.core꞉> 
+; Evaluating file: core.clj
+#'projekat.core/server
+clj꞉projekat.core꞉> 
+; Evaluating file: core.clj
+#'projekat.core/server
+clj꞉projekat.core꞉> 
+
+| :id |      :name |                  :description | :price |
+|-----+------------+-------------------------------+--------|
+|   1 |    Swedish |                  Gentle touch |   40.0 |
+|   2 |       Thai |                   Flexibility |   88.0 |
+|   3 |    Shiatsu |   Relaxation and relieve pain |   37.0 |
+|   4 |      Sport |        Release muscle tension |   45.0 |
+|   5 |      Relax |              Relaxing massage |   44.0 |
+|   7 | Whole body | Preparing body for next week. |   70.0 |
+nil
+clj꞉projekat.massage_data_base꞉> 
+; Evaluating file: core.clj
+#'projekat.core/server
+clj꞉projekat.core꞉> 
+
+| :id |      :name |                  :description | :price |
+|-----+------------+-------------------------------+--------|
+|   1 |    Swedish |                  Gentle touch |   40.0 |
+|   2 |       Thai |                   Flexibility |   35.0 |
+|   3 |    Shiatsu |   Relaxation and relieve pain |   37.0 |
+|   4 |      Sport |        Release muscle tension |   45.0 |
+|   5 |      Relax |              Relaxing massage |   44.0 |
+|   7 | Whole body | Preparing body for next week. |   70.0 |
+nil
+clj꞉projekat.massage_data_base꞉> 
 ; Evaluating file: pages.clj
 #'projekat.pages/client-login
 clj꞉projekat.pages꞉> 
+#'projekat.massage_data_base/noticeClients
+clj꞉projekat.massage_data_base꞉> 
+nil
+clj꞉projekat.massage_data_base꞉> 
+nil
+clj꞉projekat.massage_data_base꞉> 
+#object[org.joda.time.DateTime 0x65799c6a "2023-01-06T23:54:06.055Z"]
+clj꞉projekat.massage_data_base꞉> 
+"2023-01-06T23:54:16.411Z"
+clj꞉projekat.massage_data_base꞉> 
+; Syntax error compiling at (c:\Users\nodas\Desktop\alati2022\projekat\src\projekat\massage_data_base.clj:43:1).
+; Unable to resolve symbol: split in this context
+clj꞉projekat.massage_data_base꞉> 
+; Syntax error compiling at (c:\Users\nodas\Desktop\alati2022\projekat\src\projekat\massage_data_base.clj:43:1).
+; Unable to resolve symbol: split in this context
+clj꞉projekat.massage_data_base꞉> 
+; Syntax error compiling at (c:\Users\nodas\Desktop\alati2022\projekat\src\projekat\massage_data_base.clj:43:1).
+; Unable to resolve symbol: split in this context
+clj꞉projekat.massage_data_base꞉> 
+; Execution error (ClassCastException) at projekat.massage-data-base/eval50861 (form-init11297555367406710466.clj:43).
+; class java.lang.String cannot be cast to class java.util.regex.Pattern (java.lang.String and java.util.regex.Pattern are in module java.base of loader 'bootstrap')
+clj꞉projekat.massage_data_base꞉> 
+["2023-01-06" "23:55:38.050Z"]
+clj꞉projekat.massage_data_base꞉> 
+"2023-01-06  23:56:09.493Z"
+clj꞉projekat.massage_data_base꞉> 
+nil
+clj꞉projekat.massage_data_base꞉> 
+#'projekat.massage_data_base/noticeClients
+clj꞉projekat.massage_data_base꞉> 
+nil
+clj꞉projekat.massage_data_base꞉> 
+#'projekat.massage_data_base/noticeClients
+clj꞉projekat.massage_data_base꞉> 
+nil
+clj꞉projekat.massage_data_base꞉> 
+#'projekat.massage_data_base/noticeClients
+clj꞉projekat.massage_data_base꞉> 
+nil
+clj꞉projekat.massage_data_base꞉> 
+nil
+clj꞉projekat.massage_data_base꞉> 
+nil
+clj꞉projekat.massage_data_base꞉> 
+nil
+clj꞉projekat.massage_data_base꞉> 
+#'projekat.massage_data_base/noticeClients
+clj꞉projekat.massage_data_base꞉> 
+#'projekat.massage_data_base/noticeClients
+clj꞉projekat.massage_data_base꞉> 
+nil
+clj꞉projekat.massage_data_base꞉> 
+#'projekat.massage_data_base/noticeClients
+clj꞉projekat.massage_data_base꞉> 
+nil
+clj꞉projekat.massage_data_base꞉> 
+nil
+clj꞉projekat.massage_data_base꞉> 
+; Evaluating file: massage_data_base.clj
+
+| :id |      :name |                  :description | :price |
+|-----+------------+-------------------------------+--------|
+|   1 |    Swedish |                  Gentle touch |   40.0 |
+|   2 |       Thai |                   Flexibility |   35.0 |
+|   3 |    Shiatsu |   Relaxation and relieve pain |   37.0 |
+|   4 |      Sport |        Release muscle tension |   45.0 |
+|   5 |      Relax |              Relaxing massage |   44.0 |
+|   7 | Whole body | Preparing body for next week. |   70.0 |
+nil
+clj꞉projekat.massage_data_base꞉> 
+; Evaluating file: pages.clj
+#'projekat.pages/client-login
+clj꞉projekat.pages꞉> 
+; Evaluating file: pages.clj
+#'projekat.pages/client-login
+clj꞉projekat.pages꞉> 
+; Evaluating file: pages.clj
+#'projekat.pages/prepare-news
+clj꞉projekat.pages꞉> 
+; Evaluating file: massage_data_base.clj
+
+| :id |      :name |                  :description | :price |
+|-----+------------+-------------------------------+--------|
+|   1 |    Swedish |                  Gentle touch |   40.0 |
+|   2 |       Thai |                   Flexibility |   35.0 |
+|   3 |    Shiatsu |   Relaxation and relieve pain |   37.0 |
+|   4 |      Sport |        Release muscle tension |   45.0 |
+|   5 |      Relax |              Relaxing massage |   44.0 |
+|   7 | Whole body | Preparing body for next week. |   70.0 |
+nil
+clj꞉projekat.massage_data_base꞉> 
 ; Evaluating file: core.clj
-#'projekat.core/server
-clj꞉projekat.core꞉> 
-#'projekat.core/app-routes
-clj꞉projekat.core꞉> 
-; Evaluating file: core.clj
-#'projekat.core/server
-clj꞉projekat.core꞉> 
-; Evaluating file: core.clj
-#'projekat.core/server
+; Syntax error macroexpanding clojure.core/let at (c:\Users\nodas\Desktop\alati2022\projekat\src\projekat\core.clj:152:3).
+; (p/prepare-news) - failed: simple-symbol? at: [:bindings :form :local-symbol] spec: :clojure.core.specs.alpha/local-name
+; (p/prepare-news) - failed: vector? at: [:bindings :form :seq-destructure] spec: :clojure.core.specs.alpha/seq-binding-form
+; (p/prepare-news) - failed: map? at: [:bindings :form :map-destructure] spec: :clojure.core.specs.alpha/map-bindings
+; (p/prepare-news) - failed: map? at: [:bindings :form :map-destructure] spec: :clojure.core.specs.alpha/map-special-binding
+; Evaluation of file core.clj failed: class clojure.lang.Compiler$CompilerException
 clj꞉projekat.core꞉> 
 ; Evaluating file: core.clj
 ; Execution error (BindException) at sun.nio.ch.Net/bind0 (Net.java:-2).
@@ -1058,35 +1156,103 @@ clj꞉projekat.core꞉> 
 #'projekat.core/server
 clj꞉projekat.core꞉> 
 ; Evaluating file: pages.clj
-#'projekat.pages/client-login
+#'projekat.pages/prepare-news
 clj꞉projekat.pages꞉> 
-; Evaluating file: core.clj
-#'projekat.core/server
-clj꞉projekat.core꞉> 
-; Evaluating file: pages.clj
-#'projekat.pages/client-login
-clj꞉projekat.pages꞉> 
-; Evaluating file: core.clj
-#'projekat.core/server
-clj꞉projekat.core꞉> 
-; Evaluating file: core.clj
-#'projekat.core/server
-clj꞉projekat.core꞉> 
+; Evaluating file: massage_data_base.clj
 
-| :id |              :name |     :phone | :amount | :password |  :role |
-|-----+--------------------+------------+---------+-----------+--------|
-|   1 |    Nevena Stanisic | 0679089700 |  1126.0 |    nevena | client |
-|   2 |     Nikola Nikolic |  065409756 |     0.0 |    nikola | client |
-|   3 |       Milica Milic |  060342567 |     0.0 |    milica | client |
-|   4 | Danica Zdravkovoic | 0652010059 |     0.0 |      dana | client |
-|   5 |       Nikola Nikic | 0874569833 |     0.0 |     nidza | client |
+| :id |      :name |                  :description | :price |
+|-----+------------+-------------------------------+--------|
+|   1 |    Swedish |                  Gentle touch |   40.0 |
+|   2 |       Thai |                   Flexibility |   35.0 |
+|   3 |    Shiatsu |   Relaxation and relieve pain |   37.0 |
+|   4 |      Sport |        Release muscle tension |   45.0 |
+|   5 |      Relax |              Relaxing massage |   44.0 |
+|   7 | Whole body | Preparing body for next week. |   70.0 |
 nil
-clj꞉projekat.database꞉> 
+clj꞉projekat.massage_data_base꞉> 
+; Evaluating file: core.clj
+#'projekat.core/server
+clj꞉projekat.core꞉> 
 ; Evaluating file: pages.clj
-#'projekat.pages/client-login
+#'projekat.pages/prepare-news
+clj꞉projekat.pages꞉> 
+"News\n"
 clj꞉projekat.pages꞉> 
 ; Evaluating file: pages.clj
-#'projekat.pages/client-login
+#'projekat.pages/prepare-news
+clj꞉projekat.pages꞉> 
+; Evaluating file: massage_data_base.clj
+
+| :id |      :name |                  :description | :price |
+|-----+------------+-------------------------------+--------|
+|   1 |    Swedish |                  Gentle touch |   40.0 |
+|   2 |       Thai |                   Flexibility |   35.0 |
+|   3 |    Shiatsu |   Relaxation and relieve pain |   37.0 |
+|   4 |      Sport |        Release muscle tension |   45.0 |
+|   5 |      Relax |              Relaxing massage |   44.0 |
+|   7 | Whole body | Preparing body for next week. |   70.0 |
+nil
+clj꞉projekat.massage_data_base꞉> 
+; Evaluating file: core.clj
+#'projekat.core/server
+clj꞉projekat.core꞉> 
+; Evaluating file: massage_data_base.clj
+
+| :id |      :name |                  :description | :price |
+|-----+------------+-------------------------------+--------|
+|   1 |    Swedish |                  Gentle touch |   55.0 |
+|   2 |       Thai |                   Flexibility |   35.0 |
+|   3 |    Shiatsu |   Relaxation and relieve pain |   37.0 |
+|   4 |      Sport |        Release muscle tension |   45.0 |
+|   5 |      Relax |              Relaxing massage |   44.0 |
+|   7 | Whole body | Preparing body for next week. |   70.0 |
+nil
+clj꞉projekat.massage_data_base꞉> 
+; Evaluating file: massage_data_base.clj
+
+| :id |      :name |                  :description | :price |
+|-----+------------+-------------------------------+--------|
+|   1 |    Swedish |                  Gentle touch |   55.0 |
+|   2 |       Thai |                   Flexibility |   35.0 |
+|   3 |    Shiatsu |   Relaxation and relieve pain |   37.0 |
+|   4 |      Sport |        Release muscle tension |   45.0 |
+|   5 |      Relax |              Relaxing massage |   44.0 |
+|   7 | Whole body | Preparing body for next week. |   70.0 |
+nil
+clj꞉projekat.massage_data_base꞉> 
+; Evaluating file: core.clj
+#'projekat.core/server
+clj꞉projekat.core꞉> 
+"News\n[2023-01-07  00:42:22.566Z] Massage Swedish  has been changed. New description: Gentle touch. New price:77.0 \n [2023-01-07  00:43:28.942Z] Massage Sport  has been changed. New description: Release muscle tension. New price:66.0 \n "
+clj꞉projekat.pages꞉> 
+; Evaluating file: pages.clj
+#'projekat.pages/prepare-news
+clj꞉projekat.pages꞉> 
+; Evaluating file: massage_data_base.clj
+
+| :id |      :name |                  :description | :price |
+|-----+------------+-------------------------------+--------|
+|   1 |    Swedish |                  Gentle touch |   77.0 |
+|   2 |       Thai |                   Flexibility |   35.0 |
+|   3 |    Shiatsu |   Relaxation and relieve pain |   37.0 |
+|   4 |      Sport |        Release muscle tension |   66.0 |
+|   5 |      Relax |              Relaxing massage |   44.0 |
+|   7 | Whole body | Preparing body for next week. |   70.0 |
+nil
+clj꞉projekat.massage_data_base꞉> 
+; Evaluating file: core.clj
+#'projekat.core/server
+clj꞉projekat.core꞉> 
+"News[:br][2023-01-07  00:42:22.566Z] Massage Swedish  has been changed. New description: Gentle touch. New price:77.0 [:br] [2023-01-07  00:43:28.942Z] Massage Sport  has been changed. New description: Release muscle tension. New price:66.0 [:br] "
+clj꞉projekat.pages꞉> 
+; Evaluating file: pages.clj
+#'projekat.pages/prepare-news
+clj꞉projekat.pages꞉> 
+; Evaluating file: core.clj
+#'projekat.core/server
+clj꞉projekat.core꞉> 
+; Evaluating file: pages.clj
+#'projekat.pages/prepare-news
 clj꞉projekat.pages꞉> 
 ; Evaluating file: core.clj
 #'projekat.core/server

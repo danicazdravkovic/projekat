@@ -11,7 +11,9 @@
                  [ring/ring-devel "1.8.0"]
                  [org.xerial/sqlite-jdbc "3.7.2"]
                  [hiccup-table "0.2.0"]
-                 [clj-time/clj-time "0.15.2"]]
+                 [clj-time/clj-time "0.15.2"]
+                 [metasoarous/oz "2.0.0-alpha5"]; za grafikone
+                 ]
   :plugins [[lein-ring "0.12.6"]]
   :main projekat.server-config
   :ring {:handler projekat.core/app-handler};konfigurisem server a pozivam ga naredbom lein ring server
