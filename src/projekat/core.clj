@@ -84,11 +84,13 @@
       (p/client-login)))
   (POST "/client-login" req
     (let [client (prepare-client (slurp (:body req)))]
-      (if (db/check-login client)
+      (if-not (= (db/check-login client) "Exception method: database/check-login")
         (-> (resp/redirect "/index-client")
             (assoc-in [:session :role] "client")
             (assoc-in [:session :id] (db/get-id-by-phone (:phone client))));u http zahtev dodaje se polje :session{:admin true} 
-        (p/client-login "Invalid phone or password"))))
+        (p/client-login "Invalid phone or password")
+    ))
+    )
 
   (POST "/admin/login" req
     (let [admin (prepare-admin (slurp (:body req)))]
@@ -190,11 +192,11 @@
 
 
 ; (def server
-;   (ring/run-jetty wrapping {:port 3001
+;   (ring/run-jetty wrapping {:port 3004
 ;                             :join? false}))
 
 (defn -main [& args]
-(ring/run-jetty wrapping {:port 3003
+(ring/run-jetty wrapping {:port 3005
                             :join? false})
   
   )
